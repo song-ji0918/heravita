@@ -1,0 +1,9 @@
+import { Link } from '@tanstack/react-router';
+import { useState } from 'react';
+import { ArrowUpRight, Menu, X } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+export function Header() {
+ const [open, setOpen] = useState(false);
+ return <header className="site-header"><div className="header-left"><Link to="/" className="brand" aria-label="HeraVita 首页">HeraVita<small>GLOBAL LIFE REBUILDING ECOSYSTEM</small></Link><nav className="desktop-nav" aria-label="主导航"><Link to="/philosophy">品牌理念</Link><Link to="/journeys">生命旅程</Link><Link to="/destinations">全球版图</Link></nav></div><div className="header-tools"><span className="language text-xs">中文 / EN</span><Button asChild className="header-book"><Link to="/destinations/phuket" hash="concierge">私人生命管家 <ArrowUpRight size={13}/></Link></Button><Button className="mobile-menu" variant="ghost" size="icon" aria-label={open ? '关闭菜单' : '打开菜单'} onClick={() => setOpen(!open)}>{open ? <X/> : <Menu/>}</Button></div>{open && <nav className="menu-panel" aria-label="移动导航"><Link to="/" onClick={()=>setOpen(false)}>首页</Link><Link to="/philosophy" onClick={()=>setOpen(false)}>品牌理念</Link><Link to="/journeys" onClick={()=>setOpen(false)}>生命旅程</Link><Link to="/destinations" onClick={()=>setOpen(false)}>全球版图</Link></nav>}</header>;
+}
+export function Footer() { return <footer className="site-footer"><div className="footer-top"><Link className="brand" to="/">HeraVita<small>GLOBAL LIFE REBUILDING ECOSYSTEM</small></Link><div className="footer-links"><Link to="/">返回首页</Link><Link to="/destinations">全球生命版图</Link><Link to="/destinations/phuket" hash="concierge">私人生命管家 <span>↗</span></Link></div></div><div className="footer-bottom"><span>© 2026 HERAVITA. ALL RIGHTS RESERVED.</span><span className="medical-note">HeraVita 为生命健康与长寿生活方式平台，并非医疗机构。医疗服务由具备资质的机构与专业团队提供，具体方案以医生评估为准。</span></div></footer> }

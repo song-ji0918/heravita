@@ -14,7 +14,10 @@ import { Route as DestinationsRouteImport } from './routes/destinations'
 import { Route as JourneysRouteImport } from './routes/journeys'
 import { Route as PhilosophyRouteImport } from './routes/philosophy'
 import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
+import { Route as DestinationsChinaRouteImport } from './routes/destinations.china'
+import { Route as DestinationsEuropeRouteImport } from './routes/destinations.europe'
 import { Route as DestinationsPhuketRouteImport } from './routes/destinations.phuket'
+import { Route as DestinationsUsaRouteImport } from './routes/destinations.usa'
 import { Route as JourneysIndexRouteImport } from './routes/journeys.index'
 import { Route as JourneysStageRouteImport } from './routes/journeys.$stage'
 
@@ -43,9 +46,24 @@ const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
   path: '/',
   getParentRoute: () => DestinationsRoute,
 } as any)
+const DestinationsChinaRoute = DestinationsChinaRouteImport.update({
+  id: '/china',
+  path: '/china',
+  getParentRoute: () => DestinationsRoute,
+} as any)
+const DestinationsEuropeRoute = DestinationsEuropeRouteImport.update({
+  id: '/europe',
+  path: '/europe',
+  getParentRoute: () => DestinationsRoute,
+} as any)
 const DestinationsPhuketRoute = DestinationsPhuketRouteImport.update({
   id: '/phuket',
   path: '/phuket',
+  getParentRoute: () => DestinationsRoute,
+} as any)
+const DestinationsUsaRoute = DestinationsUsaRouteImport.update({
+  id: '/usa',
+  path: '/usa',
   getParentRoute: () => DestinationsRoute,
 } as any)
 const JourneysIndexRoute = JourneysIndexRouteImport.update({
@@ -64,7 +82,10 @@ export interface FileRoutesByFullPath {
   '/destinations': typeof DestinationsRouteWithChildren
   '/journeys': typeof JourneysRouteWithChildren
   '/philosophy': typeof PhilosophyRoute
+  '/destinations/china': typeof DestinationsChinaRoute
+  '/destinations/europe': typeof DestinationsEuropeRoute
   '/destinations/phuket': typeof DestinationsPhuketRoute
+  '/destinations/usa': typeof DestinationsUsaRoute
   '/journeys/$stage': typeof JourneysStageRoute
   '/destinations/': typeof DestinationsIndexRoute
   '/journeys/': typeof JourneysIndexRoute
@@ -72,7 +93,10 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/philosophy': typeof PhilosophyRoute
+  '/destinations/china': typeof DestinationsChinaRoute
+  '/destinations/europe': typeof DestinationsEuropeRoute
   '/destinations/phuket': typeof DestinationsPhuketRoute
+  '/destinations/usa': typeof DestinationsUsaRoute
   '/journeys/$stage': typeof JourneysStageRoute
   '/destinations': typeof DestinationsIndexRoute
   '/journeys': typeof JourneysIndexRoute
@@ -83,7 +107,10 @@ export interface FileRoutesById {
   '/destinations': typeof DestinationsRouteWithChildren
   '/journeys': typeof JourneysRouteWithChildren
   '/philosophy': typeof PhilosophyRoute
+  '/destinations/china': typeof DestinationsChinaRoute
+  '/destinations/europe': typeof DestinationsEuropeRoute
   '/destinations/phuket': typeof DestinationsPhuketRoute
+  '/destinations/usa': typeof DestinationsUsaRoute
   '/journeys/$stage': typeof JourneysStageRoute
   '/destinations/': typeof DestinationsIndexRoute
   '/journeys/': typeof JourneysIndexRoute
@@ -95,7 +122,10 @@ export interface FileRouteTypes {
     | '/destinations'
     | '/journeys'
     | '/philosophy'
+    | '/destinations/china'
+    | '/destinations/europe'
     | '/destinations/phuket'
+    | '/destinations/usa'
     | '/journeys/$stage'
     | '/destinations/'
     | '/journeys/'
@@ -103,7 +133,10 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/philosophy'
+    | '/destinations/china'
+    | '/destinations/europe'
     | '/destinations/phuket'
+    | '/destinations/usa'
     | '/journeys/$stage'
     | '/destinations'
     | '/journeys'
@@ -113,7 +146,10 @@ export interface FileRouteTypes {
     | '/destinations'
     | '/journeys'
     | '/philosophy'
+    | '/destinations/china'
+    | '/destinations/europe'
     | '/destinations/phuket'
+    | '/destinations/usa'
     | '/journeys/$stage'
     | '/destinations/'
     | '/journeys/'
@@ -163,11 +199,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DestinationsIndexRouteImport
       parentRoute: typeof DestinationsRoute
     }
+    '/destinations/china': {
+      id: '/destinations/china'
+      path: '/china'
+      fullPath: '/destinations/china'
+      preLoaderRoute: typeof DestinationsChinaRouteImport
+      parentRoute: typeof DestinationsRoute
+    }
+    '/destinations/europe': {
+      id: '/destinations/europe'
+      path: '/europe'
+      fullPath: '/destinations/europe'
+      preLoaderRoute: typeof DestinationsEuropeRouteImport
+      parentRoute: typeof DestinationsRoute
+    }
     '/destinations/phuket': {
       id: '/destinations/phuket'
       path: '/phuket'
       fullPath: '/destinations/phuket'
       preLoaderRoute: typeof DestinationsPhuketRouteImport
+      parentRoute: typeof DestinationsRoute
+    }
+    '/destinations/usa': {
+      id: '/destinations/usa'
+      path: '/usa'
+      fullPath: '/destinations/usa'
+      preLoaderRoute: typeof DestinationsUsaRouteImport
       parentRoute: typeof DestinationsRoute
     }
     '/journeys/': {
@@ -188,12 +245,18 @@ declare module '@tanstack/react-router' {
 }
 
 interface DestinationsRouteChildren {
+  DestinationsChinaRoute: typeof DestinationsChinaRoute
+  DestinationsEuropeRoute: typeof DestinationsEuropeRoute
   DestinationsPhuketRoute: typeof DestinationsPhuketRoute
+  DestinationsUsaRoute: typeof DestinationsUsaRoute
   DestinationsIndexRoute: typeof DestinationsIndexRoute
 }
 
 const DestinationsRouteChildren: DestinationsRouteChildren = {
+  DestinationsChinaRoute: DestinationsChinaRoute,
+  DestinationsEuropeRoute: DestinationsEuropeRoute,
   DestinationsPhuketRoute: DestinationsPhuketRoute,
+  DestinationsUsaRoute: DestinationsUsaRoute,
   DestinationsIndexRoute: DestinationsIndexRoute,
 }
 

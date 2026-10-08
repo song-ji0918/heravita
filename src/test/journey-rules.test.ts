@@ -29,4 +29,21 @@ describe('Private concierge validation', () => {
     expect(consultationSchema.safeParse({...request,contact:'invalid'}).success).toBe(false);
     expect(consultationSchema.safeParse({...request,consent:false}).success).toBe(false);
   });
+  it('keeps China inquiries attached to everyday life support', () => {
+    const result=consultationSchema.parse({...request,destination:'china',stage:'local_support'});
+    expect([result.destination,result.stage]).toEqual(['china','local_support']);
+  });
+  it('keeps Europe inquiries attached to Life Flourishing', () => {
+    const result=consultationSchema.parse({...request,destination:'europe',stage:'flourish'});
+    expect([result.destination,result.stage]).toEqual(['europe','flourish']);
+  });
+  it('keeps USA inquiries attached to medical coordination', () => {
+    const result=consultationSchema.parse({...request,destination:'usa',stage:'medical_coordination'});
+    expect([result.destination,result.stage]).toEqual(['usa','medical_coordination']);
+  });
+  it('rejects unknown destinations and mismatched regional purposes', () => {
+    expect(consultationSchema.safeParse({...request,destination:'unknown'}).success).toBe(false);
+    expect(consultationSchema.safeParse({...request,destination:'china',stage:'flourish'}).success).toBe(false);
+    expect(consultationSchema.safeParse({...request,destination:'phuket',stage:'medical_coordination'}).success).toBe(false);
+  });
 });

@@ -4,9 +4,10 @@ import { Hero } from '@/components/heravita/hero';
 import { Concierge } from '@/components/heravita/concierge';
 import { journeys } from '@/lib/journeys';
 import { pageHead } from '@/lib/page-head';
+import phuketHero from '@/assets/phuket-hero.asset.json';
 export const Route = createFileRoute('/journeys/$stage')({
  beforeLoad:({params})=>{if(!journeys.some(j=>j.slug===params.stage)) throw notFound();},
- head:({params})=>{const j=journeys.find(j=>j.slug===params.stage);return pageHead(j?.name || '未找到生命旅程',j?`${j.days} 天 ${j.nights} 夜普吉岛私人生命旅程，${j.follow}持续陪伴。${j.description}`:'探索 HeraVita 私人生命旅程。');},
+ head:({params})=>{const j=journeys.find(j=>j.slug===params.stage);return pageHead(j?.name || '未找到生命旅程',j?`${j.days} 天 ${j.nights} 夜普吉岛私人生命旅程，${j.follow}持续陪伴。${j.description}`:'探索 HeraVita 私人生命旅程。',phuketHero.url);},
  component:JourneyDetail,
 });
 function JourneyDetail(){const {stage}=Route.useParams(); const j=journeys.find(j=>j.slug===stage); if(!j)return null;

@@ -10,6 +10,9 @@ describe("App routing", () => {
   it("matches the flagship destination and all three journey detail paths", () => {
     const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
     expect(router.matchRoutes('/destinations/phuket').at(-1)?.routeId).toBe('/destinations/phuket');
+     for (const region of ['china','europe','usa']) {
+       expect(router.matchRoutes(`/destinations/${region}`).at(-1)?.routeId).toBe(`/destinations/${region}`);
+     }
     for (const stage of ['discover', 'reset', 'rebuild']) {
       expect(router.matchRoutes(`/journeys/${stage}`).at(-1)?.routeId).toBe('/journeys/$stage');
     }

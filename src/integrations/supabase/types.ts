@@ -21,6 +21,7 @@ export type Database = {
           contact: string
           contact_method: string
           created_at: string
+          destination: string
           guests: number
           id: string
           message: string
@@ -35,6 +36,7 @@ export type Database = {
           contact: string
           contact_method: string
           created_at?: string
+          destination?: string
           guests: number
           id?: string
           message?: string
@@ -49,6 +51,7 @@ export type Database = {
           contact?: string
           contact_method?: string
           created_at?: string
+          destination?: string
           guests?: number
           id?: string
           message?: string

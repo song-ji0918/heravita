@@ -8,6 +8,13 @@
       "when": 1791465608649,
       "tag": "0000_create_phuket_consultations",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1791467149569,
+      "tag": "0001_global_destination_consultations",
+      "breakpoints": true
     }
   ]
 }

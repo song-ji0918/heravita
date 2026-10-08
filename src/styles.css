@@ -297,7 +297,8 @@ h2 { font-family:var(--font-display); font-weight:400; font-size:46px; line-heig
 .destination-editorial .hero { height:88svh; max-height:920px; min-height:620px; }
 .destination-editorial .hero-main { bottom:145px; }
 .destination-editorial .hero-chinese { max-width:740px; }
-.hero-region-cta { display:inline-flex; align-items:center; gap:28px; margin-top:22px; padding-bottom:10px; border-bottom:1px solid var(--on-image); font-size:12px; }
+.hero-region-cta { display:inline-flex; align-items:center; gap:28px; margin-top:22px; padding:0 0 10px; height:auto; border-radius:0; background:transparent; color:var(--on-image); border-bottom:1px solid var(--on-image); font-size:12px; font-weight:400; }
+.hero-region-cta:hover { background:transparent; color:var(--gold); }
 .network-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
 .network-card { position:relative; overflow:hidden; color:var(--on-image); min-height:490px; isolation:isolate; }
 .network-card::after { position:absolute; inset:0; content:''; background:var(--network-shade); z-index:-1; }

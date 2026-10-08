@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      phuket_consultations: {
+        Row: {
+          arrival_date: string | null
+          consent: boolean
+          contact: string
+          contact_method: string
+          created_at: string
+          guests: number
+          id: string
+          message: string
+          name: string
+          partner_consultation: boolean
+          stage: string
+          title: string
+        }
+        Insert: {
+          arrival_date?: string | null
+          consent: boolean
+          contact: string
+          contact_method: string
+          created_at?: string
+          guests: number
+          id?: string
+          message?: string
+          name: string
+          partner_consultation?: boolean
+          stage: string
+          title: string
+        }
+        Update: {
+          arrival_date?: string | null
+          consent?: boolean
+          contact?: string
+          contact_method?: string
+          created_at?: string
+          guests?: number
+          id?: string
+          message?: string
+          name?: string
+          partner_consultation?: boolean
+          stage?: string
+          title?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

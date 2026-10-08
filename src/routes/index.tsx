@@ -1,24 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
-
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
-export const Route = createFileRoute("/")({
-  component: Index,
-});
-
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
+import { createFileRoute, Link } from '@tanstack/react-router';
+import { ArrowUpRight } from 'lucide-react';
+import { Header, Footer } from '@/components/heravita/site-shell';
+import { Hero } from '@/components/heravita/hero';
+import { JourneyCards } from '@/components/heravita/journey-cards';
+import { GlobalPresence } from '@/components/heravita/global-presence';
+import { Button } from '@/components/ui/button';
+import { pageHead } from '@/lib/page-head';
+export const Route = createFileRoute('/')({head:()=>pageHead('全球生命重建生态系统','HeraVita 连接长寿医学、情绪与关系、自然疗愈和生活方式。让生命回归秩序，让人生重新绽放。'),component:HomePage});
+function HomePage(){return <><Header/><main><Hero home eyebrow="GLOBAL LIFE REBUILDING ECOSYSTEM" title="HeraVita" chinese="让生命回归秩序，让人生重新绽放。" subtitle="A longer life. A fuller life."><Button asChild className="hero-cta"><Link to="/journeys">开启生命发现 <ArrowUpRight/></Link></Button></Hero><section className="section home-belief" id="next-act"><p className="section-eyebrow"><span>02 /</span> OUR BELIEF</p><h2 className="cn-heading">真正的长寿，不只是延长生命，<br/>而是让生命重新回到属于自己的秩序。</h2><p className="body-copy">身体、情绪、神经系统、关系、环境与生活方式彼此连接。HeraVita 以完整生命状态为中心，帮助个人与家庭建立可持续的健康长寿生活方式。</p><Link to="/philosophy" className="text-link mt-7">了解 HeraVita <ArrowUpRight size={17}/></Link></section><section className="section pt-0"><p className="section-eyebrow"><span>03 /</span> OUR METHOD</p><h2>Science meets life.</h2><p className="cn-heading mt-4">让科学理解身体，让疗愈理解生命。</p><div className="pillars">{[['全球长寿医学','LONGEVITY MEDICINE'],['情绪与关系重建','EMOTION & CONNECTION'],['神经系统重启','NERVOUS SYSTEM RESET'],['疗愈环境','HEALING ENVIRONMENT'],['生活方式重建','LIFESTYLE REBUILDING']].map(([cn,en])=><div className="pillar" key={cn}>{cn}<span>{en}</span></div>)}</div></section><section className="section pt-0"><div className="section-top"><div><p className="section-eyebrow"><span>04 /</span> YOUR JOURNEY</p><h2>Every life has its own stage.</h2><p className="cn-heading">看见自己 → 恢复自己 → 重建自己 → 展开自己</p></div><Link className="text-link" to="/journeys">发现您的生命旅程 <ArrowUpRight size={17}/></Link></div><JourneyCards/></section><section className="section pt-0"><GlobalPresence/></section></main><Footer/></>}

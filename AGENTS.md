@@ -15,3 +15,5 @@
 - Shared HeraVita presentation modules live under components/heravita, with semantic global CSS tokens; this keeps the brand consistent across pages.
 - Journey specifications live in one browser-safe data module and drive cards, details and rule tests; this prevents contradictory durations.
 - Concierge requests use a shared Zod schema and a public insert-only createServerFn with a handler-local privileged client; this stores private leads without exposing visitor reads or server secrets.
+- Destination identity and editorial copy use one browser-safe catalog with explicit public leaf routes; this keeps home cards, overview and regional pages aligned.
+- Concierge destination and allowed purpose are validated together and stored in the existing private lead table; this preserves older requests while routing new inquiries accurately.

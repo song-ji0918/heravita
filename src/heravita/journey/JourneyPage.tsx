@@ -8,7 +8,7 @@ import sourceZh from "./source.zh.json";
 import sourceEn from "./source.en.json";
 import { stageMedia, expansionMedia } from "./media";
 import { JourneyRail, JourneyProgression, ApplyLink } from "./Navigation";
-import { journeyRules, type Stage } from "./rules";
+import { type Stage } from "./rules";
 import "./journey.css";
 
 type ProductStage = Exclude<Stage, "discover">;
@@ -18,10 +18,25 @@ export default function JourneyPage({stage}:{stage:ProductStage}) {
  const root=useRef<HTMLDivElement>(null); useReveal(root);
  const {i18n}=useTranslation();
  const en=!i18n.language.startsWith("zh"); const source=en?sourceEn:sourceZh; const t=(zh:string,english:string)=>en?english:zh;
- const c=source.stages[stage]; const shared=source.shared; const rule=journeyRules[stage];
+ const c=source.stages[stage]; const shared=source.shared;
  const [day,setDay]=useState(0);
  const title=(text:string,kicker:string)=><><p className="j-kicker" data-reveal>{kicker}</p><h2 className="j-title" data-reveal>{text}</h2><span className="j-rule" data-line /></>;
  const images=stageMedia[stage];
+ const relationshipChapter=(<>
+   <section id="connection" className="j-section j-relationship" data-header-theme="dark" data-reveal-group>
+    <div className="j-relationship-grid"><Photo src={images.connection} alt="伴侣深度对话与重新连接意象" /><div>{title(c.relationshipTitle,"Love & Happiness")}<Paragraphs items={c.relationship.slice(0,stage==="reset"?1:2)} /><div className="j-word-list">{c.relationship.slice(stage==="reset"?1:2).map(p=><span key={p}>{p}</span>)}</div></div></div>
+   </section>
+ </>);
+ const energyChapter=(<>
+   <section id="energy" className="j-section j-energy" data-header-theme="light" data-reveal-group>
+    <Photo src={images.energy} alt="呼吸、身体觉察与内在生命力体验意象" /><div className="j-energy-copy">{title(c.energyTitle,"Inner Vitality")}<Paragraphs items={c.energy} />{stage==="rebuild"&&<div className="j-chakras">{(en?["Safety","Intimacy","Strength","Love","Expression","Insight","Meaning"]:["安全","亲密","力量","爱","表达","洞察","意义"]).map(x=><span key={x}>{x}</span>)}</div>}<p className="j-clinical-note">{t("七脉轮作为传统身心灵文化中的内在觉察、冥想与生命主题探索框架，不作为医学诊断或医疗治疗依据。","The seven chakras are a traditional framework for inner awareness, meditation and exploration of life themes, not a basis for medical diagnosis or treatment.")}</p></div>
+   </section>
+ </>);
+ const lifestyleChapter=(<>
+   <section className="j-section j-life-chapter" data-header-theme="light" data-reveal-group>
+    <div className="j-lifestyle"><div>{title(c.days[5].title,"A Living Rhythm")}<p className="j-body">{stage==="reset"?t("冰箱文化、共创厨房与睡眠节律，让身体重新拥有恢复的空间。","Refrigerator culture, co-creation cooking and sleep rhythms make room for recovery."):stage==="rebuild"?t("从饮食和睡眠，到工作与家庭节律，重新建立支持自己的日常系统。","From food and sleep to work and family rhythms, rebuild daily systems that support you."):t("阳光、海洋、运动与自然体验，让健康回到更开阔的生活里。","Sunlight, ocean, movement and nature bring health into a wider life.")}</p>{stage==="reset"&&<blockquote>{c.days[5].quote}</blockquote>}</div><Photo src={images.lifestyle} alt={t("本阶段的日常生活与自然体验意象","Daily life and nature experiences for this stage")} /></div>
+   </section>
+ </>);
  return <div className={`j-page j-variant-${stage}`} ref={root} dir={i18n.dir()}>
   <Header overlay />
   <main>
@@ -38,37 +53,7 @@ export default function JourneyPage({stage}:{stage:ProductStage}) {
     <Photo src={images.medicine} alt="医生评估与个性化健康方案沟通意象" />
     <div className="j-medical-copy" data-reveal-group>{title(c.medicalTitle,"Global Longevity Medicine")}<ul>{c.medical.map((p,i)=><li key={i} data-reveal>{p}</li>)}</ul><p className="j-clinical-note">{t("医学逻辑：目标 → 评估 → 匹配 → 医学干预。HeraVita不是医院；医学服务由具备相应资质的医疗机构与专业医生提供，不承诺医学结果。","Medical pathway: goal → assessment → matching → intervention. HeraVita is not a hospital. Medical services are delivered by qualified institutions and physicians; medical outcomes are not promised.")}</p></div>
    </section>
-   {stage==="reset"?<>
-   <section id="connection" className="j-section j-relationship" data-header-theme="dark" data-reveal-group>
-    <div className="j-relationship-grid"><Photo src={images.connection} alt="伴侣深度对话与重新连接意象" /><div>{title(c.relationshipTitle,"Love & Happiness")}<Paragraphs items={c.relationship.slice(0,stage==="reset"?1:2)} /><div className="j-word-list">{c.relationship.slice(stage==="reset"?1:2).map(p=><span key={p}>{p}</span>)}</div></div></div>
-   </section>
-   <section id="energy" className="j-section j-energy" data-header-theme="light" data-reveal-group>
-    <Photo src={images.energy} alt="呼吸、身体觉察与内在生命力体验意象" /><div className="j-energy-copy">{title(c.energyTitle,"Inner Vitality")}<Paragraphs items={c.energy} />{stage==="rebuild"&&<div className="j-chakras">{(en?["Safety","Intimacy","Strength","Love","Expression","Insight","Meaning"]:["安全","亲密","力量","爱","表达","洞察","意义"]).map(x=><span key={x}>{x}</span>)}</div>}<p className="j-clinical-note">{t("七脉轮作为传统身心灵文化中的内在觉察、冥想与生命主题探索框架，不作为医学诊断或医疗治疗依据。","The seven chakras are a traditional framework for inner awareness, meditation and exploration of life themes, not a basis for medical diagnosis or treatment.")}</p></div>
-   </section>
-   <section className="j-section j-life-chapter" data-header-theme="light" data-reveal-group>
-    <div className="j-lifestyle"><div>{title(c.days[5].title,"A Living Rhythm")}<p className="j-body">{c.days[5].body}</p>{stage==="reset"&&<blockquote>{c.days[5].quote}</blockquote>}</div><Photo src={images.lifestyle} alt={t("本阶段的日常生活与自然体验意象","Daily life and nature experiences for this stage")} /></div>
-   </section>
-   </>:stage==="rebuild"?<>
-   <section id="energy" className="j-section j-energy" data-header-theme="light" data-reveal-group>
-    <Photo src={images.energy} alt="呼吸、身体觉察与内在生命力体验意象" /><div className="j-energy-copy">{title(c.energyTitle,"Inner Vitality")}<Paragraphs items={c.energy} />{stage==="rebuild"&&<div className="j-chakras">{(en?["Safety","Intimacy","Strength","Love","Expression","Insight","Meaning"]:["安全","亲密","力量","爱","表达","洞察","意义"]).map(x=><span key={x}>{x}</span>)}</div>}<p className="j-clinical-note">{t("七脉轮作为传统身心灵文化中的内在觉察、冥想与生命主题探索框架，不作为医学诊断或医疗治疗依据。","The seven chakras are a traditional framework for inner awareness, meditation and exploration of life themes, not a basis for medical diagnosis or treatment.")}</p></div>
-   </section>
-   <section id="connection" className="j-section j-relationship" data-header-theme="dark" data-reveal-group>
-    <div className="j-relationship-grid"><Photo src={images.connection} alt="伴侣深度对话与重新连接意象" /><div>{title(c.relationshipTitle,"Love & Happiness")}<Paragraphs items={c.relationship.slice(0,stage==="reset"?1:2)} /><div className="j-word-list">{c.relationship.slice(stage==="reset"?1:2).map(p=><span key={p}>{p}</span>)}</div></div></div>
-   </section>
-   <section className="j-section j-life-chapter" data-header-theme="light" data-reveal-group>
-    <div className="j-lifestyle"><div>{title(c.days[5].title,"A Living Rhythm")}<p className="j-body">{c.days[5].body}</p>{stage==="reset"&&<blockquote>{c.days[5].quote}</blockquote>}</div><Photo src={images.lifestyle} alt={t("本阶段的日常生活与自然体验意象","Daily life and nature experiences for this stage")} /></div>
-   </section>
-   </>:<>
-   <section id="connection" className="j-section j-relationship" data-header-theme="dark" data-reveal-group>
-    <div className="j-relationship-grid"><Photo src={images.connection} alt="伴侣深度对话与重新连接意象" /><div>{title(c.relationshipTitle,"Love & Happiness")}<Paragraphs items={c.relationship.slice(0,stage==="reset"?1:2)} /><div className="j-word-list">{c.relationship.slice(stage==="reset"?1:2).map(p=><span key={p}>{p}</span>)}</div></div></div>
-   </section>
-   <section className="j-section j-life-chapter" data-header-theme="light" data-reveal-group>
-    <div className="j-lifestyle"><div>{title(c.days[5].title,"A Living Rhythm")}<p className="j-body">{c.days[5].body}</p>{stage==="reset"&&<blockquote>{c.days[5].quote}</blockquote>}</div><Photo src={images.lifestyle} alt={t("本阶段的日常生活与自然体验意象","Daily life and nature experiences for this stage")} /></div>
-   </section>
-   <section id="energy" className="j-section j-energy" data-header-theme="light" data-reveal-group>
-    <Photo src={images.energy} alt="呼吸、身体觉察与内在生命力体验意象" /><div className="j-energy-copy">{title(c.energyTitle,"Inner Vitality")}<Paragraphs items={c.energy} />{stage==="rebuild"&&<div className="j-chakras">{(en?["Safety","Intimacy","Strength","Love","Expression","Insight","Meaning"]:["安全","亲密","力量","爱","表达","洞察","意义"]).map(x=><span key={x}>{x}</span>)}</div>}<p className="j-clinical-note">{t("七脉轮作为传统身心灵文化中的内在觉察、冥想与生命主题探索框架，不作为医学诊断或医疗治疗依据。","The seven chakras are a traditional framework for inner awareness, meditation and exploration of life themes, not a basis for medical diagnosis or treatment.")}</p></div>
-   </section>
-   </>}
+   {stage==="reset"?<>{relationshipChapter}{energyChapter}{lifestyleChapter}</>:stage==="rebuild"?<>{energyChapter}{relationshipChapter}{lifestyleChapter}</>:<>{relationshipChapter}{lifestyleChapter}{energyChapter}</>}
    {stage==="rebuild"?<section id="days" className="j-section" data-header-theme="light" data-reveal-group>
     {title(t("七天，重建一个完整的生命系统","Seven Days to Rebuild Your Life System"),"Your Seven-Day Journey")}<div className="j-timeline"><div className="j-timeline-image"><img src={images.days} alt="生命系统重建的自然场域意象" loading="lazy" width={1920} height={1088}/></div><div>{c.days.map((d,i)=><details key={d.title} open={i===0?true:undefined}><summary>DAY 0{i+1}　{d.title}</summary><p>{d.body}</p>{d.quote&&<p>{d.quote}</p>}</details>)}</div></div>
    </section>:<section id="days" className="j-section j-days" data-header-theme="dark" data-reveal-group>

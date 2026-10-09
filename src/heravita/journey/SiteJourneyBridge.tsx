@@ -18,7 +18,7 @@ export default function SiteJourneyBridge(){
    if(!isApply)return;
    e.preventDefault();e.stopPropagation();
    const path=window.location.pathname;
-   const stage:Stage|"undecided"=path==="/discover"?"discover":"undecided";
+   const stage:Stage|"undecided"=path==="/discover"?"discover":path==="/journey/reset"?"reset":path==="/journey/rebuild"?"rebuild":path==="/journey/flourish"?"flourish":"undecided";
    const destination:typeof destinations[number]=path.includes("/phuket")?"phuket":path.includes("/china")?"china":path.includes("/usa")?"usa":path.includes("/europe")?"europe":"undecided";
    void navigate({to:"/journey/booking",search:{stage,destination}});
   }

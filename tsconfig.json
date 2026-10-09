@@ -43,6 +43,7 @@
       ]
     },
     "resolveJsonModule": true,
-    "allowArbitraryExtensions": true
+    "allowArbitraryExtensions": true,
+    "strictNullChecks": true
   }
 }

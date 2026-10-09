@@ -22,6 +22,13 @@
       "when": 1791559390293,
       "tag": "0002_allow_public_consultation_insert",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1791559428594,
+      "tag": "0003_remove_test_consultation",
+      "breakpoints": true
     }
   ]
 }

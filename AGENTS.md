@@ -15,3 +15,4 @@
 - Each original page has a thin TanStack route (ssr: false via src/original-page.tsx) because the original i18n reads localStorage at load.
 - Files over 10 MB (video, fonts) are hosted via lovable-assets and referenced by URL, because the repo rejects large files.
 - The original App.tsx, main.tsx, tests and docs are kept for reference in original-source/.
+- New HeraVita pages live under src/heravita/<page> with flat routes (e.g. global_.phuket.tsx, global_.phuket_.booking.tsx) so the original /global page stays an untouched leaf.

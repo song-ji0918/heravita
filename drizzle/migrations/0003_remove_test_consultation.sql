@@ -1,0 +1,1 @@
+DELETE FROM public.phuket_consultations WHERE name = '测试' AND contact = 'test@example.com';

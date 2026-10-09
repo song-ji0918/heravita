@@ -21,6 +21,8 @@ import { Route as MedicalRouteImport } from './routes/medical'
 import { Route as MethodRouteImport } from './routes/method'
 import { Route as OriginRouteImport } from './routes/origin'
 import { Route as StoryRouteImport } from './routes/story'
+import { Route as GlobalPhuketRouteImport } from './routes/global_.phuket'
+import { Route as GlobalPhuketBookingRouteImport } from './routes/global_.phuket_.booking'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -82,6 +84,16 @@ const StoryRoute = StoryRouteImport.update({
   path: '/story',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GlobalPhuketRoute = GlobalPhuketRouteImport.update({
+  id: '/global_/phuket',
+  path: '/global/phuket',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlobalPhuketBookingRoute = GlobalPhuketBookingRouteImport.update({
+  id: '/global_/phuket_/booking',
+  path: '/global/phuket/booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -96,6 +108,8 @@ export interface FileRoutesByFullPath {
   '/method': typeof MethodRoute
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
+  '/global/phuket': typeof GlobalPhuketRoute
+  '/global/phuket/booking': typeof GlobalPhuketBookingRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -110,6 +124,8 @@ export interface FileRoutesByTo {
   '/method': typeof MethodRoute
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
+  '/global/phuket': typeof GlobalPhuketRoute
+  '/global/phuket/booking': typeof GlobalPhuketBookingRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -125,6 +141,8 @@ export interface FileRoutesById {
   '/method': typeof MethodRoute
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
+  '/global_/phuket': typeof GlobalPhuketRoute
+  '/global_/phuket_/booking': typeof GlobalPhuketBookingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -141,6 +159,8 @@ export interface FileRouteTypes {
     | '/method'
     | '/origin'
     | '/story'
+    | '/global/phuket'
+    | '/global/phuket/booking'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -155,6 +175,8 @@ export interface FileRouteTypes {
     | '/method'
     | '/origin'
     | '/story'
+    | '/global/phuket'
+    | '/global/phuket/booking'
   id:
     | '__root__'
     | '/'
@@ -169,6 +191,8 @@ export interface FileRouteTypes {
     | '/method'
     | '/origin'
     | '/story'
+    | '/global_/phuket'
+    | '/global_/phuket_/booking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -184,6 +208,8 @@ export interface RootRouteChildren {
   MethodRoute: typeof MethodRoute
   OriginRoute: typeof OriginRoute
   StoryRoute: typeof StoryRoute
+  GlobalPhuketRoute: typeof GlobalPhuketRoute
+  GlobalPhuketBookingRoute: typeof GlobalPhuketBookingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -272,6 +298,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof StoryRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/global_/phuket': {
+      id: '/global_/phuket'
+      path: '/global/phuket'
+      fullPath: '/global/phuket'
+      preLoaderRoute: typeof GlobalPhuketRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/global_/phuket_/booking': {
+      id: '/global_/phuket_/booking'
+      path: '/global/phuket/booking'
+      fullPath: '/global/phuket/booking'
+      preLoaderRoute: typeof GlobalPhuketBookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -288,6 +328,8 @@ const rootRouteChildren: RootRouteChildren = {
   MethodRoute: MethodRoute,
   OriginRoute: OriginRoute,
   StoryRoute: StoryRoute,
+  GlobalPhuketRoute: GlobalPhuketRoute,
+  GlobalPhuketBookingRoute: GlobalPhuketBookingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

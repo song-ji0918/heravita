@@ -55,7 +55,9 @@
 /* 03 / 06 */
 .pk-full { display: flex; align-items: center; }
 .pk-full-copy { position: relative; z-index: 1; max-width: 640px; padding: 0 7.5%; color: #fff; box-sizing: content-box; }
-.pk-full-copy .pk-actions { margin-top: 132px; }
+.pk-full-copy .pk-actions { margin-top: 88px; }
+.pk-residence { align-items: flex-end; }
+.pk-residence .pk-full-copy { padding-bottom: 15vh; }
 .pk-concierge { justify-content: center; text-align: center; color: #fff; }
 .pk-center-copy { position: relative; z-index: 1; max-width: 860px; padding: 0 6%; display: flex; flex-direction: column; align-items: center; }
 .pk-center-copy .pk-body { margin-bottom: 34px; }

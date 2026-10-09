@@ -48,7 +48,7 @@ export default function PhuketPage() {
           </div>
         </section>
 
-        <section className="pk-screen pk-full" data-header-theme="dark" data-reveal-group>
+        <section className="pk-screen pk-full pk-residence" data-header-theme="dark" data-reveal-group>
           <div className="pk-media"><img data-parallax src={IMG.residence} alt={c.residence.title} loading="lazy" /></div>
           <div className="pk-shade pk-shade--left" />
           <div className="pk-full-copy">

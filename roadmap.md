@@ -1,4 +1,8 @@
 # HeraVita
+- [ ] Build complete Reset, Rebuilding and Flourishing pages from Journey V1.1 with varied layouts and precise cool-tone photography.
+- [ ] Link the four stages and homepage without rewriting original pages.
+- [ ] Unify all reservation entries on a standalone application page and verify private submission.
+- [ ] Test source prices, partner rule, navigation and desktop/mobile presentation.
 - [x] Build the Phuket five-act page, three journey details and home/global-presence entry.
 - [x] Store validated concierge consultations privately in Cloud.
 - [x] Verify navigation, form submission and desktop/mobile presentation.

@@ -25,6 +25,10 @@ import { Route as GlobalChinaRouteImport } from './routes/global_.china'
 import { Route as GlobalEuropeRouteImport } from './routes/global_.europe'
 import { Route as GlobalPhuketRouteImport } from './routes/global_.phuket'
 import { Route as GlobalUsaRouteImport } from './routes/global_.usa'
+import { Route as JourneyBookingRouteImport } from './routes/journey_.booking'
+import { Route as JourneyFlourishRouteImport } from './routes/journey_.flourish'
+import { Route as JourneyRebuildRouteImport } from './routes/journey_.rebuild'
+import { Route as JourneyResetRouteImport } from './routes/journey_.reset'
 import { Route as GlobalPhuketBookingRouteImport } from './routes/global_.phuket_.booking'
 import { Route as GlobalUsaConsultationRouteImport } from './routes/global_.usa_.consultation'
 import { Route as GlobalUsaNetworkRouteImport } from './routes/global_.usa_.network'
@@ -109,6 +113,26 @@ const GlobalUsaRoute = GlobalUsaRouteImport.update({
   path: '/global/usa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JourneyBookingRoute = JourneyBookingRouteImport.update({
+  id: '/journey_/booking',
+  path: '/journey/booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JourneyFlourishRoute = JourneyFlourishRouteImport.update({
+  id: '/journey_/flourish',
+  path: '/journey/flourish',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JourneyRebuildRoute = JourneyRebuildRouteImport.update({
+  id: '/journey_/rebuild',
+  path: '/journey/rebuild',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const JourneyResetRoute = JourneyResetRouteImport.update({
+  id: '/journey_/reset',
+  path: '/journey/reset',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GlobalPhuketBookingRoute = GlobalPhuketBookingRouteImport.update({
   id: '/global_/phuket_/booking',
   path: '/global/phuket/booking',
@@ -142,6 +166,10 @@ export interface FileRoutesByFullPath {
   '/global/europe': typeof GlobalEuropeRoute
   '/global/phuket': typeof GlobalPhuketRoute
   '/global/usa': typeof GlobalUsaRoute
+  '/journey/booking': typeof JourneyBookingRoute
+  '/journey/flourish': typeof JourneyFlourishRoute
+  '/journey/rebuild': typeof JourneyRebuildRoute
+  '/journey/reset': typeof JourneyResetRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
   '/global/usa/consultation': typeof GlobalUsaConsultationRoute
   '/global/usa/network': typeof GlobalUsaNetworkRoute
@@ -163,6 +191,10 @@ export interface FileRoutesByTo {
   '/global/europe': typeof GlobalEuropeRoute
   '/global/phuket': typeof GlobalPhuketRoute
   '/global/usa': typeof GlobalUsaRoute
+  '/journey/booking': typeof JourneyBookingRoute
+  '/journey/flourish': typeof JourneyFlourishRoute
+  '/journey/rebuild': typeof JourneyRebuildRoute
+  '/journey/reset': typeof JourneyResetRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
   '/global/usa/consultation': typeof GlobalUsaConsultationRoute
   '/global/usa/network': typeof GlobalUsaNetworkRoute
@@ -185,6 +217,10 @@ export interface FileRoutesById {
   '/global_/europe': typeof GlobalEuropeRoute
   '/global_/phuket': typeof GlobalPhuketRoute
   '/global_/usa': typeof GlobalUsaRoute
+  '/journey_/booking': typeof JourneyBookingRoute
+  '/journey_/flourish': typeof JourneyFlourishRoute
+  '/journey_/rebuild': typeof JourneyRebuildRoute
+  '/journey_/reset': typeof JourneyResetRoute
   '/global_/phuket_/booking': typeof GlobalPhuketBookingRoute
   '/global_/usa_/consultation': typeof GlobalUsaConsultationRoute
   '/global_/usa_/network': typeof GlobalUsaNetworkRoute
@@ -208,6 +244,10 @@ export interface FileRouteTypes {
     | '/global/europe'
     | '/global/phuket'
     | '/global/usa'
+    | '/journey/booking'
+    | '/journey/flourish'
+    | '/journey/rebuild'
+    | '/journey/reset'
     | '/global/phuket/booking'
     | '/global/usa/consultation'
     | '/global/usa/network'
@@ -229,6 +269,10 @@ export interface FileRouteTypes {
     | '/global/europe'
     | '/global/phuket'
     | '/global/usa'
+    | '/journey/booking'
+    | '/journey/flourish'
+    | '/journey/rebuild'
+    | '/journey/reset'
     | '/global/phuket/booking'
     | '/global/usa/consultation'
     | '/global/usa/network'
@@ -250,6 +294,10 @@ export interface FileRouteTypes {
     | '/global_/europe'
     | '/global_/phuket'
     | '/global_/usa'
+    | '/journey_/booking'
+    | '/journey_/flourish'
+    | '/journey_/rebuild'
+    | '/journey_/reset'
     | '/global_/phuket_/booking'
     | '/global_/usa_/consultation'
     | '/global_/usa_/network'
@@ -272,6 +320,10 @@ export interface RootRouteChildren {
   GlobalEuropeRoute: typeof GlobalEuropeRoute
   GlobalPhuketRoute: typeof GlobalPhuketRoute
   GlobalUsaRoute: typeof GlobalUsaRoute
+  JourneyBookingRoute: typeof JourneyBookingRoute
+  JourneyFlourishRoute: typeof JourneyFlourishRoute
+  JourneyRebuildRoute: typeof JourneyRebuildRoute
+  JourneyResetRoute: typeof JourneyResetRoute
   GlobalPhuketBookingRoute: typeof GlobalPhuketBookingRoute
   GlobalUsaConsultationRoute: typeof GlobalUsaConsultationRoute
   GlobalUsaNetworkRoute: typeof GlobalUsaNetworkRoute
@@ -391,6 +443,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlobalUsaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/journey_/booking': {
+      id: '/journey_/booking'
+      path: '/journey/booking'
+      fullPath: '/journey/booking'
+      preLoaderRoute: typeof JourneyBookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journey_/flourish': {
+      id: '/journey_/flourish'
+      path: '/journey/flourish'
+      fullPath: '/journey/flourish'
+      preLoaderRoute: typeof JourneyFlourishRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journey_/rebuild': {
+      id: '/journey_/rebuild'
+      path: '/journey/rebuild'
+      fullPath: '/journey/rebuild'
+      preLoaderRoute: typeof JourneyRebuildRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/journey_/reset': {
+      id: '/journey_/reset'
+      path: '/journey/reset'
+      fullPath: '/journey/reset'
+      preLoaderRoute: typeof JourneyResetRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/global_/phuket_/booking': {
       id: '/global_/phuket_/booking'
       path: '/global/phuket/booking'
@@ -432,6 +512,10 @@ const rootRouteChildren: RootRouteChildren = {
   GlobalEuropeRoute: GlobalEuropeRoute,
   GlobalPhuketRoute: GlobalPhuketRoute,
   GlobalUsaRoute: GlobalUsaRoute,
+  JourneyBookingRoute: JourneyBookingRoute,
+  JourneyFlourishRoute: JourneyFlourishRoute,
+  JourneyRebuildRoute: JourneyRebuildRoute,
+  JourneyResetRoute: JourneyResetRoute,
   GlobalPhuketBookingRoute: GlobalPhuketBookingRoute,
   GlobalUsaConsultationRoute: GlobalUsaConsultationRoute,
   GlobalUsaNetworkRoute: GlobalUsaNetworkRoute,

@@ -17,3 +17,7 @@
 - The original App.tsx, main.tsx, tests and docs are kept for reference in original-source/.
 - New HeraVita pages live under src/heravita/<page> with flat routes (e.g. global_.phuket.tsx, global_.phuket_.booking.tsx) so the original /global page stays an untouched leaf.
 - Content-rich destinations may use an editorial overview plus focused child pages for networks and consultation, because this preserves full-screen restraint without compressing important content.
+- Journey pages use shared source-content and medical/rights modules with stage-specific editorial arrangements, so factual content remains consistent without forcing identical page composition.
+- Original homepage and Discovery wiring is extended by an isolated capture bridge and a Discovery wrapper, so original source remains unmodified.
+- Reservation entry points converge on the standalone Journey application template; legacy reservation URLs render the same template with destination context, preserving existing links.
+- Public journey applications permit insert only and no visitor reads or changes; submitted preferences are private rather than confirmed bookings.

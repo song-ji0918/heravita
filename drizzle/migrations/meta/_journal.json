@@ -36,6 +36,13 @@
       "when": 1791563907307,
       "tag": "0004_create_usa_consultations",
       "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1791568404132,
+      "tag": "0005_create_journey_applications",
+      "breakpoints": true
     }
   ]
 }

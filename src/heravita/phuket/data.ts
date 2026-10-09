@@ -22,7 +22,7 @@ export const SPACE_IMAGES = [precision, wellness, kitchen];
 
 export const JOURNEY_MEDIA: Record<string, { img: string; to: string }> = {
   discover: { img: "/discover/discover-welcome.jpg", to: "/discover" },
-  reset: { img: resetImg, to: "/journey" },
-  rebuild: { img: rebuildImg, to: "/journey" },
-  flourish: { img: flourish, to: "/journey" },
+  reset: { img: resetImg, to: "/journey/reset" },
+  rebuild: { img: rebuildImg, to: "/journey/rebuild" },
+  flourish: { img: flourish, to: "/journey/flourish" },
 };

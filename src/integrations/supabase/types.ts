@@ -14,6 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
+      journey_applications: {
+        Row: {
+          consent: boolean
+          contact: string
+          contact_method: string
+          created_at: string
+          destination: string
+          focus: string
+          full_name: string
+          id: string
+          partner: boolean
+          preferred_date: string | null
+          preferred_language: string
+          stage: string
+        }
+        Insert: {
+          consent: boolean
+          contact: string
+          contact_method: string
+          created_at?: string
+          destination: string
+          focus?: string
+          full_name: string
+          id?: string
+          partner?: boolean
+          preferred_date?: string | null
+          preferred_language?: string
+          stage: string
+        }
+        Update: {
+          consent?: boolean
+          contact?: string
+          contact_method?: string
+          created_at?: string
+          destination?: string
+          focus?: string
+          full_name?: string
+          id?: string
+          partner?: boolean
+          preferred_date?: string | null
+          preferred_language?: string
+          stage?: string
+        }
+        Relationships: []
+      }
       phuket_consultations: {
         Row: {
           arrival_date: string | null

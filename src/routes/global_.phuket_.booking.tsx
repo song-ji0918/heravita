@@ -16,5 +16,5 @@ export const Route = createFileRoute("/global_/phuket_/booking")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: originalPage(() => import("@/heravita/phuket/BookingPage")),
+  component: originalPage(() => import("@/heravita/journey/PhuketBookingPage")),
 });

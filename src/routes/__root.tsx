@@ -11,7 +11,9 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../original/index.css?url";
+import journeyTokens from "../journey-tokens.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import SiteJourneyBridge from "@/heravita/journey/SiteJourneyBridge";
 
 function NotFoundComponent() {
   return (
@@ -95,6 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "stylesheet", href: journeyTokens },
     ],
   }),
   shellComponent: RootShell,
@@ -122,6 +125,7 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
+      <SiteJourneyBridge />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

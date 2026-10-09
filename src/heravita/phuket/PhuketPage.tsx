@@ -27,12 +27,12 @@ export default function PhuketPage() {
               <em>{c.hero.subtitle}</em>
             </h1>
             <p className="pk-lead" data-reveal>{leadEn}<br />{leadLocal}</p>
-            <ul className="pk-tags" data-reveal>
-              {c.hero.tags.map((t) => <li key={t}>{t}</li>)}
-            </ul>
             <div className="pk-actions" data-reveal>
               <Cta to="/global/phuket/booking">{c.hero.cta}</Cta>
             </div>
+            <ul className="pk-tags" data-reveal>
+              {c.hero.tags.map((t) => <li key={t}>{t}</li>)}
+            </ul>
           </div>
           <span className="pk-scroll" aria-hidden="true">Scroll</span>
         </section>

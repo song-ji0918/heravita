@@ -28,7 +28,6 @@ export default function UsaPage() {
             <p className="usa-eyebrow" data-reveal>{c.hero.eyebrow}</p>
             <h1 className="usa-display" data-reveal><span>{c.hero.title}</span><em>{c.hero.subtitle}</em></h1>
             <p className="usa-lead" data-reveal>{c.hero.lead}</p>
-            <div className="usa-actions" data-reveal><Cta to="/global/usa/network">{c.hero.cta}</Cta></div>
             <ul className="usa-tags" data-reveal>{c.hero.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
           </div>
           <span className="usa-scroll" aria-hidden="true">Scroll</span>
@@ -50,7 +49,6 @@ export default function UsaPage() {
             <span className="usa-rule" data-line />
             <h2 className="usa-title" data-reveal>{c.anchor.title}</h2>
             <p className="usa-body" data-reveal>{c.anchor.body}</p>
-            <div data-reveal><Cta to="/global/usa/consultation" tone="on-light">{c.anchor.cta}</Cta></div>
           </div>
           <div className="usa-split-media"><img data-parallax src={consultation} alt={c.anchor.title} loading="lazy" width={1440} height={1800} /></div>
         </section>
@@ -73,7 +71,7 @@ export default function UsaPage() {
             <h2 className="usa-title usa-title--light" data-reveal>{c.capabilities.title}</h2>
             <p className="usa-body usa-body--light" data-reveal>{c.capabilities.intro}</p>
             <div className="usa-capability-list">
-              {c.capabilities.items.map((item) => <article data-reveal key={item.en}><p>{item.en}</p><h3>{item.title}</h3><span>{item.text}</span></article>)}
+              {c.capabilities.items.map((item) => <article data-reveal key={item.en}><p>{item.en}</p><h3>{item.title}</h3>{item.text && <span>{item.text}</span>}</article>)}
             </div>
           </div>
         </section>
@@ -85,7 +83,6 @@ export default function UsaPage() {
             <span className="usa-rule" data-line />
             <h2 className="usa-title" data-reveal>{c.matching.title}</h2>
             {c.matching.body.map((p) => <p className="usa-body" data-reveal key={p}>{p}</p>)}
-            <div data-reveal><Cta to="/global/usa/consultation" tone="on-light">{c.matching.cta}</Cta></div>
           </div>
         </section>
 
@@ -104,7 +101,7 @@ export default function UsaPage() {
             <p className="usa-eyebrow" data-reveal>{c.closing.eyebrow}</p>
             <h2 className="usa-display usa-display--small" data-reveal><span>{c.closing.title}</span><em>{c.closing.subtitle}</em></h2>
             <p className="usa-body usa-body--light" data-reveal>{c.closing.body}</p>
-            <div className="usa-closing-actions" data-reveal><Cta to="/global/usa/network">{c.closing.networkCta}</Cta><Cta to="/global/usa/consultation">{c.closing.consultCta}</Cta></div>
+            <div className="usa-closing-actions" data-reveal><Cta to="/global/usa/consultation">{c.closing.consultCta}</Cta></div>
           </div>
         </section>
       </main>

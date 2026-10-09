@@ -22,7 +22,7 @@ import { Route as MethodRouteImport } from './routes/method'
 import { Route as OriginRouteImport } from './routes/origin'
 import { Route as StoryRouteImport } from './routes/story'
 import { Route as GlobalPhuketRouteImport } from './routes/global_.phuket'
-import { Route as GlobalPhuketBookingRouteImport } from './routes/global_.phuket.booking'
+import { Route as GlobalPhuketBookingRouteImport } from './routes/global_.phuket_.booking'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -90,9 +90,9 @@ const GlobalPhuketRoute = GlobalPhuketRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const GlobalPhuketBookingRoute = GlobalPhuketBookingRouteImport.update({
-  id: '/booking',
-  path: '/booking',
-  getParentRoute: () => GlobalPhuketRoute,
+  id: '/global_/phuket_/booking',
+  path: '/global/phuket/booking',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
@@ -108,7 +108,7 @@ export interface FileRoutesByFullPath {
   '/method': typeof MethodRoute
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
-  '/global/phuket': typeof GlobalPhuketRouteWithChildren
+  '/global/phuket': typeof GlobalPhuketRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
 }
 export interface FileRoutesByTo {
@@ -124,7 +124,7 @@ export interface FileRoutesByTo {
   '/method': typeof MethodRoute
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
-  '/global/phuket': typeof GlobalPhuketRouteWithChildren
+  '/global/phuket': typeof GlobalPhuketRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
 }
 export interface FileRoutesById {
@@ -141,8 +141,8 @@ export interface FileRoutesById {
   '/method': typeof MethodRoute
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
-  '/global_/phuket': typeof GlobalPhuketRouteWithChildren
-  '/global_/phuket/booking': typeof GlobalPhuketBookingRoute
+  '/global_/phuket': typeof GlobalPhuketRoute
+  '/global_/phuket_/booking': typeof GlobalPhuketBookingRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -192,7 +192,7 @@ export interface FileRouteTypes {
     | '/origin'
     | '/story'
     | '/global_/phuket'
-    | '/global_/phuket/booking'
+    | '/global_/phuket_/booking'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -208,7 +208,8 @@ export interface RootRouteChildren {
   MethodRoute: typeof MethodRoute
   OriginRoute: typeof OriginRoute
   StoryRoute: typeof StoryRoute
-  GlobalPhuketRoute: typeof GlobalPhuketRouteWithChildren
+  GlobalPhuketRoute: typeof GlobalPhuketRoute
+  GlobalPhuketBookingRoute: typeof GlobalPhuketBookingRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -304,27 +305,15 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlobalPhuketRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/global_/phuket/booking': {
-      id: '/global_/phuket/booking'
-      path: '/booking'
+    '/global_/phuket_/booking': {
+      id: '/global_/phuket_/booking'
+      path: '/global/phuket/booking'
       fullPath: '/global/phuket/booking'
       preLoaderRoute: typeof GlobalPhuketBookingRouteImport
-      parentRoute: typeof GlobalPhuketRoute
+      parentRoute: typeof rootRouteImport
     }
   }
 }
-
-interface GlobalPhuketRouteChildren {
-  GlobalPhuketBookingRoute: typeof GlobalPhuketBookingRoute
-}
-
-const GlobalPhuketRouteChildren: GlobalPhuketRouteChildren = {
-  GlobalPhuketBookingRoute: GlobalPhuketBookingRoute,
-}
-
-const GlobalPhuketRouteWithChildren = GlobalPhuketRoute._addFileChildren(
-  GlobalPhuketRouteChildren,
-)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
@@ -339,7 +328,8 @@ const rootRouteChildren: RootRouteChildren = {
   MethodRoute: MethodRoute,
   OriginRoute: OriginRoute,
   StoryRoute: StoryRoute,
-  GlobalPhuketRoute: GlobalPhuketRouteWithChildren,
+  GlobalPhuketRoute: GlobalPhuketRoute,
+  GlobalPhuketBookingRoute: GlobalPhuketBookingRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

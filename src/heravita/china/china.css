@@ -1,5 +1,5 @@
 .cn-motto { margin: 0 0 22px; font-family: var(--pk-cn-serif); font-size: clamp(18px, 1.5vw, 22px); letter-spacing: .14em; line-height: 1.8; color: #e6d4b0; }
-.cn-sanctuary .pk-shade--left { background: linear-gradient(90deg, rgba(18,20,22,.62) 0%, rgba(18,20,22,.18) 50%, transparent 100%); }
+.cn-sanctuary .pk-shade--left { background: linear-gradient(90deg, rgba(18,20,22,.78) 0%, rgba(18,20,22,.5) 38%, rgba(18,20,22,.08) 68%, transparent 100%); }
 
 .cn-pillars { min-height: 100vh; background: #f7f4ee; color: #1f2421; display: grid; grid-template-columns: 5fr 7fr; gap: 6vw; align-items: center; padding: 14vh 7.5% 12vh; box-sizing: border-box; }
 .cn-pillars-head .pk-body { color: #5d615e; max-width: 420px; }

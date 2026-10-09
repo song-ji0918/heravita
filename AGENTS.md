@@ -18,6 +18,7 @@
 - New HeraVita pages live under src/heravita/<page> with flat routes (e.g. global_.phuket.tsx, global_.phuket_.booking.tsx) so the original /global page stays an untouched leaf.
 - Content-rich destinations may use an editorial overview plus focused child pages for networks and consultation, because this preserves full-screen restraint without compressing important content.
 - Journey pages use stage-specific photograph sets and chapter order, while shared method and inclusion details remain compact disclosures rather than repeated narrative screens; this keeps source content complete without repeating the product story.
+- Life Reset uses a standalone Discovery-referenced editorial composition, not the shared JourneyPage renderer, so it can be reviewed and refined independently before redesigning later stages.
 - Original homepage and Discovery wiring is extended by an isolated capture bridge and a Discovery wrapper, so original source remains unmodified.
 - Reservation entry points converge on the standalone Journey application template; legacy reservation URLs render the same template with destination context, preserving existing links.
 - Public journey applications permit insert only and no visitor reads or changes; submitted preferences are private rather than confirmed bookings.

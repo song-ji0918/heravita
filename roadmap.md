@@ -1,5 +1,5 @@
 # HeraVita
-- [ ] Redesign journey page composition from a newly confirmed direction; waiting for the user's scope and reading-layout choice.
+- [ ] Rebuild Life Reset alone as a rich Discovery-style editorial page; retain approved source and unified booking.
 - [ ] Replace repeated journey topic photographs with stage-specific images.
 - [ ] Review image composition and scene similarity, not only duplicate filenames.
 - [ ] Remove repeated full-screen explanations; connect distinct product chapters and retain complete inclusions.

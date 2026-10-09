@@ -4,7 +4,7 @@ import { originalPage } from "@/original-page";
 const title = "预约到访 · 普吉岛基地 | HERAVITA";
 const description = "联络 HeraVita 专属生命管家，预约普吉岛基地到访：选择生命阶段、到访时间与同行安排。";
 
-export const Route = createFileRoute("/global_/phuket/booking")({
+export const Route = createFileRoute("/global_/phuket_/booking")({
   ssr: false,
   head: () => ({
     meta: [

@@ -59,7 +59,7 @@ export default function UsaPage() {
           <div className="usa-network-copy">
             <p className="usa-eyebrow" data-reveal>{c.network.eyebrow}</p>
             <h2 className="usa-title usa-title--light" data-reveal>{c.network.title}</h2>
-            <ul className="usa-region-strip" data-reveal>{c.network.regions.map((region) => <li key={region.name}><span>{region.name}</span><small>{region.role}</small></li>)}</ul>
+            <ul className="usa-region-strip" data-reveal>{c.network.regions.map((region) => <li key={region.name}><span>{region.name}</span></li>)}</ul>
           </div>
         </section>
 

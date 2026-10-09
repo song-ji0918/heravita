@@ -118,7 +118,7 @@ const HomeNarrative = () => {
         </p>
         <div className='hn-destination-links'>
           {destinations.map((item) => (
-            <button type='button' className='hn-clp-button hn-button-on-dark hn-destination-button' key={item.english}>
+            <button type='button' onClick={item.english === "THAILAND" ? () => navigate("/global/phuket") : undefined} className='hn-clp-button hn-button-on-dark hn-destination-button' key={item.english}>
               <span className='hn-clp-button__label hn-clp-button__label--stack'>
                 <span>{item.label}</span>
               </span>

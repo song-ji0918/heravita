@@ -1,0 +1,10 @@
+import reset from "@/assets/journey-reset.jpg";
+import rebuild from "@/assets/journey-rebuild.jpg";
+import flourish from "@/assets/journey-flourish.jpg";
+import medicine from "@/assets/journey-medicine.jpg";
+import connection from "@/assets/journey-connection.jpg";
+import breath from "@/assets/journey-breath.jpg";
+import kitchen from "@/assets/journey-kitchen.jpg";
+import care from "@/assets/journey-care.jpg";
+import spa from "@/assets/journey-spa.jpg";
+export const media = { reset, rebuild, flourish, medicine, connection, breath, kitchen, care, spa };

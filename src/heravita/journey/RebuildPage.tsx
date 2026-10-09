@@ -1,2 +1,2 @@
-import JourneyPage from "./JourneyPage";
-export default function RebuildPage(){return <JourneyPage stage="rebuild"/>;}
+import StageEditorialPage from "./StageEditorialPage";
+export default function RebuildPage(){return <StageEditorialPage stage="rebuild"/>;}

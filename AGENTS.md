@@ -9,11 +9,9 @@
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
 
-
-## Application architecture
-- Use TanStack file-based public leaf routes for brand, destinations, and journey content, with Outlet-only parent routes; this keeps direct links and page-specific metadata reliable.
-- Shared HeraVita presentation modules live under components/heravita, with semantic global CSS tokens; this keeps the brand consistent across pages.
-- Journey specifications live in one browser-safe data module and drive cards, details and rule tests; this prevents contradictory durations.
-- Concierge requests use a shared Zod schema and a public insert-only createServerFn with a handler-local privileged client; this stores private leads without exposing visitor reads or server secrets.
-- Destination identity and editorial copy use one browser-safe catalog with explicit public leaf routes; this keeps home cards, overview and regional pages aligned.
-- Concierge destination and allowed purpose are validated together and stored in the existing private lead table; this preserves older requests while routing new inquiries accurately.
+# Architecture rules
+- The user's original site lives unmodified under src/original; iterate by adding, not rewriting, because the user requires their existing code to stay the base.
+- `react-router-dom` is aliased to src/router-compat.tsx (vite.config.ts) so original imports run on TanStack Router without editing them.
+- Each original page has a thin TanStack route (ssr: false via src/original-page.tsx) because the original i18n reads localStorage at load.
+- Files over 10 MB (video, fonts) are hosted via lovable-assets and referenced by URL, because the repo rejects large files.
+- The original App.tsx, main.tsx, tests and docs are kept for reference in original-source/.

@@ -1,0 +1,859 @@
+{
+  "header": {
+    "menu": "Menú",
+    "login": "Iniciar sesión",
+    "language": "Idioma",
+    "contact": "Contacto"
+  },
+  "nav": {
+    "home": "Inicio",
+    "journey": "Tu viaje",
+    "founder": "Nuestra filosofía de marca",
+    "lifeCivilization": "Nuestro método",
+    "globalNetwork": "Presencia global",
+    "medicalLifestyle": "Confianza y pruebas",
+    "origin": "Origen de la civilización de la vida",
+    "contact": "Acción y colaboración"
+  },
+  "banner": {
+    "label": "HERAVITA · Ecosistema global de reconstrucción de la vida",
+    "title": "Deja que la vida recupere su orden y vuelva a florecer.",
+    "titleLine1": "Deja que la vida recupere su orden",
+    "titleLine2": "y vuelva a florecer.",
+    "subtitle": "Deja que la vida recupere su orden y vuelva a florecer.",
+    "desc": "Entre la medicina y la naturaleza, vuelve a escuchar tu cuerpo.",
+    "cta": "Comienza tu descubrimiento",
+    "playFullVideo": "Reproducir el vídeo completo",
+    "pauseVideo": "Pausar vídeo",
+    "closeVideo": "Cerrar vídeo",
+    "playMusic": "Reproducir música",
+    "pauseMusic": "Pausar música"
+  },
+  "section1": {
+    "title": "La salud es un derecho innato de cada persona",
+    "desc": "La salud no debería ser un privilegio de unos pocos, ni solo un remedio después de la enfermedad. Cada vida merece vivir, crecer y envejecer con salud.",
+    "learnMore": "Saber más...",
+    "leftAlt": "Finca HERAVITA",
+    "rightAlt": "Espacio de vida con vista al mar"
+  },
+  "section2": {
+    "titleLine1": "El próximo avance de la civilización",
+    "titleLine2": "debería ser una civilización de la salud",
+    "desc": "Vivimos una era sin precedentes: nunca habíamos tenido medicina, tecnología e información de salud tan avanzadas.<br/>Sin embargo, cada vez más personas siguen afectadas por enfermedades crónicas, estrés, ansiedad, problemas de sueño y un estilo de vida desequilibrado.<br/>Quizá lo que realmente falta no es más tratamiento.<br/>Sino una nueva visión de la salud, una nueva forma de vivir y una nueva civilización: la civilización de la salud.",
+    "learnMore": "Saber más..."
+  },
+  "section3": {
+    "title": "¿Qué es la verdadera salud?",
+    "desc": "La verdadera salud no es solo la ausencia de enfermedad.<br/> La verdadera salud es el florecimiento conjunto del cuerpo, la mente, las emociones, las relaciones y la vida.",
+    "learnMore": "Saber más...",
+    "items": {
+      "physical": {
+        "title": "Cuerpo (Physical Health)",
+        "desc": "Un cuerpo sano y lleno de vitalidad"
+      },
+      "mental": {
+        "title": "Mente (Mental Health)",
+        "desc": "Un estado interior estable, positivo y resiliente"
+      },
+      "emotional": {
+        "title": "Emociones (Emotional Health)",
+        "desc": "Percibir, comprender y regular las propias emociones"
+      },
+      "relational": {
+        "title": "Relaciones (Relationship Health)",
+        "desc": "Vínculos de apoyo, confianza y crecimiento mutuo"
+      },
+      "life": {
+        "title": "Vida (Life Growth)",
+        "desc": "Crecer de forma continua y crear valor y sentido"
+      }
+    }
+  },
+  "section4": {
+    "title": "¿Cómo le ayuda HERAVITA?",
+    "learnMore": "Saber más...",
+    "items": {
+      "environment": {
+        "title": "Entorno · Sanación natural",
+        "desc": "Clima tropical, iones negativos del mar, la calma de la cultura budista y la profundidad de los castillos históricos. Coloque el cuerpo en un entorno cuidadosamente diseñado y deje que empiece a recuperarse."
+      },
+      "medicine": {
+        "title": "Medicina · Autoridad médica",
+        "desc": "Colaboramos con las instituciones médicas más prestigiosas del mundo para reparar las células con medicina de precisión. Cada prueba y cada intervención cuenta con respaldo institucional."
+      },
+      "spirit": {
+        "title": "Espíritu · Limpieza emocional",
+        "desc": "Meditación, equilibrio de chakras, acompañamiento emocional… cada etapa de restauración cuerpo-mente tiene su plan emocional."
+      },
+      "food": {
+        "title": "Nutrición · Nutrición precisa",
+        "desc": "Un plan de nutrientes personalizado según genes, hormonas, micronutrientes y microbiota intestinal, formulado por el centro de longevidad del Hospital Bumrungrad, con precisión semanal."
+      },
+      "energy": {
+        "title": "Cuatro fuerzas · Vitalidad",
+        "desc": "No se trata de sentirse un poco mejor. Es el día en que descubre que a las tres de la tarde ya no necesita un tercer café."
+      },
+      "happiness": {
+        "title": "Cuatro fuerzas · Felicidad",
+        "desc": "No es que su pareja se vuelva de pronto más romántica. Es que el tono con su familia cambia: empieza a tener paciencia."
+      },
+      "influence": {
+        "title": "Cuatro fuerzas · Influencia",
+        "desc": "No se trata de más seguidores. Es que al reencontrarse, la primera frase de los amigos pasa a ser: ¿qué has hecho últimamente? Estás distinto."
+      },
+      "creativity": {
+        "title": "Cuatro fuerzas · Creatividad",
+        "desc": "No es que de pronto tenga ideas nuevas. Es que se atreve a imaginar. Quien no se atreve a imaginar no puede tomar ninguna decisión nueva."
+      },
+      "spirituality": {
+        "title": "Cuatro fuerzas · Presencia",
+        "desc": "Es prepararse una taza de té, sentarse y no necesitar el teléfono. Esa quietud."
+      },
+      "aristocracy": {
+        "title": "Cuatro aires · Elegancia",
+        "desc": "No se trata de más seguidores. Es que al reencontrarse, la primera frase de los amigos pasa a ser: ¿qué has hecho últimamente? Estás distinto."
+      },
+      "courage": {
+        "title": "Cuatro aires · Valor",
+        "desc": "Es tomar una decisión que antes no se atrevía a tomar. No por impulso, sino con serenidad."
+      },
+      "joy": {
+        "title": "Cuatro aires · Alegría",
+        "desc": "Es empezar a sonreír. Sin motivo. No por una buena noticia, sino porque ha vuelto a vivir."
+      }
+    }
+  },
+  "section5": {
+    "title": "Discovery Journey",
+    "desc": "Cada cambio<br/>empieza por conocerse de verdad.<br/>Journey es el primer paso hacia HERAVITA.<br/>Con evaluación científica, recursos médicos globales, un estilo de vida saludable, crecimiento vital y acompañamiento a largo plazo,<br/>ayudamos a cada persona a reconstruir su propia salud.",
+    "cta": "Explorar el viaje",
+    "slides": {
+      "airport-pickup": {
+        "title": "Traslado al aterrizar, alguien le espera",
+        "desc": "Su conductor exclusivo le esperará en la sala de llegadas 30 minutos antes del aterrizaje, con un cartel. Antes de salir, le enviaremos foto, nombre y matrícula: verifique los datos antes de subir. El vehículo es un Toyota Alphard, amplio, con espacio reservado para el equipaje. Si el vuelo se retrasa, seguiremos la información en tiempo real y ajustaremos el horario."
+      },
+      "welcome": {
+        "title": "Welcome Home · Bienvenida como en casa",
+        "desc": "Ceremonia de bienvenida exclusiva · Recibimiento cálido · Bebida de bienvenida del día · Fruta tropical recién cortada · Puede indicar restricciones alimentarias · También si llega de madrugada"
+      },
+      "check-in": {
+        "title": "Villa de sanación · Su espacio privado de descanso",
+        "desc": "A su llegada, la villa ya estará ventilada y profundamente limpia: ropa de cama desinfectada a alta temperatura, vajilla tratada una a una. Jardín independiente, sin extraños, cerradura propia y seguridad 24 horas. Dormir en paz no debe ser una preocupación. El servicio de concierge está disponible sin interrumpir."
+      },
+      "spa": {
+        "title": "Healing SPA · Terapia profesional, relax seguro",
+        "desc": "Terapeutas acreditados; sábanas y toallas nuevas para usted. La sala es solo suya; fuera, el silencio del mar. Un gesto basta para ajustar la presión. Puede indicar el género del terapeuta. Aquí, usted decide."
+      },
+      "kitchen": {
+        "title": "Longevity Lunch · Cocina compartida",
+        "desc": "No hace falta experiencia: el chef le guiará paso a paso, del prep al emplatado. El fuego y el sazón están cubiertos; usted solo disfruta de cocinar."
+      },
+      "health-assessment": {
+        "title": "Life Assessment · Conocerle para cuidarle mejor",
+        "desc": "Tras llegar, su asesor de salud dedicará unos 30 minutos a una «línea base» del viaje. Lectura privada, uno a uno; los resultados sirven solo para personalizar comidas y actividades. Solo usted ve los datos."
+      },
+      "afternoon-tea": {
+        "title": "Meet Hera · Té, historia y una postal exclusiva",
+        "desc": "A la hora del té, la fundadora de HERAVITA le espera en el salón del jardín. Hablará de por qué eligió esta tierra y de dónde nace la visión de HERAVITA. Antes de confiar cuerpo y mente a un lugar, conozca a quien lo cuida. Y aquí le pedimos una cosa: enviar esa calma a casa."
+      },
+      "float-therapy": {
+        "title": "Floating Healing · El agua le sostiene, nosotros le cuidamos",
+        "desc": "Una esterilla suave le sostiene con firmeza sobre el agua. El sol entre las pestañas, la brisa en el oído, el agua que se mece: como la cuna de la infancia. Alguien vela junto a la piscina. El mundo se reduce al cielo, al agua y a un cuerpo que se aligera."
+      },
+      "sunset": {
+        "title": "Sunset Pool Gathering · El momento más suave del día, para usted",
+        "desc": "Al atardecer, la piscina cambia: luces y velas, música suave, una bebida fría y pequeños bocados. Puede brindar con un compañero de viaje o no hablar con nadie y entregarse a una tumbona. Aquí, la compañía y la soledad no necesitan justificación."
+      },
+      "party": {
+        "title": "Welcome Dinner · La primera cena que le da la bienvenida",
+        "desc": "Mesa larga a la luz de las velas en el jardín, vestimenta de resort. El menú está pensado para el cuerpo después de volar: suave, poco grasa, fácil de digerir, con sabores locales de temporada y platos internacionales familiares."
+      },
+      "evening-meditation": {
+        "title": "Evening Meditation · Meditación antes de dormir",
+        "desc": "No hace falta experiencia. La guía es suave y lenta, solo respiración y relajación."
+      }
+    }
+  },
+  "section6": {
+    "title": "Origin",
+    "desc": "Ser Origin, cocreador de la civilización de la salud,<br/> no es ser un socio cualquiera, ni un agente, ni un vendedor.<br/> Representa una responsabilidad, un compromiso a largo plazo y la misión de impulsar juntos esta civilización.<br/> Porque el verdadero cambio nunca lo completa una sola persona. Lo crea un grupo con la misma convicción.",
+    "cta": "Conocer Origin",
+    "identity": {
+      "label": "Identidad",
+      "title": "Cocreador",
+      "desc": "Ser Origin significa ir más allá de participar: ser creador junto a otros.<br/>Es creer en una visión de salud, vida y futuro. Es el compromiso de construir juntos algo con sentido."
+    },
+    "mission": {
+      "label": "Misión",
+      "title": "Construir una civilización de la salud",
+      "desc": "Un cambio con sentido nunca lo logra una sola persona. Una nueva civilización de la salud tampoco puede nacer de un solo fundador.<br/>Cada Origin forma parte de este viaje. No esperamos el futuro: lo creamos juntos."
+    }
+  },
+  "section7": {
+    "title": "Hoy tenemos la tecnología para cambiar el mundo.<br/><strong>Lo siguiente es una civilización que transforme la vida.</strong>",
+    "subtitle": "HERAVITA Global Health Civilization Platform"
+  },
+  "footer": {
+    "ariaLabel": "Navegación del pie de página",
+    "brand": "HERAVITA",
+    "pillars": "Ciencia · Naturaleza · Sabiduría · Cuidado",
+    "slogan": "Que la vida recupere su ritmo original",
+    "email": "concierge@heravita.com",
+    "socialChannels": "Redes sociales",
+    "copyright": "© 2026 HERAVITA. Todos los derechos reservados",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de uso"
+  },
+  "journeyPage": {
+    "section1": {
+      "eyebrow": "Journey · Viaje de descubrimiento de la vida",
+      "title": "No es dejar la vida un tiempo, es volver a entrar en ella",
+      "subtitle": "A Journey to Rediscover Life",
+      "desc": "Salir un momento del ritmo conocido para comprender de nuevo el cuerpo, sentir la vida<br/>y pensar cómo quiere vivir a partir de ahora."
+    },
+    "section2": {
+      "eyebrow": "BEYOND TRAVEL • BEYOND CHECKUP",
+      "title": "Algunos viajes le muestran el mundo<br/>Este le ayuda a verse de nuevo",
+      "rows": [
+        { "label": "Más que turismo", "value": "No es una fuga breve de lo cotidiano" },
+        { "label": "Más que un chequeo", "value": "No se trata solo de un informe" },
+        { "label": "Journey", "value": "Para que el cambio entre de verdad en la vida" }
+      ],
+      "desc": "De sentir y comprender a empezar a cambiar",
+      "nexttitle": "WHY PHUKET?"
+    },
+    "section3": {
+      "eyebrow": "PHUKET",
+      "title": "¿Por qué Phuket?",
+      "desc": "Porque el entorno también sana. Sol, brisa marina, plantas tropicales y un ritmo que por fin se ralentiza. El cuerpo se suelta de una tensión prolongada.",
+      "subdesc": "Aquí, naturaleza, medicina, alimentación, sueño y cuidado emocional dejan de ir por separado y se vuelven una misma experiencia de vida.",
+      "features": [
+        "Entorno Environment",
+        "Medicina Medicine",
+        "Cultura Culture",
+        "Ritmo Rhythm"
+      ],
+      "minidesc": "Algunos cambios piden salir de la escala conocida"
+    },
+    "section4": {
+      "eyebrow": "BEYOND TRAVEL BEYOND CHECKUP",
+      "title": "No es un viaje más refinado<br/>ni un chequeo en el extranjero",
+      "items": [
+        "Ojos · Ver",
+        "Lengua · Saborear",
+        "Oídos · Escuchar",
+        "Cuerpo · Relajarse",
+        "Nariz · Oler",
+        "Mente · Conectar"
+      ],
+      "desc": "Observamos juntos cuerpo, sueño, alimentación, estrés y emoción, para entender qué vida ha llevado al cuerpo hasta el estado de hoy",
+      "subdesc": "A partir de ahora, ¿cómo quiere vivir?"
+    },
+    "section5": {
+      "eyebrow": "THE JOURNEY EXPERIENCE",
+      "title": "El cambio no se le dice<br/>tiene que vivirlo el cuerpo",
+      "items": [
+        "Reducir la velocidad · Dar seguridad al cuerpo",
+        "Verse · Comprender cuerpo y vida",
+        "Probar nuevas formas · Movimiento, nutrición y recuperación",
+        "Escuchar dentro · Emoción, relaciones y exploración vital"
+      ],
+      "desc": "De cómo empieza el día a cómo se prepara una comida, el cambio ocurre en cada detalle real"
+    },
+    "section6": {
+      "eyebrow": "FROM DISCOVERY TO REDESIGN",
+      "title": "De ver el cuerpo<br/>a rediseñar la vida",
+      "desc": "No diseñamos una vida perfecta por usted. Encontramos juntos una vida que le encaje.",
+      "caption": "Evening Meditation · Recalibrar cuerpo y mente en la naturaleza",
+      "slides": {
+        "slide1": {
+          "title": "Discover Descubrir",
+          "desc": "Ver lo que realmente influye en el estado de la vida"
+        },
+        "slide2": {
+          "title": "Experience Vivir",
+          "desc": "Observar cómo responde el cuerpo a distintas elecciones"
+        },
+        "slide3": {
+          "title": "Redesign Reconfigurar",
+          "desc": "Convertir lo que funciona en una vida que se pueda sostener"
+        }
+      }
+    },
+    "section7": {
+      "eyebrow": "CONTINUE YOUR JOURNEY",
+      "title": "El viaje termina<br/>el cambio sigue en la vida cotidiana",
+      "subtitle": "Lo que se lleva no es solo un informe. Es comprensión del cuerpo y un modo de vivir que se puede seguir practicando.",
+      "desc": "Comprenderse · Alimentación y movimiento · Sueño y recuperación · Cuidado emocional · Revisión a largo plazo",
+      "caption1": "Journey Never Ends",
+      "caption2": "El verdadero viaje empieza al volver a vivir",
+      "buttonText": "Reservar una conversación serena"
+    }
+  },
+  "founderStory": {
+    "hero": {
+      "eyebrow": "Origen de la marca",
+      "title": "HERAVITA no nació de un negocio, sino de preguntas sobre la vida y de un compromiso a largo plazo con las familias de todo el mundo.",
+      "signature": "De una pregunta sobre la vida a una práctica duradera para familias de todo el mundo",
+      "imageAlt": "Un espacio sereno junto al mar"
+    },
+    "origin": {
+      "eyebrow": "De la experiencia familiar a la práctica duradera",
+      "title": "La salud y la longevidad comenzaron con una pregunta",
+      "p1": "El camino hacia la salud no comenzó con una oportunidad de negocio, sino con las preguntas constantes de una familia sobre la vida y el bienestar.",
+      "p2": "De allí surgió una pregunta más profunda: ¿por qué pueden persistir desafíos de salud complejos aun cuando la gestión de la salud ha estado presente durante mucho tiempo?",
+      "p3": "La verdadera gestión de la salud debe entrar antes en la alimentación, el sueño, el movimiento, las emociones, el estrés, las relaciones, el entorno y el estado vital a largo plazo.",
+      "imageAlt": "Un momento sereno de práctica de cuerpo y mente"
+    },
+    "practice": {
+      "eyebrow": "La gestión de la vida comienza en lo cotidiano",
+      "title": "Del cambio de una familia a una civilización de salud para más familias",
+      "p1": "Antes de llegar a más familias, esta filosofía de gestión de la vida se practicó durante años en el ritmo cotidiano del hogar.",
+      "p2": "El trabajo comenzó por lo más cotidiano: alimentación, rutina, movimiento, gestión emocional y del estrés, evaluación periódica, apoyo profesional y hábitos más estables y duraderos.",
+      "quote": "La salud no es algo que se completa en un hospital en un solo día. Es una forma de vivir que una familia crea junta cada día.",
+      "imageAlt": "Una escena tranquila de práctica cotidiana de bienestar"
+    },
+    "accumulation": {
+      "eyebrow": "La doble acumulación distintiva de HERAVITA",
+      "title": "De la acumulación a largo plazo a una plataforma global de salud y vida.",
+      "industryTitle": "2006–2022 | 16 años en el sector de la salud de China",
+      "industry": "Desde 2006, el trabajo sostenido en belleza, salud y atención a clientes de alto patrimonio en China ha desarrollado capacidades duraderas en programas de salud, sistemas de mercado, relaciones con clientes y liderazgo de equipos.",
+      "lifeTitle": "Más de una década de crecimiento interior | Una segunda ruta a largo plazo",
+      "life": "En paralelo, el crecimiento interior, el cuidado emocional, la mejora de las relaciones y la gestión del estado vital se han estudiado y practicado durante más de una década.",
+      "quote": "Los negocios y la gestión de clientes de alto patrimonio, junto con el crecimiento interior y la práctica de vida, forman dos caminos desarrollados en paralelo."
+    },
+    "timeline": {
+      "eyebrow": "Cronología de la evolución global de HERAVITA",
+      "title": "Desde el propósito inicial, por la vida, hacia el mundo",
+      "items": {
+        "foundation": "2006–2022  Dieciséis años de práctica en el sector de la salud de China",
+        "europe": "2023  Estudios en Europa | Toma forma la marca HERAVITA",
+        "upgrade": "Agosto–octubre de 2024 | Estudios en Estados Unidos y una segunda evolución",
+        "global": "2025  Salida al mundo | Construcción de un mapa internacional de salud y longevidad",
+        "service": "2026  Servicio sistemático para miembros globales de alto valor | El ecosistema global de reconstrucción de la vida toma forma gradualmente"
+      }
+    },
+    "today": {
+      "eyebrow": "¿Qué es HERAVITA hoy?",
+      "title": "Ecosistema global de reconstrucción de la vida",
+      "p1": "HERAVITA ya no es solo una plataforma médica internacional ni una marca de salud. Está integrando casi 20 años de capacidad empresarial, gestión de clientes de alto patrimonio, crecimiento interior, recursos médicos globales, salud, longevidad y estilos de vida internacionales.",
+      "visionLabel": "Visión",
+      "vision": "Convertirse en una plataforma global líder para la reconstrucción de la vida y los estilos de vida de longevidad.",
+      "imageAlt": "Un espacio de vida junto al mar"
+    },
+    "close": {
+      "quote": "HERAVITA no creció desde un negocio, sino desde el respeto por la vida, la responsabilidad por la salud de las familias y la exploración a largo plazo de una vida más plena y duradera.",
+      "cta": "Explorar el viaje de descubrimiento"
+    }
+  },
+  "founderPage": {
+    "section1": {
+      "eyebrow": "Founder · Fundadora y marca",
+      "title": "Por qué fundamos HERAVITA",
+      "subtitle": "La verdadera salud debería ocurrir cada día de la vida",
+      "desc": "Si el ser humano puede vivir cien años,<br/>¿hemos aprendido a vivir de verdad con salud?"
+    },
+    "section3": {
+      "eyebrow": "BRAND STORY",
+      "title": "Historia de la marca",
+      "question": "La medicina avanza. ¿Por qué seguimos sintiéndonos mal?",
+      "p1": "Tenemos una medicina más avanzada, y aun así nos agobian el estrés, el sueño y un estilo de vida desequilibrado.",
+      "p2": "Quizá no nos falte más tratamiento, sino una nueva forma de entender la salud."
+    },
+    "section4": {
+      "eyebrow": "FOUNDER'S WHY",
+      "title": "Lo que de verdad determina la salud de una persona<br/>suele ocurrir fuera del hospital",
+      "p1": "He recorrido muchos países y distintos sistemas sanitarios. Poco a poco vi que la salud también vive en el estilo de vida, las emociones, las relaciones, la familia y las decisiones de cada día.",
+      "p2": "Fundé HERAVITA no para crear otra institución médica, sino para conectar el mundo y acompañar a más familias a reconstruir su salud."
+    },
+    "section5": {
+      "divider": "BRAND VISION",
+      "eyebrow": "BRAND VISION",
+      "title": "Que la civilización de la salud sea<br/>una parte esencial del próximo capítulo humano",
+      "p1": "Creemos que el progreso de una sociedad no se mide solo por la tecnología y el crecimiento económico, sino por la salud de las personas, la felicidad familiar y la calidad de vida.",
+      "p2": "HERAVITA quiere impulsar esta civilización con socios de todo el mundo, para que más personas vivan con más salud, felicidad y sentido.",
+      "cards": {
+        "personal": {
+          "title": "Primera capa: ayudar a la persona",
+          "desc": "Ayudar a cada uno a reconstruir su salud. Eso es Journey, eso es medicina, eso es estilo de vida."
+        },
+        "family": {
+          "title": "Segunda capa: ayudar a la familia",
+          "desc": "Lo que influye en la salud no es solo el cuerpo. También los vínculos familiares, la intimidad, la crianza, el estilo de vida y el entorno emocional. No servimos a un cliente, sino a una familia. El hospital trata pacientes. HERAVITA acompaña familias."
+        },
+        "civilization": {
+          "title": "Tercera capa: impulsar una civilización",
+          "desc": "Queremos que la salud se convierta en una nueva civilización. No un producto, no un curso, no una técnica médica. Un consenso social. Que la salud sea una elección compartida."
+        }
+      }
+    },
+    "section6": {
+      "eyebrow": "BRAND MISSION",
+      "title": "Impulsar la civilización de la salud",
+      "subtitle": "Convertir recursos de salud de clase mundial en capacidades que las familias puedan conservar.",
+      "desc": "Al conectar recursos médicos globales, estilos de vida saludables, crecimiento vital y gestión a largo plazo, ayudamos a más familias a reconstruir la salud y a crear juntas un futuro más sano y feliz."
+    },
+    "section7": {
+      "eyebrow": "GLOBAL STRATEGY",
+      "title": "Arraigados en Asia, conectados al mundo",
+      "p1": "HERAVITA está construyendo una red global de civilización de la salud: instituciones médicas de excelencia, recursos de estilo de vida, crecimiento vital y gestión de la salud.",
+      "p2": "Una red global de civilización de la salud orientada a las familias.",
+      "p3": "HERAVITA no es un centro de bienestar en una ciudad: es una marca para el mundo.",
+      "cta": "Conocer la presencia global de HERAVITA"
+    },
+    "section8": {
+      "eyebrow": "OUR TEAM",
+      "title": "No un solo experto, sino un equipo que le comprende en conjunto",
+      "desc": "Del diseño del viaje y la guía cuerpo-mente a cada detalle del espacio y la vida cotidiana,<br/>varios roles colaboran para que el cambio ocurra de verdad.",
+      "members": {
+        "creator": {
+          "title": "JOURNEYHOST · Acompañante del viaje",
+          "desc": "Le acompaña en meditación, claridad mental, regulación emocional y exploración vital"
+        },
+        "guide": {
+          "title": "LIFE CONCIERGE · Concierge de vida",
+          "desc": "Traslados, logística y necesidades cotidianas, para que disfrute Journey con tranquilidad"
+        },
+        "curator": {
+          "title": "Space Curator · Curador del espacio",
+          "desc": "Hacer del entorno un recipiente para la sanación y el diálogo."
+        },
+        "designer": {
+          "title": "WELLBEING GUIDE · Guía cuerpo-mente",
+          "desc": "Le acompaña en meditación, claridad mental, regulación emocional y exploración vital"
+        },
+        "companion": {
+          "title": "HOME CARE · Ama de llaves",
+          "desc": "Habitación, ambiente, aroma y detalles, para que cada día tenga la calidez de volver a casa"
+        }
+      }
+    },
+    "section9": {
+      "eyebrow": "THE FUTURE OF HERAVITA",
+      "title": "Tres identidades del futuro de HERAVITA",
+      "subtitle": "De servir a una persona, a servir a una familia, a impulsar una civilización de la salud compartida.",
+      "roles": {
+        "platform": {
+          "title": "Healthy Practice Platform · Plataforma de práctica de la civilización de la salud",
+          "desc": "Llevar la civilización de la salud a la vida real: de la experiencia al cambio y a un modo de vivir que se sostiene."
+        },
+        "research": {
+          "title": "Healthy Research Institution · Institución de investigación",
+          "desc": "Construir pensamiento y método de forma continua, publicando el Libro Blanco de la Civilización de la Salud, el Índice de Civilización de la Salud, el Índice de Salud Familiar y más."
+        },
+        "disseminator": {
+          "title": "Healthy Civilization Disseminator · Difusor de la civilización de la salud",
+          "desc": "Foros, cumbres, documentales, cursos y publicaciones que influyen en cómo la sociedad entiende la salud."
+        }
+      }
+    }
+  },
+  "lifePage": {
+    "section1": {
+      "eyebrow": "Life Civilization · Reconstrucción de la vida",
+      "title": "Redefinir la salud, comprender de nuevo la vida",
+      "desc": "La salud no es la desaparición de la enfermedad, sino que la vida recupere equilibrio, fuerza y posibilidad."
+    },
+    "section3": {
+      "title": "Una vida más larga no significa una vida mejor",
+      "desc": "Mientras la tecnología amplía los límites de la vida, necesitamos aún más reentender qué es la verdadera salud.",
+      "p2": "La salud no es la desaparición de la enfermedad, sino que la vida recupere equilibrio, fuerza y posibilidad.",
+      "states": {
+        "fatigue": "Fatiga",
+        "insomnia": "Insomnio",
+        "anxiety": "Ansiedad"
+      }
+    },
+    "section4": {
+      "eyebrow": "FROM TREATMENT TO HEALTH",
+      "title": "La verdadera salud no es un solo tratamiento",
+      "p1": "La salud que entiende HERAVITA es el buen estado de una persona como vida completa.",
+      "p2": "La medicina atiende la enfermedad y los síntomas. HERAVITA se ocupa de cómo se reconstruye la salud.",
+      "p3": "La medicina ayuda a tratar la enfermedad. La civilización de la vida ayuda a recrear la salud."
+    },
+    "section5": {
+      "eyebrow": "LIFE RECONSTRUCTION",
+      "title": "Reconstruir la vida no es reparar un problema,<br/>es reconstruir un sistema de vida",
+      "desc": "Cada dimensión influye en las demás. La reconstrucción es un cambio coordinado.",
+      "nodes": {
+        "body": "Cuerpo",
+        "emotion": "Emoción",
+        "sleep": "Sueño",
+        "diet": "Alimentación",
+        "movement": "Movimiento",
+        "family": "Familia",
+        "lifestyle": "Estilo de vida",
+        "care": "Acompañamiento"
+      }
+    },
+    "section6": {
+      "eyebrow": "THE HERAVITA WAY",
+      "title": "HERAVITA ofrece un sistema completo de reconstrucción de la vida",
+      "desc": "HERAVITA no ofrece un tratamiento aislado, sino un sistema que recorre evaluación, experiencia, ajuste y gestión a largo plazo. Intervenimos juntos en cuerpo, emoción, sueño, alimentación, movimiento, familia y estilo de vida, y acompañamos para que el cambio vuelva a cada día.",
+      "items": {
+        "body": {
+          "title": "THE BODY AS A BEGINNING · Primero escuchar el cuerpo",
+          "desc": "Con evaluación, pruebas, consulta experta y un plan de restauración personalizado, le ayudamos a entender las señales del cuerpo y qué ajustar primero. Reconstruir la vida empieza por leer esas señales."
+        },
+        "emotion": {
+          "title": "EMOTION · Emoción",
+          "desc": "Con evaluación emocional, meditación, acompañamiento y exploración vital uno a uno, le ayudamos a salir de la tensión constante y a reconectar emoción y cuerpo."
+        },
+        "sleep": {
+          "title": "SLEEP · Sueño",
+          "desc": "Desde el entorno de sueño, los hábitos matutinos y los datos de recuperación, construimos un sistema alineado con su ritmo circadiano, observando el sueño profundo y la HRV."
+        },
+        "diet": {
+          "title": "DIET · Alimentación",
+          "desc": "Convertimos los resultados en un plan que se puede seguir, ajustando lo que entra en el cuerpo cada día según metabolismo, nutrición, tolerancia y preferencia."
+        },
+        "movement": {
+          "title": "MOVEMENT · Movimiento",
+          "desc": "Primero evaluamos movilidad y desequilibrios musculares; luego restauramos la función con estiramiento, marcha, activación del core y entrenamiento personalizado, no persiguiendo la intensidad."
+        },
+        "family": {
+          "title": "FAMILY · Familia",
+          "desc": "HERAVITA mira más allá de un resultado individual: si el cambio puede volver a casa. Con historial familiar, cuidado familiar y apoyo a largo plazo, el cambio personal se vuelve un modo de vivir compartido."
+        },
+        "lifestyle": {
+          "title": "LIFESTYLE · Estilo de vida",
+          "desc": "La indicación médica se vuelve un cotidiano que se puede vivir: cómo comer, dormir, moverse, descansar y reordenar el ritmo de la vida."
+        },
+        "care": {
+          "title": "LONG-TERM CARE · Acompañamiento",
+          "desc": "Con su permiso, HERAVITA sigue los datos clave, revisa los cambios y ajusta el plan, para que la gestión de la salud entre de verdad en la vida cotidiana."
+        }
+      }
+    },
+    "section7": {
+      "eyebrow": "LIFE, CONTINUED",
+      "title": "Cuando la salud es un modo de vivir y una cultura familiar,<br/>la civilización de la vida empieza hoy",
+      "desc": "La salud no es una etapa breve. Es una capacidad que puede durar toda la vida."
+    }
+  },
+  "medicalPage": {
+    "section1": {
+      "eyebrow": "Medical & Lifestyle · Medicina y estilo de vida de longevidad",
+      "title": "Conectar medicina de clase mundial con un estilo de vida de longevidad que dure toda la vida",
+      "desc": "La medicina custodia el límite de la vida. El estilo de vida decide cómo se vive cada día."
+    },
+    "section3": {
+      "eyebrow": "GLOBAL MEDICAL SUPPORT",
+      "title": "Conectar los recursos médicos más avanzados del mundo",
+      "p1": "HERAVITA colabora con instituciones médicas de prestigio mundial para ofrecer a las familias pruebas precisas, consulta experta y gestión de la salud a largo plazo.",
+      "p2": "De Norteamérica a Europa, de Japón a Tailandia, la medicina deja de estar aislada y se vuelve un mismo sistema de apoyo a la vida.",
+      "imageAlt": "Hospital Internacional Bumrungrad"
+    },
+    "section4": {
+      "eyebrow": "GLOBAL MEDICAL SUPPORT",
+      "title": "Medicina de clase mundial,<br/>al alcance de las familias",
+      "desc": "Pulse las imágenes para conocer a los socios médicos y de bienestar de HERAVITA en el mundo.",
+      "partners": {
+        "ucla": {
+          "title": "UCLA Health · EE. UU.",
+          "desc": "UCLA Health es uno de los sistemas sanitarios más completos y avanzados del mundo."
+        },
+        "sedona": {
+          "title": "Centro de sanación Sedona · EE. UU.",
+          "desc": "Un santuario de sanación espiritual y despertar cuerpo-mente-espíritu. Los vórtices de energía de Sedona concentran la energía de la Tierra: ideales para meditar, soltar emociones y restaurar el cuerpo."
+        },
+        "scn": {
+          "title": "Stem Cell Network (SCN) · Canadá",
+          "desc": "Plataforma nacional canadiense de células madre y medicina regenerativa, fundada en 2001 con apoyo federal. Más de 100 millones de dólares canadienses invertidos, 200+ proyectos y 30+ ensayos clínicos."
+        },
+        "milan": {
+          "title": "Laboratorio de salud del castillo de Milán · Italia",
+          "desc": "En un castillo milenario de Milán, HERAVITA ha creado un laboratorio de salud que cruza épocas: medicina funcional, biotecnología y filosofía de bienestar oriental en un marco de longevidad elegante."
+        },
+        "paris": {
+          "title": "Red de derivación médica de París · Francia",
+          "desc": "A través de la red de París, HERAVITA tiende un puente hacia los especialistas líderes de Europa: de la prueba precisa a la atención en profundidad, medicina global uno a uno."
+        },
+        "laprairie": {
+          "title": "Clinique La Prairie · Suiza",
+          "desc": "Fundada en 1931 a orillas del lago Lemán en Montreux, pionera de la medicina de longevidad moderna. El Dr. Paul Niehans propuso la terapia celular: restaurar la vitalidad cuidando las células."
+        },
+        "peptide": {
+          "title": "Laboratorio de terapia peptídica · Suiza",
+          "desc": "La terapia peptídica aporta péptidos activos naturales para activar células, reparar tejidos, ralentizar el envejecimiento y regular la inmunidad: mensajeros de reparación, metabolismo, sueño y equilibrio hormonal."
+        },
+        "harley": {
+          "title": "The Harley Street Clinic · Reino Unido",
+          "desc": "Parte de HCA, conocida por su equipamiento y enfermería avanzados, con fortaleza en investigación oncológica, quimioterapia de mama y cirugía cardíaca pediátrica."
+        },
+        "imperial": {
+          "title": "Imperial College Healthcare · Reino Unido",
+          "desc": "Une cinco hospitales líderes de Londres con Imperial College London; modelo de traducción de la investigación, con un centro NIHR y participación en el proyecto de 100.000 genomas."
+        },
+        "tokyo": {
+          "title": "Hospital de la Universidad de Tokio · Japón",
+          "desc": "Una de las instituciones médicas más autorizadas de Japón, líder en casos complejos, especialmente oncología, cardiovascular y medicina regenerativa. HERAVITA colabora en consultas, chequeos internacionales y derivaciones."
+        },
+        "regen": {
+          "title": "Centro de medicina regenerativa de Japón · Japón",
+          "desc": "Institución líder en terapia celular, células madre, inmunidad y medicina regenerativa: madura, segura y sólida en antienvejecimiento, crónicos y reparación de tejidos."
+        },
+        "kyoto": {
+          "title": "Clínica cuerpo-mente de Kioto · Japón",
+          "desc": "Integra psiquiatría moderna con terapias orientales como acupuntura y masaje, para el equilibrio integral ante estrés, ansiedad y depresión, en un entorno sereno."
+        },
+        "bumrungrad": {
+          "title": "Hospital Internacional Bumrungrad · Tailandia",
+          "desc": "Hospital internacional líder en el Sudeste Asiático, reconocido por su técnica y un sistema de servicio completo, especialmente medicina de precisión y gestión personalizada, uniendo tratamiento y sanación ambiental."
+        },
+        "bangkok": {
+          "title": "Bangkok Hospital · Tailandia",
+          "desc": "Uno de los hospitales privados más influyentes de Tailandia y Asia, conocido por su atención internacional y la experiencia del paciente en cardiología, oncología, neurología y más."
+        },
+        "chiangmai": {
+          "title": "Centro de salud de Chiang Mai · Tailandia",
+          "desc": "En la capital cultural del norte de Tailandia, une medicina moderna y terapias naturales: detox, nutrición, yoga y meditación, en un entorno silencioso de restauración integral."
+        }
+      }
+    },
+    "section5": {
+      "eyebrow": "MEDICINE AS THE FOUNDATION",
+      "title": "Los sistemas médicos avanzados nos ayudan a entendernos con más precisión<br/>Primero comprender el cuerpo, después decidir cómo cambiar",
+      "p1": "La medicina no es todo el viaje, pero sí un fundamento esencial de cada elección de salud.",
+      "p2": ""
+    },
+    "section6": {
+      "eyebrow": "FROM INSIGHT TO ACTION",
+      "title": "La medicina es la base; el estilo de vida es la respuesta a largo plazo<br/>El final de una prueba debe ser un cambio que se pueda ejecutar",
+      "desc": "HERAVITA no solo interpreta cada indicador médico. Convierte el juicio profesional en un plan personal de alimentación, sueño, movimiento, emoción y gestión a largo plazo, para que la salud ocurra en la vida de cada día."
+    },
+    "section7": {
+      "eyebrow": "A Holistic Approach to Renewal",
+      "title": "El sistema de los cuatro complementos",
+      "desc": "HERAVITA reconstruye la salud en cuatro dimensiones conectadas: medicina, entorno, espíritu y nutrición. La naturaleza nutre cuerpo y mente; la medicina internacional aporta apoyo científico; la meditación y la sanación emocional restauran el orden interior; y un plan nutricional personalizado devuelve la salud a la vida diaria. Entorno, medicina, espíritu y alimento actúan juntos como un ciclo continuo de bienestar.",
+      "items": {
+        "environment": {
+          "title": "Entorno",
+          "desc": "Nutrir cuerpo y mente en la naturaleza."
+        },
+        "medicine": {
+          "title": "Medicina",
+          "desc": "Apoyo científico desde recursos médicos internacionales."
+        },
+        "spirit": {
+          "title": "Espíritu",
+          "desc": "Restaurar el orden interior con meditación y sanación emocional."
+        },
+        "nutrition": {
+          "title": "Nutrición",
+          "desc": "Un plan nutricional personalizado que devuelve la salud a la vida diaria."
+        }
+      }
+    },
+    "section8": {
+      "eyebrow": "The Strength to Live Fully",
+      "title": "Las cuatro fuerzas",
+      "desc": "Mejorar la salud no se ve solo en los indicadores. Se ve en la capacidad de volver a enfrentar la vida. HERAVITA ayuda a recuperar la vitalidad del cuerpo, la felicidad interior, la influencia para conectar con otros y la creatividad para construir obra y vida. Estas cuatro fuerzas son el cambio duradero que nace de dentro a fuera cuando cuerpo y mente se reintegran.",
+      "items": {
+        "vitality": {
+          "title": "Vitalidad",
+          "desc": "Recuperar la vitalidad del cuerpo."
+        },
+        "happiness": {
+          "title": "Felicidad",
+          "desc": "Recuperar la felicidad interior."
+        },
+        "influence": {
+          "title": "Influencia",
+          "desc": "Recuperar la fuerza para conectar con otros."
+        },
+        "creativity": {
+          "title": "Creatividad",
+          "desc": "La creatividad para construir obra y vida."
+        }
+      }
+    },
+    "section9": {
+      "eyebrow": "The Quality of a Renewed Life",
+      "title": "Las cuatro cualidades",
+      "desc": "Cuando el cuerpo se repara, la emoción se serena y la vida recupera su ritmo, aparece una nueva calidad de estar. El espíritu nace de la calma y la claridad interiores; la gracia, de una experiencia privada respetada y una comunidad en la misma frecuencia; el coraje, de la fuerza para volver a superarse; la alegría, de la felicidad que fluye de verdad entre las personas. Estas cuatro cualidades son la textura y el brillo de una vida tras reconstruir la salud.",
+      "items": {
+        "aura": {
+          "title": "Espíritu",
+          "desc": "De la calma y la claridad interiores."
+        },
+        "grace": {
+          "title": "Gracia",
+          "desc": "De una experiencia privada respetada y una comunidad en la misma frecuencia."
+        },
+        "courage": {
+          "title": "Coraje",
+          "desc": "De la fuerza para volver a superarse."
+        },
+        "joy": {
+          "title": "Alegría",
+          "desc": "De la felicidad que fluye de verdad entre las personas."
+        }
+      }
+    },
+    "section10": {
+      "eyebrow": "LIFESTYLE IS THE LONG-TERM ANSWER",
+      "title": "Lo que de verdad cambia una vida es cómo se vive cada día.",
+      "subtitle": "La salud ocurre en cada sueño, cada comida, cada paso, y también en la emoción, el vínculo y el ritmo cotidiano",
+      "desc": "De la evaluación médica a la práctica vivida, del cambio por etapas al acompañamiento a largo plazo, HERAVITA conecta cada descubrimiento, cada juicio y cada acción.",
+      "items": {
+        "food": {
+          "title": "Alimentación",
+          "desc": "Poner la indicación médica en cada comida."
+        },
+        "care": {
+          "title": "Cuidado cotidiano",
+          "desc": "Pruebas, apoyo y recuperación como parte de la vida ordinaria."
+        },
+        "rest": {
+          "title": "Sueño y descanso",
+          "desc": "La verdadera recuperación ocurre en un espacio donde se puede callar."
+        }
+      }
+    }
+  },
+  "originPage": {
+    "section1": {
+      "eyebrow": "Origin · Origen de la civilización de la vida",
+      "title": "Una nueva práctica, orientada al cambio de una vida",
+      "desc": "El verdadero cambio no se queda en un solo viaje. Empieza en una persona, entra en una familia y se vuelve una civilización de la vida que se puede continuar juntos."
+    },
+    "section2": {
+      "eyebrow": "A NEW RHYTHM",
+      "title": "Cuando se redefine la salud,<br/>la vida encuentra un nuevo ritmo",
+      "desc": "La salud ya no es solo una prueba o un tratamiento. Empieza a entrar en cómo camina, cómo trabaja y cómo convive consigo cada día."
+    },
+    "section3": {
+      "eyebrow": "FROM ONE TO A FAMILY",
+      "title": "El cambio de una persona<br/>entra en cada día de una familia",
+      "desc": "Cuando una vida se reacomoda, también cambian la mesa, la conversación y el acompañamiento. La salud se vuelve el tiempo que la familia pasa junta."
+    },
+    "section4": {
+      "eyebrow": "A FAMILY CULTURE",
+      "title": "Cuando la salud es cultura familiar,<br/>la civilización encuentra un nuevo comienzo",
+      "desc": "La elección de una familia se conecta con más familias. La civilización de la vida no es un eslogan. Es una dirección practicada una y otra vez."
+    },
+    "section5": {
+      "eyebrow": "BODY AND SPIRIT",
+      "title": "El verdadero cambio,<br/>del cuerpo al interior",
+      "desc": "Primero el cuerpo se aquieta. Luego el interior puede verse de nuevo. El cambio que dura nunca ocurrió solo en el cuerpo."
+    },
+    "section6": {
+      "eyebrow": "ORIGIN",
+      "title": "Conectar la salud y el sentido de la vida en el mundo no es cuestión de escala<br/>es que ninguna práctica quede sola",
+      "desc": "Origin no convierte a las personas en escala. Hace que cada práctica se vea y se conecte: el punto de origen de construir juntos una civilización de la salud."
+    }
+  },
+  "contactPage": {
+    "eyebrow": "Contact · Contacto",
+    "title": "Concierge de salud exclusivo de HERAVITA",
+    "desc": "El equipo multilingüe de concierge de HERAVITA le ofrece un apoyo profesional y atento. Ya sea una primera consulta, organizar un Journey de descubrimiento de la vida o conectar con recursos médicos y de longevidad en el mundo, diseñaremos un plan exclusivo según sus necesidades reales y le acompañaremos a redescubrir la vida y reconstruir la salud.",
+    "fields": [
+      { "label": "WeChat", "value": "fs10000000" },
+      { "label": "WhatsApp", "value": "fs10000000" },
+      { "label": "Correo", "value": "fs10000000@heravita.com" }
+    ],
+    "email": "fs10000000@heravita.com",
+    "cta": "Reserve su viaje en línea"
+  },
+  "homeNarrative": {
+    "belief": {
+      "eyebrow": "OUR BELIEF · BRAND PHILOSOPHY",
+      "titleLine1": "La verdadera longevidad no consiste solo en prolongar la vida",
+      "titleLine2": "sino en devolverla al orden que le pertenece",
+      "principle": "Devuelve la complejidad al orden y la vida a ti mismo. Deja que la ciencia comprenda el cuerpo y que la sanación comprenda la vida.",
+      "description": "HeraVita cree que la verdadera salud no es un único indicador. El cuerpo, las emociones, el sistema nervioso, las relaciones, el entorno y el estilo de vida están conectados. Reconstruir la vida es volver a ver esas conexiones para recuperar orden, vitalidad y sostenibilidad a largo plazo.",
+      "cta": "Descubre HERAVITA"
+    },
+    "method": {
+      "eyebrow": "OUR METHOD",
+      "titleLine1": "Que la ciencia comprenda el cuerpo",
+      "titleLine2": "Que la sanación comprenda la vida",
+      "description": "HeraVita integra medicina global de longevidad, reconstrucción emocional, reinicio del sistema nervioso, entornos de sanación y reconstrucción del estilo de vida en un sistema de gestión para la vida en su totalidad.",
+      "whole": "Acompañamos a una persona completa.",
+      "items": ["Medicina global de longevidad", "Reconstrucción emocional", "Reinicio del sistema nervioso", "Entornos de sanación", "Reconstrucción del estilo de vida"]
+    },
+    "journey": {
+      "eyebrow": "YOUR JOURNEY",
+      "titleLine1": "Cada viaje de vida",
+      "titleLine2": "tiene una etapa propia",
+      "description": "Algunas personas necesitan verse primero; otras, recuperarse; algunas ya están preparadas para cambiar de verdad y otras avanzan hacia una nueva plenitud de vida.",
+      "question": "¿En qué etapa de la vida te encuentras ahora?",
+      "path": "DISCOVER · RESET · REBUILD · FLOURISH",
+      "items": [
+        { "label": "Descubrir la vida", "english": "DISCOVER", "description": "Quiero comprender mejor mi cuerpo y mi estado actual" },
+        { "label": "Reiniciar la vida", "english": "RESET", "description": "Estoy agotado y necesito recuperarme" },
+        { "label": "Reconstruir la vida", "english": "REBUILD", "description": "Quiero cambiar de verdad mi forma de vivir" },
+        { "label": "Hacer florecer la vida", "english": "FLOURISH", "description": "Quiero rediseñar la próxima etapa de mi vida" }
+      ]
+    },
+    "global": {
+      "eyebrow": "GLOBAL PRESENCE",
+      "titleLine1": "Lugares diferentes",
+      "titleLine2": "acogen necesidades distintas de la vida",
+      "lead": "Lugares diferentes al servicio de un mismo viaje de vida.",
+      "description": "HeraVita está creando presencia local y una red de recursos en China, Tailandia, Europa y Estados Unidos, conectando medicina, sanación, estilo de vida y acompañamiento a largo plazo para que cada viaje reciba el apoyo adecuado.",
+      "items": [
+        { "label": "China", "english": "CHINA" },
+        { "label": "Tailandia", "english": "THAILAND" },
+        { "label": "Europa", "english": "EUROPE" },
+        { "label": "Estados Unidos", "english": "USA" }
+      ]
+    },
+    "proof": {
+      "eyebrow": "06 / TRUST & PROOF",
+      "titleLine1": "La confianza nace de",
+      "titleLine2": "un acompañamiento real y duradero.",
+      "lead": "Del criterio profesional a la coordinación entre regiones; de una experiencia puntual a un cambio cotidiano sostenible. Cada paso debe apoyarse en personas, métodos y evidencias claras.",
+      "items": [
+        { "label": "Equipos expertos y apoyo personal", "english": "EXPERTISE" },
+        { "label": "Recursos globales y colaboración local", "english": "NETWORK" },
+        { "label": "Viajes reales e historias de vida", "english": "STORIES" },
+        { "label": "Cambios revisables y seguimiento continuo", "english": "CONTINUITY" }
+      ],
+      "note": "Las instituciones colaboradoras, las credenciales de los expertos y los datos de resultados se verificarán y presentarán individualmente antes del lanzamiento oficial.",
+      "cta": "Explorar la evidencia",
+      "photoAlt": "Una familia camina unida junto al mar bajo la luz de la mañana"
+    },
+    "action": {
+      "eyebrow": "07 / BEGIN THE NEXT CHAPTER",
+      "titleLine1": "El próximo capítulo de la vida",
+      "titleLine2": "empieza ahora.",
+      "description": "Tanto si deseas volver a verte como si quieres impulsar junto a HeraVita una civilización de la salud, esperamos iniciar contigo una conversación verdaderamente significativa.",
+      "items": ["Comienza tu descubrimiento　/　Para particulares", "Explora la colaboración global　/　Para socios", "Enviar una consulta"],
+      "ecosystem": "HERAVITA · GLOBAL LIFE REBUILDING ECOSYSTEM",
+      "concept": "CONCEPT DESIGN · 2026"
+    }
+  },
+  "globalPage": {
+    "eyebrow": "Global Network · Presencia global",
+    "subtitle": "Lo que HERAVITA está construyendo no es un solo destino, sino una red global de salud que crece a través de los territorios.",
+    "title": "Cruzar geografías<br/>para que los recursos se conecten",
+    "desc": "Desde Asia, conectando Europa, Norteamérica y más regiones",
+    "layers": {
+      "bases": "Bases globales",
+      "hospitals": "Hospitales asociados",
+      "future": "Planes futuros",
+      "resources": "Recursos internacionales"
+    },
+    "markers": {
+      "phuket": "Base HERAVITA · Phuket",
+      "milan": "Laboratorio de salud del castillo de Milán · Italia",
+      "sedona": "Centro de sanación Sedona · EE. UU.",
+      "ucla": "UCLA Health · EE. UU.",
+      "imperial": "Imperial College Healthcare · Reino Unido",
+      "paris": "Red de derivación de París · Francia",
+      "laprairie": "Clinique La Prairie · Suiza",
+      "regen": "Centro de medicina regenerativa · Japón",
+      "longevity": "Centro de longevidad · Tailandia",
+      "bumrungrad": "Bumrungrad International · Bangkok",
+      "sydney": "En planificación · Sídney",
+      "dubai": "En planificación · Dubái",
+      "saoPaulo": "En planificación · São Paulo",
+      "scn": "Stem Cell Network · Canadá",
+      "tokyo": "Hospital de la Universidad de Tokio · Japón",
+      "peptide": "Laboratorio de terapia peptídica · Suiza",
+      "harley": "The Harley Street Clinic · Reino Unido"
+    }
+  }
+}

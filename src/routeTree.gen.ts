@@ -10,156 +10,180 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as DestinationsRouteImport } from './routes/destinations'
-import { Route as JourneysRouteImport } from './routes/journeys'
-import { Route as PhilosophyRouteImport } from './routes/philosophy'
-import { Route as DestinationsIndexRouteImport } from './routes/destinations.index'
-import { Route as DestinationsChinaRouteImport } from './routes/destinations.china'
-import { Route as DestinationsEuropeRouteImport } from './routes/destinations.europe'
-import { Route as DestinationsPhuketRouteImport } from './routes/destinations.phuket'
-import { Route as DestinationsUsaRouteImport } from './routes/destinations.usa'
-import { Route as JourneysIndexRouteImport } from './routes/journeys.index'
-import { Route as JourneysStageRouteImport } from './routes/journeys.$stage'
+import { Route as SplatRouteImport } from './routes/$'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as DiscoverRouteImport } from './routes/discover'
+import { Route as FounderRouteImport } from './routes/founder'
+import { Route as GlobalRouteImport } from './routes/global'
+import { Route as JourneyRouteImport } from './routes/journey'
+import { Route as LifeRouteImport } from './routes/life'
+import { Route as MedicalRouteImport } from './routes/medical'
+import { Route as MethodRouteImport } from './routes/method'
+import { Route as OriginRouteImport } from './routes/origin'
+import { Route as StoryRouteImport } from './routes/story'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DestinationsRoute = DestinationsRouteImport.update({
-  id: '/destinations',
-  path: '/destinations',
+const SplatRoute = SplatRouteImport.update({
+  id: '/$',
+  path: '/$',
   getParentRoute: () => rootRouteImport,
 } as any)
-const JourneysRoute = JourneysRouteImport.update({
-  id: '/journeys',
-  path: '/journeys',
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
   getParentRoute: () => rootRouteImport,
 } as any)
-const PhilosophyRoute = PhilosophyRouteImport.update({
-  id: '/philosophy',
-  path: '/philosophy',
+const DiscoverRoute = DiscoverRouteImport.update({
+  id: '/discover',
+  path: '/discover',
   getParentRoute: () => rootRouteImport,
 } as any)
-const DestinationsIndexRoute = DestinationsIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => DestinationsRoute,
+const FounderRoute = FounderRouteImport.update({
+  id: '/founder',
+  path: '/founder',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const DestinationsChinaRoute = DestinationsChinaRouteImport.update({
-  id: '/china',
-  path: '/china',
-  getParentRoute: () => DestinationsRoute,
+const GlobalRoute = GlobalRouteImport.update({
+  id: '/global',
+  path: '/global',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const DestinationsEuropeRoute = DestinationsEuropeRouteImport.update({
-  id: '/europe',
-  path: '/europe',
-  getParentRoute: () => DestinationsRoute,
+const JourneyRoute = JourneyRouteImport.update({
+  id: '/journey',
+  path: '/journey',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const DestinationsPhuketRoute = DestinationsPhuketRouteImport.update({
-  id: '/phuket',
-  path: '/phuket',
-  getParentRoute: () => DestinationsRoute,
+const LifeRoute = LifeRouteImport.update({
+  id: '/life',
+  path: '/life',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const DestinationsUsaRoute = DestinationsUsaRouteImport.update({
-  id: '/usa',
-  path: '/usa',
-  getParentRoute: () => DestinationsRoute,
+const MedicalRoute = MedicalRouteImport.update({
+  id: '/medical',
+  path: '/medical',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const JourneysIndexRoute = JourneysIndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => JourneysRoute,
+const MethodRoute = MethodRouteImport.update({
+  id: '/method',
+  path: '/method',
+  getParentRoute: () => rootRouteImport,
 } as any)
-const JourneysStageRoute = JourneysStageRouteImport.update({
-  id: '/$stage',
-  path: '/$stage',
-  getParentRoute: () => JourneysRoute,
+const OriginRoute = OriginRouteImport.update({
+  id: '/origin',
+  path: '/origin',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StoryRoute = StoryRouteImport.update({
+  id: '/story',
+  path: '/story',
+  getParentRoute: () => rootRouteImport,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/destinations': typeof DestinationsRouteWithChildren
-  '/journeys': typeof JourneysRouteWithChildren
-  '/philosophy': typeof PhilosophyRoute
-  '/destinations/china': typeof DestinationsChinaRoute
-  '/destinations/europe': typeof DestinationsEuropeRoute
-  '/destinations/phuket': typeof DestinationsPhuketRoute
-  '/destinations/usa': typeof DestinationsUsaRoute
-  '/journeys/$stage': typeof JourneysStageRoute
-  '/destinations/': typeof DestinationsIndexRoute
-  '/journeys/': typeof JourneysIndexRoute
+  '/$': typeof SplatRoute
+  '/contact': typeof ContactRoute
+  '/discover': typeof DiscoverRoute
+  '/founder': typeof FounderRoute
+  '/global': typeof GlobalRoute
+  '/journey': typeof JourneyRoute
+  '/life': typeof LifeRoute
+  '/medical': typeof MedicalRoute
+  '/method': typeof MethodRoute
+  '/origin': typeof OriginRoute
+  '/story': typeof StoryRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/philosophy': typeof PhilosophyRoute
-  '/destinations/china': typeof DestinationsChinaRoute
-  '/destinations/europe': typeof DestinationsEuropeRoute
-  '/destinations/phuket': typeof DestinationsPhuketRoute
-  '/destinations/usa': typeof DestinationsUsaRoute
-  '/journeys/$stage': typeof JourneysStageRoute
-  '/destinations': typeof DestinationsIndexRoute
-  '/journeys': typeof JourneysIndexRoute
+  '/$': typeof SplatRoute
+  '/contact': typeof ContactRoute
+  '/discover': typeof DiscoverRoute
+  '/founder': typeof FounderRoute
+  '/global': typeof GlobalRoute
+  '/journey': typeof JourneyRoute
+  '/life': typeof LifeRoute
+  '/medical': typeof MedicalRoute
+  '/method': typeof MethodRoute
+  '/origin': typeof OriginRoute
+  '/story': typeof StoryRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/destinations': typeof DestinationsRouteWithChildren
-  '/journeys': typeof JourneysRouteWithChildren
-  '/philosophy': typeof PhilosophyRoute
-  '/destinations/china': typeof DestinationsChinaRoute
-  '/destinations/europe': typeof DestinationsEuropeRoute
-  '/destinations/phuket': typeof DestinationsPhuketRoute
-  '/destinations/usa': typeof DestinationsUsaRoute
-  '/journeys/$stage': typeof JourneysStageRoute
-  '/destinations/': typeof DestinationsIndexRoute
-  '/journeys/': typeof JourneysIndexRoute
+  '/$': typeof SplatRoute
+  '/contact': typeof ContactRoute
+  '/discover': typeof DiscoverRoute
+  '/founder': typeof FounderRoute
+  '/global': typeof GlobalRoute
+  '/journey': typeof JourneyRoute
+  '/life': typeof LifeRoute
+  '/medical': typeof MedicalRoute
+  '/method': typeof MethodRoute
+  '/origin': typeof OriginRoute
+  '/story': typeof StoryRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
-    | '/destinations'
-    | '/journeys'
-    | '/philosophy'
-    | '/destinations/china'
-    | '/destinations/europe'
-    | '/destinations/phuket'
-    | '/destinations/usa'
-    | '/journeys/$stage'
-    | '/destinations/'
-    | '/journeys/'
+    | '/$'
+    | '/contact'
+    | '/discover'
+    | '/founder'
+    | '/global'
+    | '/journey'
+    | '/life'
+    | '/medical'
+    | '/method'
+    | '/origin'
+    | '/story'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
-    | '/philosophy'
-    | '/destinations/china'
-    | '/destinations/europe'
-    | '/destinations/phuket'
-    | '/destinations/usa'
-    | '/journeys/$stage'
-    | '/destinations'
-    | '/journeys'
+    | '/$'
+    | '/contact'
+    | '/discover'
+    | '/founder'
+    | '/global'
+    | '/journey'
+    | '/life'
+    | '/medical'
+    | '/method'
+    | '/origin'
+    | '/story'
   id:
     | '__root__'
     | '/'
-    | '/destinations'
-    | '/journeys'
-    | '/philosophy'
-    | '/destinations/china'
-    | '/destinations/europe'
-    | '/destinations/phuket'
-    | '/destinations/usa'
-    | '/journeys/$stage'
-    | '/destinations/'
-    | '/journeys/'
+    | '/$'
+    | '/contact'
+    | '/discover'
+    | '/founder'
+    | '/global'
+    | '/journey'
+    | '/life'
+    | '/medical'
+    | '/method'
+    | '/origin'
+    | '/story'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  DestinationsRoute: typeof DestinationsRouteWithChildren
-  JourneysRoute: typeof JourneysRouteWithChildren
-  PhilosophyRoute: typeof PhilosophyRoute
+  SplatRoute: typeof SplatRoute
+  ContactRoute: typeof ContactRoute
+  DiscoverRoute: typeof DiscoverRoute
+  FounderRoute: typeof FounderRoute
+  GlobalRoute: typeof GlobalRoute
+  JourneyRoute: typeof JourneyRoute
+  LifeRoute: typeof LifeRoute
+  MedicalRoute: typeof MedicalRoute
+  MethodRoute: typeof MethodRoute
+  OriginRoute: typeof OriginRoute
+  StoryRoute: typeof StoryRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -171,118 +195,99 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/destinations': {
-      id: '/destinations'
-      path: '/destinations'
-      fullPath: '/destinations'
-      preLoaderRoute: typeof DestinationsRouteImport
+    '/$': {
+      id: '/$'
+      path: '/$'
+      fullPath: '/$'
+      preLoaderRoute: typeof SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/journeys': {
-      id: '/journeys'
-      path: '/journeys'
-      fullPath: '/journeys'
-      preLoaderRoute: typeof JourneysRouteImport
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/philosophy': {
-      id: '/philosophy'
-      path: '/philosophy'
-      fullPath: '/philosophy'
-      preLoaderRoute: typeof PhilosophyRouteImport
+    '/discover': {
+      id: '/discover'
+      path: '/discover'
+      fullPath: '/discover'
+      preLoaderRoute: typeof DiscoverRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/destinations/': {
-      id: '/destinations/'
-      path: '/'
-      fullPath: '/destinations/'
-      preLoaderRoute: typeof DestinationsIndexRouteImport
-      parentRoute: typeof DestinationsRoute
+    '/founder': {
+      id: '/founder'
+      path: '/founder'
+      fullPath: '/founder'
+      preLoaderRoute: typeof FounderRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/destinations/china': {
-      id: '/destinations/china'
-      path: '/china'
-      fullPath: '/destinations/china'
-      preLoaderRoute: typeof DestinationsChinaRouteImport
-      parentRoute: typeof DestinationsRoute
+    '/global': {
+      id: '/global'
+      path: '/global'
+      fullPath: '/global'
+      preLoaderRoute: typeof GlobalRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/destinations/europe': {
-      id: '/destinations/europe'
-      path: '/europe'
-      fullPath: '/destinations/europe'
-      preLoaderRoute: typeof DestinationsEuropeRouteImport
-      parentRoute: typeof DestinationsRoute
+    '/journey': {
+      id: '/journey'
+      path: '/journey'
+      fullPath: '/journey'
+      preLoaderRoute: typeof JourneyRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/destinations/phuket': {
-      id: '/destinations/phuket'
-      path: '/phuket'
-      fullPath: '/destinations/phuket'
-      preLoaderRoute: typeof DestinationsPhuketRouteImport
-      parentRoute: typeof DestinationsRoute
+    '/life': {
+      id: '/life'
+      path: '/life'
+      fullPath: '/life'
+      preLoaderRoute: typeof LifeRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/destinations/usa': {
-      id: '/destinations/usa'
-      path: '/usa'
-      fullPath: '/destinations/usa'
-      preLoaderRoute: typeof DestinationsUsaRouteImport
-      parentRoute: typeof DestinationsRoute
+    '/medical': {
+      id: '/medical'
+      path: '/medical'
+      fullPath: '/medical'
+      preLoaderRoute: typeof MedicalRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/journeys/': {
-      id: '/journeys/'
-      path: '/'
-      fullPath: '/journeys/'
-      preLoaderRoute: typeof JourneysIndexRouteImport
-      parentRoute: typeof JourneysRoute
+    '/method': {
+      id: '/method'
+      path: '/method'
+      fullPath: '/method'
+      preLoaderRoute: typeof MethodRouteImport
+      parentRoute: typeof rootRouteImport
     }
-    '/journeys/$stage': {
-      id: '/journeys/$stage'
-      path: '/$stage'
-      fullPath: '/journeys/$stage'
-      preLoaderRoute: typeof JourneysStageRouteImport
-      parentRoute: typeof JourneysRoute
+    '/origin': {
+      id: '/origin'
+      path: '/origin'
+      fullPath: '/origin'
+      preLoaderRoute: typeof OriginRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/story': {
+      id: '/story'
+      path: '/story'
+      fullPath: '/story'
+      preLoaderRoute: typeof StoryRouteImport
+      parentRoute: typeof rootRouteImport
     }
   }
 }
 
-interface DestinationsRouteChildren {
-  DestinationsChinaRoute: typeof DestinationsChinaRoute
-  DestinationsEuropeRoute: typeof DestinationsEuropeRoute
-  DestinationsPhuketRoute: typeof DestinationsPhuketRoute
-  DestinationsUsaRoute: typeof DestinationsUsaRoute
-  DestinationsIndexRoute: typeof DestinationsIndexRoute
-}
-
-const DestinationsRouteChildren: DestinationsRouteChildren = {
-  DestinationsChinaRoute: DestinationsChinaRoute,
-  DestinationsEuropeRoute: DestinationsEuropeRoute,
-  DestinationsPhuketRoute: DestinationsPhuketRoute,
-  DestinationsUsaRoute: DestinationsUsaRoute,
-  DestinationsIndexRoute: DestinationsIndexRoute,
-}
-
-const DestinationsRouteWithChildren = DestinationsRoute._addFileChildren(
-  DestinationsRouteChildren,
-)
-
-interface JourneysRouteChildren {
-  JourneysStageRoute: typeof JourneysStageRoute
-  JourneysIndexRoute: typeof JourneysIndexRoute
-}
-
-const JourneysRouteChildren: JourneysRouteChildren = {
-  JourneysStageRoute: JourneysStageRoute,
-  JourneysIndexRoute: JourneysIndexRoute,
-}
-
-const JourneysRouteWithChildren = JourneysRoute._addFileChildren(
-  JourneysRouteChildren,
-)
-
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  DestinationsRoute: DestinationsRouteWithChildren,
-  JourneysRoute: JourneysRouteWithChildren,
-  PhilosophyRoute: PhilosophyRoute,
+  SplatRoute: SplatRoute,
+  ContactRoute: ContactRoute,
+  DiscoverRoute: DiscoverRoute,
+  FounderRoute: FounderRoute,
+  GlobalRoute: GlobalRoute,
+  JourneyRoute: JourneyRoute,
+  LifeRoute: LifeRoute,
+  MedicalRoute: MedicalRoute,
+  MethodRoute: MethodRoute,
+  OriginRoute: OriginRoute,
+  StoryRoute: StoryRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

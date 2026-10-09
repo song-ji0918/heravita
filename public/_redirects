@@ -1,0 +1,11 @@
+# Explicit app routes avoid Cloudflare's catch-all-to-index loop detection.
+/story /index.html 200
+/method /index.html 200
+/discover /index.html 200
+/journey /index.html 200
+/founder /index.html 200
+/life /index.html 200
+/medical /index.html 200
+/origin /index.html 200
+/contact /index.html 200
+/global /index.html 200

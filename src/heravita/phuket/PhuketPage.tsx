@@ -48,14 +48,14 @@ export default function PhuketPage() {
           </div>
         </section>
 
-        <section className="pk-screen pk-full" data-header-theme="dark" data-reveal-group>
+        <section className="pk-screen pk-full pk-residence" data-header-theme="dark" data-reveal-group>
           <div className="pk-media"><img data-parallax src={IMG.residence} alt={c.residence.title} loading="lazy" /></div>
           <div className="pk-shade pk-shade--left" />
           <div className="pk-full-copy">
             <p className="pk-eyebrow" data-reveal>{c.residence.eyebrow}</p>
             <h2 className="pk-title pk-title--light" data-reveal>{c.residence.title}</h2>
             <p className="pk-body pk-body--light" data-reveal>{c.residence.body}</p>
-            <div data-reveal><Cta to="/global/phuket/booking">{c.residence.cta}</Cta></div>
+            <div className="pk-actions" data-reveal><Cta to="/global/phuket/booking">{c.residence.cta}</Cta></div>
           </div>
         </section>
 

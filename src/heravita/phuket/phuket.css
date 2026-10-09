@@ -55,7 +55,9 @@
 /* 03 / 06 */
 .pk-full { display: flex; align-items: center; }
 .pk-full-copy { position: relative; z-index: 1; max-width: 640px; padding: 0 7.5%; color: #fff; box-sizing: content-box; }
-.pk-full-copy .pk-actions { margin-top: 64px; }
+.pk-full-copy .pk-actions { margin-top: 76px; }
+.pk-residence { align-items: flex-end; }
+.pk-residence .pk-full-copy { padding-bottom: 20vh; }
 .pk-concierge { justify-content: center; text-align: center; color: #fff; }
 .pk-center-copy { position: relative; z-index: 1; max-width: 860px; padding: 0 6%; display: flex; flex-direction: column; align-items: center; }
 .pk-center-copy .pk-body { margin-bottom: 34px; }
@@ -120,6 +122,8 @@
 @media (max-width: 900px) {
   .pk-split, .pk-booking { grid-template-columns: 1fr; }
   .pk-split-media { min-height: 60vh; }
+  .pk-full-copy .pk-actions { margin-top: 64px; }
+  .pk-residence .pk-full-copy { padding-bottom: 11vh; }
   .pk-spaces-grid { grid-template-columns: 1fr; }
   .pk-space { min-height: 70vh; border-left: 0; border-top: 1px solid rgba(197,168,128,.25); }
   .pk-space-text { max-height: none; opacity: 1; margin-top: 14px; }

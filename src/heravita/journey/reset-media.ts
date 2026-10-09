@@ -1,0 +1,13 @@
+import hero from '@/assets/journey-reset.jpg';
+import pause from '@/assets/reset-pause.jpg';
+import arrival from '@/assets/reset-arrival.jpg';
+import hormones from '@/assets/reset-hormones.jpg';
+import medicine from '@/assets/journey-medicine.jpg';
+import connection from '@/assets/journey-connection.jpg';
+import energy from '@/assets/reset-days.jpg';
+import kitchen from '@/assets/journey-kitchen.jpg';
+import spa from '@/assets/journey-spa.jpg';
+import home from '@/assets/reset-home.jpg';
+import map from '@/assets/reset-map.jpg';
+import residence from '@/assets/journey-care.jpg';
+export const resetMedia={hero,pause,arrival,hormones,medicine,connection,energy,kitchen,spa,home,map,residence};

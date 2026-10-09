@@ -1,7 +1,6 @@
 import { useRef } from "react";
 import Header from "@/original/components/Header/Header";
 import Footer from "@/original/components/Footer/Footer";
-import { Cta } from "@/heravita/phuket/Cta";
 import { useReveal } from "@/heravita/phuket/useReveal";
 import coast from "@/assets/usa-network-coast.jpg";
 import precision from "@/assets/usa-precision-nature.jpg";

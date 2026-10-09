@@ -1,4 +1,8 @@
 # HeraVita
+- [ ] Replace repeated journey topic photographs with stage-specific images.
+- [ ] Remove repeated full-screen explanations; connect distinct product chapters and retain complete inclusions.
+- [ ] Restore designed opening/closing application buttons and illustrated stage progression; fix footer image sizing.
+- [ ] Verify product pages, stage links, footer and application entries in the running site.
 - [x] Build complete Reset, Rebuilding and Flourishing pages from Journey V1.1 with varied layouts and precise cool-tone photography.
 - [x] Link the four stages and homepage without rewriting original pages.
 - [x] Unify all reservation entries on a standalone application page and verify private submission.

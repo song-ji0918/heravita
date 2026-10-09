@@ -18,4 +18,4 @@ import home from '@/assets/reset-home.jpg';
 import map from '@/assets/reset-map.jpg';
 import residence from '@/assets/journey-care.jpg';
 export const resetMedia={hero,pause,arrival,hormones,medicine,connection,energy,kitchen,spa,home,map,residence};
-export const resetDayImages=[d1,d2,d3,d4,d5,d6,d7];
+export const resetDayImages=[d1,d2,d3,d5,d4,d6,d7];

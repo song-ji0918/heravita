@@ -7,6 +7,7 @@ import kitchen from "@/assets/longevity-kitchen.jpg";
 import residence from "@/assets/phuket-residence.jpg";
 import concierge from "@/assets/phuket-concierge.jpg";
 import flourish from "@/assets/phuket-flourish.jpg";
+import resetImg from "@/assets/phuket-reset.jpg";
 
 export const IMG = {
   hero: heroAsset.url,
@@ -20,7 +21,7 @@ export const SPACE_IMAGES = [precision, wellness, kitchen];
 
 export const JOURNEY_MEDIA: Record<string, { img: string; to: string }> = {
   discover: { img: "/discover/discover-welcome.jpg", to: "/discover" },
-  reset: { img: "/discover/discover-senses-floating.jpg", to: "/journey" },
+  reset: { img: resetImg, to: "/journey" },
   rebuild: { img: "/home-narrative/family.jpg", to: "/journey" },
   flourish: { img: flourish, to: "/journey" },
 };

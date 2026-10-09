@@ -68,7 +68,7 @@
 .usa-capabilities-visual img { width: 100%; height: 100%; object-fit: cover; filter: saturate(.7) contrast(1.04); }
 .usa-capabilities-copy { display: flex; flex-direction: column; justify-content: center; padding: 12vh 9%; }
 .usa-capability-list { margin-top: 6vh; border-top: 1px solid rgba(250,250,250,.26); }
-.usa-capability-list article { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 22px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid rgba(250,250,250,.18); }
+.usa-capability-list article { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: baseline; padding: 24px 0; border-bottom: 1px solid rgba(250,250,250,.18); }
 .usa-capability-list p, .usa-capability-list h3, .usa-capability-list span { margin: 0; }
 .usa-capability-list p { font-family: var(--usa-serif); font-size: 18px; }
 .usa-capability-list h3 { font-family: var(--usa-cn-serif); font-size: 17px; font-weight: 400; }

@@ -22,7 +22,7 @@
 .usa-media img, .usa-split-media img, .usa-matching-media img { width: 100%; height: 100%; object-fit: cover; will-change: transform; }
 .usa-overlay { position: absolute; inset: 0; pointer-events: none; }
 .usa-overlay--hero { background: linear-gradient(90deg, rgba(9,12,14,.76), rgba(9,12,14,.1) 64%), linear-gradient(0deg, rgba(9,12,14,.5), transparent 55%); }
-.usa-overlay--left { background: linear-gradient(90deg, rgba(9,12,14,.9), rgba(9,12,14,.58) 42%, rgba(9,12,14,.08) 78%); }
+.usa-overlay--left { background: linear-gradient(90deg, rgba(9,12,14,.93), rgba(9,12,14,.84) 52%, rgba(9,12,14,.5) 76%, rgba(9,12,14,.06) 94%); }
 .usa-overlay--bottom { background: linear-gradient(0deg, rgba(9,12,14,.75), rgba(9,12,14,.04) 70%); }
 .usa-eyebrow { margin: 0; font-size: 11px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; }
 .usa-display { margin: 24px 0; font-family: var(--usa-serif); font-weight: 300; line-height: 1.02; }
@@ -59,8 +59,8 @@
 .usa-network { display: flex; align-items: center; color: var(--usa-white); }
 .usa-network-copy { position: relative; z-index: 1; width: min(750px, 72%); padding: 13vh 7.5%; }
 .usa-region-strip { margin: 7vh 0 44px; padding: 0; border-top: 1px solid rgba(250,250,250,.3); list-style: none; }
-.usa-region-strip li { padding: 15px 0; border-bottom: 1px solid rgba(250,250,250,.2); }
-.usa-region-strip span { font-family: var(--usa-serif); font-size: 21px; letter-spacing: .05em; }
+.usa-region-strip li { padding: 15px 0; border-bottom: 1px solid rgba(250,250,250,.3); }
+.usa-region-strip span { font-family: var(--usa-serif); font-size: 22px; letter-spacing: .05em; color: rgba(250,250,250,.95); }
 
 .usa-capabilities { display: grid; grid-template-columns: 5fr 7fr; background: var(--usa-ink); color: var(--usa-white); }
 .usa-capabilities-visual { min-height: 100vh; overflow: hidden; }

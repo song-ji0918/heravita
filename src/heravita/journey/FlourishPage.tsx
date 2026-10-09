@@ -1,2 +1,2 @@
-import JourneyPage from "./JourneyPage";
-export default function FlourishPage(){return <JourneyPage stage="flourish"/>;}
+import StageEditorialPage from "./StageEditorialPage";
+export default function FlourishPage(){return <StageEditorialPage stage="flourish"/>;}

@@ -63,7 +63,6 @@ export default function UsaPage() {
             <h2 className="usa-title usa-title--light" data-reveal>{c.network.title}</h2>
             <p className="usa-body usa-body--light" data-reveal>{c.network.intro}</p>
             <ul className="usa-region-strip" data-reveal>{c.network.regions.map((region) => <li key={region.name}><span>{region.name}</span><small>{region.role}</small></li>)}</ul>
-            <div data-reveal><Cta to="/global/usa/network">{c.network.cta}</Cta></div>
           </div>
         </section>
 

@@ -15,6 +15,13 @@
       "when": 1791467149569,
       "tag": "0001_global_destination_consultations",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1791559390293,
+      "tag": "0002_allow_public_consultation_insert",
+      "breakpoints": true
     }
   ]
 }

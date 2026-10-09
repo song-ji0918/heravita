@@ -29,6 +29,13 @@
       "when": 1791559428594,
       "tag": "0003_remove_test_consultation",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1791563907307,
+      "tag": "0004_create_usa_consultations",
+      "breakpoints": true
     }
   ]
 }

@@ -133,3 +133,13 @@
   .pk-journey-grid, .pk-choices { grid-template-columns: 1fr; }
   .pk-journey { border-right: 0; border-bottom: 1px solid rgba(197,168,128,.45); }
 }
+
+/* Hero rhythm: title → lead → CTA → tags, with more breathing room */
+.pk-hero-copy { padding-bottom: 9vh; }
+.pk-hero-copy .pk-lead { margin-top: 28px; max-width: 640px; }
+.pk-hero-copy .pk-actions { margin-top: 56px; }
+.pk-hero-copy .pk-tags { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.22); max-width: 640px; }
+@media (max-width: 768px) {
+  .pk-hero-copy .pk-actions { margin-top: 40px; }
+  .pk-hero-copy .pk-tags { margin-top: 28px; }
+}

@@ -1,0 +1,17 @@
+.cn-motto { margin: 0 0 22px; font-family: var(--pk-cn-serif); font-size: clamp(18px, 1.5vw, 22px); letter-spacing: .14em; line-height: 1.8; color: #e6d4b0; }
+.cn-sanctuary .pk-shade--left { background: linear-gradient(90deg, rgba(18,20,22,.78) 0%, rgba(18,20,22,.5) 38%, rgba(18,20,22,.08) 68%, transparent 100%); }
+
+.cn-pillars { min-height: 100vh; background: #f7f4ee; color: #1f2421; display: grid; grid-template-columns: 5fr 7fr; gap: 6vw; align-items: center; padding: 14vh 7.5% 12vh; box-sizing: border-box; }
+.cn-pillars-head .pk-body { color: #5d615e; max-width: 420px; }
+.cn-pillar-list { list-style: none; margin: 0; padding: 0; border-top: 1px solid rgba(160,130,80,.45); }
+.cn-pillar { display: grid; grid-template-columns: 2fr 3fr; gap: 32px; padding: 28px 0; border-bottom: 1px solid rgba(31,36,33,.14); transition: padding .5s ease, background .5s ease; }
+.cn-pillar:hover { padding-inline-start: 14px; background: linear-gradient(90deg, rgba(176,146,92,.08), transparent 70%); }
+.cn-pillar h3 { margin: 0 0 6px; font-family: var(--pk-cn-serif); font-weight: 400; font-size: clamp(18px, 1.5vw, 22px); letter-spacing: .08em; }
+.cn-pillar .pk-space-en { margin: 0; color: #9a7d4f; }
+.cn-pillar-text { margin: 0; font-size: 14px; line-height: 1.9; color: #5d615e; }
+.cn-network { justify-content: center; margin: 0 0 34px; }
+
+@media (max-width: 900px) {
+  .cn-pillars { grid-template-columns: 1fr; gap: 40px; padding: 12vh 6% 10vh; }
+  .cn-pillar { grid-template-columns: 1fr; gap: 10px; padding: 22px 0; }
+}

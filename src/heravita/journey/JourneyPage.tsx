@@ -27,7 +27,7 @@ export default function JourneyPage({stage}:{stage:ProductStage}) {
   <main>
    <section className="j-hero" data-header-theme="dark" data-reveal-group>
     <div className="j-hero-media"><img src={media[stage]} alt={`${c.title} · 自然生命场域意象`} width={1920} height={1088} data-parallax /></div><div className="j-shade" />
-    <div className="j-hero-copy"><p className="j-kicker" data-reveal>HeraVita Life Journey · 0{stage==="reset"?2:stage==="rebuild"?3:4}</p><h1 data-reveal>{c.title}<em>{c.en}</em></h1><p data-reveal>{c.claim}</p><div className="j-hero-meta" data-reveal><span>{t("7天6夜","7 days · 6 nights")}</span><span>{c.follow}</span><span>{t("长寿 · 爱 · 生命力","Longevity · Love · Vitality")}</span></div></div>
+    <div className="j-hero-copy"><p className="j-kicker" data-reveal>HeraVita Life Journey · 0{stage==="reset"?2:stage==="rebuild"?3:4}</p><h1 data-reveal>{c.title}{!en&&<em>{c.en}</em>}</h1><p data-reveal>{c.claim}</p><div className="j-hero-meta" data-reveal><span>{t("7天6夜","7 days · 6 nights")}</span><span>{c.follow}</span><span>{t("长寿 · 爱 · 生命力","Longevity · Love · Vitality")}</span></div></div>
    </section>
    <JourneyRail active={stage} en={en} />
    <section className="j-section j-intro" data-header-theme="light" data-reveal-group>

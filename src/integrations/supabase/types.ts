@@ -62,6 +62,57 @@ export type Database = {
         }
         Relationships: []
       }
+      usa_consultations: {
+        Row: {
+          companion: boolean
+          consent: boolean
+          contact: string
+          contact_method: string
+          created_at: string
+          focus: string
+          full_name: string
+          id: string
+          message: string
+          preferred_language: string
+          preferred_region: string
+          preferred_timing: string | null
+          records_ready: boolean
+          source: string
+        }
+        Insert: {
+          companion?: boolean
+          consent: boolean
+          contact: string
+          contact_method: string
+          created_at?: string
+          focus: string
+          full_name: string
+          id?: string
+          message?: string
+          preferred_language: string
+          preferred_region: string
+          preferred_timing?: string | null
+          records_ready?: boolean
+          source?: string
+        }
+        Update: {
+          companion?: boolean
+          consent?: boolean
+          contact?: string
+          contact_method?: string
+          created_at?: string
+          focus?: string
+          full_name?: string
+          id?: string
+          message?: string
+          preferred_language?: string
+          preferred_region?: string
+          preferred_timing?: string | null
+          records_ready?: boolean
+          source?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never

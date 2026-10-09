@@ -1,3 +1,10 @@
+import d1 from '@/assets/rd-day1.jpg';
+import d2 from '@/assets/rd-day2.jpg';
+import d3 from '@/assets/rd-day3.jpg';
+import d4 from '@/assets/rd-day4.jpg';
+import d5 from '@/assets/rd-day5.jpg';
+import d6 from '@/assets/rd-day6.jpg';
+import d7 from '@/assets/rd-day7.jpg';
 import hero from '@/assets/journey-reset.jpg';
 import pause from '@/assets/reset-pause.jpg';
 import arrival from '@/assets/reset-arrival.jpg';
@@ -11,3 +18,4 @@ import home from '@/assets/reset-home.jpg';
 import map from '@/assets/reset-map.jpg';
 import residence from '@/assets/journey-care.jpg';
 export const resetMedia={hero,pause,arrival,hormones,medicine,connection,energy,kitchen,spa,home,map,residence};
+export const resetDayImages=[d1,d2,d3,d4,d5,d6,d7];

@@ -68,7 +68,6 @@ export default function PhuketPage() {
             {c.spaces.items.map((s, i) => (
               <article className="pk-space" key={s.en} tabIndex={0}>
                 <img src={SPACE_IMAGES[i]} alt={s.title} loading="lazy" />
-                <div className="pk-space-frame" />
                 <div className="pk-space-copy">
                   <p className="pk-space-en">{s.en}</p>
                   <h3>{s.title}</h3>

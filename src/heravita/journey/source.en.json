@@ -1,0 +1,286 @@
+{
+  "stages": {
+    "reset": {
+      "key": "reset",
+      "title": "Life Reset",
+      "en": "Life Reset",
+      "follow": "90-Day Life Reset Companionship",
+      "rmb": 98000,
+      "usd": 14900,
+      "question": "What is quietly draining my body and my sense of wellbeing?",
+      "claim": "Restore the foundation of life, and rediscover resilience, connection, and wellbeing.",
+      "medicalTitle": "Hormones · Metabolism · Resilience",
+      "medical": [
+        "Core testing: hormone-related testing and physician evaluation.",
+        "Includes 3 months of hormone and recovery management; if the physician's evaluation finds the member suitable for hormone-related treatment, a personalized treatment plan will follow; if not suitable, corresponding metabolic, nutritional, or recovery management will be arranged instead.",
+        "Includes 1 Wiebo laser session.",
+        "Includes 1 liver health support session.",
+        "The final implementation shall be determined based on the professional opinion of physicians at partner medical institutions."
+      ],
+      "relationshipTitle": "Relationship and Wellbeing Reset",
+      "relationship": [
+        "Core focus: reconnection. Rediscover yourself, rediscover your partner, rediscover love, rediscover life.",
+        "Deep couple's dialogue",
+        "Exploring ways of expressing love",
+        "Emotional awareness",
+        "Couple's meditation",
+        "Relationship rituals",
+        "Cooking together",
+        "Shared experiences in nature",
+        "Dialogue about a shared future"
+      ],
+      "energyTitle": "Sacral Chakra Vitality Reset",
+      "energy": [
+        "As HeraVita's signature Life Reset experience, this focuses on the traditional sacral chakra themes of vitality, sensation, intimacy, joy, and creativity; it may incorporate breathwork, sound, body flow, water-element experiences, meditation, creativity, intimacy-awareness, and abundance-themed meditation."
+      ],
+      "days": [
+        {
+          "title": "Day 1 · Arrival · Slow Down",
+          "body": "Private airport transfer, villa check-in, Welcome Home, initial conversation about body and emotions, healing meal, essential-oil spa massage ①, evening meditation and sleep preparation.",
+          "quote": "First, let the body know: I no longer need to keep pushing through."
+        },
+        {
+          "title": "Day 2 · Seeing · Understanding the Body",
+          "body": "Hormone testing, physician consultation, body composition, nutritional needs, sleep and lifestyle assessment, emotional and wellbeing assessment, cooking together.",
+          "quote": "True reset begins with seeing why you are so tired."
+        },
+        {
+          "title": "Day 3 · Releasing · Letting Go of the Burden",
+          "body": "Physician-matched medical program; Wiebo laser may be arranged per physician's plan; one-on-one emotional counseling, stress-source awareness, nervous-system relaxation, environmental healing.",
+          "quote": "Some exhaustion comes from the body, some from what has long gone unreleased."
+        },
+        {
+          "title": "Day 4 · Recovery · Reclaiming Vitality",
+          "body": "Liver support program, confirmation of hormone and recovery plan, sacral chakra vitality experience, breathwork, body flow, water-element experience, abundance-themed meditation.",
+          "quote": "Recovery is not just about having strength—it is about feeling again, having joy, having vitality."
+        },
+        {
+          "title": "Day 5 · Connection · Feeling Love Again",
+          "body": "Exploring relationship wellbeing, deep couple's dialogue, ways of expressing love, cooking together, shared experiences in nature, relationship rituals.",
+          "quote": "Feel yourself again, and feel the people around you again."
+        },
+        {
+          "title": "Day 6 · Rebuilding · New Rhythms of Life",
+          "body": "Refrigerator culture, dietary structure, sleep rhythm, ways of exercising, recovery time, work rhythm, family lifestyle, essential-oil spa massage ②.",
+          "quote": "Return to the same life, but no longer live it the same way."
+        },
+        {
+          "title": "Day 7 · Return · Setting Off Anew",
+          "body": "Physician summary, 3-month hormone and recovery management plan, 90-day lifestyle companionship, relationship and wellbeing plan, personal life recovery map, life reset ceremony.",
+          "quote": "What ends after seven days is not the journey, but the beginning of a new way of life."
+        }
+      ]
+    },
+    "rebuild": {
+      "key": "rebuild",
+      "title": "Life Rebuilding",
+      "en": "Life Rebuilding",
+      "follow": "6-Month Life Rebuilding Companionship",
+      "rmb": 138000,
+      "usd": 20900,
+      "question": "Why do my body, emotions, and relationships always return to the same patterns?",
+      "claim": "What is rebuilt is not a single metric, but the entire life system that supports health and wellbeing.",
+      "medicalTitle": "Nutrition · Genetics · Deep Health",
+      "medical": [
+        "Core testing: nutrient testing.",
+        "Core testing: DNA All Health / genetic health assessment.",
+        "A deeper assessment pathway is designed by the physician, combining personal medical history, family history, and current physical condition.",
+        "Includes 3 months of personalized hormone and metabolic management.",
+        "Includes 1 gut health management session.",
+        "Includes 1 immune support session.",
+        "Includes 1 brain and nervous system health support session."
+      ],
+      "relationshipTitle": "Rebuilding Relationship Wellbeing",
+      "relationship": [
+        "Core focus: rebuilding the way love is practiced. Attention is given to emotional patterns, communication patterns, expectations and disappointments, giving and receiving love, relationship boundaries, family roles, division of responsibility, intimacy and distance, shared daily rhythms, and a shared future.",
+        "The goal is not to determine who is right or wrong, but to re-understand: how we love, how we get hurt, how we defend ourselves, and how we reconnect."
+      ],
+      "energyTitle": "Seven-Chakra Life Energy Realignment",
+      "energy": [
+        "Centered on the seven traditional life themes of security, intimacy, strength, love, expression, insight, and meaning, combined with emotional patterns, relationship patterns, self-worth, creativity, and life direction."
+      ],
+      "days": [
+        {
+          "title": "Day 1 · Returning to Yourself",
+          "body": "Airport transfer, check-in, Welcome Home, in-depth life interview, review of body/relationship/lifestyle patterns, essential-oil spa ①, evening quiet time.",
+          "quote": ""
+        },
+        {
+          "title": "Day 2 · Deep Seeing",
+          "body": "Nutrient testing, DNA health assessment, physician evaluation, family and personal medical history, emotional patterns, relationship patterns, sources of stress.",
+          "quote": ""
+        },
+        {
+          "title": "Day 3 · Body Rebuilding",
+          "body": "Gut health management, personalized hormone and metabolic plan, nutritional rebuilding, cooking together, refrigerator culture, exercise and recovery.",
+          "quote": ""
+        },
+        {
+          "title": "Day 4 · Inner Rebuilding",
+          "body": "Brain and nervous system health support, nervous-system relaxation, seven-chakra life-theme experience, emotional-pattern awareness, self-worth, meditation/sound/breathwork.",
+          "quote": ""
+        },
+        {
+          "title": "Day 5 · Relationship Rebuilding",
+          "body": "Patterns in the couple's relationship, communication, expectations, boundaries, roles, loving and being loved, a shared future, cooking together, nature experience.",
+          "quote": ""
+        },
+        {
+          "title": "Day 6 · Life System Rebuilding",
+          "body": "Work rhythm, family rhythm, diet, sleep, exercise, personal space, recovery time, relationship rituals, travel style, essential-oil spa ②.",
+          "quote": ""
+        },
+        {
+          "title": "Day 7 · Integration · A New Life System",
+          "body": "Physician summary, 6-month life rebuilding plan, body health pathway, relationship pathway, emotional and inner-growth pathway, lifestyle implementation plan, personal life rebuilding blueprint, life rebuilding ceremony.",
+          "quote": ""
+        }
+      ]
+    },
+    "flourish": {
+      "key": "flourish",
+      "title": "Life Flourishing",
+      "en": "Life Flourishing",
+      "follow": "12-Month Private Life Management",
+      "rmb": 198000,
+      "usd": 29900,
+      "question": "What kind of life do I want to have over the next 10, 20 years?",
+      "claim": "From restoring life, to truly unfolding it.",
+      "medicalTitle": "Advanced Longevity and Regenerative Medicine",
+      "medical": [
+        "Includes 1 designated cell-based medical program.",
+        "This program is limited to the designated scope jointly confirmed by HeraVita and partner medical institutions; whether it is applicable and how it is implemented will be determined by a qualified physician based on a comprehensive evaluation of test results, physical condition, indications, and local regulations.",
+        "If the physician's evaluation finds the designated cell-based medical program not suitable, an equivalent advanced longevity medicine program will be matched within the scope defined by this package.",
+        "Other cell-based programs, upgraded programs, or additional treatment sessions are not included in the base package.",
+        "Includes 1 gut health management session.",
+        "Includes 1 brain and nervous system health support session.",
+        "Includes 1 liver health support session.",
+        "Includes advanced longevity medical assessment and a physician-designed personalized annual health strategy.",
+        "A separate immune support item is not repeated in this fourth stage."
+      ],
+      "relationshipTitle": "Love · Joy · Meaning of Life",
+      "relationship": [
+        "At this stage, the focus moves beyond repairing the relationship to co-creating happiness together. Attention is given to the quality of intimacy, shared dreams, family-life design, travel together, novelty, sense of ritual, growing together, meaning of life, and family impact and legacy."
+      ],
+      "energyTitle": "Full-Dimensional Life Flourishing",
+      "energy": [
+        "Heart-chakra connection experience",
+        "Love and abundance life experience",
+        "Shared vision as a couple",
+        "Life flourishing ceremony"
+      ],
+      "days": [
+        {
+          "title": "Day 1 · Opening a New Chapter of Life",
+          "body": "Airport transfer, check-in, Welcome Home, annual life-status interview, review of health/family/relationship/career/future vision, essential-oil spa ①.",
+          "quote": ""
+        },
+        {
+          "title": "Day 2 · Seeing the Future Body",
+          "body": "Advanced longevity assessment, physician consultation, biological-age trends, metabolism, nutrition, brain health, gut health and other assessments, forming the annual medical direction.",
+          "quote": ""
+        },
+        {
+          "title": "Day 3 · Activating the Body's Potential",
+          "body": "The physician arranges the designated cell-based medical program or a matched advanced longevity medicine program based on indications; other complex activities are reduced on this day, allowing ample time for recovery.",
+          "quote": ""
+        },
+        {
+          "title": "Day 4 · Love and Abundance",
+          "body": "Heart-chakra connection experience, love-and-abundance theme, exploring wellbeing, shared vision as a couple, dialogue on life and relationship, acceptance/giving and receiving.",
+          "quote": ""
+        },
+        {
+          "title": "Day 5 · Creation · Unfolding",
+          "body": "Creativity, meaning of life, personal dreams, future career, family's future, global lifestyle, full-dimensional seven-chakra life unfolding, nature/golf/high-quality life experience.",
+          "quote": ""
+        },
+        {
+          "title": "Day 6 · Designing the Next 10 Years",
+          "body": "The next 10 years of health, marriage and family, the next generation, global living, career, travel, meaning of life, a global life map, essential-oil spa ②, forming a future life-unfolding map.",
+          "quote": ""
+        },
+        {
+          "title": "Day 7 · Flourishing · Stepping Into a Bigger World",
+          "body": "Annual medical longevity strategy, 12-month private life management plan, family and relationship vision, global journey recommendations, future life-unfolding map, life flourishing ceremony, \"My Next Chapter.\"",
+          "quote": ""
+        }
+      ]
+    }
+  },
+  "shared": {
+    "dimensions": [
+      "Health and Longevity",
+      "Biological age, hormones, metabolism, sleep, nutrition, gut health, brain health, immune status, resilience, and precision longevity medicine.",
+      "What does my body truly need right now?",
+      "Love and Wellbeing",
+      "Emotions, wellbeing, the couple's relationship, intimacy, expressing love, the capacity to receive love, family connection, novelty, a sense of ritual, and a shared future.",
+      "Can I still feel love, connection, and happiness?",
+      "Energy and Inner Vitality",
+      "Life force, bodily sensation, creativity, inner stability, a sense of abundance, awareness, meditation, meaning of life, and the seven-chakra themed experience.",
+      "Does my life still have energy, feeling, and the power to unfold?"
+    ],
+    "layers": [
+      "Layer One | Global Longevity Medicine",
+      "Connecting members with leading longevity medicine institutions and specialist physicians to provide core testing, physician evaluation, personalized medical plans, necessary medical interventions, and long-term health strategies. The medical logic is unified as: Goal → Assessment → Matching → Medical Intervention. The life stage and goal remain fixed, the core testing remains relatively fixed, and the specific medical intervention is personalized.",
+      "Layer Two | Rebuilding Emotional and Relationship Wellbeing",
+      "Includes emotional awareness, stress release, wellbeing, the couple's relationship, intimate connection, expressing love, the capacity to receive love, family communication, relationship patterns, personal boundaries, and a shared future. Core belief: once the body is healthy, one should also live happily.",
+      "Layer Three | Energy and Inner Vitality",
+      "Includes meditation, breathwork, body awareness, sound experiences, the seven-chakra themed experience, awakening of vitality, love-and-abundance themes, creativity, inner connection, and meaning of life. The seven chakras serve as a traditional mind-body-spirit framework for inner awareness, meditation, and exploration of life themes, and are not used as a basis for medical diagnosis or treatment.",
+      "Layer Four | Healing Lifestyle and Environment",
+      "Refrigerator culture, cooking together, healing nutrition, six-senses healing, environmental healing, sleep rhythm, exercise and recovery, integrated with sunlight, the ocean, plants, music, fragrance, spa, floatation, golf, nature activities, and spaces for quiet reflection. Core expression: let the environment begin to support life, rather than drain it.",
+      "Layer Five | Integration and Long-Term Companionship",
+      "True change must ultimately return to the home, the refrigerator, sleep, exercise, the couple's relationship, ways of working, and daily rhythms. The four stages each include 28 days, 90 days, 6 months, and 12 months of ongoing companionship respectively."
+    ],
+    "care": [
+      "6 nights at a HeraVita wellness healing villa, single occupancy.",
+      "Dedicated vehicle transfers: airport, medical institutions, and main activities throughout the Journey.",
+      "Private life concierge: scheduling, itinerary, daily needs, medical coordination, activity coordination, and life services.",
+      "Daily residence care: room tidying, cleaning, and basic daily living care.",
+      "Healer companionship: meditation, breathwork, body awareness, seven-chakra experience, emotional and inner support.",
+      "Life rebuilding companion: daily review, recording life discoveries, lifestyle guidance, and personal-plan integration.",
+      "Emotional and relationship wellbeing support: one-on-one emotional counseling, exploring wellbeing, exploring relationship status; shared experiences are added when a partner accompanies.",
+      "Includes 2 fixed essential-oil spa massages.",
+      "Six-senses healing.",
+      "Cooking together.",
+      "Refrigerator culture.",
+      "Meditation and breathwork.",
+      "Exercise and nature experiences.",
+      "Daily Journey review.",
+      "Delivery of a personal life plan.",
+      "Long-term online companionship corresponding to the stage."
+    ],
+    "partner": [
+      "When two partners join the same stage of the life journey together, the combined package price for both receives a 10% discount.",
+      "This is not a 10% discount for the second person—rather, the combined total price for both people is settled uniformly at 90%. Couple accommodation is arranged based on actual double-occupancy needs."
+    ],
+    "boundaries": [
+      "Layer One | Guaranteed Inclusions",
+      "Upon purchase, you are guaranteed: accommodation, vehicle transfers, concierge, residence care, 2 spa sessions, healer, life rebuilding companion, emotional-relationship experience, cooking together, refrigerator culture, meditation, exercise, core assessments, personal plan, long-term companionship, and the medical items explicitly stated on the package page.",
+      "Layer Two | Precise Physician Matching",
+      "Although some medical items are included within the package scope, whether they are ultimately applicable and how they are implemented is determined by the physician based on test results, indications, and individual physical condition; if not applicable, a medical plan suited to the stage's goals and the package level will be matched instead.",
+      "Layer Three | Optional Upgrades",
+      "Additional testing, additional treatment sessions, cell-based programs beyond the package's designated scope, cell-program upgrades, additional specialist consultations, additional accommodation, room-type upgrades, extended Journey, private yacht or specially customized activities, follow-up medical care in Europe/Switzerland/the United States, global secluded-destination journeys, and professional services such as identity/education/asset/corporate overseas expansion, all require a separate plan and fee."
+    ],
+    "expansion": [
+      "This layer sits beyond Life Flourishing—it is not a fifth life stage, but HeraVita's global life-expansion system for premium members.",
+      "Core proposition: from a healthy life, to a bigger global life.",
+      "Global Secluded-Destination Journeys",
+      "High-quality, private, and immersive global travel and life experiences designed for premium members.",
+      "Global Identity and Lifestyle Planning",
+      "Connecting members with suitable professional resources for overseas identity, residency, and global lifestyle services.",
+      "Next-Generation International Education",
+      "Connecting members with overseas education, international schools, university pathways, and resources for the next generation's global growth.",
+      "Global Asset and Professional Resource Connections",
+      "Connecting members with qualified investment, asset management, legal, tax, and family-office service institutions. HeraVita's role: understand needs, screen resources, connect resources, and coordinate services.",
+      "Corporate Global Connections",
+      "Connecting members with overseas markets, corporate overseas expansion, international cooperation, overseas professional services, and a global business resource network."
+    ],
+    "brand": [
+      "LONGEVITY · LOVE · VITALITY",
+      "Live longer. Love deeper. Live more fully.",
+      "Live Longer. Love Deeper. Live Fully.",
+      "HeraVita · Global Life Rebuilding Ecosystem"
+    ]
+  }
+}

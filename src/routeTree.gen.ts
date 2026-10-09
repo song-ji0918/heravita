@@ -25,6 +25,7 @@ import { Route as GlobalChinaRouteImport } from './routes/global_.china'
 import { Route as GlobalEuropeRouteImport } from './routes/global_.europe'
 import { Route as GlobalPhuketRouteImport } from './routes/global_.phuket'
 import { Route as GlobalUsaRouteImport } from './routes/global_.usa'
+import { Route as JourneyBookingRouteImport } from './routes/journey_.booking'
 import { Route as JourneyFlourishRouteImport } from './routes/journey_.flourish'
 import { Route as JourneyRebuildRouteImport } from './routes/journey_.rebuild'
 import { Route as JourneyResetRouteImport } from './routes/journey_.reset'
@@ -112,6 +113,11 @@ const GlobalUsaRoute = GlobalUsaRouteImport.update({
   path: '/global/usa',
   getParentRoute: () => rootRouteImport,
 } as any)
+const JourneyBookingRoute = JourneyBookingRouteImport.update({
+  id: '/journey_/booking',
+  path: '/journey/booking',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const JourneyFlourishRoute = JourneyFlourishRouteImport.update({
   id: '/journey_/flourish',
   path: '/journey/flourish',
@@ -160,6 +166,7 @@ export interface FileRoutesByFullPath {
   '/global/europe': typeof GlobalEuropeRoute
   '/global/phuket': typeof GlobalPhuketRoute
   '/global/usa': typeof GlobalUsaRoute
+  '/journey/booking': typeof JourneyBookingRoute
   '/journey/flourish': typeof JourneyFlourishRoute
   '/journey/rebuild': typeof JourneyRebuildRoute
   '/journey/reset': typeof JourneyResetRoute
@@ -184,6 +191,7 @@ export interface FileRoutesByTo {
   '/global/europe': typeof GlobalEuropeRoute
   '/global/phuket': typeof GlobalPhuketRoute
   '/global/usa': typeof GlobalUsaRoute
+  '/journey/booking': typeof JourneyBookingRoute
   '/journey/flourish': typeof JourneyFlourishRoute
   '/journey/rebuild': typeof JourneyRebuildRoute
   '/journey/reset': typeof JourneyResetRoute
@@ -209,6 +217,7 @@ export interface FileRoutesById {
   '/global_/europe': typeof GlobalEuropeRoute
   '/global_/phuket': typeof GlobalPhuketRoute
   '/global_/usa': typeof GlobalUsaRoute
+  '/journey_/booking': typeof JourneyBookingRoute
   '/journey_/flourish': typeof JourneyFlourishRoute
   '/journey_/rebuild': typeof JourneyRebuildRoute
   '/journey_/reset': typeof JourneyResetRoute
@@ -235,6 +244,7 @@ export interface FileRouteTypes {
     | '/global/europe'
     | '/global/phuket'
     | '/global/usa'
+    | '/journey/booking'
     | '/journey/flourish'
     | '/journey/rebuild'
     | '/journey/reset'
@@ -259,6 +269,7 @@ export interface FileRouteTypes {
     | '/global/europe'
     | '/global/phuket'
     | '/global/usa'
+    | '/journey/booking'
     | '/journey/flourish'
     | '/journey/rebuild'
     | '/journey/reset'
@@ -283,6 +294,7 @@ export interface FileRouteTypes {
     | '/global_/europe'
     | '/global_/phuket'
     | '/global_/usa'
+    | '/journey_/booking'
     | '/journey_/flourish'
     | '/journey_/rebuild'
     | '/journey_/reset'
@@ -308,6 +320,7 @@ export interface RootRouteChildren {
   GlobalEuropeRoute: typeof GlobalEuropeRoute
   GlobalPhuketRoute: typeof GlobalPhuketRoute
   GlobalUsaRoute: typeof GlobalUsaRoute
+  JourneyBookingRoute: typeof JourneyBookingRoute
   JourneyFlourishRoute: typeof JourneyFlourishRoute
   JourneyRebuildRoute: typeof JourneyRebuildRoute
   JourneyResetRoute: typeof JourneyResetRoute
@@ -430,6 +443,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlobalUsaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/journey_/booking': {
+      id: '/journey_/booking'
+      path: '/journey/booking'
+      fullPath: '/journey/booking'
+      preLoaderRoute: typeof JourneyBookingRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/journey_/flourish': {
       id: '/journey_/flourish'
       path: '/journey/flourish'
@@ -492,6 +512,7 @@ const rootRouteChildren: RootRouteChildren = {
   GlobalEuropeRoute: GlobalEuropeRoute,
   GlobalPhuketRoute: GlobalPhuketRoute,
   GlobalUsaRoute: GlobalUsaRoute,
+  JourneyBookingRoute: JourneyBookingRoute,
   JourneyFlourishRoute: JourneyFlourishRoute,
   JourneyRebuildRoute: JourneyRebuildRoute,
   JourneyResetRoute: JourneyResetRoute,

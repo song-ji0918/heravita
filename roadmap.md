@@ -1,5 +1,6 @@
 # HeraVita
 - [ ] Replace repeated journey topic photographs with stage-specific images.
+- [ ] Review image composition and scene similarity, not only duplicate filenames.
 - [ ] Remove repeated full-screen explanations; connect distinct product chapters and retain complete inclusions.
 - [ ] Restore designed opening/closing application buttons and illustrated stage progression; fix footer image sizing.
 - [ ] Verify product pages, stage links, footer and application entries in the running site.

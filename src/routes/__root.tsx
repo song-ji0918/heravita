@@ -11,6 +11,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../original/index.css?url";
+import journeyTokens from "../journey-tokens.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import SiteJourneyBridge from "@/heravita/journey/SiteJourneyBridge";
 
@@ -96,6 +97,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         href: appCss,
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "stylesheet", href: journeyTokens },
     ],
   }),
   shellComponent: RootShell,

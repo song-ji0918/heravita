@@ -34,7 +34,7 @@ export default function NetworkPage() {
         </section>
 
         <section className="usa-network-human" data-header-theme="light">
-          <div className="usa-network-human-copy" data-reveal-group><p className="usa-eyebrow" data-reveal>International Medical Coordination</p><span className="usa-rule" data-line /><h2 className="usa-title" data-reveal>{c.closing.subtitle}</h2><p className="usa-body" data-reveal>{c.closing.body}</p></div>
+          <div className="usa-network-human-copy" data-reveal-group><p className="usa-eyebrow" data-reveal>International Medical Coordination</p><span className="usa-rule" data-line /><h2 className="usa-title" data-reveal>{c.closing.subtitle}</h2><p className="usa-body" data-reveal>{c.coordination}</p></div>
           <div className="usa-network-human-media"><img src={people} alt={c.closing.subtitle} loading="lazy" width={1440} height={1800} /></div>
         </section>
       </main>

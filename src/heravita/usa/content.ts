@@ -12,6 +12,7 @@ export type UsaCopy = {
   matching: { eyebrow: string; title: string; body: string[]; cta: string };
   vitality: { eyebrow: string; title: string; body: string };
   closing: { eyebrow: string; title: string; subtitle: string; body: string; networkCta: string; consultCta: string };
+  coordination: string;
 };
 
 const TAGS = ["New York Local Company", "Resource Network", "Expanding"];
@@ -87,6 +88,7 @@ const zh: UsaCopy = {
     networkCta: "探索医学网络",
     consultCta: "预约国际医学协调",
   },
+  coordination: "国际医学协调，是让跨地区、跨语言的安排不必由您独自梳理。我们从您的关注方向与既有资料出发，协助澄清问题、核对时间与沟通安排。",
 };
 
 const en: UsaCopy = {
@@ -98,6 +100,7 @@ const en: UsaCopy = {
   matching: { eyebrow: "Selection & Matching", title: "Turning complex choices into a path forward", body: ["We begin with your priorities, existing records, timing and regional preferences to clarify questions and screen potentially suitable specialists and resources.", "All medical decisions, tests and interventions are determined after assessment by qualified medical institutions and physicians."], cta: "Begin Medical Coordination" },
   vitality: { eyebrow: "Longevity in Life", title: "The purpose of medicine is a life with greater vitality", body: "Longevity science does not live only in clinics and data. It returns to movement, relationships, natural rhythms and everyday choices—supporting our capacity to function, feel and flourish." },
   closing: { eyebrow: "HeraVita United States", title: "Find the Right Path", subtitle: "Begin with a clearer choice", body: "Explore the U.S. resource network, or speak with an international medical coordination advisor about your priorities and next step.", networkCta: "Explore the Network", consultCta: "Request Coordination" },
+  coordination: "International medical coordination means you do not have to organize an arrangement across regions and languages alone. We begin with your priorities and existing records, clarify the questions, and keep timing and communication in order.",
 };
 
 const es: UsaCopy = {
@@ -109,6 +112,7 @@ const es: UsaCopy = {
   matching: { eyebrow: "Selección y correspondencia", title: "Convertir decisiones complejas en un camino", body: ["Partimos de sus prioridades, documentación, tiempo y región para clarificar preguntas y seleccionar recursos potencialmente adecuados.", "Toda decisión, prueba e intervención médica depende de la evaluación de instituciones y profesionales cualificados."], cta: "Iniciar coordinación médica" },
   vitality: { eyebrow: "La longevidad en la vida", title: "El propósito de la medicina es una vida con mayor vitalidad", body: "La ciencia de la longevidad vuelve al movimiento, las relaciones, los ritmos naturales y las decisiones cotidianas." },
   closing: { eyebrow: "HeraVita United States", title: "Find the Right Path", subtitle: "Comience con una elección más clara", body: "Explore la red o converse con un asesor de coordinación médica internacional.", networkCta: "Explorar la red", consultCta: "Solicitar coordinación" },
+  coordination: "La coordinación médica internacional significa que no debe organizar solo los trámites entre regiones e idiomas. Partimos de sus prioridades y documentación existente para clarificar las preguntas y ordenar tiempos y comunicaciones.",
 };
 
 const ar: UsaCopy = {
@@ -120,6 +124,7 @@ const ar: UsaCopy = {
   matching: { eyebrow: "الفرز والمطابقة", title: "تحويل الخيارات المعقدة إلى مسار واضح", body: ["نبدأ بأولوياتك وسجلاتك وتوقيتك والمنطقة المفضلة لتوضيح الأسئلة وفرز الموارد المحتملة.", "تُحدد جميع القرارات والفحوص والتدخلات بعد تقييم مؤسسات وأطباء مؤهلين."], cta: "ابدأ التنسيق الطبي" },
   vitality: { eyebrow: "طول العمر في الحياة", title: "غاية الطب حياة أكثر حيوية", body: "يعود علم طول العمر إلى الحركة والعلاقات والإيقاعات الطبيعية والخيارات اليومية." },
   closing: { eyebrow: "HeraVita United States", title: "Find the Right Path", subtitle: "ابدأ بخيار أكثر وضوحًا", body: "استكشف الشبكة أو تحدث مع مستشار التنسيق الطبي الدولي.", networkCta: "استكشف الشبكة", consultCta: "اطلب التنسيق" },
+  coordination: "التنسيق الطبي الدولي يعني ألا تضطر إلى ترتيب الإجراءات عبر المناطق واللغات وحدك. نبدأ من أولوياتك وسجلاتك المتوفرة لتوضيح الأسئلة وتنظيم التوقيت والتواصل.",
 };
 
 const COPY: Record<string, UsaCopy> = { zh, en, es, ar };

@@ -22,6 +22,7 @@ import { Route as MethodRouteImport } from './routes/method'
 import { Route as OriginRouteImport } from './routes/origin'
 import { Route as StoryRouteImport } from './routes/story'
 import { Route as GlobalChinaRouteImport } from './routes/global_.china'
+import { Route as GlobalEuropeRouteImport } from './routes/global_.europe'
 import { Route as GlobalPhuketRouteImport } from './routes/global_.phuket'
 import { Route as GlobalUsaRouteImport } from './routes/global_.usa'
 import { Route as GlobalPhuketBookingRouteImport } from './routes/global_.phuket_.booking'
@@ -93,6 +94,11 @@ const GlobalChinaRoute = GlobalChinaRouteImport.update({
   path: '/global/china',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GlobalEuropeRoute = GlobalEuropeRouteImport.update({
+  id: '/global_/europe',
+  path: '/global/europe',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GlobalPhuketRoute = GlobalPhuketRouteImport.update({
   id: '/global_/phuket',
   path: '/global/phuket',
@@ -133,6 +139,7 @@ export interface FileRoutesByFullPath {
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
   '/global/china': typeof GlobalChinaRoute
+  '/global/europe': typeof GlobalEuropeRoute
   '/global/phuket': typeof GlobalPhuketRoute
   '/global/usa': typeof GlobalUsaRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
@@ -153,6 +160,7 @@ export interface FileRoutesByTo {
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
   '/global/china': typeof GlobalChinaRoute
+  '/global/europe': typeof GlobalEuropeRoute
   '/global/phuket': typeof GlobalPhuketRoute
   '/global/usa': typeof GlobalUsaRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
@@ -174,6 +182,7 @@ export interface FileRoutesById {
   '/origin': typeof OriginRoute
   '/story': typeof StoryRoute
   '/global_/china': typeof GlobalChinaRoute
+  '/global_/europe': typeof GlobalEuropeRoute
   '/global_/phuket': typeof GlobalPhuketRoute
   '/global_/usa': typeof GlobalUsaRoute
   '/global_/phuket_/booking': typeof GlobalPhuketBookingRoute
@@ -196,6 +205,7 @@ export interface FileRouteTypes {
     | '/origin'
     | '/story'
     | '/global/china'
+    | '/global/europe'
     | '/global/phuket'
     | '/global/usa'
     | '/global/phuket/booking'
@@ -216,6 +226,7 @@ export interface FileRouteTypes {
     | '/origin'
     | '/story'
     | '/global/china'
+    | '/global/europe'
     | '/global/phuket'
     | '/global/usa'
     | '/global/phuket/booking'
@@ -236,6 +247,7 @@ export interface FileRouteTypes {
     | '/origin'
     | '/story'
     | '/global_/china'
+    | '/global_/europe'
     | '/global_/phuket'
     | '/global_/usa'
     | '/global_/phuket_/booking'
@@ -257,6 +269,7 @@ export interface RootRouteChildren {
   OriginRoute: typeof OriginRoute
   StoryRoute: typeof StoryRoute
   GlobalChinaRoute: typeof GlobalChinaRoute
+  GlobalEuropeRoute: typeof GlobalEuropeRoute
   GlobalPhuketRoute: typeof GlobalPhuketRoute
   GlobalUsaRoute: typeof GlobalUsaRoute
   GlobalPhuketBookingRoute: typeof GlobalPhuketBookingRoute
@@ -357,6 +370,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof GlobalChinaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/global_/europe': {
+      id: '/global_/europe'
+      path: '/global/europe'
+      fullPath: '/global/europe'
+      preLoaderRoute: typeof GlobalEuropeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/global_/phuket': {
       id: '/global_/phuket'
       path: '/global/phuket'
@@ -409,6 +429,7 @@ const rootRouteChildren: RootRouteChildren = {
   OriginRoute: OriginRoute,
   StoryRoute: StoryRoute,
   GlobalChinaRoute: GlobalChinaRoute,
+  GlobalEuropeRoute: GlobalEuropeRoute,
   GlobalPhuketRoute: GlobalPhuketRoute,
   GlobalUsaRoute: GlobalUsaRoute,
   GlobalPhuketBookingRoute: GlobalPhuketBookingRoute,

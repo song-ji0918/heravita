@@ -22,7 +22,7 @@
 .usa-media img, .usa-split-media img, .usa-matching-media img { width: 100%; height: 100%; object-fit: cover; will-change: transform; }
 .usa-overlay { position: absolute; inset: 0; pointer-events: none; }
 .usa-overlay--hero { background: linear-gradient(90deg, rgba(9,12,14,.76), rgba(9,12,14,.1) 64%), linear-gradient(0deg, rgba(9,12,14,.5), transparent 55%); }
-.usa-overlay--left { background: linear-gradient(90deg, rgba(9,12,14,.9), rgba(9,12,14,.58) 42%, rgba(9,12,14,.08) 78%); }
+.usa-overlay--left { background: linear-gradient(90deg, rgba(9,12,14,.93), rgba(9,12,14,.86) 52%, rgba(9,12,14,.55) 76%, rgba(9,12,14,.08) 94%), linear-gradient(0deg, rgba(9,12,14,.66), rgba(9,12,14,.2) 46%, transparent 78%); }
 .usa-overlay--bottom { background: linear-gradient(0deg, rgba(9,12,14,.75), rgba(9,12,14,.04) 70%); }
 .usa-eyebrow { margin: 0; font-size: 11px; font-weight: 500; letter-spacing: .24em; text-transform: uppercase; }
 .usa-display { margin: 24px 0; font-family: var(--usa-serif); font-weight: 300; line-height: 1.02; }
@@ -58,10 +58,10 @@
 
 .usa-network { display: flex; align-items: center; color: var(--usa-white); }
 .usa-network-copy { position: relative; z-index: 1; width: min(750px, 72%); padding: 13vh 7.5%; }
+.usa-network .usa-media img { filter: brightness(.72) saturate(.68) contrast(1.05); }
 .usa-region-strip { margin: 7vh 0 44px; padding: 0; border-top: 1px solid rgba(250,250,250,.3); list-style: none; }
-.usa-region-strip li { display: grid; grid-template-columns: minmax(180px, 1fr) 1.5fr; gap: 24px; padding: 17px 0; border-bottom: 1px solid rgba(250,250,250,.2); }
-.usa-region-strip span { font-family: var(--usa-serif); font-size: 20px; }
-.usa-region-strip small { color: rgba(250,250,250,.7); font-size: 12px; line-height: 1.7; }
+.usa-region-strip li { padding: 15px 0; border-bottom: 1px solid rgba(250,250,250,.42); }
+.usa-region-strip span { font-family: var(--usa-serif); font-size: 24px; letter-spacing: .05em; color: rgba(250,250,250,.96); }
 
 .usa-capabilities { display: grid; grid-template-columns: 5fr 7fr; background: var(--usa-ink); color: var(--usa-white); }
 .usa-capabilities-visual { min-height: 100vh; overflow: hidden; }

@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "OPPOSansRegular";
+  src: url("/__l5e/assets-v1/687395e0-bd39-407d-8743-12deafc64696/OPPOSansRegular.ttf") format("truetype");
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  /* 品牌色，后续 Banner / sections / Footer 会复用 */
+  --color-brand-cream: #f7f5ef;
+  --color-brand-navy: #1f3b5c;
+  --color-brand-ink: #1a1a1a;
+  --color-brand-gray: #2f2f2f;
+  --color-banner: #fcfaf7;
+
+  --font-OPPOSansRegular: "OPPOSansRegular", sans-serif;
+}
+
+:root {
+  color-scheme: light;
+  --font-brand-sans: "Helvetica Neue", "Helvetica", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+  --font-display-latin: "Helvetica Neue", "Helvetica", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+  --font-hero-display: "Red Hat Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-hero-text: "Red Hat Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-brand-sans);
+  background-color: #ffffff;
+}
+
+html[dir="rtl"] body {
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    "Noto Naskh Arabic",
+    "Arial",
+    sans-serif;
+}
+
+#root {
+  display: flex;
+  min-height: 100svh;
+  flex-direction: column;
+}
+
+@keyframes section3Caption {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

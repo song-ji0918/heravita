@@ -55,7 +55,7 @@ export default function PhuketPage() {
             <p className="pk-eyebrow" data-reveal>{c.residence.eyebrow}</p>
             <h2 className="pk-title pk-title--light" data-reveal>{c.residence.title}</h2>
             <p className="pk-body pk-body--light" data-reveal>{c.residence.body}</p>
-            <div data-reveal><Cta to="/global/phuket/booking">{c.residence.cta}</Cta></div>
+            <div className="pk-actions" data-reveal><Cta to="/global/phuket/booking">{c.residence.cta}</Cta></div>
           </div>
         </section>
 

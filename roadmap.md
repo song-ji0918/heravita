@@ -1,4 +1,6 @@
 # HeraVita
+- [ ] Refine Rebuilding/Flourishing seven-day paths, relationship chapters and connected layouts; reduce black backgrounds and dividers.
+- [ ] Replace Rebuilding/Flourishing opening and clinical-looking photography with distinct vitality-led scenes; verify both pages.
 - [ ] Rebuild Life Reset alone as a rich Discovery-style editorial page; retain approved source and unified booking.
 - [ ] Replace repeated journey topic photographs with stage-specific images.
 - [ ] Review image composition and scene similarity, not only duplicate filenames.

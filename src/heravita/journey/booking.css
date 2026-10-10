@@ -1,0 +1,44 @@
+.bk-page{background:var(--journey-paper)}
+.bk-hero{position:relative;height:72svh;min-height:520px;overflow:hidden;color:var(--journey-light)}
+.bk-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:bk-zoom 18s ease-out both}
+.bk-hero-shade{position:absolute;inset:0;background:var(--journey-shade)}
+.bk-hero-copy{position:absolute;left:50%;bottom:12%;transform:translateX(-50%);width:min(840px,86%);text-align:center;animation:bk-rise 1.2s ease-out both}
+.bk-hero h1{font-size:56px;line-height:1.3;margin:0 0 20px}
+.bk-hero-copy>p{font-size:16px;margin:0 auto;max-width:560px}
+.bk-eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.24em!important;margin-bottom:22px}
+.bk-scroll{width:min(840px,86%);margin:0 auto;padding:110px 0 130px}
+.bk-chapter{padding:0 0 90px;animation:bk-rise .9s ease-out both}
+.bk-chapter header{display:flex;align-items:baseline;gap:22px;margin-bottom:38px}
+.bk-chapter header span{font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--journey-gold)}
+.bk-chapter h2{font-size:36px;line-height:1.3;margin:0}
+.bk-label{font-size:13px;color:var(--journey-muted);margin:30px 0 14px}
+.bk-chips{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px}
+.bk-chips button{border:1px solid var(--journey-line);background:transparent;color:var(--journey-ink);padding:12px 20px;font-size:13px;border-radius:999px;cursor:pointer;transition:all .35s ease}
+.bk-chips button:hover{border-color:var(--journey-ink)}
+.bk-chips button[aria-pressed=true]{background:var(--journey-ink);color:var(--journey-light);border-color:var(--journey-ink)}
+.bk-summary{display:grid;grid-template-columns:1fr 1fr auto;gap:30px;align-items:end;background:var(--journey-vital-surface);padding:30px 34px;margin:6px 0 10px;animation:bk-rise .6s ease-out both}
+.bk-summary small{display:block;font-size:11px;color:var(--journey-muted);text-transform:uppercase;margin-bottom:8px}
+.bk-summary strong{display:block;font-family:"Cormorant Garamond","Noto Serif SC",serif;font-weight:400;font-size:24px}
+.bk-summary span{font-size:13px;color:var(--journey-muted)}
+.bk-note{font-size:13px;color:var(--journey-muted);line-height:1.9}
+.bk-text-link{font-size:13px;text-decoration:underline;text-underline-offset:6px;color:inherit}
+.bk-form label{display:block;font-size:13px;margin-bottom:26px;color:var(--journey-muted)}
+.bk-form input:not([type=checkbox]),.bk-form select,.bk-form textarea{display:block;width:100%;background:transparent;color:var(--journey-ink);border:0;border-bottom:1px solid var(--journey-line);border-radius:0;padding:12px 0;font-size:15px;margin-top:6px}
+.bk-form input:focus,.bk-form select:focus,.bk-form textarea:focus{outline:none;border-bottom-color:var(--journey-gold)}
+.bk-row{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end}
+.bk-form .bk-check{display:flex;gap:12px;align-items:flex-start;color:var(--journey-ink);line-height:1.8}
+.bk-check input{width:16px;height:16px;flex:0 0 16px;margin-top:5px;accent-color:var(--journey-ink)}
+.bk-final{text-align:center;padding-bottom:0}
+.bk-final .bk-check{text-align:start}
+.bk-clinical{font-size:12px;color:var(--journey-muted);line-height:1.9;max-width:640px;margin:10px auto 40px}
+.bk-cta{display:inline-flex;min-width:260px;justify-content:center}
+.bk-success{text-align:center;padding:40px 0 20px}
+.bk-success h2{font-size:42px;margin-bottom:24px}
+.bk-success>p{color:var(--journey-muted);max-width:560px;margin:0 auto}
+.bk-actions{display:flex;flex-direction:column;align-items:center;gap:26px;margin-top:44px}
+@keyframes bk-zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+@keyframes bk-rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.bk-hero-copy{animation-name:bk-rise-c}
+@keyframes bk-rise-c{from{opacity:0;transform:translate(-50%,24px)}to{opacity:1;transform:translate(-50%,0)}}
+@media(max-width:767px){.bk-hero{height:64svh}.bk-hero h1{font-size:34px}.bk-scroll{padding:70px 0 90px}.bk-chapter{padding-bottom:64px}.bk-chapter h2{font-size:28px}.bk-row,.bk-summary{grid-template-columns:1fr;gap:18px}.bk-chips button{padding:10px 16px}.bk-cta{width:100%}}
+@media(prefers-reduced-motion:reduce){.bk-hero img,.bk-hero-copy,.bk-chapter,.bk-summary{animation:none}}

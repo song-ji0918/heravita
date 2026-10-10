@@ -1,12 +1,10 @@
 # HeraVita
-- [ ] Refine Rebuilding/Flourishing seven-day paths, relationship chapters and connected layouts; reduce black backgrounds and dividers.
-- [ ] Replace Rebuilding/Flourishing opening and clinical-looking photography with distinct vitality-led scenes; verify both pages.
-- [ ] Rebuild Life Reset alone as a rich Discovery-style editorial page; retain approved source and unified booking.
-- [ ] Replace repeated journey topic photographs with stage-specific images.
-- [ ] Review image composition and scene similarity, not only duplicate filenames.
-- [ ] Remove repeated full-screen explanations; connect distinct product chapters and retain complete inclusions.
-- [ ] Restore designed opening/closing application buttons and illustrated stage progression; fix footer image sizing.
-- [ ] Verify product pages, stage links, footer and application entries in the running site.
+- [x] Refine Rebuilding/Flourishing seven-day paths, relationship chapters and connected layouts; reduce black backgrounds and dividers.
+- [x] Replace Rebuilding/Flourishing opening and clinical-looking photography with distinct vitality-led scenes; verify both pages.
+- [x] Rebuild Life Reset alone as a rich Discovery-style editorial page; retain approved source and unified booking.
+- [x] Replace repeated journey topic photographs with stage-specific images and review scene/composition differences.
+- [x] Connect distinct product chapters, retain complete inclusions and restore opening/closing buttons and footer sizing.
+- [x] Verify Rebuilding/Flourishing day navigation, photos, narrow-screen overflow and application stage context in the running site.
 - [x] Build complete Reset, Rebuilding and Flourishing pages from Journey V1.1 with varied layouts and precise cool-tone photography.
 - [x] Link the four stages and homepage without rewriting original pages.
 - [x] Unify all reservation entries on a standalone application page and verify private submission.

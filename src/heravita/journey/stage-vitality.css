@@ -1,0 +1,56 @@
+.stage-vitality .re-section{padding:96px max(7%,calc((100% - 1400px)/2));}
+.stage-vitality .re-hero-copy{text-align:left;max-width:720px;justify-self:start;margin-left:7%;padding-left:0;padding-right:0}
+.stage-vitality .re-hero .re-veil{background:var(--journey-vital-veil)}
+.stage-vitality .re-hero h1{font-size:48px;max-width:620px}
+.stage-vitality .re-intro,.stage-vitality .re-medical,.stage-vitality .re-clinical,.stage-vitality .re-energy,.stage-vitality .re-map,.stage-vitality .re-follow{grid-template-columns:1fr 1fr;gap:7%;align-items:center}
+.stage-vitality .re-medical{align-items:start}
+.stage-vitality .re-medical-left .re-photo{aspect-ratio:4/5}
+.stage-vitality .re-clinical{padding-top:0}
+.stage-vitality .re-medical-list li,.stage-vitality .re-care-list li,.stage-vitality .re-map-list li{border:0;padding:10px 0}
+.stage-vitality .re-medical-list{padding-top:48px}
+.stage-vitality .re-medical-list li{padding-left:20px;position:relative}
+.stage-vitality .re-medical-list li::before{content:'·';position:absolute;left:0;color:var(--journey-vital-accent)}
+.stage-vitality .re-steps span,.stage-vitality .re-energy-tags span{border:0;padding:0}
+.stage-vitality .re-relationship{background:var(--journey-vital-surface);color:var(--journey-ink)}
+.stage-vitality .re-relationship-top{grid-template-columns:1fr 1fr;gap:7%;align-items:center}
+.stage-vitality .re-relationship-top>.re-photo{grid-column:1;grid-row:1;aspect-ratio:4/5}
+.stage-vitality .re-relationship-copy{grid-column:2;grid-row:1}
+.stage-vitality .re-relationship-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 25px;margin:32px 0 0}
+.stage-vitality .re-relationship-list li{padding:0;border:0;font-size:14px;color:var(--journey-muted)}
+.stage-vitality .re-lifestyle-grid{grid-template-columns:1fr 1fr;gap:7%}
+.stage-vitality .re-lifestyle-side{padding-top:0}
+.stage-vitality .re-lifestyle-grid .re-photo{aspect-ratio:4/3}
+.stage-vitality .re-days{background:var(--journey-vital-surface);color:var(--journey-ink)}
+.stage-vitality .re-days-heading{display:block;margin-bottom:48px}
+.stage-vitality .re-days-heading h2{margin-bottom:16px}
+.stage-vitality .re-days .re-note{color:var(--journey-muted);max-width:620px;margin-left:auto}
+.stage-vitality .re-rights-grid article,.stage-vitality .re-method,.stage-vitality .re-partner,.stage-vitality .re-onward{border:0}
+.stage-vitality .re-method{background:var(--journey-vital-surface);padding:24px 30px}
+.stage-vitality .re-closing{background:var(--journey-paper);color:var(--journey-ink)}
+.stage-vitality .re-closing .re-note{color:var(--journey-muted)}
+.stage-vitality .re-closing .j-apply{color:var(--journey-ink);border-color:var(--journey-ink)}
+.stage-vitality .re-closing .j-apply:hover{background:var(--journey-ink);color:var(--journey-light)}
+.stage-vitality .re-onward-buttons a{border-color:var(--journey-line)}
+.stage-vitality .re-onward-buttons a:hover{background:var(--journey-vital-surface);color:var(--journey-ink)}
+.stage-vitality .j-rail,.stage-vitality .j-rail a{border:0}
+.stage-vitality .re-care-list{gap:40px 6%}
+.sv-path{display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:start}
+.sv-path-scene{position:sticky;top:115px}
+.stage-vitality main .sv-path-scene>img{width:100%;height:510px;object-fit:cover}
+.sv-path-caption{margin-top:26px}
+.sv-path-caption>span{font-size:12px;color:var(--journey-muted)}
+.sv-path-caption h3{margin-top:12px}
+.sv-path-scene nav{display:flex;gap:6px;flex-wrap:wrap}
+.sv-path-scene nav button{width:44px;height:44px;padding:0;border-radius:50%;font-weight:400;color:var(--journey-muted)}
+.sv-path-scene nav button[aria-current]{background:var(--journey-vital-accent);color:var(--journey-light)}
+.sv-path-days{list-style:none;padding:0;margin:0}
+.sv-path-days li{display:grid;grid-template-columns:50px 1fr;gap:22px;min-height:300px;padding:26px 0 46px;scroll-margin-top:120px}
+.sv-path-days h3{font-size:25px;margin-bottom:18px}
+.sv-path-days p{font-size:15px;line-height:2.1}
+.sv-path-days .re-kicker{font-size:11px;color:var(--journey-muted);margin-bottom:10px}
+.sv-path-number{font-size:17px;width:42px;height:42px;display:grid;place-items:center;border-radius:50%;background:var(--journey-paper);color:var(--journey-muted);transition:background .5s,color .5s}
+.sv-path-days .is-active .sv-path-number{background:var(--journey-vital-accent);color:var(--journey-light)}
+.sv-path-days blockquote{font-size:15px;font-style:italic;margin:20px 0;line-height:1.9}
+@media(max-width:1000px){.stage-vitality .re-hero-copy{max-width:600px;margin-left:7%;margin-right:7%}.stage-vitality .re-hero h1{font-size:40px}.stage-vitality .re-section{padding:75px 7%}.sv-path{gap:5%;grid-template-columns:.9fr 1.1fr}.stage-vitality main .sv-path-scene>img{height:390px}.sv-path-days li{gap:14px;grid-template-columns:42px 1fr}.stage-vitality .re-relationship-list{gap:12px 18px}}
+@media(max-width:700px){.stage-vitality .re-section{padding:64px 7%}.stage-vitality .re-hero-copy{padding-top:120px}.stage-vitality .re-hero h1{font-size:32px}.stage-vitality .re-intro,.stage-vitality .re-medical,.stage-vitality .re-clinical,.stage-vitality .re-energy,.stage-vitality .re-map,.stage-vitality .re-follow,.stage-vitality .re-relationship-top,.stage-vitality .re-lifestyle-grid,.sv-path{grid-template-columns:1fr;gap:32px}.stage-vitality .re-relationship-top>.re-photo,.stage-vitality .re-relationship-copy{grid-column:auto;grid-row:auto}.stage-vitality .re-relationship-top>.re-photo{aspect-ratio:4/3}.stage-vitality .re-medical-list{padding-top:0}.stage-vitality .re-clinical{padding-top:0}.sv-path-scene{position:relative;top:auto}.stage-vitality main .sv-path-scene>img{height:auto;aspect-ratio:4/3}.sv-path-days li{min-height:0;padding-bottom:35px}.sv-path-days h3{font-size:23px}.stage-vitality .re-days .re-note{margin-left:0}.stage-vitality .re-method{padding:20px}.stage-vitality .re-care-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.sv-path-number{transition:none}}

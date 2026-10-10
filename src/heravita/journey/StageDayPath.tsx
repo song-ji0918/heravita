@@ -27,7 +27,10 @@ export function StageDayPath({ days, image, en }: { days: Day[]; image: string; 
   }, [days]);
   const go = (index: number) => {
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    list.current?.children[index]?.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth', block: 'center' });
+    const item = list.current?.children[index];
+    if (!item) return;
+    const rect = item.getBoundingClientRect();
+    window.scrollTo({ top: window.scrollY + rect.top + rect.height / 2 - window.innerHeight * 0.45, behavior: reduced ? 'auto' : 'smooth' });
   };
   return <div className="sv-path">
     <div className="sv-path-scene">

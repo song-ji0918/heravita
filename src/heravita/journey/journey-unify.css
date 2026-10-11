@@ -1,0 +1,26 @@
+/* Unified journey buttons (homepage hn-clp-button rules, compact) and hero alignment. */
+.hv-btn{--hn-button-height:44px;--hn-button-arrow-width:40px;display:inline-flex;width:max-content;min-width:148px;max-width:100%;height:var(--hn-button-height);align-items:stretch;padding:0;overflow:hidden;border:0;border-radius:0;direction:ltr;font-family:"IBM Plex Sans",var(--font-brand-sans,sans-serif);font-size:12px;font-weight:400;letter-spacing:.08em;line-height:1.25;text-transform:uppercase;text-decoration:none!important;transition:color 250ms ease,background-color 350ms ease,box-shadow 350ms ease;cursor:pointer}
+.hv-btn .hn-clp-button__label{display:flex;align-items:center;flex:1 1 auto;min-width:0;padding:0 16px;white-space:nowrap}
+.hv-btn .hn-clp-button__arrow{display:flex;align-items:center;justify-content:center;flex:0 0 var(--hn-button-arrow-width);width:var(--hn-button-arrow-width);border-left:1px solid currentColor;font-size:18px;font-weight:300;transition:transform 450ms cubic-bezier(.2,.7,.2,1)}
+.hv-btn:hover .hn-clp-button__arrow{transform:translateX(3px)}
+.hv-btn.hn-button-on-light{background:#1e1e1e;color:#fff}.hv-btn.hn-button-on-light:hover{background:#090909;color:#fff}.hv-btn.hn-button-on-light .hn-clp-button__arrow{border-left-color:rgba(255,255,255,.72)}
+.hv-btn.hn-button-on-dark{background:rgba(255,255,255,.96);color:#000}.hv-btn.hn-button-on-dark:hover{background:#f5f3ee;color:#1e1e1e}.hv-btn.hn-button-on-dark .hn-clp-button__arrow{border-left-color:rgba(30,30,30,.38)}
+.hv-btn-row{display:flex;flex-wrap:wrap;gap:14px}
+@media(max-width:600px){.hv-btn .hn-clp-button__label{white-space:normal}}
+
+/* Uppercase English eyebrows and stage labels */
+.reset-editorial .re-kicker,.j-kicker,.reset-editorial .re-english,.j-stage-label h3:lang(en){text-transform:uppercase;letter-spacing:.14em}
+.reset-editorial .re-hero .re-english{font-style:normal;font-size:16px;font-family:inherit}
+
+/* Hero: full screen, left aligned like Life Discovery */
+.reset-editorial .re-hero{height:auto;min-height:100vh;min-height:100dvh;place-items:center start}
+.reset-editorial .re-hero-copy{text-align:left;max-width:760px;justify-self:start;margin-left:8%;padding:130px 0 80px}
+.reset-editorial .re-hero h1{font-size:clamp(36px,4.4vw,64px)}
+.reset-editorial .re-hero .hv-btn{margin-top:22px}
+.reset-editorial .re-closing .hv-btn{margin-top:28px}
+.reset-editorial .re-arrival{height:auto;min-height:100vh;min-height:100dvh}
+@media(max-width:700px){.reset-editorial .re-hero-copy{margin:0 7%;padding:110px 0 60px}}
+
+/* Discover onward cards: simpler */
+.j-discover-extension .j-stage-label h3{margin:0 0 18px}
+.j-stage-link .hv-btn{pointer-events:none}

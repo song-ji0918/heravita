@@ -24,3 +24,17 @@
 /* Discover onward cards: simpler */
 .j-discover-extension .j-stage-label h3{margin:0 0 18px}
 .j-stage-link .hv-btn{pointer-events:none}
+
+/* Unified serif headings and type scale across journey pages */
+.reset-editorial h1,.reset-editorial h2,.reset-editorial h3,.stage-vitality h1,.stage-vitality h2,.stage-vitality h3{font-family:"Cormorant Garamond","Noto Serif SC",serif;font-weight:400}
+.reset-editorial .re-hero h1,.stage-vitality .re-hero h1{font-size:clamp(40px,4.6vw,64px);line-height:1.25;max-width:none}
+.reset-editorial h2,.stage-vitality h2{font-size:clamp(30px,3.4vw,48px);line-height:1.4}
+.reset-editorial .re-kicker,.stage-vitality .re-kicker{font-size:11px;letter-spacing:.22em}
+.reset-editorial .re-hero .re-english{font-size:15px}
+
+/* Booking page: full-screen hero, serif headings */
+.bk-hero{height:100vh;height:100dvh;min-height:600px}
+.bk-hero h1,.bk-chapter h2,.bk-success h2{font-family:"Cormorant Garamond","Noto Serif SC",serif;font-weight:400}
+.bk-hero h1{font-size:clamp(38px,4.4vw,60px)}
+.bk-chapter h2{font-size:clamp(28px,3vw,42px)}
+@media(max-width:767px){.bk-hero{height:100svh;min-height:560px}.bk-hero h1{font-size:32px}}

@@ -24,7 +24,6 @@ const HomeNarrative = () => {
   const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const languageCode = (i18n.resolvedLanguage ?? i18n.language).split("-")[0];
-  const showSecondaryEnglish = languageCode === 'zh';
   const beliefTitleLines = [
     t("homeNarrative.belief.titleLine1"),
     t("homeNarrative.belief.titleLine2"),
@@ -129,33 +128,29 @@ const HomeNarrative = () => {
       </div>
     </section>
 
-    <section id='proof' data-header-theme='light' className='hn-screen hn-proof'>
-      <div className='hn-proof-photo' role='img' aria-label={t("homeNarrative.proof.photoAlt")} />
+    <section
+      id='proof'
+      data-header-theme='dark'
+      className='hn-screen hn-proof'
+    >
+      <span className='sr-only'>{t("homeNarrative.proof.photoAlt")}</span>
       <div className='hn-proof-content'>
         <p className='hn-eyebrow'>{t("homeNarrative.proof.eyebrow")}</p>
         <h2 className='hn-headline hn-proof-title'>
-          {t("homeNarrative.proof.titleLine1")}
-          <br />
-          {t("homeNarrative.proof.titleLine2")}
+          <span className='hn-title-line'>{t("homeNarrative.proof.titleLine1")}</span>
+          <span className='hn-title-line hn-title-line--emphasis hn-proof-title__second'>{t("homeNarrative.proof.titleLine2")}</span>
         </h2>
-        <p className='hn-proof-lead'>
+        <p className='hn-description hn-proof-lead'>
           {t("homeNarrative.proof.lead")}
         </p>
         <div className='hn-proof-list'>
           {proofItems.map((item) => (
-            <div className='hn-proof-item' key={item.english}>
-              <span>{item.label}</span>
-              {showSecondaryEnglish && <small>{item.english}</small>}
-            </div>
+            <button type='button' className='hn-clp-button hn-button-on-dark hn-proof-button' key={item.english}>
+              <span className='hn-clp-button__label'>{item.label}</span>
+              <span className='hn-clp-button__arrow' aria-hidden='true'>→</span>
+            </button>
           ))}
         </div>
-        <p className='hn-proof-note'>
-          {t("homeNarrative.proof.note")}
-        </p>
-        <button type='button' className='hn-clp-button hn-button-on-light hn-proof-action'>
-          <span className='hn-clp-button__label'>{t("homeNarrative.proof.cta")}</span>
-          <span className='hn-clp-button__arrow' aria-hidden='true'>→</span>
-        </button>
       </div>
     </section>
 

@@ -801,19 +801,17 @@
       ]
     },
     "proof": {
-      "eyebrow": "06 / TRUST & PROOF",
-      "titleLine1": "La confianza nace de",
-      "titleLine2": "un acompañamiento real y duradero.",
-      "lead": "Del criterio profesional a la coordinación entre regiones; de una experiencia puntual a un cambio cotidiano sostenible. Cada paso debe apoyarse en personas, métodos y evidencias claras.",
+      "eyebrow": "CONFIANZA Y EVIDENCIA",
+      "titleLine1": "La confianza no nace de promesas",
+      "titleLine2": "sino de hechos reales",
+      "lead": "HeraVita reúne instituciones colaboradoras verificadas, investigación internacional sobre el terreno, una selección rigurosa de recursos, experiencias de estilo de vida de alta calidad y un sistema de servicio a largo plazo para construir una red global de gestión de la vida visible, verificable y sostenible.",
       "items": [
-        { "label": "Equipos expertos y apoyo personal", "english": "EXPERTISE" },
-        { "label": "Recursos globales y colaboración local", "english": "NETWORK" },
-        { "label": "Viajes reales e historias de vida", "english": "STORIES" },
-        { "label": "Cambios revisables y seguimiento continuo", "english": "CONTINUITY" }
+        { "label": "Socios médicos en Asia", "english": "ASIA MEDICAL PARTNERS" },
+        { "label": "Red de longevidad UE–EE. UU.", "english": "EUROPE AND US LONGEVITY NETWORK" },
+        { "label": "Recursos globales de vida premium", "english": "GLOBAL PREMIUM LIFESTYLE" },
+        { "label": "Equipos y estándares de servicio", "english": "PROFESSIONAL SERVICE STANDARDS" }
       ],
-      "note": "Las instituciones colaboradoras, las credenciales de los expertos y los datos de resultados se verificarán y presentarán individualmente antes del lanzamiento oficial.",
-      "cta": "Explorar la evidencia",
-      "photoAlt": "Una familia camina unida junto al mar bajo la luz de la mañana"
+      "photoAlt": "Espacio HeraVita de gestión de la vida y asesora profesional al atardecer entre el lago y las montañas"
     },
     "action": {
       "eyebrow": "07 / BEGIN THE NEXT CHAPTER",

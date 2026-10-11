@@ -785,19 +785,17 @@
       ]
     },
     "proof": {
-      "eyebrow": "06 / TRUST & PROOF",
-      "titleLine1": "Trust grows from",
-      "titleLine2": "real and lasting companionship.",
-      "lead": "From professional judgment to cross-regional coordination; from a single experience to sustainable everyday change. Every step should have clear people, methods, and evidence behind it.",
+      "eyebrow": "TRUST & PROOF",
+      "titleLine1": "Trust is not built on promises",
+      "titleLine2": "but on what truly happens",
+      "lead": "HeraVita brings together verified partner institutions, global field research, rigorous resource selection, exceptional lifestyle experiences, and long-term service standards to build a life-management network that can be seen, verified, and consistently delivered.",
       "items": [
-        { "label": "Expert teams and personal support", "english": "EXPERTISE" },
-        { "label": "Global resources and local collaboration", "english": "NETWORK" },
-        { "label": "Real journeys and life stories", "english": "STORIES" },
-        { "label": "Reviewable change and long-term follow-up", "english": "CONTINUITY" }
+        { "label": "Asian Medical Partners", "english": "ASIA MEDICAL PARTNERS" },
+        { "label": "EU & U.S. Longevity Network", "english": "EUROPE AND US LONGEVITY NETWORK" },
+        { "label": "Global Premium Lifestyle Resources", "english": "GLOBAL PREMIUM LIFESTYLE" },
+        { "label": "Professional Teams & Service Standards", "english": "PROFESSIONAL SERVICE STANDARDS" }
       ],
-      "note": "Partner institutions, expert credentials, and outcome data will be verified and presented individually before the official launch.",
-      "cta": "Explore the Evidence",
-      "photoAlt": "A family walking together in the morning light by the sea"
+      "photoAlt": "A HeraVita life-management retreat and professional advisor at sunset over the lake and mountains"
     },
     "action": {
       "eyebrow": "07 / BEGIN THE NEXT CHAPTER",

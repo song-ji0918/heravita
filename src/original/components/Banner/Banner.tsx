@@ -3,6 +3,9 @@ import gsap from 'gsap'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
+export const HERO_VIDEO_SRC = '/home/hero.mp4'
+export const HERO_VIDEO_AUTOPLAY_MUTED = true
+
 /**
  * 首页 Banner
  * - 全宽视频背景自动播放
@@ -15,7 +18,7 @@ const Banner = () => {
   const ambientVideoRef = useRef<HTMLVideoElement>(null)
   const dialogVideoRef = useRef<HTMLVideoElement>(null)
   const [isVideoDialogOpen, setIsVideoDialogOpen] = useState(false)
-  const [isBackgroundMuted, setIsBackgroundMuted] = useState(false)
+  const [isBackgroundMuted, setIsBackgroundMuted] = useState(HERO_VIDEO_AUTOPLAY_MUTED)
   const isChinese = i18n.language.startsWith('zh')
   const bannerFont = 'var(--font-brand-sans)'
   const heroDisplayFont = bannerFont
@@ -130,7 +133,7 @@ const Banner = () => {
         preload='auto'
         aria-hidden='true'
       >
-        <source src='/__l5e/assets-v1/1c5554df-df59-4c8a-bd9d-bb727f303e56/hero.mp4' type='video/mp4' />
+        <source src={HERO_VIDEO_SRC} type='video/mp4' />
       </video>
 
       {/* 文字可读性遮罩，保留影像的明暗层次 */}
@@ -228,7 +231,7 @@ const Banner = () => {
               playsInline
               preload='auto'
             >
-              <source src='/__l5e/assets-v1/1c5554df-df59-4c8a-bd9d-bb727f303e56/hero.mp4' type='video/mp4' />
+              <source src={HERO_VIDEO_SRC} type='video/mp4' />
             </video>
             <button
               type='button'

@@ -818,19 +818,17 @@
       ]
     },
     "proof": {
-      "eyebrow": "06 / TRUST & PROOF",
-      "titleLine1": "信任，来自",
-      "titleLine2": "真实而长期的陪伴。",
-      "lead": "从专业判断，到跨区域协调；从一次体验，到可持续的日常改变。每一步，都应有清晰的人、方法与依据。",
+      "eyebrow": "TRUST & PROOF | 信任与真实发生",
+      "titleLine1": "信任 不来自承诺",
+      "titleLine2": "而来自真实发生",
+      "lead": "HeraVita通过真实合作机构、全球实地考察、专业资源筛选、高品质生活方式体验与长期服务体系，建立一套可被看见、被验证、被持续交付的全球生命管理网络。",
       "items": [
-        { "label": "专业团队与个人化支持", "english": "EXPERTISE" },
-        { "label": "全球资源与本地协作", "english": "NETWORK" },
-        { "label": "真实旅程与生命故事", "english": "STORIES" },
-        { "label": "可回顾的变化与长期跟进", "english": "CONTINUITY" }
+        { "label": "亚洲医疗合作机构", "english": "ASIA MEDICAL PARTNERS" },
+        { "label": "欧洲与美国长寿资源网络", "english": "EUROPE AND US LONGEVITY NETWORK" },
+        { "label": "全球高品质生活方式资源", "english": "GLOBAL PREMIUM LIFESTYLE" },
+        { "label": "专业团队与服务标准", "english": "PROFESSIONAL SERVICE STANDARDS" }
       ],
-      "note": "合作机构、专家资历及成果数据将在正式上线前逐项核验与呈现。",
-      "cta": "了解我们的实践 / Explore the Evidence",
-      "photoAlt": "家人共同走向海边的晨光"
+      "photoAlt": "湖山日落中的HeraVita生命管理空间与专业顾问"
     },
     "action": {
       "eyebrow": "07 / BEGIN THE NEXT CHAPTER",

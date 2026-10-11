@@ -8,16 +8,6 @@
 5. 第五幕：私人生命管家咨询与到访预约表单（收集阶段偏好、到访时间与伴侣同行咨询需求）。
 页面具备路由导航（可从首页全球版图点击进入，也可返回首页），遵循象牙白、深曜石灰与细金线条的奢华克制设计系统。
 
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/2a28abe9-b140-4033-9970-f5f45c4c3f7c).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
 ## Development
 
 Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).

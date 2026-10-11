@@ -31,10 +31,3 @@
 .reset-editorial h2,.stage-vitality h2{font-size:clamp(30px,3.4vw,48px);line-height:1.4}
 .reset-editorial .re-kicker,.stage-vitality .re-kicker{font-size:11px;letter-spacing:.22em}
 .reset-editorial .re-hero .re-english{font-size:15px}
-
-/* Booking page: full-screen hero, serif headings */
-.bk-hero{height:100vh;height:100dvh;min-height:600px}
-.bk-hero h1,.bk-chapter h2,.bk-success h2{font-family:"Cormorant Garamond","Noto Serif SC",serif;font-weight:400}
-.bk-hero h1{font-size:clamp(38px,4.4vw,60px)}
-.bk-chapter h2{font-size:clamp(28px,3vw,42px)}
-@media(max-width:767px){.bk-hero{height:100svh;min-height:560px}.bk-hero h1{font-size:32px}}

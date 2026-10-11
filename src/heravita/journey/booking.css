@@ -1,5 +1,5 @@
 .bk-page{background:var(--journey-paper)}
-.bk-hero{position:relative;height:72svh;min-height:520px;overflow:hidden;color:var(--journey-light)}
+.bk-hero{position:relative;height:100vh;height:100dvh;min-height:600px;overflow:hidden;color:var(--journey-light)}
 .bk-hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;animation:bk-zoom 18s ease-out both}
 .bk-hero-shade{position:absolute;inset:0;background:var(--journey-shade)}
 .bk-hero-copy{position:absolute;left:50%;bottom:12%;transform:translateX(-50%);width:min(840px,86%);text-align:center;animation:bk-rise 1.2s ease-out both}

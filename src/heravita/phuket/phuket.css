@@ -145,3 +145,6 @@
   .pk-hero-copy .pk-actions { margin-top: 40px; }
   .pk-hero-copy .pk-tags { margin-top: 28px; }
 }
+
+/* English titles uppercase across destination pages */
+.pk-display span, .pk-space-en, .usa-display span, .usa-display em, .usa-eyebrow { text-transform: uppercase; }

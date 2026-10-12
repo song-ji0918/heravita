@@ -173,19 +173,10 @@ const Header = ({ backgroundColor, overlay = false, alwaysVisible = false }: Hea
             className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center gap-3 sm:gap-4"
           >
             <img
-              src="/brand/heravita-logo-white@2x.png"
-              alt=""
-              aria-hidden="true"
-              className={`h-12 w-auto object-contain max-[399px]:h-9 sm:h-14 lg:h-16 ${useLightControls ? "" : "brightness-0"}`}
+              src="/brand/heravita-logo-full-white.png"
+              alt="HERA VITA HEALTH GROUP"
+              className={`h-8 w-auto object-contain max-[399px]:h-6 sm:h-9 lg:h-10 ${useLightControls ? "" : "brightness-0"}`}
             />
-            <span className="hidden flex-col items-center text-center text-current md:flex">
-              <span className="font-serif text-[18px] leading-none tracking-[0.22em] sm:text-[20px]">
-                HERA VITA
-              </span>
-              <span className="mt-1.5 text-[7px] leading-none tracking-[0.42em] sm:text-[8px]">
-                HEALTH GROUP
-              </span>
-            </span>
           </Link>
 
           {/* 右侧：语言下拉 + 登录 */}

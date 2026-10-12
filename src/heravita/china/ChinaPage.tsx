@@ -5,7 +5,7 @@ import { Cta } from "@/heravita/phuket/Cta";
 import { useReveal } from "@/heravita/phuket/useReveal";
 import "@/heravita/phuket/phuket.css";
 import "./china.css";
-import jieyouge from "@/assets/jieyouge.asset.json";
+import jieyouge from "@/assets/jieyouge.jpg";
 import hero from "@/assets/china-hero.jpg";
 import everyday from "@/assets/china-everyday.jpg";
 import concierge from "@/assets/china-concierge.jpg";
@@ -50,7 +50,7 @@ export default function ChinaPage() {
         </section>
 
         <section className="pk-screen pk-full pk-residence cn-sanctuary" data-header-theme="dark" data-reveal-group>
-          <div className="pk-media"><img data-parallax src={jieyouge.url} alt={c.sanctuary.title} loading="lazy" /></div>
+          <div className="pk-media"><img data-parallax src={jieyouge} alt={c.sanctuary.title} loading="lazy" /></div>
           <div className="pk-shade pk-shade--left" />
           <div className="pk-full-copy">
             <p className="pk-eyebrow" data-reveal>{c.sanctuary.eyebrow}</p>

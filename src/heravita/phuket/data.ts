@@ -1,5 +1,5 @@
-import heroAsset from "@/assets/phuket-hero.asset.json";
-import interiorAsset from "@/assets/phuket-interior.asset.json";
+import hero from "@/assets/heravita-phuket-hero.jpg";
+import interior from "@/assets/heravita-phuket-interior.jpg";
 import climate from "@/assets/healing-climate.jpg";
 import precision from "@/assets/precision-suite.jpg";
 import wellness from "@/assets/wellness-pavilion.jpg";
@@ -11,8 +11,8 @@ import resetImg from "@/assets/phuket-reset.jpg";
 import rebuildImg from "@/assets/phuket-rebuild.jpg";
 
 export const IMG = {
-  hero: heroAsset.url,
-  interior: interiorAsset.url,
+  hero,
+  interior,
   climate,
   residence,
   concierge,

@@ -1,4 +1,6 @@
 # HeraVita
+- [ ] Organize working secondary menu links and add a top-level breadcrumb with sibling page selection.
+- [ ] Match site-wide English heading typography to the homepage and verify navigation and presentation.
 - [x] Refine Rebuilding/Flourishing seven-day paths, relationship chapters and connected layouts; reduce black backgrounds and dividers.
 - [x] Replace Rebuilding/Flourishing opening and clinical-looking photography with distinct vitality-led scenes; verify both pages.
 - [x] Rebuild Life Reset alone as a rich Discovery-style editorial page; retain approved source and unified booking.

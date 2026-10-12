@@ -65,7 +65,7 @@ const Footer = () => {
           {/* 左侧品牌 */}
           <div className="flex flex-col items-center text-center lg:w-[240px] lg:shrink-0">
             <img
-              src="/brand/heravita-logo-white.png"
+              src="/brand/heravita-logo-full-white.png"
               alt=""
               aria-hidden="true"
               className="h-auto w-[72px] object-contain brightness-0 sm:w-[80px]"

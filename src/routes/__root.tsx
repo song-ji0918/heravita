@@ -13,6 +13,7 @@ import { type ReactNode } from "react";
 import appCss from "../original/index.css?url";
 import journeyTokens from "../journey-tokens.css?url";
 import SiteJourneyBridge from "@/heravita/journey/SiteJourneyBridge";
+import SiteBreadcrumb from "@/heravita/nav/SiteBreadcrumb";
 
 function NotFoundComponent() {
   return (
@@ -123,6 +124,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <SiteJourneyBridge />
+      <SiteBreadcrumb />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

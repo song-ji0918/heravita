@@ -11,3 +11,4 @@
 - Reservation entry points converge on the standalone Journey application template; legacy reservation URLs render the same template with destination context, preserving existing links.
 - Public journey applications permit insert only and no visitor reads or changes; submitted preferences are private rather than confirmed bookings.
 - Rebuild and Flourish render StageEditorialPage with isolated stage-vitality styling and StageDayPath; Reset retains DayPath, so later-stage presentation can evolve without changing the approved Reset composition.
+- Site menu hierarchy and breadcrumb trail share src/heravita/nav/site-map.ts; the original Header only swaps its menu import, so new pages are added there once.

@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 import LanguageDropdown from "./LanguageDropdown";
-import NavMenu from "./NavMenu";
+import NavMenu from "@/heravita/nav/SiteNavMenu";
 
 gsap.registerPlugin(ScrollTrigger);
 

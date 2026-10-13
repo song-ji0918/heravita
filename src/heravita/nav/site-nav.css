@@ -1,0 +1,67 @@
+:root {
+  --hv-nav-ink: #1a1a1a;
+  --hv-nav-paper: #f7f5f0;
+  --hv-nav-muted: rgba(26, 26, 26, 0.5);
+  --hv-nav-gold: #b29a6c;
+  --hv-nav-sage: #4e716c;
+}
+
+/* ---------- Menu ---------- */
+.hv-nav { position: fixed; inset: 0; z-index: 100; }
+.hv-nav-scrim { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.32); border: 0; cursor: pointer; animation: hvFade .3s ease both; }
+.hv-nav-panel { position: absolute; inset: 0 auto 0 0; display: flex; width: 100%; background: var(--hv-nav-paper); color: var(--hv-nav-ink); box-shadow: 8px 0 32px rgba(0,0,0,.12); animation: hvSlide .45s cubic-bezier(.2,.7,.2,1) both; }
+@media (min-width: 1024px) {
+  .hv-nav-panel { width: 24rem; transition: width .45s cubic-bezier(.2,.7,.2,1); }
+  .hv-nav-panel.is-expanded { width: 48rem; }
+}
+.hv-nav-primary { width: 100%; padding: 22px 28px 40px; overflow-y: auto; }
+@media (min-width: 1024px) { .hv-nav-primary { width: 24rem; flex: none; padding: 30px 40px; } }
+.hv-nav-close { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 48px; background: none; border: 0; color: inherit; cursor: pointer; font-family: Manrope, sans-serif; font-size: 12px; letter-spacing: .18em; }
+.hv-nav-close:hover { color: var(--hv-nav-sage); }
+.hv-nav-primary > ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
+.hv-nav-primary > ul > li { animation: hvRise .4s ease both; }
+.hv-nav-item { display: flex; width: 100%; justify-content: space-between; align-items: center; background: none; border: 0; padding: 0; color: inherit; cursor: pointer; text-align: left; font-family: "Cormorant Garamond", "Noto Serif SC", serif; font-size: 22px; font-weight: 400; letter-spacing: .04em; text-transform: uppercase; text-decoration: none; transition: color .3s, transform .3s; }
+.hv-nav-item i { font-style: normal; font-size: 20px; opacity: .45; transition: transform .3s; }
+.hv-nav-item:hover, .hv-nav-item.is-active { color: var(--hv-nav-sage); transform: translateX(6px); }
+.hv-nav-item.is-active i { transform: rotate(90deg); }
+@media (min-width: 1024px) { .hv-nav-item.is-active i { transform: none; opacity: 1; } }
+.hv-nav-inline { list-style: none; margin: 14px 0 4px; padding: 0 0 0 14px; border-left: 1px solid var(--hv-nav-gold); display: flex; flex-direction: column; gap: 12px; }
+.hv-nav-inline a { color: var(--hv-nav-muted); text-decoration: none; font-family: Manrope, sans-serif; font-size: 13px; letter-spacing: .1em; text-transform: uppercase; }
+.hv-nav-inline a[aria-current="page"], .hv-nav-inline a:hover { color: var(--hv-nav-ink); }
+@media (min-width: 1024px) { .hv-nav-inline { display: none; } }
+
+.hv-nav-secondary { display: none; }
+@media (min-width: 1024px) {
+  .hv-nav-secondary { display: block; flex: 1; padding: 128px 40px 40px; border-left: 1px solid rgba(178,154,108,.35); background: #fbfaf7; animation: hvFade .4s ease both; }
+}
+.hv-nav-eyebrow { margin: 0 0 28px; color: var(--hv-nav-gold); font-family: Manrope, sans-serif; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; }
+.hv-nav-secondary ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 22px; }
+.hv-nav-secondary li { animation: hvRise .4s ease both; }
+.hv-nav-secondary a { display: flex; flex-direction: column; gap: 4px; color: var(--hv-nav-ink); text-decoration: none; }
+.hv-nav-secondary a span { font-family: "Cormorant Garamond", "Noto Serif SC", serif; font-size: 20px; letter-spacing: .04em; text-transform: uppercase; transition: color .3s, transform .3s; }
+.hv-nav-secondary a small { color: var(--hv-nav-muted); font-family: Manrope, sans-serif; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+.hv-nav-secondary a:hover span, .hv-nav-secondary a[aria-current="page"] span { color: var(--hv-nav-sage); transform: translateX(6px); }
+
+/* ---------- Breadcrumb ---------- */
+.hv-crumb { position: fixed; left: 0; right: 0; z-index: 45; padding: 10px 25px; font-family: Manrope, sans-serif; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; transition: opacity .5s ease, transform .5s ease; }
+@media (min-width: 768px) { .hv-crumb { padding: 12px 58px; } }
+.hv-crumb.is-hidden { opacity: 0; transform: translateY(-6px); pointer-events: none; }
+.hv-crumb.is-light { color: rgba(255,255,255,.92); border-top: 1px solid rgba(255,255,255,.22); text-shadow: 0 1px 8px rgba(0,0,0,.35); }
+.hv-crumb.is-dark { color: var(--hv-nav-ink); border-top: 1px solid rgba(26,26,26,.12); background: rgba(247,245,240,.86); backdrop-filter: blur(6px); }
+.hv-crumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 0; }
+.hv-crumb li { display: inline-flex; align-items: center; }
+.hv-crumb a { color: inherit; opacity: .72; text-decoration: none; transition: opacity .3s; }
+.hv-crumb a:hover { opacity: 1; }
+.hv-crumb-sep { margin: 0 12px; opacity: .5; }
+.hv-crumb-current { font-weight: 600; }
+.hv-crumb-select { position: relative; }
+.hv-crumb-select > button { display: inline-flex; align-items: center; gap: 8px; background: none; border: 0; padding: 0; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; font-weight: 600; cursor: pointer; }
+.hv-crumb-select > button i { font-style: normal; transform: translateY(-2px); }
+.hv-crumb-menu { position: absolute; top: calc(100% + 10px); left: 0; min-width: 220px; list-style: none; margin: 0; padding: 10px 0; background: var(--hv-nav-paper); color: var(--hv-nav-ink); text-shadow: none; box-shadow: 0 12px 32px rgba(0,0,0,.14); animation: hvRise .3s ease both; }
+.hv-crumb-menu a { display: block; padding: 9px 18px; opacity: .75; }
+.hv-crumb-menu a[aria-current="page"] { opacity: 1; color: var(--hv-nav-sage); }
+
+@keyframes hvFade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes hvSlide { from { transform: translateX(-24px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes hvRise { from { transform: translateY(10px); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .hv-nav *, .hv-nav, .hv-crumb { animation: none !important; transition: none !important; } }

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "@tanstack/react-router";
-import { trailFor } from "./site-map";
+import { trailFor, navLabel } from "./site-map";
 import "./site-nav.css";
 
 /** CLP-style location bar under the header: shows the path, links to parents, and switches between sibling pages. */

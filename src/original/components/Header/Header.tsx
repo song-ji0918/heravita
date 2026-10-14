@@ -175,7 +175,7 @@ const Header = ({ backgroundColor, overlay = false, alwaysVisible = false }: Hea
             <img
               src="/brand/heravita-logo-full-white.png"
               alt="HERA VITA HEALTH GROUP"
-              className={`h-8 w-auto object-contain max-[399px]:h-6 sm:h-9 lg:h-10 ${useLightControls ? "" : "brightness-0"}`}
+              className={`h-11 w-auto object-contain max-[399px]:h-8 sm:h-12 lg:h-14 ${useLightControls ? "" : "brightness-0"}`}
             />
           </Link>
 

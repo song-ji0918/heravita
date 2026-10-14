@@ -68,10 +68,10 @@ const Footer = () => {
               src="/brand/heravita-logo-full-white.png"
               alt=""
               aria-hidden="true"
-              className="h-auto w-[72px] object-contain brightness-0 sm:w-[80px]"
+              className="h-auto w-[110px] object-contain brightness-0 sm:w-[128px]"
               loading="eager"
             />
-            <span className="mt-2 font-serif text-[19px] tracking-[0.12em] text-brand-ink sm:text-[21px]">HERAVITA</span>
+            <span className="mt-3 font-serif text-[24px] tracking-[0.14em] text-brand-ink sm:text-[27px]">HERAVITA</span>
 
             <p className="mt-3 text-[12px] tracking-[0.04em] text-brand-gray sm:text-[13px]">
               {t("footer.pillars")}

@@ -20,7 +20,7 @@ const JourneyPage = () => {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#F3EEE7] text-[#2F2F2F]">
-      <Header backgroundColor={JOURNEY_HEADER_BG} />
+      <Header overlay alwaysVisible />
       <main className="flex-1">
         <Section1 />
         <Section2 />

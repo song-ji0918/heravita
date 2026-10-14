@@ -63,7 +63,7 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
 
   return (
     <div className="j-page bk-page" dir={i18n.dir()}>
-      <Header />
+      <Header overlay alwaysVisible />
       <section className="bk-hero">
         <img src={hero} alt={t("宁静的生命旅程空间", "A quiet life journey sanctuary")} width={1920} height={1080} />
         <div className="bk-hero-shade" />

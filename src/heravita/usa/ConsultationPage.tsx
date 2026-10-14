@@ -52,7 +52,7 @@ export default function ConsultationPage() {
 
   return (
     <div ref={root} className="usa-page" dir={dir}>
-      <Header backgroundColor="#f4f5f3" />
+      <Header overlay alwaysVisible />
       <main className="usa-consultation">
         <aside className="usa-consultation-image"><img src={image} alt={t.title} width={1920} height={1080} /><div className="usa-overlay usa-overlay--bottom" /><p>{t.eyebrow}</p></aside>
         <section className="usa-consultation-form" data-reveal-group>

@@ -16,7 +16,7 @@ const FounderPage = () => {
 
   return (
     <div className='flex min-h-screen flex-col bg-[#F3EEE7] text-[#292723]'>
-      <Header backgroundColor='#F3EEE7' />
+      <Header overlay alwaysVisible />
 
       <main className='flex-1'>
         <section aria-labelledby='founder-hero-title' className='px-5 py-16 sm:px-8 sm:py-24 lg:px-14 lg:py-36'>

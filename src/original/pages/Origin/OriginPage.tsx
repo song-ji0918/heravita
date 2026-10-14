@@ -9,7 +9,6 @@ import Section4 from "./OriginS4";
 import Section5 from "./OriginS5";
 import Section6 from "./OriginS6";
 
-const ORIGIN_HEADER_BG = "#F3EEE7";
 
 /** Origin 菜单页：Header + 主体 sections + Footer */
 const OriginPage = () => {

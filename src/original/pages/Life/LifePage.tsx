@@ -11,7 +11,6 @@ import Section6 from "./LifeS6";
 import Section7 from "./LifeS7";
 import Section8 from "./LifeS8";
 
-const LIFE_HEADER_BG = "#F3EEE7";
 
 /** Life 菜单页：Header + 主体 sections + Footer */
 const LifePage = () => {

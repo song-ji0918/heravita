@@ -4,7 +4,6 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Section1 from "./GlobalS1";
 
-const GLOBAL_HEADER_BG = "#F3EEE7";
 
 /** Global 菜单页：Header + 主体 + Footer */
 const GlobalPage = () => {

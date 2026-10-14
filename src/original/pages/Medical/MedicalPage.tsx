@@ -12,7 +12,6 @@ import Section7 from "./MedicalS7";
 import Section8 from "./MedicalS8";
 import Section9 from "./MedicalS9";
 
-const MEDICAL_HEADER_BG = "#F3EEE7";
 
 /** Medical 菜单页：Header + 主体 sections + Footer */
 const MedicalPage = () => {

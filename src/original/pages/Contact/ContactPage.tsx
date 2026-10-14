@@ -4,7 +4,6 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Section1 from "./ContactS1";
 
-const CONTACT_HEADER_BG = "#F3EEE7";
 
 /** Contact 菜单页：Header + 主体 + Footer */
 const ContactPage = () => {

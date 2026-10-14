@@ -10,7 +10,6 @@ import Section5 from "./Section5";
 import Section6 from "./Section6";
 import Section7 from "./Section7";
 
-const JOURNEY_HEADER_BG = "#F3EEE7";
 
 /** Journey 菜单页：Header + 主体 sections + Footer */
 const JourneyPage = () => {

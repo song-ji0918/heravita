@@ -11,7 +11,6 @@ import Section6 from "./LifeS6";
 import Section7 from "./LifeS7";
 import Section8 from "./LifeS8";
 
-const LIFE_HEADER_BG = "#F3EEE7";
 
 /** Life 菜单页：Header + 主体 sections + Footer */
 const LifePage = () => {
@@ -21,7 +20,7 @@ const LifePage = () => {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#F3EEE7] text-[#2F2F2F]">
-      <Header backgroundColor={LIFE_HEADER_BG} />
+      <Header overlay alwaysVisible />
       <main className="flex-1">
         <Section1 />
         <Section2 />

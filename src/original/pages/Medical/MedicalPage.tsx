@@ -12,7 +12,6 @@ import Section7 from "./MedicalS7";
 import Section8 from "./MedicalS8";
 import Section9 from "./MedicalS9";
 
-const MEDICAL_HEADER_BG = "#F3EEE7";
 
 /** Medical 菜单页：Header + 主体 sections + Footer */
 const MedicalPage = () => {
@@ -22,7 +21,7 @@ const MedicalPage = () => {
 
   return (
     <div className="flex min-h-screen flex-col bg-[#F3EEE7] text-[#2F2F2F]">
-      <Header backgroundColor={MEDICAL_HEADER_BG} />
+      <Header overlay alwaysVisible />
       <main className="flex-1">
         <Section1 />
         <Section2 />

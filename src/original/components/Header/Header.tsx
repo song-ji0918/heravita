@@ -61,13 +61,13 @@ const Header = ({ backgroundColor, overlay = false, alwaysVisible = false }: Hea
           .elementsFromPoint(sampleX, sampleY)
           .map((element) => element.closest<HTMLElement>("[data-header-theme]"))
           .find((element) => element !== null);
-        const nextTheme = themedSection?.dataset.headerTheme;
+        // 未声明主题的页面默认浅色背景，使用深色控件，保证全站透明导航可读。
+        const nextTheme =
+          themedSection?.dataset.headerTheme === "dark" ? "dark" : "light";
 
-        if (nextTheme === "dark" || nextTheme === "light") {
-          setHeaderTheme((currentTheme) =>
-            currentTheme === nextTheme ? currentTheme : nextTheme,
-          );
-        }
+        setHeaderTheme((currentTheme) =>
+          currentTheme === nextTheme ? currentTheme : nextTheme,
+        );
       };
 
       const setHeaderVisibility = (visible: boolean, immediate = false) => {

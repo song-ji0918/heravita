@@ -25,7 +25,12 @@ export default function SiteBreadcrumb() {
       const rect = header.getBoundingClientRect();
       const overlay = getComputedStyle(header).position === "fixed";
       setTop(overlay ? rect.bottom : Math.max(rect.bottom, 0));
-      setLight(overlay);
+      // 与导航栏同一套明暗逻辑：采样路径栏下方的区块主题，未声明则视为浅色背景。
+      const themed = document
+        .elementsFromPoint(window.innerWidth / 2, Math.min(rect.bottom + 14, window.innerHeight - 1))
+        .map((el) => el.closest<HTMLElement>("[data-header-theme]"))
+        .find((el) => el !== null);
+      setLight(overlay && themed?.dataset.headerTheme === "dark");
       setHidden(window.scrollY > 40);
     };
     measure();

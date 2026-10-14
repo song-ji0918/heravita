@@ -67,7 +67,7 @@ export default function BookingPage() {
 
   return (
     <div ref={root} className="pk-page" dir={dir}>
-      <Header backgroundColor="#f7f6f2" />
+      <Header overlay alwaysVisible />
       <main className="pk-booking">
         <aside className="pk-booking-media">
           <img src={IMG.concierge} alt={b.mediaTitle} />

@@ -43,10 +43,10 @@ export default function SiteBreadcrumb() {
   }, [menu]);
 
   if (trail.length < 2) return null;
-  const label = (c: { zh: string; en: string }) => (en ? c.en : c.zh);
+  const label = (c: { zh: string; en: string; es: string; ar: string }) => navLabel(c, lang);
 
   return (
-    <nav ref={ref} aria-label={en ? "Breadcrumb" : "页面路径"} className={`hv-crumb ${light ? "is-light" : "is-dark"} ${hidden ? "is-hidden" : ""}`} style={{ top }}>
+    <nav ref={ref} aria-label={zh ? "页面路径" : "Breadcrumb"} className={`hv-crumb ${light ? "is-light" : "is-dark"} ${hidden ? "is-hidden" : ""}`} style={{ top }}>
       <ol>
         {trail.map((c, i) => {
           const last = i === trail.length - 1;

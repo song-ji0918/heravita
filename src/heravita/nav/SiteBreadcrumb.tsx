@@ -1,14 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "@tanstack/react-router";
-import { trailFor } from "./site-map";
+import { trailFor, navLabel } from "./site-map";
 import "./site-nav.css";
 
 /** CLP-style location bar under the header: shows the path, links to parents, and switches between sibling pages. */
 export default function SiteBreadcrumb() {
   const { pathname } = useLocation();
   const { i18n } = useTranslation();
-  const en = !i18n.language?.startsWith("zh");
+  const lang = i18n.language || "zh";
+  const zh = lang.startsWith("zh");
   const trail = trailFor(pathname);
   const [top, setTop] = useState(56);
   const [light, setLight] = useState(true);
@@ -42,10 +43,10 @@ export default function SiteBreadcrumb() {
   }, [menu]);
 
   if (trail.length < 2) return null;
-  const label = (c: { zh: string; en: string }) => (en ? c.en : c.zh);
+  const label = (c: { zh: string; en: string; es: string; ar: string }) => navLabel(c, lang);
 
   return (
-    <nav ref={ref} aria-label={en ? "Breadcrumb" : "页面路径"} className={`hv-crumb ${light ? "is-light" : "is-dark"} ${hidden ? "is-hidden" : ""}`} style={{ top }}>
+    <nav ref={ref} aria-label={zh ? "页面路径" : "Breadcrumb"} className={`hv-crumb ${light ? "is-light" : "is-dark"} ${hidden ? "is-hidden" : ""}`} style={{ top }}>
       <ol>
         {trail.map((c, i) => {
           const last = i === trail.length - 1;

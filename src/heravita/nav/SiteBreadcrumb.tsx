@@ -8,7 +8,8 @@ import "./site-nav.css";
 export default function SiteBreadcrumb() {
   const { pathname } = useLocation();
   const { i18n } = useTranslation();
-  const en = !i18n.language?.startsWith("zh");
+  const lang = i18n.language || "zh";
+  const zh = lang.startsWith("zh");
   const trail = trailFor(pathname);
   const [top, setTop] = useState(56);
   const [light, setLight] = useState(true);

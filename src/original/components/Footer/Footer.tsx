@@ -65,13 +65,12 @@ const Footer = () => {
           {/* 左侧品牌 */}
           <div className="flex flex-col items-center text-center lg:w-[240px] lg:shrink-0">
             <img
-              src="/brand/heravita-logo-full-white.png"
+              src="/brand/heravita-logo-full-black.png"
               alt=""
               aria-hidden="true"
-              className="h-auto w-[110px] object-contain brightness-0 sm:w-[128px]"
+              className="h-auto w-[110px] object-contain sm:w-[128px]"
               loading="eager"
             />
-            <span className="mt-3 font-serif text-[24px] tracking-[0.14em] text-brand-ink sm:text-[27px]">HERAVITA</span>
 
             <p className="mt-3 text-[12px] tracking-[0.04em] text-brand-gray sm:text-[13px]">
               {t("footer.pillars")}

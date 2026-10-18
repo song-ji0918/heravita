@@ -6,7 +6,7 @@ import Footer from "@/original/components/Footer/Footer";
 import { supabase } from "@/integrations/supabase/client";
 import { applicationSchema, stages, destinations, estimate, journeyRules, type Stage } from "./rules";
 import { names, stagePaths } from "./Navigation";
-import { media } from "./media";
+import bookingCover from "@/assets/journey-spa.jpg";
 import "./journey.css";
 import "./booking.css";
 
@@ -39,7 +39,6 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
   const [error, setError] = useState("");
   const rule = stage === "undecided" ? null : journeyRules[stage];
   const price = stage === "undecided" ? null : estimate(stage, partner);
-  const hero = stage === "reset" || stage === "rebuild" || stage === "flourish" ? media[stage] : media.spa;
 
   async function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -65,7 +64,7 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
     <div className="j-page bk-page" dir={i18n.dir()}>
       <Header overlay alwaysVisible />
       <section className="bk-hero" data-header-theme="dark">
-        <img src={hero} alt={t("宁静的生命旅程空间", "A quiet life journey sanctuary")} width={1920} height={1080} />
+        <img src={bookingCover} alt={t("宁静的生命旅程空间", "A quiet life journey sanctuary")} width={1920} height={1080} />
         <div className="bk-hero-shade" />
         <div className="bk-hero-copy">
           <p className="bk-eyebrow">Your Private Life Journey</p>

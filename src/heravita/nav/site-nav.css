@@ -43,11 +43,11 @@
 .hv-nav-secondary a:hover span, .hv-nav-secondary a[aria-current="page"] span { color: var(--hv-nav-sage); transform: translateX(6px); }
 
 /* ---------- Breadcrumb ---------- */
-.hv-crumb { position: fixed; left: 0; right: 0; z-index: 45; padding: 10px 25px; font-family: Manrope, sans-serif; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; transition: opacity .5s ease, transform .5s ease; }
+.hv-crumb { position: fixed; left: 0; right: 0; z-index: 45; padding: 10px 25px; background: transparent; backdrop-filter: none; font-family: Manrope, sans-serif; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; transition: opacity .5s ease, transform .5s ease; }
 @media (min-width: 768px) { .hv-crumb { padding: 12px 58px; } }
 .hv-crumb.is-hidden { opacity: 0; transform: translateY(-6px); pointer-events: none; }
 .hv-crumb.is-light { color: rgba(255,255,255,.92); border-top: 1px solid rgba(255,255,255,.22); text-shadow: 0 1px 8px rgba(0,0,0,.35); }
-.hv-crumb.is-dark { color: var(--hv-nav-ink); border-top: 1px solid rgba(26,26,26,.12); background: rgba(247,245,240,.86); backdrop-filter: blur(6px); }
+.hv-crumb.is-dark { color: var(--hv-nav-ink); border-top: 1px solid rgba(26,26,26,.12); }
 .hv-crumb ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 0; }
 .hv-crumb li { display: inline-flex; align-items: center; }
 .hv-crumb a { color: inherit; opacity: .72; text-decoration: none; transition: opacity .3s; }

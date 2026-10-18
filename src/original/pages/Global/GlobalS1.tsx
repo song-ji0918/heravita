@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useCallback, useMemo, useRef, useState } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import MapMarkers from "@/heravita/global/MapMarkers";
 
 import {
   GLOBAL_LAYER_IDS,
@@ -122,10 +123,8 @@ const GlobalS1 = () => {
             </div>
           </div>
 
-          <div
-            data-gs1
-            className="relative min-w-0 w-full flex-1 overflow-hidden bg-[#d5e3ea]"
-          >
+          <div data-gs1 className="min-w-0 w-full flex-1">
+          <div className="relative overflow-hidden">
             <div className="absolute top-3 left-3 z-10 flex flex-col overflow-hidden rounded-sm border border-[#2f2f2f]/12 bg-white">
               <button
                 type="button"
@@ -157,24 +156,17 @@ const GlobalS1 = () => {
                 className="block h-auto w-full"
                 draggable={false}
               />
-              <div className="absolute inset-0">
-                {markers.map((marker) => (
-                  <div
-                    key={marker.id}
-                    className="absolute flex -translate-y-1/2 items-center gap-1.5"
-                    style={{ left: `${marker.x}%`, top: `${marker.y}%` }}
-                  >
-                    <span
-                      className="size-1.5 shrink-0 bg-[#2f2f2f]"
-                      aria-hidden="true"
-                    />
-                    <span className="whitespace-nowrap text-[10px] leading-none text-[#2f2f2f] sm:text-[11px]">
-                      {t(`globalPage.markers.${marker.id}`)}
-                    </span>
-                  </div>
-                ))}
-              </div>
+              <MapMarkers markers={markers} />
             </div>
+          </div>
+          <ol className="mt-6 grid grid-cols-1 gap-x-6 gap-y-4 text-foreground sm:grid-cols-2 xl:grid-cols-3">
+            {markers.map((marker, index) => (
+              <li key={marker.id} className="grid min-w-0 grid-cols-[24px_minmax(0,1fr)] items-start gap-2 text-[12px] leading-relaxed sm:text-[13px]">
+                <span className="text-muted-foreground" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+                <span className="min-w-0 break-words">{t(`globalPage.markers.${marker.id}`)}</span>
+              </li>
+            ))}
+          </ol>
           </div>
         </div>
       </div>

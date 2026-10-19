@@ -4,7 +4,6 @@ import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
 import Section1 from "./LifeS1";
 import Section2 from "./LifeS2";
-import Section3 from "./LifeS3";
 import Section4 from "./LifeS4";
 import Section5 from "./LifeS5";
 import Section6 from "./LifeS6";
@@ -24,7 +23,6 @@ const LifePage = () => {
       <main className="flex-1">
         <Section1 />
         <Section2 />
-        <Section3 />
         <Section4 />
         <Section5 />
         <Section6 />

@@ -1,3 +1,4 @@
+import { HeroTitle } from "@/heravita/hero/HeroTitle";
 import { useRef } from "react";
 import Header from "@/original/components/Header/Header";
 import Footer from "@/original/components/Footer/Footer";
@@ -26,7 +27,7 @@ export default function UsaPage() {
           <div className="usa-overlay usa-overlay--hero" />
           <div className="usa-hero-copy">
             <p className="usa-eyebrow" data-reveal>{c.hero.eyebrow}</p>
-            <h1 className="usa-display" data-reveal><span>{c.hero.title}</span><em>{c.hero.subtitle}</em></h1>
+            <HeroTitle first={c.hero.title} second={c.hero.subtitle}/>
             <p className="usa-lead" data-reveal>{c.hero.lead}</p>
             <ul className="usa-tags" data-reveal>{c.hero.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
           </div>

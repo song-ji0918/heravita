@@ -1,3 +1,4 @@
+import { HeroTitle } from "@/heravita/hero/HeroTitle";
 import { useRef } from "react";
 import Header from "@/original/components/Header/Header";
 import Footer from "@/original/components/Footer/Footer";
@@ -17,10 +18,10 @@ export default function NetworkPage() {
     <div ref={root} className="usa-page" dir={dir}>
       <Header overlay />
       <main>
-        <section className="usa-screen usa-network-hero" data-header-theme="dark" data-reveal-group>
+        <section className="usa-screen usa-network-hero usa-hero" data-header-theme="dark" data-reveal-group>
           <div className="usa-media"><img data-parallax src={coast} alt={c.network.title} width={1920} height={1080} /></div>
           <div className="usa-overlay usa-overlay--hero" />
-          <div className="usa-hero-copy"><p className="usa-eyebrow" data-reveal>{c.network.eyebrow}</p><h1 className="usa-display" data-reveal><span>U.S. Medical Network</span><em>{c.network.title}</em></h1><p className="usa-lead" data-reveal>{c.network.intro}</p></div>
+          <div className="usa-hero-copy"><p className="usa-eyebrow" data-reveal>{c.network.eyebrow}</p><HeroTitle first="U.S. Medical Network" second={c.network.title}/><p className="usa-lead" data-reveal>{c.network.intro}</p></div>
         </section>
 
         <section className="usa-network-index" data-header-theme="light">

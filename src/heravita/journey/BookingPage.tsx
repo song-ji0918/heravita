@@ -1,3 +1,4 @@
+import { HeroTitle } from "@/heravita/hero/HeroTitle";
 import { useState, type FormEvent } from "react";
 import { Link } from "@tanstack/react-router";
 import { useTranslation } from "react-i18next";
@@ -68,7 +69,7 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
         <div className="bk-hero-shade" />
         <div className="bk-hero-copy">
           <p className="bk-eyebrow">Your Private Life Journey</p>
-          <h1>{t("从一次真诚的对话开始", "Begin with a Personal Conversation")}</h1>
+          <HeroTitle first={t("从一次真诚的", "Begin with a Personal")} second={t("对话开始", "Conversation")}/>
           <p>{t("不急于决定。先让我们理解，您此刻真正需要什么。", "There is no need to decide today. Let us understand what matters to you now.")}</p>
         </div>
       </section>

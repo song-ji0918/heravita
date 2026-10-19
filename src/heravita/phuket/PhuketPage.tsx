@@ -1,3 +1,4 @@
+import { HeroTitle } from "@/heravita/hero/HeroTitle";
 import { useRef } from "react";
 import Header from "@/original/components/Header/Header";
 import Footer from "@/original/components/Footer/Footer";
@@ -22,10 +23,7 @@ export default function PhuketPage() {
           <div className="pk-shade" />
           <div className="pk-hero-copy">
             <p className="pk-eyebrow" data-reveal>{c.hero.eyebrow}</p>
-            <h1 className="pk-display" data-reveal>
-              <span>{c.hero.title}</span>
-              <em>{c.hero.subtitle}</em>
-            </h1>
+            <HeroTitle first={c.hero.title} second={c.hero.subtitle}/>
             <p className="pk-lead" data-reveal>{leadEn}<br />{leadLocal}</p>
             <div className="pk-actions" data-reveal>
               <Cta to="/global/phuket/booking">{c.hero.cta}</Cta>

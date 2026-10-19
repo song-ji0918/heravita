@@ -1,3 +1,4 @@
+import { HeroTitle } from "@/heravita/hero/HeroTitle";
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import Header from '@/original/components/Header/Header';
@@ -60,7 +61,7 @@ export default function StageEditorialPage({ stage }: { stage: Key }) {
   return <div className="reset-editorial stage-vitality" ref={root} dir={i18n.dir()}><Header overlay /><main>
     <section className="re-hero" data-header-theme="dark" data-reveal-group>
       <div className="re-hero-image"><img src={photos.hero} alt={tp(k.heroAlt)} width={1920} height={1088} data-parallax /></div><div className="re-veil" />
-      <div className="re-hero-copy"><p className="re-kicker" data-reveal>HeraVita · {k.label}</p><h1 data-reveal>{t(`7天6夜 · ${c.title}计划`, `7 Days · 6 Nights · ${k.label}`)}</h1>{!en && <p className="re-english" data-reveal>{k.label}</p>}<p className="re-lead" data-reveal>{c.claim}</p><p className="re-period" data-reveal>{t(`泰国普吉岛 · ${c.follow}`, `Phuket, Thailand · ${c.follow}`)}</p><p className="re-price" data-reveal>{price}</p><ApplyLink stage={stage} en={en} /></div>
+      <div className="re-hero-copy"><p className="re-kicker" data-reveal>HeraVita · {k.label}</p><HeroTitle first={t(`7天6夜 · ${c.title}计划`, `7 Days · 6 Nights · ${k.label}`)} second={c.claim}/>{!en && <p className="re-english" data-reveal>{k.label}</p>}<p className="re-period" data-reveal>{t(`泰国普吉岛 · ${c.follow}`, `Phuket, Thailand · ${c.follow}`)}</p><p className="re-price" data-reveal>{price}</p><ApplyLink stage={stage} en={en} /></div>
     </section>
     <JourneyRail active={stage} en={en} />
     <section className="re-section re-intro" data-header-theme="light" data-reveal-group>

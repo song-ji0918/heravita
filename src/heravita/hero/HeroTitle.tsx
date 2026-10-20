@@ -1,4 +1,5 @@
-import type { ReactNode } from 'react';
+import type { ReactNode from 'react';
+import './hero.css';
 
 /** Preserve page wording while sharing the homepage's two-line title composition. */
 export function HeroTitle({ first, second }: { first: ReactNode; second: ReactNode }) {

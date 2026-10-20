@@ -1,6 +1,7 @@
 # HeraVita
 - [x] Organize working secondary menu links and add a top-level breadcrumb with sibling page selection.
-- [ ] Match every opening hero to homepage typography, two-line italic structure and verify multilingual presentation.
+- [ ] Restore previous titles through built-in History (awaiting user action; do not implement typography changes).
+- [ ] Replace Reset and Rebuilding opening photos with the two newly supplied images and verify display.
 - [x] Refine Rebuilding/Flourishing seven-day paths, relationship chapters and connected layouts; reduce black backgrounds and dividers.
 - [x] Replace Rebuilding/Flourishing opening and clinical-looking photography with distinct vitality-led scenes; verify both pages.
 - [x] Rebuild Life Reset alone as a rich Discovery-style editorial page; retain approved source and unified booking.

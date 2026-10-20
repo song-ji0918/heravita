@@ -1,4 +1,5 @@
-import rbHero from '@/assets/rebuild-vital-hero.jpg';
+import rbHeroAsset from '@/assets/rebuild-hero.png.asset.json';
+const rbHero = rbHeroAsset.url;
 import rbIntro from '@/assets/rb-intro.jpg';
 import rbArrival from '@/assets/rb-arrival.jpg';
 import rbMedical from '@/assets/rebuild-vital-health.jpg';

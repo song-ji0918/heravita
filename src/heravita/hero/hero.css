@@ -4,19 +4,19 @@
   --hv-hero-label-size: 13px;
 }
 /* Journey heroes mirror the homepage banner: centered label, two-line title, italic second line. */
-html body .hv-hero-title,
-html body .hv-hero-title .hv-hero-line {
+html body .re-hero .hv-hero-title,
+html body .re-hero .hv-hero-title .hv-hero-line {
   font-family: var(--hv-hero-font);
   font-size: var(--hv-hero-title-size);
   font-weight: 500;
   line-height: 1.16;
   letter-spacing: 0.055em;
 }
-html body .hv-hero-title:lang(en),
-html body .hv-hero-title:lang(en) .hv-hero-line {
+html body .re-hero .hv-hero-title:lang(en),
+html body .re-hero .hv-hero-title:lang(en) .hv-hero-line {
   text-transform: uppercase;
 }
-html body .hv-hero-title {
+html body .re-hero .hv-hero-title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,14 +25,14 @@ html body .hv-hero-title {
   margin: 24px 0 0;
   text-align: center;
 }
-html body .hv-hero-title .hv-hero-line {
+html body .re-hero .hv-hero-title .hv-hero-line {
   display: block;
   max-width: 100%;
   text-wrap: balance;
   overflow-wrap: anywhere;
   font-style: normal;
 }
-html body .hv-hero-title .hv-hero-line--second {
+html body .re-hero .hv-hero-title .hv-hero-line--second {
   margin-top: 12px;
   font-style: italic;
 }
@@ -80,8 +80,8 @@ html body :is(.re-hero-copy .re-price, .pk-hero-copy .pk-lead, .usa-hero-copy .u
 html body :is(.pk-hero-copy .pk-tags, .usa-hero-copy .usa-tags) { justify-content: center; margin-left: auto; margin-right: auto; }
 html body .pk-hero-copy .pk-actions { margin-top: 28px; }
 @media (min-width: 900px) {
-  html body .hv-hero-title .hv-hero-line:first-child { transform: translateX(-15%); max-width: 84%; }
-  html body .hv-hero-title .hv-hero-line--second { transform: translateX(15%); max-width: 84%; }
+  html body .re-hero .hv-hero-title .hv-hero-line:first-child { transform: translateX(-15%); max-width: 84%; }
+  html body .re-hero .hv-hero-title .hv-hero-line--second { transform: translateX(15%); max-width: 84%; }
 }
 @media (min-width: 640px) {
   :root { --hv-hero-label-size: 17px; }

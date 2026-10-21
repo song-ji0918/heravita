@@ -1,3 +1,4 @@
+import { heroSlogans } from "./hero-slogans";
 import { HeroTitle } from "@/heravita/hero/HeroTitle";
 import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -63,7 +64,7 @@ export default function StageEditorialPage({ stage }: { stage: Key }) {
   return <div className="reset-editorial stage-vitality" ref={root} dir={i18n.dir()}><Header overlay /><main>
     <section className="re-hero" data-header-theme="dark" data-reveal-group>
       <div className="re-hero-image"><img src={photos.hero} alt={tp(k.heroAlt)} width={1920} height={1088} data-parallax /></div><div className="re-veil" />
-      <div className="re-hero-copy"><p className="re-kicker" data-reveal>{tp(k.heroLabel)}</p><HeroTitle first={tp(k.heroPlan)} second={c.claim}/><p className="re-price" data-reveal>{price}</p><ApplyLink stage={stage} en={en} /></div>
+      <div className="re-hero-copy"><p className="re-kicker" data-reveal>{tp(k.heroLabel)}</p><HeroTitle first={heroSlogans[stage][en?2:0]} second={heroSlogans[stage][en?3:1]}/><p className="re-plan" data-reveal>{tp(k.heroPlan)}</p><p className="re-price" data-reveal>{price}</p><ApplyLink stage={stage} en={en} /></div>
     </section>
     <JourneyRail active={stage} en={en} />
     <section className="re-section re-intro" data-header-theme="light" data-reveal-group>

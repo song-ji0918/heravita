@@ -92,3 +92,13 @@ html body .pk-hero-copy .pk-actions { margin-top: 28px; }
 @media (max-width: 639px) {
   html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .bk-hero-copy, .hv-original-hero-copy) { padding: 160px 24px 72px; }
 }
+html body .re-hero-copy .re-plan {
+  font-family: var(--hv-hero-font);
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  margin: 28px auto 0;
+  opacity: 0.88;
+}
+html body .re-hero-copy .re-plan + .re-price { margin-top: 6px; }

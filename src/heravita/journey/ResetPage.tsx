@@ -24,7 +24,7 @@ export default function ResetPage(){
  return <div className="reset-editorial" ref={root} dir={i18n.dir()}><Header overlay/><main>
   <section className="re-hero" data-header-theme="dark" data-reveal-group>
    <div className="re-hero-image"><img src={photos.hero} alt={t('海岛自然场域与静谧水面','A quiet island sanctuary and still water')} width={1920} height={1088} data-parallax/></div><div className="re-veil"/>
-   <div className="re-hero-copy"><p className="re-kicker" data-reveal>HeraVita · Life Reset</p><HeroTitle first={t('7天6夜 · 生命重启计划','7 Days · 6 Nights · Life Reset')} second={c.claim}/>{!en&&<p className="re-english" data-reveal>Life Reset</p>}<p className="re-period" data-reveal>{t('泰国普吉岛 · 90天生命重启陪伴','Phuket, Thailand · 90-Day Life Reset Companionship')}</p><p className="re-price" data-reveal>From RMB ¥98,000+ / USD $14,900+</p><ApplyLink stage="reset" en={en}/></div>
+   <div className="re-hero-copy"><p className="re-kicker" data-reveal>{t('LIFE RESET｜生命重启','LIFE RESET')}</p><HeroTitle first={t('7天6夜 · 90天生命重启计划','7 Days · 6 Nights · 90-Day Life Reset Plan')} second={c.claim}/><p className="re-price" data-reveal>From RMB ¥98,000+ / USD $14,900+</p><ApplyLink stage="reset" en={en}/></div>
   </section>
   <JourneyRail active="reset" en={en}/>
   <section className="re-section re-intro" data-header-theme="light" data-reveal-group>

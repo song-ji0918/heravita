@@ -12,7 +12,7 @@ export function JourneyRail({active, en=false}:{active:Stage;en?:boolean}) {
  return <nav className="j-rail" aria-label={en?"Life journey stages":"四阶段生命旅程"}>{stages.map((s,i)=><Button asChild variant="ghost" key={s}><Link to={stagePaths[s]} aria-current={active===s?"page":undefined}><small>0{i+1}</small><span>{names[s][en?1:0]}</span><span className="j-rail-arrow" aria-hidden="true">↗</span></Link></Button>)}</nav>;
 }
 export function ApplyLink({stage,en=false,tone="on-dark"}:{stage:Stage;en?:boolean;tone?:Tone}) {
- return <Link to="/journey/booking" search={{stage,destination:"undecided"}} className={`hv-btn hn-button-${tone}`}><BtnInner>{en?"Reserve a Private Consultation":"预约私人旅程咨询"}</BtnInner></Link>;
+ return <Link to="/journey/booking" search={{stage,destination:"undecided"}} className={`hv-btn hn-button-${tone}`}><BtnInner>{en?"Begin Your Life Journey":"申请你的生命旅程"}</BtnInner></Link>;
 }
 export function StageLink({to,children,tone="on-light",back=false}:{to:string;children:ReactNode;tone?:Tone;back?:boolean}){
  return <Link to={to} className={`hv-btn hn-button-${tone}`}><BtnInner arrow={back?"←":"→"}>{children}</BtnInner></Link>;

@@ -1,16 +1,19 @@
 :root {
   --hv-hero-font: var(--font-brand-sans, sans-serif);
-  --hv-hero-title-size: 48px;
-  --hv-hero-label-size: 17px;
+  --hv-hero-title-size: clamp(1.5rem, 5vw, 3rem);
+  --hv-hero-label-size: 13px;
 }
-/* Scoped selectors outrank legacy stage styles without changing later chapters. */
+/* Journey heroes mirror the homepage banner: centered label, two-line title, italic second line. */
 html body .hv-hero-title,
 html body .hv-hero-title .hv-hero-line {
   font-family: var(--hv-hero-font);
   font-size: var(--hv-hero-title-size);
   font-weight: 500;
   line-height: 1.16;
-  letter-spacing: 0;
+  letter-spacing: 0.055em;
+}
+html body .hv-hero-title:lang(en),
+html body .hv-hero-title:lang(en) .hv-hero-line {
   text-transform: uppercase;
 }
 html body .hv-hero-title {
@@ -19,7 +22,7 @@ html body .hv-hero-title {
   align-items: center;
   width: 100%;
   max-width: none;
-  margin: 24px 0;
+  margin: 24px 0 0;
   text-align: center;
 }
 html body .hv-hero-title .hv-hero-line {
@@ -59,11 +62,13 @@ html body :is(.re-hero-copy .re-kicker, .pk-hero-copy .pk-eyebrow, .usa-hero-cop
   font-size: var(--hv-hero-label-size);
   font-weight: 500;
   line-height: 30px;
-  letter-spacing: 0;
-  text-transform: uppercase;
+  letter-spacing: 0.12em;
   margin: 0 0 24px;
 }
-html body :is(.pk-hero-copy .pk-lead, .usa-hero-copy .usa-lead, .bk-hero-copy > p:not(.bk-eyebrow)) {
+html body :is(.re-hero-copy .re-kicker:lang(en), .pk-hero-copy .pk-eyebrow:lang(en), .usa-hero-copy .usa-eyebrow:lang(en), .bk-hero-copy .bk-eyebrow:lang(en), .hv-original-hero-copy .hv-hero-eyebrow:lang(en)) {
+  text-transform: uppercase;
+}
+html body :is(.re-hero-copy .re-price, .pk-hero-copy .pk-lead, .usa-hero-copy .usa-lead, .bk-hero-copy > p:not(.bk-eyebrow)) {
   font-family: var(--hv-hero-font);
   font-size: 17px;
   font-weight: 400;
@@ -75,15 +80,15 @@ html body :is(.pk-hero-copy .pk-lead, .usa-hero-copy .usa-lead, .bk-hero-copy > 
 html body :is(.pk-hero-copy .pk-tags, .usa-hero-copy .usa-tags) { justify-content: center; margin-left: auto; margin-right: auto; }
 html body .pk-hero-copy .pk-actions { margin-top: 28px; }
 @media (min-width: 900px) {
-  html body .hv-hero-title .hv-hero-line:first-child { transform: translateX(-8%); max-width: 84%; }
-  html body .hv-hero-title .hv-hero-line--second { transform: translateX(8%); max-width: 84%; }
+  html body .hv-hero-title .hv-hero-line:first-child { transform: translateX(-15%); max-width: 84%; }
+  html body .hv-hero-title .hv-hero-line--second { transform: translateX(15%); max-width: 84%; }
+}
+@media (min-width: 640px) {
+  :root { --hv-hero-label-size: 17px; }
 }
 @media (max-width: 1023px) {
-  :root { --hv-hero-title-size: 40px; }
   html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .bk-hero-copy, .hv-original-hero-copy) { padding-left: 40px; padding-right: 40px; }
 }
 @media (max-width: 639px) {
-  :root { --hv-hero-title-size: 28px; --hv-hero-label-size: 13px; }
   html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .bk-hero-copy, .hv-original-hero-copy) { padding: 160px 24px 72px; }
 }
-@media (max-width: 359px) { :root { --hv-hero-title-size: 24px; } }

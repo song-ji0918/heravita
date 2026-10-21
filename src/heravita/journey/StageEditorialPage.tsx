@@ -17,13 +17,14 @@ type Key = 'rebuild' | 'flourish';
 type Pair = [string, string];
 
 const copy: Record<Key, {
-  label: string; months: number; heroAlt: Pair; introKicker: string; arrivalKicker: string;
+  label: string; months: number; heroAlt: Pair; heroLabel: Pair; heroPlan: Pair; introKicker: string; arrivalKicker: string;
   relationFocus: [string[], string[]]; energyTags: [string[], string[]] | null;
   life: { main: Pair; mainText: Pair; side: Pair; sideText: Pair };
   followText: Pair; closingTitle: Pair; prev: 'reset' | 'rebuild'; next: 'flourish' | 'discover';
 }> = {
   rebuild: {
     label: 'Life Rebuilding', months: 6, heroAlt: ['伴侣漫步于绿意海岸', 'Partners walking along a living green coastline'],
+    heroLabel: ['LIFE REBUILDING｜生命重建', 'LIFE REBUILDING'], heroPlan: ['7天6夜 · 6个月生命重建计划', '7 Days · 6 Nights · 6-Month Life Rebuilding Plan'],
     introKicker: 'Beyond the Same Patterns', arrivalKicker: 'Return to Yourself',
     relationFocus: [['情绪模式', '沟通模式', '期待与失望', '爱的给予与接受', '关系边界', '家庭角色', '责任分配', '亲密与距离', '共同生活节律', '共同未来'], ['Emotional patterns', 'Communication patterns', 'Expectations & disappointments', 'Giving & receiving love', 'Relationship boundaries', 'Family roles', 'Division of responsibility', 'Intimacy & distance', 'Shared daily rhythms', 'A shared future']],
     energyTags: [['安全', '亲密', '力量', '爱', '表达', '洞察', '意义'], ['Security', 'Intimacy', 'Strength', 'Love', 'Expression', 'Insight', 'Meaning']],
@@ -33,6 +34,7 @@ const copy: Record<Key, {
   },
   flourish: {
     label: 'Life Flourishing', months: 12, heroAlt: ['伴侣在安达曼海扬帆远行', 'Partners sailing across the Andaman Sea'],
+    heroLabel: ['LIFE FLOURISHING｜生命绽放', 'LIFE FLOURISHING'], heroPlan: ['7天6夜 · 12个月私人生命管理', '7 Days · 6 Nights · 12-Month Private Life Management'],
     introKicker: 'The Next Ten Years', arrivalKicker: 'A New Chapter',
     relationFocus: [['亲密关系质量', '共同梦想', '家庭生活设计', '共同旅行', '新鲜感', '仪式感', '共同成长', '生命意义', '家庭影响与传承'], ['Quality of intimacy', 'Shared dreams', 'Family-life design', 'Travel together', 'Novelty', 'Sense of ritual', 'Growing together', 'Meaning of life', 'Family impact & legacy']],
     energyTags: null,
@@ -61,7 +63,7 @@ export default function StageEditorialPage({ stage }: { stage: Key }) {
   return <div className="reset-editorial stage-vitality" ref={root} dir={i18n.dir()}><Header overlay /><main>
     <section className="re-hero" data-header-theme="dark" data-reveal-group>
       <div className="re-hero-image"><img src={photos.hero} alt={tp(k.heroAlt)} width={1920} height={1088} data-parallax /></div><div className="re-veil" />
-      <div className="re-hero-copy"><p className="re-kicker" data-reveal>HeraVita · {k.label}</p><HeroTitle first={t(`7天6夜 · ${c.title}计划`, `7 Days · 6 Nights · ${k.label}`)} second={c.claim}/>{!en && <p className="re-english" data-reveal>{k.label}</p>}<p className="re-period" data-reveal>{t(`泰国普吉岛 · ${c.follow}`, `Phuket, Thailand · ${c.follow}`)}</p><p className="re-price" data-reveal>{price}</p><ApplyLink stage={stage} en={en} /></div>
+      <div className="re-hero-copy"><p className="re-kicker" data-reveal>{tp(k.heroLabel)}</p><HeroTitle first={tp(k.heroPlan)} second={c.claim}/><p className="re-price" data-reveal>{price}</p><ApplyLink stage={stage} en={en} /></div>
     </section>
     <JourneyRail active={stage} en={en} />
     <section className="re-section re-intro" data-header-theme="light" data-reveal-group>

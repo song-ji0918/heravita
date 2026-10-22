@@ -103,13 +103,14 @@ html body .re-hero-copy .re-plan {
 }
 html body .re-hero-copy .re-plan + .re-price { margin-top: 6px; }
 /* Journey heroes: left-aligned block; slogan second line italic, single line, offset right. */
-html body .re-hero .re-hero-copy { text-align: left; }
+html body .re-hero .re-hero-copy { text-align: left; max-width: none; width: auto; }
 html body .re-hero .hv-hero-title { align-items: flex-start; text-align: left; }
-html body .re-hero .hv-hero-title .hv-hero-line { max-width: none; transform: none; }
+html body .re-hero .hv-hero-title .hv-hero-line { max-width: none; transform: none; white-space: nowrap; overflow-wrap: normal; text-wrap: nowrap; }
+html body .re-hero .hv-hero-title:lang(en),
+html body .re-hero .hv-hero-title:lang(en) .hv-hero-line { font-size: min(var(--hv-hero-title-size), 3.2vw); }
 html body .re-hero .hv-hero-title .hv-hero-line--second {
-  white-space: nowrap;
   font-style: italic;
-  font-size: min(var(--hv-hero-title-size), 3.6vw);
+  font-size: min(var(--hv-hero-title-size), 3.2vw);
   margin-left: clamp(24px, 8vw, 140px);
 }
 html body .re-hero .re-hero-copy :is(.re-kicker, .re-plan, .re-price) { margin-left: 0; margin-right: 0; text-align: left; }

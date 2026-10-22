@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import Header from "@/original/components/Header/Header";
 import Footer from "@/original/components/Footer/Footer";
 import { supabase } from "@/integrations/supabase/client";
+import { notifyApplication } from "./notify.functions";
 import { applicationSchema, stages, destinations, estimate, journeyRules, type Stage } from "./rules";
 import { names, stagePaths } from "./Navigation";
 import bookingCover from "@/assets/journey-spa.jpg";
@@ -52,6 +53,7 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
     try {
       const { error: dbError } = await supabase.from("journey_applications").insert(parsed.data);
       if (dbError) throw dbError;
+      notifyApplication({ data: parsed.data }).catch(() => {});
       setStatus("done");
       window.scrollTo({ top: 0, behavior: "smooth" });
     } catch {

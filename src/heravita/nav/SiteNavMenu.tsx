@@ -68,7 +68,7 @@ export default function SiteNavMenu({ isOpen, onClose }: Props) {
               {group.children.map((c, i) => (
                 <li key={c.to} style={{ animationDelay: `${i * 50}ms` }}>
                   <Link to={c.to} onClick={onClose} aria-current={pathname === c.to ? "page" : undefined}>
-                    <span>{navLabel(c, lang)}</span><small>{zh ? c.en : c.zh}</small>
+                    <span>{navLabel(c, lang)}</span>{zh && <small>{c.en}</small>}
                   </Link>
                 </li>
               ))}

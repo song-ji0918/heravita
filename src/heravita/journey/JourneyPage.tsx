@@ -1,11 +1,9 @@
+import { useJourneyCopy, journeyText } from './locale';
 import { useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import Header from "@/original/components/Header/Header";
 import Footer from "@/original/components/Footer/Footer";
 import { Button } from "@/components/ui/button";
 import { useReveal } from "@/heravita/phuket/useReveal";
-import sourceZh from "./source.zh.json";
-import sourceEn from "./source.en.json";
 import { stageMedia, expansionMedia } from "./media";
 import { JourneyRail, JourneyProgression, ApplyLink } from "./Navigation";
 import { type Stage } from "./rules";
@@ -16,11 +14,10 @@ function Photo({src,alt,hero=false}:{src:string;alt:string;hero?:boolean}) { ret
 function Paragraphs({items}:{items:string[]}) { return <>{items.map((p,i)=><p key={i} className="j-body">{p}</p>)}</>; }
 export default function JourneyPage({stage}:{stage:ProductStage}) {
  const root=useRef<HTMLDivElement>(null); useReveal(root);
- const {i18n}=useTranslation();
- const en=!i18n.language.startsWith("zh"); const source=en?sourceEn:sourceZh; const t=(zh:string,english:string)=>en?english:zh;
+ const {i18n,en,t,source}=useJourneyCopy();
  const c=source.stages[stage]; const shared=source.shared;
  const [day,setDay]=useState(0);
- const title=(text:string,kicker:string)=><><p className="j-kicker" data-reveal>{kicker}</p><h2 className="j-title" data-reveal>{text}</h2><span className="j-rule" data-line /></>;
+ const title=(text:string,kicker:string)=><><p className="j-kicker" data-reveal>{journeyText(kicker)}</p><h2 className="j-title" data-reveal>{text}</h2><span className="j-rule" data-line /></>;
  const images=stageMedia[stage];
  const relationshipChapter=(<>
    <section id="connection" className="j-section j-relationship" data-header-theme="dark" data-reveal-group>
@@ -29,7 +26,7 @@ export default function JourneyPage({stage}:{stage:ProductStage}) {
  </>);
  const energyChapter=(<>
    <section id="energy" className="j-section j-energy" data-header-theme="light" data-reveal-group>
-    <Photo src={images.energy} alt="呼吸、身体觉察与内在生命力体验意象" /><div className="j-energy-copy">{title(c.energyTitle,"Inner Vitality")}<Paragraphs items={c.energy} />{stage==="rebuild"&&<div className="j-chakras">{(en?["Safety","Intimacy","Strength","Love","Expression","Insight","Meaning"]:["安全","亲密","力量","爱","表达","洞察","意义"]).map(x=><span key={x}>{x}</span>)}</div>}<p className="j-clinical-note">{t("七脉轮作为传统身心灵文化中的内在觉察、冥想与生命主题探索框架，不作为医学诊断或医疗治疗依据。","The seven chakras are a traditional framework for inner awareness, meditation and exploration of life themes, not a basis for medical diagnosis or treatment.")}</p></div>
+    <Photo src={images.energy} alt="呼吸、身体觉察与内在生命力体验意象" /><div className="j-energy-copy">{title(c.energyTitle,"Inner Vitality")}<Paragraphs items={c.energy} />{stage==="rebuild"&&<div className="j-chakras">{(en?["Safety","Intimacy","Strength","Love","Expression","Insight","Meaning"]:["安全","亲密","力量","爱","表达","洞察","意义"]).map(x=><span key={x}>{x}</span>)}</div>}<p className="j-clinical-note">{t("以传统七脉轮主题为线索，探索觉察、冥想与内在生命力。","Explore awareness, meditation and inner vitality through traditional seven-chakra themes.")}</p></div>
    </section>
  </>);
  const lifestyleChapter=(<>
@@ -51,7 +48,7 @@ export default function JourneyPage({stage}:{stage:ProductStage}) {
    </section>
    <section id="medicine" className="j-medical" data-header-theme="light">
     <Photo src={images.medicine} alt="医生评估与个性化健康方案沟通意象" />
-    <div className="j-medical-copy" data-reveal-group>{title(c.medicalTitle,"Global Longevity Medicine")}<ul>{c.medical.map((p,i)=><li key={i} data-reveal>{p}</li>)}</ul><p className="j-clinical-note">{t("医学逻辑：目标 → 评估 → 匹配 → 医学干预。HeraVita不是医院；医学服务由具备相应资质的医疗机构与专业医生提供，不承诺医学结果。","Medical pathway: goal → assessment → matching → intervention. HeraVita is not a hospital. Medical services are delivered by qualified institutions and physicians; medical outcomes are not promised.")}</p></div>
+    <div className="j-medical-copy" data-reveal-group>{title(c.medicalTitle,"Global Longevity Medicine")}<ul>{c.medical.map((p,i)=><li key={i} data-reveal>{p}</li>)}</ul><p className="j-clinical-note">{t("医学路径：目标 → 评估 → 匹配 → 个性化方案。","Your medical pathway: goals → assessment → matching → a personalized plan.")}</p></div>
    </section>
    {stage==="reset"?<>{relationshipChapter}{energyChapter}{lifestyleChapter}</>:stage==="rebuild"?<>{energyChapter}{relationshipChapter}{lifestyleChapter}</>:<>{relationshipChapter}{lifestyleChapter}{energyChapter}</>}
    {stage==="rebuild"?<section id="days" className="j-section" data-header-theme="light" data-reveal-group>
@@ -70,7 +67,7 @@ export default function JourneyPage({stage}:{stage:ProductStage}) {
     </div>
    </section>
    {stage==="flourish"&&<><div className="j-expansion-cover"><img src={expansionMedia} alt="全球生命拓展的地中海生活意象" width={1920} height={1088} loading="lazy" data-parallax /></div><section className="j-section" data-header-theme="light" data-reveal-group>{title(t("从健康生命，走向更大的全球人生。","From a Healthy Life to a Wider World."),"Global Life Expansion")}<Paragraphs items={shared.expansion.slice(0,2)}/><div className="j-expansion-list">{[2,4,6,8,10].map(i=><article key={i}><h3>{shared.expansion[i]}</h3><p className="j-body">{shared.expansion[i+1]}</p></article>)}</div><p className="j-clinical-note">{t("全球生命拓展不属于基础套餐固定包含内容，需另行制定方案与费用。","Global life expansion is not included in the base program; scope and fees are agreed separately.")}</p></section></>}
-   <section className="j-section j-price" data-header-theme="light" data-reveal-group><div>{title(t("为你的下一阶段，留出时间","Make Space for Your Next Chapter"),"Your Journey")}<p>{t("7天6夜","7 days · 6 nights")} + {c.follow}</p><strong>{t("起 ","From ")}RMB ¥{c.rmb.toLocaleString()}+<br/>USD ${c.usd.toLocaleString()}+</strong><p className="j-body">{t("最终方案根据检测、医生评估、医疗匹配及定制服务确定；双币为独立定价，不做实时汇率换算。","Final scope and fees depend on testing, physician assessment, medical matching and customization. RMB and USD prices are independently set, not live currency conversions.")}</p><ApplyLink stage={stage} en={en}/></div><div><h3 className="j-title">{t("伴侣同行礼遇","Partner Privilege")}</h3><Paragraphs items={shared.partner}/><p className="j-body">{t("这不是一次套餐升级，而是选择当下真正适合你的生命阶段。","This is not a package upgrade, but a choice of the life stage that genuinely fits you now.")}</p><p className="j-image-caption">{t("本页摄影为体验与空间示意，不代表具体医疗机构或实际交付场地。","Photography illustrates experiences and spaces; it does not represent specific medical institutions or guaranteed venues.")}</p></div></section>
+   <section className="j-section j-price" data-header-theme="light" data-reveal-group><div>{title(t("为你的下一阶段，留出时间","Make Space for Your Next Chapter"),"Your Journey")}<p>{t("7天6夜","7 days · 6 nights")} + {c.follow}</p><strong>{t("起 ","From ")}RMB ¥{c.rmb.toLocaleString()}+<br/>USD ${c.usd.toLocaleString()}+</strong><p className="j-body">{t("最终方案根据检测、医生评估、医疗匹配及定制服务确定；双币为独立定价，不做实时汇率换算。","Final scope and fees depend on testing, physician assessment, medical matching and customization. RMB and USD prices are independently set, not live currency conversions.")}</p><ApplyLink stage={stage} en={en}/></div><div><h3 className="j-title">{t("伴侣同行礼遇","Partner Privilege")}</h3><Paragraphs items={shared.partner}/><p className="j-body">{t("这不是一次套餐升级，而是选择当下真正适合你的生命阶段。","This is not a package upgrade, but a choice of the life stage that genuinely fits you now.")}</p></div></section>
    <section className="j-section j-next" data-header-theme="dark" data-reveal-group><p className="j-kicker">From Discovery to Flourishing</p><h2 className="j-title">{t("看见自己 · 恢复自己 · 重建自己 · 展开自己","Discover · Reset · Rebuild · Flourish")}</h2><p>{t("活得更久。爱得更深。活得更有生命力。","Live Longer. Love Deeper. Live Fully.")}</p><JourneyProgression active={stage} en={en}/></section>
   </main><Footer/>
  </div>;

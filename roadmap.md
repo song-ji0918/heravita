@@ -1,4 +1,7 @@
 # HeraVita
+- [ ] Remove repetitive visitor-facing disclaimers while retaining concise application and assessment information.
+- [ ] Correct multilingual editorial errors and complete Spanish/Arabic journey and booking copy.
+- [ ] Verify language switching, journey navigation and booking form presentation.
 - [x] Organize working secondary menu links and add a top-level breadcrumb with sibling page selection.
 - [ ] Restore previous titles through built-in History (awaiting user action; do not implement typography changes).
 - [x] Replace Reset and Rebuilding opening photos with the two newly supplied images and verify display.

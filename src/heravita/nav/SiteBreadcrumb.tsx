@@ -11,7 +11,7 @@ export default function SiteBreadcrumb() {
   const lang = i18n.language || "zh";
   const zh = lang.startsWith("zh");
   const trail = trailFor(pathname);
-  const [top, setTop] = useState(56);
+  const [top, setTop] = useState<number | null>(null);
   const [light, setLight] = useState(true);
   const [hidden, setHidden] = useState(false);
   const [menu, setMenu] = useState(false);
@@ -19,13 +19,22 @@ export default function SiteBreadcrumb() {
 
   useEffect(() => {
     setMenu(false);
+    setTop(null);
+    let ro: ResizeObserver | null = null;
+    let observed: Element | null = null;
     const measure = () => {
       const header = document.querySelector("header");
       if (!header) return;
+      if (observed !== header && typeof ResizeObserver !== "undefined") {
+        ro?.disconnect();
+        ro = new ResizeObserver(measure);
+        ro.observe(header);
+        observed = header;
+      }
       const rect = header.getBoundingClientRect();
+      if (rect.height === 0) return;
       const overlay = getComputedStyle(header).position === "fixed";
       setTop(overlay ? rect.bottom : Math.max(rect.bottom, 0));
-      // 与导航栏同一套明暗逻辑：采样路径栏下方的区块主题，未声明则视为浅色背景。
       const themed = document
         .elementsFromPoint(window.innerWidth / 2, Math.min(rect.bottom + 14, window.innerHeight - 1))
         .map((el) => el.closest<HTMLElement>("[data-header-theme]"))
@@ -34,10 +43,11 @@ export default function SiteBreadcrumb() {
       setHidden(window.scrollY > 40);
     };
     measure();
+    const raf = requestAnimationFrame(measure);
     const id = window.setTimeout(measure, 400);
     window.addEventListener("scroll", measure, { passive: true });
     window.addEventListener("resize", measure);
-    return () => { window.clearTimeout(id); window.removeEventListener("scroll", measure); window.removeEventListener("resize", measure); };
+    return () => { cancelAnimationFrame(raf); window.clearTimeout(id); ro?.disconnect(); window.removeEventListener("scroll", measure); window.removeEventListener("resize", measure); };
   }, [pathname]);
 
   useEffect(() => {
@@ -51,7 +61,7 @@ export default function SiteBreadcrumb() {
   const label = (c: { zh: string; en: string; es: string; ar: string }) => navLabel(c, lang);
 
   return (
-    <nav ref={ref} aria-label={zh ? "页面路径" : "Breadcrumb"} className={`hv-crumb ${light ? "is-light" : "is-dark"} ${hidden ? "is-hidden" : ""}`} style={{ top }}>
+    <nav ref={ref} aria-label={zh ? "页面路径" : "Breadcrumb"} className={`hv-crumb ${light ? "is-light" : "is-dark"} ${hidden ? "is-hidden" : ""}`} style={{ top: top ?? 0, visibility: top === null ? "hidden" : undefined }}>
       <ol>
         {trail.map((c, i) => {
           const last = i === trail.length - 1;

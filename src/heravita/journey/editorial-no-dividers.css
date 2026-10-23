@@ -1,0 +1,43 @@
+/* These three editorial journeys separate content with space. */
+.reset-editorial
+  main
+  :is(
+    blockquote,
+    .re-medical-list li,
+    .re-steps span,
+    .re-relationship-list li,
+    .re-energy-tags span,
+    .re-day-list li,
+    .re-care-list li,
+    .re-map-list li,
+    .re-rights-grid article,
+    .re-method,
+    .re-partner,
+    .re-onward,
+    .dp-dots button,
+    .hn-clp-button__arrow
+  ) {
+  border-width: 0;
+}
+
+.reset-editorial main blockquote {
+  padding-inline-start: 0;
+  padding-left: 0;
+}
+
+.reset-editorial main :is(hr, .dp-track) {
+  display: none;
+}
+
+.reset-editorial #footer .border-t {
+  border-top-width: 0;
+}
+
+.reset-editorial :is(.hv-nav-inline, .hv-nav-secondary) {
+  border-left-width: 0;
+}
+
+/* The shared breadcrumb is rendered outside the page component. */
+body:has(.reset-editorial) .hv-crumb {
+  border-top-width: 0;
+}

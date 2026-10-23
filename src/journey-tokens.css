@@ -1,3 +1,6 @@
+@import "./heravita/price-typography.css";
+@import "./heravita/number-typography.css";
+
 :root {
   --journey-paper: oklch(0.97 0.003 160);
   --journey-ink: oklch(0.20 0.004 160);

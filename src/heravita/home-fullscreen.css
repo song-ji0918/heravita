@@ -1,0 +1,18 @@
+/* Give home backgrounds extra height so a small scroll does not expose the next scene. */
+main > #home,
+main > .home-narrative > .hn-screen {
+  min-height: 112vh;
+  min-height: 112dvh;
+}
+
+main > .home-narrative > .hn-screen {
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main > #home > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

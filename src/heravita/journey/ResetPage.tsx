@@ -5,11 +5,12 @@ import { useRef } from 'react';
 import Header from '@/original/components/Header/Header';
 import Footer from '@/original/components/Footer/Footer';
 import { useReveal } from '@/heravita/phuket/useReveal';
-import { ApplyLink, JourneyRail, StageLink } from './Navigation';
+import { ApplyLink, StageLink } from './Navigation';
 import { resetMedia as photos, resetDayImages as dayImages } from './reset-media';
 import { DayPath } from './DayPath';
 import './journey.css';
 import './reset-editorial.css';
+import './editorial-no-dividers.css';
 
 function Photo({src,alt}:{src:string;alt:string}){return <div className="re-photo"><img src={src} alt={alt} width={1440} height={1088} loading="lazy"/></div>;}
 
@@ -24,7 +25,6 @@ export default function ResetPage(){
    <div className="re-hero-image"><img src={photos.hero} alt={t('海岛自然场域与静谧水面','A quiet island sanctuary and still water')} width={1920} height={1088} data-parallax/></div><div className="re-veil"/>
    <div className="re-hero-copy"><p className="re-kicker" data-reveal>{t('LIFE RESET｜生命重启','LIFE RESET')}</p><HeroTitle first={journeyText(heroSlogans.reset[en?2:0])} second={journeyText(heroSlogans.reset[en?3:1])}/><p className="re-plan" data-reveal>{t('7天6夜 · 90天生命重启计划','7 Days · 6 Nights · 90-Day Life Reset Plan')}</p><p className="re-price" data-reveal>From RMB ¥98,000+ / USD $14,900+</p><ApplyLink stage="reset" en={en}/></div>
   </section>
-  <JourneyRail active="reset" en={en}/>
   <section className="re-section re-intro" data-header-theme="light" data-reveal-group>
    <div>{heading('A Moment to Begin Again',c.question)}<p data-reveal>{c.claim}</p><blockquote data-reveal>{c.days[0].quote}</blockquote></div><Photo src={photos.pause} alt={t('海岸边安静停留，重新感受自己','A quiet pause on the coast to reconnect with yourself')}/>
   </section>

@@ -1,0 +1,39 @@
+:root {
+  --hv-price-font: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+/* One price treatment across both original and extended journey pages. */
+html
+  body
+  :is(
+    .discover-page .hero-rate strong,
+    .discover-page .rate-card > strong,
+    .reset-editorial .re-price,
+    .reset-editorial .re-cost,
+    .j-page .j-price strong,
+    .j-page .j-booking-aside strong,
+    .bk-page .bk-summary strong,
+    .bk-page .bk-summary span
+  ) {
+  font-family: var(--hv-price-font);
+  font-style: normal;
+  font-weight: 400;
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: normal;
+}
+
+html body .discover-page :is(.hero-rate, .rate-card) strong small {
+  font-family: inherit;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  html body .reset-editorial .re-cost {
+    font-size: clamp(24px, 6.5vw, 30px);
+    line-height: 1.5;
+  }
+
+  html body .bk-page .bk-summary strong {
+    font-size: clamp(20px, 6vw, 24px);
+  }
+}

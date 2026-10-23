@@ -36,7 +36,7 @@ html body .re-hero .hv-hero-title .hv-hero-line--second {
   margin-top: 12px;
   font-style: italic;
 }
-html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .bk-hero-copy, .hv-original-hero-copy) {
+html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .hv-original-hero-copy) {
   position: relative;
   inset: auto;
   transform: none;
@@ -49,7 +49,7 @@ html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .bk-hero-copy, .hv-o
   justify-self: center;
   box-sizing: border-box;
 }
-html body :is(.re-hero, .pk-hero, .usa-hero, .bk-hero, .hv-original-hero) {
+html body :is(.re-hero, .pk-hero, .usa-hero, .hv-original-hero) {
   display: grid;
   place-items: center;
   position: relative;
@@ -57,7 +57,7 @@ html body :is(.re-hero, .pk-hero, .usa-hero, .bk-hero, .hv-original-hero) {
   min-height: 100svh;
   max-height: none;
 }
-html body :is(.re-hero-copy .re-kicker, .pk-hero-copy .pk-eyebrow, .usa-hero-copy .usa-eyebrow, .bk-hero-copy .bk-eyebrow, .hv-original-hero-copy .hv-hero-eyebrow) {
+html body :is(.re-hero-copy .re-kicker, .pk-hero-copy .pk-eyebrow, .usa-hero-copy .usa-eyebrow, .hv-original-hero-copy .hv-hero-eyebrow) {
   font-family: var(--hv-hero-font);
   font-size: var(--hv-hero-label-size);
   font-weight: 500;
@@ -65,10 +65,10 @@ html body :is(.re-hero-copy .re-kicker, .pk-hero-copy .pk-eyebrow, .usa-hero-cop
   letter-spacing: 0.12em;
   margin: 0 0 24px;
 }
-html body :is(.re-hero-copy .re-kicker:lang(en), .pk-hero-copy .pk-eyebrow:lang(en), .usa-hero-copy .usa-eyebrow:lang(en), .bk-hero-copy .bk-eyebrow:lang(en), .hv-original-hero-copy .hv-hero-eyebrow:lang(en)) {
+html body :is(.re-hero-copy .re-kicker:lang(en), .pk-hero-copy .pk-eyebrow:lang(en), .usa-hero-copy .usa-eyebrow:lang(en), .hv-original-hero-copy .hv-hero-eyebrow:lang(en)) {
   text-transform: uppercase;
 }
-html body :is(.re-hero-copy .re-price, .pk-hero-copy .pk-lead, .usa-hero-copy .usa-lead, .bk-hero-copy > p:not(.bk-eyebrow)) {
+html body :is(.re-hero-copy .re-price, .pk-hero-copy .pk-lead, .usa-hero-copy .usa-lead) {
   font-family: var(--hv-hero-font);
   font-size: 17px;
   font-weight: 400;
@@ -87,10 +87,10 @@ html body .pk-hero-copy .pk-actions { margin-top: 28px; }
   :root { --hv-hero-label-size: 17px; }
 }
 @media (max-width: 1023px) {
-  html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .bk-hero-copy, .hv-original-hero-copy) { padding-left: 40px; padding-right: 40px; }
+  html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .hv-original-hero-copy) { padding-left: 40px; padding-right: 40px; }
 }
 @media (max-width: 639px) {
-  html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .bk-hero-copy, .hv-original-hero-copy) { padding: 160px 24px 72px; }
+  html body :is(.re-hero-copy, .pk-hero-copy, .usa-hero-copy, .hv-original-hero-copy) { padding: 160px 24px 72px; }
 }
 html body .re-hero-copy .re-plan {
   font-family: var(--hv-hero-font);

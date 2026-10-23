@@ -5,12 +5,13 @@ import { useRef } from 'react';
 import Header from '@/original/components/Header/Header';
 import Footer from '@/original/components/Footer/Footer';
 import { useReveal } from '@/heravita/phuket/useReveal';
-import { ApplyLink, JourneyRail, StageLink, stagePaths, names } from './Navigation';
+import { ApplyLink, StageLink, stagePaths, names } from './Navigation';
 import { StageDayPath } from './StageDayPath';
 import { stageEditorialMedia } from './stage-editorial-media';
 import './journey.css';
 import './reset-editorial.css';
 import './stage-vitality.css';
+import './editorial-no-dividers.css';
 
 type Key = 'rebuild' | 'flourish';
 type Pair = [string, string];
@@ -64,7 +65,6 @@ export default function StageEditorialPage({ stage }: { stage: Key }) {
       <div className="re-hero-image"><img src={photos.hero} alt={tp(k.heroAlt)} width={1920} height={1088} data-parallax /></div><div className="re-veil" />
       <div className="re-hero-copy"><p className="re-kicker" data-reveal>{tp(k.heroLabel)}</p><HeroTitle first={journeyText(heroSlogans[stage][en?2:0])} second={journeyText(heroSlogans[stage][en?3:1])}/><p className="re-plan" data-reveal>{tp(k.heroPlan)}</p><p className="re-price" data-reveal>{price}</p><ApplyLink stage={stage} en={en} /></div>
     </section>
-    <JourneyRail active={stage} en={en} />
     <section className="re-section re-intro" data-header-theme="light" data-reveal-group>
       <div>{heading(k.introKicker, c.question)}<p data-reveal>{c.claim}</p></div><Photo src={photos.intro} alt={c.question} />
     </section>

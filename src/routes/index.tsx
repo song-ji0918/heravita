@@ -1,5 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { originalPage } from "@/original-page";
+import "@/heravita/home-laptop.css";
+import "@/heravita/home-fullscreen.css";
 
 export const Route = createFileRoute("/")({
   ssr: false,

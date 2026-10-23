@@ -38,8 +38,8 @@
 .pk-no { font-family: var(--pk-serif); font-size: 15px; color: var(--pk-gold); letter-spacing: .2em; }
 
 /* 01 */
-.pk-hero { display: flex; align-items: flex-end; color: #fff; }
-.pk-hero-copy { position: relative; z-index: 1; padding: 0 7.5% 11vh; max-width: 1100px; }
+.pk-hero { display: flex; align-items: center; color: #fff; }
+.pk-hero-copy { position: relative; z-index: 1; width: 100%; max-width: 1280px; padding: clamp(198px, 28dvh, 232px) 7.5% clamp(32px, 6dvh, 64px); }
 .pk-tags { display: flex; flex-wrap: wrap; gap: 10px 28px; margin: 32px 0 0; padding: 0; list-style: none; font-size: 12px; letter-spacing: .2em; }
 .pk-tags li { position: relative; padding-left: 16px; }
 .pk-tags li::before { content: ""; position: absolute; left: 0; top: 50%; width: 6px; height: 1px; background: var(--pk-gold); }
@@ -136,14 +136,18 @@
   .pk-journey { border-right: 0; border-bottom: 1px solid rgba(197,168,128,.45); }
 }
 
-/* Hero rhythm: title → lead → CTA → tags, with more breathing room */
-.pk-hero-copy { padding-bottom: 9vh; }
-.pk-hero-copy .pk-lead { margin-top: 28px; max-width: 640px; }
-.pk-hero-copy .pk-actions { margin-top: 56px; }
-.pk-hero-copy .pk-tags { margin-top: 40px; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.22); max-width: 640px; }
+/* Reserve room for the fixed header and breadcrumb before the hero copy. */
+.pk-hero .pk-display { margin: 18px 0; }
+.pk-hero .pk-display span { font-size: clamp(38px, min(5vw, 8.4dvh), 84px); line-height: 1.08; }
+.pk-hero .pk-display em { margin-top: 12px; font-size: clamp(20px, 2vw, 30px); line-height: 1.35; letter-spacing: .1em; }
+.pk-hero-copy .pk-lead { margin: 18px 0 0; max-width: 640px; font-size: clamp(18px, min(1.5vw, 2.9dvh), 22px); line-height: 1.65; }
+.pk-hero-copy .pk-actions { margin-top: 28px; }
+.pk-hero-copy .pk-tags { margin-top: 28px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.22); max-width: 640px; font-size: 11px; letter-spacing: .12em; }
 @media (max-width: 768px) {
-  .pk-hero-copy .pk-actions { margin-top: 40px; }
-  .pk-hero-copy .pk-tags { margin-top: 28px; }
+  .pk-hero-copy { padding: 184px 7% 44px; }
+  .pk-hero-copy .pk-actions { margin-top: 24px; }
+  .pk-hero-copy .pk-tags { margin-top: 24px; }
+  .pk-hero .pk-scroll { display: none; }
 }
 
 /* English titles uppercase across destination pages */

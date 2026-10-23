@@ -1,0 +1,181 @@
+/* Slim digits match the fine strokes of the existing serif headings. */
+@font-face {
+  font-family: "HeraVita Light Numerals";
+  src:
+    local("Helvetica Neue Light"), local("HelveticaNeue-Light"), local("Helvetica Light"),
+    local("Helvetica Neue"), local("Arial");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: "HeraVita Light Numerals";
+  src:
+    local("Helvetica Neue Light"), local("HelveticaNeue-Light"), local("Helvetica Light"),
+    local("Helvetica Neue"), local("Arial");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: "HeraVita Numerals";
+  src:
+    local("Helvetica Neue Light"), local("HelveticaNeue-Light"), local("Helvetica Light"),
+    local("Helvetica Neue"), local("Arial");
+  font-weight: 100 349;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+@font-face {
+  font-family: "HeraVita Numerals";
+  src:
+    local("Helvetica Neue Light"), local("HelveticaNeue-Light"), local("Helvetica Light"),
+    local("Helvetica Neue"), local("Arial");
+  font-weight: 100 349;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+/* This face supplies digits only; each element keeps its existing letterforms. */
+@font-face {
+  font-family: "HeraVita Numerals";
+  src: local("Helvetica Neue"), local("Helvetica"), local("Arial");
+  font-weight: 350 900;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+/* Match italic text with upright numeric glyphs instead of synthesized italics. */
+@font-face {
+  font-family: "HeraVita Numerals";
+  src: local("Helvetica Neue"), local("Helvetica"), local("Arial");
+  font-weight: 350 900;
+  font-style: italic;
+  font-display: swap;
+  unicode-range: U+0030-0039;
+}
+
+:root {
+  --font-brand-sans:
+    "HeraVita Numerals", "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+  --font-display-latin: var(--font-brand-sans);
+  --font-hero-display:
+    "HeraVita Numerals", "Red Hat Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-hero-text:
+    "HeraVita Numerals", "Red Hat Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-serif:
+    "HeraVita Light Numerals", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+body {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+html[dir="rtl"] body,
+html body .home-narrative[dir="rtl"] {
+  font-family: "HeraVita Numerals", "Segoe UI", Tahoma, "Noto Naskh Arabic", Arial, sans-serif;
+}
+
+html body :is(.j-page, .reset-editorial) {
+  font-family: "HeraVita Numerals", "Red Hat Text", "Noto Sans SC", sans-serif;
+}
+
+html body :is(.story-page, .discover-page),
+html
+  body
+  .story-page
+  :is(.chapter h1, .chapter h2, .intro h1, .founder h2, .founder .founder-title, .health h2),
+html body .discover-page :is(.hero h1, .chapter h2, .photo-chapter h2, .number small) {
+  font-family: "HeraVita Numerals", "DM Sans", "Noto Sans SC", sans-serif;
+}
+
+html body :is(.method-page, .pk-page, .usa-page, .hv-btn),
+html body .pk-page .hn-clp-button,
+html
+  body
+  .home-narrative
+  :is(.hn-method, .hn-journey, .hn-global, .hn-belief, .hn-proof)
+  :is(.hn-eyebrow, .hn-description, .hn-clp-button),
+html
+  body
+  .home-narrative
+  :is(
+    .hn-belief-principle,
+    .hn-method-whole,
+    .hn-global-lead,
+    .hn-journey-question,
+    .hn-journey-item__description
+  ) {
+  font-family: "HeraVita Numerals", "IBM Plex Sans", var(--font-brand-sans);
+}
+
+html
+  body
+  :is(.hv-nav-close, .hv-nav-inline a, .hv-nav-eyebrow, .hv-nav-secondary a small, .hv-crumb) {
+  font-family: "HeraVita Numerals", Manrope, sans-serif;
+}
+
+html body .pk-page {
+  --pk-serif: "HeraVita Light Numerals", "Cormorant Garamond", "Noto Serif SC", "Songti SC", serif;
+  --pk-cn-serif: "HeraVita Light Numerals", "Noto Serif SC", "Songti SC", serif;
+}
+
+html body .usa-page {
+  --usa-serif: "HeraVita Light Numerals", "Cormorant Garamond", "Noto Serif SC", "Songti SC", serif;
+  --usa-cn-serif: "HeraVita Light Numerals", "Noto Serif SC", "Songti SC", serif;
+}
+
+html body .j-page :is(h1, h2, h3),
+html body .reset-editorial.reset-editorial :is(h1, h2, h3):not(.hv-hero-title),
+html
+  body
+  :is(
+    .j-display,
+    .j-follow,
+    .re-day-number,
+    .re-follow .re-number,
+    .dp-count,
+    .dp-number,
+    .bk-chapter header span,
+    .hv-nav-item,
+    .hv-nav-secondary a span
+  ) {
+  font-family: "HeraVita Light Numerals", "Cormorant Garamond", "Noto Serif SC", serif;
+}
+
+html
+  body
+  :is(
+    .j-day-panel blockquote,
+    .j-timeline summary,
+    .j-boundaries summary,
+    .j-life-chapter blockquote
+  ) {
+  font-family: "HeraVita Light Numerals", "Noto Serif SC", serif;
+}
+
+html body .discover-page :is(.senses h3, .day, .number, .rate-card h3),
+html body .story-page .brand-wordmark {
+  font-family: "HeraVita Light Numerals", Georgia, serif;
+}
+
+/* Keep large duration values in proportion after switching to lining numerals. */
+html body .re-follow .re-number {
+  font-size: clamp(48px, 6vw, 80px);
+  font-weight: 300;
+}
+
+html body .discover-page .number {
+  font-size: clamp(56px, 7vw, 104px);
+  font-weight: 300;
+}
+
+/* Day and chapter numbers remain quiet supporting information. */
+html body :is(.re-day-number, .dp-number, .dp-count, .bk-chapter header span),
+html body .discover-page .day {
+  font-weight: 300;
+}

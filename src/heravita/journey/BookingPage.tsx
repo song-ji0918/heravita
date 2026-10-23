@@ -1,6 +1,6 @@
+import { useJourneyCopy, journeyText } from './locale';
 import { useState, type FormEvent } from "react";
 import { Link } from "@tanstack/react-router";
-import { useTranslation } from "react-i18next";
 import Header from "@/original/components/Header/Header";
 import Footer from "@/original/components/Footer/Footer";
 import { supabase } from "@/integrations/supabase/client";
@@ -27,10 +27,8 @@ const destNames: Record<Dest, [string, string]> = {
 };
 
 export default function BookingPage({ initialStage = "undecided", initialDestination = "undecided" }: Props) {
-  const { i18n } = useTranslation();
+  const { i18n, en, t } = useJourneyCopy();
   const lang = i18n.language.split("-")[0];
-  const en = lang !== "zh";
-  const t = (zh: string, english: string) => (en ? english : zh);
   const [stage, setStage] = useState<Stage | "undecided">(initialStage);
   const [destination, setDestination] = useState<Dest>(initialDestination);
   const [partner, setPartner] = useState(false);
@@ -69,7 +67,7 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
         <img src={bookingCover} alt={t("宁静的生命旅程空间", "A quiet life journey sanctuary")} width={1920} height={1080} />
         <div className="bk-hero-shade" />
         <div className="bk-hero-copy">
-          <p className="bk-eyebrow">Your Private Life Journey</p>
+          <p className="bk-eyebrow">{t("你的私人生命旅程", "Your Private Life Journey")}</p>
           <h1>{t("从一次真诚的对话开始", "Begin with a Personal Conversation")}</h1>
           <p>{t("不急于决定。先让我们理解，您此刻真正需要什么。", "There is no need to decide today. Let us understand what matters to you now.")}</p>
         </div>
@@ -78,7 +76,7 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
       <main className="bk-scroll">
         {status === "done" ? (
           <div className="bk-success" role="status">
-            <p className="bk-eyebrow">Thank you</p>
+            <p className="bk-eyebrow">{t("感谢您的信任", "Thank you")}</p>
             <h2>{t("您的申请已收到", "Your Application Has Been Received")}</h2>
             <p>{t("您的需求与联系偏好已安全记录，私人顾问将与您联系。到访日期、方案与费用须另行确认。", "Your preferences have been securely recorded and a private advisor will be in touch. Dates, scope and fees require separate confirmation.")}</p>
             <div className="bk-actions">
@@ -94,12 +92,12 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
               <header><span>01</span><h2>{t("生命阶段与目的地", "Journey and Destination")}</h2></header>
               <p className="bk-label">{t("关注的生命阶段", "Life stage of interest")}</p>
               <div className="bk-chips">
-                {stages.map((s) => <button type="button" key={s} aria-pressed={stage === s} onClick={() => setStage(s)}>{names[s][en ? 1 : 0]}</button>)}
+                {stages.map((s) => <button type="button" key={s} aria-pressed={stage === s} onClick={() => setStage(s)}>{t(names[s][0], names[s][1])}</button>)}
                 <button type="button" aria-pressed={stage === "undecided"} onClick={() => setStage("undecided")}>{t("希望先与顾问沟通", "Guide me first")}</button>
               </div>
               {rule && price && stage !== "undecided" ? (
                 <div className="bk-summary" key={stage}>
-                  <div><small>{t("旅程周期", "Duration")}</small><strong>{rule.days}{t("天", " days")} · {rule.nights}{t("夜", " nights")}</strong><span>+ {en ? rule.followEn : rule.follow}{t("陪伴", " support")}</span></div>
+                  <div><small>{t("旅程周期", "Duration")}</small><strong>{rule.days}{t("天", " days")} · {rule.nights}{t("夜", " nights")}</strong><span>+ {t(rule.follow, rule.followEn)}{t("陪伴", " support")}</span></div>
                   <div><small>{t("参考投资", "Indicative investment")}</small><strong>{stage !== "discover" ? t("起 ", "From ") : ""}RMB ¥{price.rmb.toLocaleString()}</strong><span>USD ${price.usd.toLocaleString()}</span></div>
                   <Link to={stagePaths[stage]} className="bk-text-link">{t("查看完整旅程权益", "View full inclusions")}</Link>
                 </div>
@@ -107,11 +105,11 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
               {stage === "discover" && <p className="bk-note">{t("授权合作伙伴客户专享价：RMB ¥29,800 / USD $4,500，须核实身份后适用。", "Authorized partner client price: RMB ¥29,800 / USD $4,500, subject to verification.")}</p>}
               <p className="bk-label">{t("目的地 / 咨询方向", "Destination")}</p>
               <div className="bk-chips">
-                {destinations.map((d) => <button type="button" key={d} aria-pressed={destination === d} onClick={() => setDestination(d)}>{destNames[d][en ? 1 : 0]}</button>)}
+                {destinations.map((d) => <button type="button" key={d} aria-pressed={destination === d} onClick={() => setDestination(d)}>{t(destNames[d][0], destNames[d][1])}</button>)}
               </div>
               {destination === "usa" && (
                 <div className="bk-row">
-                  <label>{t("期望美国地区", "Preferred US region")}<select name="usa_region"><option>Not decided</option>{["New York", "Boston", "Rochester / Minnesota", "Cleveland", "San Francisco Bay Area"].map((x) => <option key={x}>{x}</option>)}</select></label>
+                  <label>{t("期望美国地区", "Preferred US region")}<select name="usa_region"><option>{t("尚未决定", "Not decided")}</option>{["New York", "Boston", "Rochester / Minnesota", "Cleveland", "San Francisco Bay Area"].map((x) => <option key={x}>{journeyText(x)}</option>)}</select></label>
                   <label className="bk-check"><input type="checkbox" name="records_ready" /><span>{t("已有可供梳理的医学资料", "I have medical records ready")}</span></label>
                 </div>
               )}
@@ -120,7 +118,7 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
             <section className="bk-chapter">
               <header><span>02</span><h2>{t("您最关注什么", "What Matters Most")}</h2></header>
               <div className="bk-chips">
-                {focusOptions.map(([zh, english]) => { const v = en ? english : zh; const on = focus.includes(v); return <button type="button" key={zh} aria-pressed={on} onClick={() => setFocus(on ? focus.filter((x) => x !== v) : [...focus, v])}>{v}</button>; })}
+                {focusOptions.map(([zh, english]) => { const v = t(zh, english); const on = focus.includes(v); return <button type="button" key={zh} aria-pressed={on} onClick={() => setFocus(on ? focus.filter((x) => x !== v) : [...focus, v])}>{v}</button>; })}
               </div>
               <label>{t("想对顾问说的话（可选）", "Anything you would like to share (optional)")}<textarea name="focus" rows={4} maxLength={700} /></label>
             </section>
@@ -140,7 +138,7 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
               </div>
               <p className="bk-label">{t("联系方式 *", "Contact method *")}</p>
               <div className="bk-chips">
-                {([["wechat", "微信", "WeChat"], ["phone", "电话", "Phone"], ["email", "电子邮箱", "Email"]] as const).map(([v, zh, english]) => <button type="button" key={v} aria-pressed={method === v} onClick={() => setMethod(v)}>{en ? english : zh}</button>)}
+                {([["wechat", "微信", "WeChat"], ["phone", "电话", "Phone"], ["email", "电子邮箱", "Email"]] as const).map(([v, zh, english]) => <button type="button" key={v} aria-pressed={method === v} onClick={() => setMethod(v)}>{t(zh, english)}</button>)}
               </div>
               <label>{t("号码 / 账号 *", "Number / account *")}<input name="contact" required maxLength={120} type={method === "email" ? "email" : "text"} /></label>
             </section>

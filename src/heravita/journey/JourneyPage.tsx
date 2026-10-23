@@ -1,11 +1,9 @@
+import { useJourneyCopy, journeyText } from './locale';
 import { useRef, useState } from "react";
-import { useTranslation } from "react-i18next";
 import Header from "@/original/components/Header/Header";
 import Footer from "@/original/components/Footer/Footer";
 import { Button } from "@/components/ui/button";
 import { useReveal } from "@/heravita/phuket/useReveal";
-import sourceZh from "./source.zh.json";
-import sourceEn from "./source.en.json";
 import { stageMedia, expansionMedia } from "./media";
 import { JourneyRail, JourneyProgression, ApplyLink } from "./Navigation";
 import { type Stage } from "./rules";
@@ -16,11 +14,10 @@ function Photo({src,alt,hero=false}:{src:string;alt:string;hero?:boolean}) { ret
 function Paragraphs({items}:{items:string[]}) { return <>{items.map((p,i)=><p key={i} className="j-body">{p}</p>)}</>; }
 export default function JourneyPage({stage}:{stage:ProductStage}) {
  const root=useRef<HTMLDivElement>(null); useReveal(root);
- const {i18n}=useTranslation();
- const en=!i18n.language.startsWith("zh"); const source=en?sourceEn:sourceZh; const t=(zh:string,english:string)=>en?english:zh;
+ const {i18n,en,t,source}=useJourneyCopy();
  const c=source.stages[stage]; const shared=source.shared;
  const [day,setDay]=useState(0);
- const title=(text:string,kicker:string)=><><p className="j-kicker" data-reveal>{kicker}</p><h2 className="j-title" data-reveal>{text}</h2><span className="j-rule" data-line /></>;
+ const title=(text:string,kicker:string)=><><p className="j-kicker" data-reveal>{journeyText(kicker)}</p><h2 className="j-title" data-reveal>{text}</h2><span className="j-rule" data-line /></>;
  const images=stageMedia[stage];
  const relationshipChapter=(<>
    <section id="connection" className="j-section j-relationship" data-header-theme="dark" data-reveal-group>

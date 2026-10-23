@@ -1,3 +1,4 @@
+import { useJourneyCopy, journeyText } from './locale';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import './day-path.css';
 
@@ -5,6 +6,7 @@ type Day = { title: string; body: string; quote?: string };
 
 /** Seven-day journey path: a gold line fills as you scroll, the active day lights up and its photograph crossfades in. */
 export function DayPath({ days, images, en = false }: { days: Day[]; images?: string[]; en?: boolean }) {
+  const { t } = useJourneyCopy();
   const list = useRef<HTMLOListElement>(null);
   const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
@@ -35,14 +37,14 @@ export function DayPath({ days, images, en = false }: { days: Day[]; images?: st
         <div className="dp-media" aria-hidden="true">
           <div className="dp-frame">
             {images.map((src, i) => <img key={src} src={src} alt="" width={1440} height={1088} loading="lazy" className={i === active ? 'is-active' : ''} />)}
-            <span className="dp-count">DAY 0{active + 1} <i>/ 07</i></span>
+            <span className="dp-count">{t("第", "Day")} 0{active + 1} <i>/ 07</i></span>
           </div>
         </div>
       )}
       <div className="dp-body">
-        <nav className="dp-dots" aria-label={en ? 'Jump to day' : '跳转至某一天'}>
+        <nav className="dp-dots" aria-label={t('跳转至某一天', 'Jump to day')}>
           {days.map((_, i) => (
-            <button key={i} type="button" onClick={() => go(i)} className={i === active ? 'is-active' : ''} aria-label={`Day ${i + 1}`}>0{i + 1}</button>
+            <button key={i} type="button" onClick={() => go(i)} className={i === active ? 'is-active' : ''} aria-label={`${t("第", "Day")} ${i + 1}`}>0{i + 1}</button>
           ))}
         </nav>
         <ol className="dp-list" ref={list} style={{ '--dp-progress': progress } as CSSProperties}>
@@ -50,7 +52,7 @@ export function DayPath({ days, images, en = false }: { days: Day[]; images?: st
           {days.map((d, i) => (
             <li key={d.title} data-day={i} className={i === active ? 'is-active' : i < active ? 'is-past' : ''}>
               <span className="dp-node" aria-hidden="true" />
-              <span className="dp-number"><small>DAY</small>0{i + 1}</span>
+              <span className="dp-number"><small>{t("第", "Day")}</small>0{i + 1}</span>
               <h3>{d.title}</h3>
               {images && <img className="dp-inline" src={images[i]} alt="" width={1440} height={1088} loading="lazy" />}
               <p>{d.body}</p>

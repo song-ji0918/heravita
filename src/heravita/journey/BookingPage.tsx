@@ -146,8 +146,8 @@ export default function BookingPage({ initialStage = "undecided", initialDestina
             </section>
 
             <section className="bk-chapter bk-final">
-              <label className="bk-check"><input type="checkbox" name="consent" required /><span>{t("我同意 HeraVita 使用上述信息处理本次咨询并与我联系；理解具体医学项目须经专业医生评估后实施或匹配。", "I consent to HeraVita using this information to contact me. I understand medical services require physician assessment.")}</span></label>
-              <p className="bk-clinical">{t("HeraVita 不是医院。提交申请不代表预约已确认，也不构成医学诊断或治疗建议。以上价格为方案参考，最终方案与费用根据评估确认。", "HeraVita is not a hospital. An application is not a confirmed booking or medical advice. Prices are indicative; final scope follows assessment.")}</p>
+              <label className="bk-check"><input type="checkbox" name="consent" required /><span>{t("我同意 HeraVita 使用以上信息安排本次咨询并与我联系。", "I agree that HeraVita may use this information to arrange my consultation and contact me.")}</span></label>
+              <p className="bk-clinical">{t("提交后，私人顾问将与您确认日期、方案与费用；涉及医学的项目将由医生评估后安排。", "After you apply, your private advisor will confirm dates, scope and fees with you. Medical services are arranged following physician assessment.")}</p>
               {error && <p role="alert" className="j-error">{error}</p>}
               <button type="submit" className="hn-clp-button hn-button-dark bk-cta" disabled={status === "sending"}>{status === "sending" ? t("正在提交", "Submitting") : t("提交旅程申请", "Submit Application")}</button>
             </section>

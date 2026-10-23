@@ -29,7 +29,6 @@ const zh: UsaCopy = {
     quote: "美国的价值不只在一个城市，而在多个医学中心、医学院、生命科学与创新区域。",
     body: [
       "方向：前沿医学、精准医学、生命科学、基因组学、健康科技、创新医疗、国际专家资源。",
-      "HeraVita 不是医院；医疗服务由具体医疗机构与专业团队提供。",
     ],
   },
   anchor: {
@@ -78,7 +77,7 @@ const zh: UsaCopy = {
 
 const en: UsaCopy = {
   hero: { eyebrow: "United States · Innovation", title: "United States", subtitle: "Advanced Medicine & Life Science Connections", lead: "One Local Presence. A Broader Medical Network.", tags: TAGS, cta: "" },
-  premise: { eyebrow: "Why USA", title: "Connecting life to the medicine of the future", quote: "The value of the United States lies not in one city, but across many medical centers, medical schools, life-science and innovation regions.", body: ["Directions: advanced medicine, precision medicine, life science, genomics, health technology, medical innovation and international specialist resources.", "HeraVita is not a hospital; medical services are provided by specific medical institutions and professional teams."] },
+  premise: { eyebrow: "Why USA", title: "Connecting life to the medicine of the future", quote: "The value of the United States lies not in one city, but across many medical centers, medical schools, life-science and innovation regions.", body: ["Directions: advanced medicine, precision medicine, life science, genomics, health technology, medical innovation and international specialist resources."] },
   anchor: { eyebrow: "Local Presence", title: "HeraVita has established a local company in New York", body: "New York anchors U.S. market development, local resource connection, member service coordination and access to international specialist and medical resources.", cta: "" },
   network: { eyebrow: "U.S. Medical & Innovation Network", title: "From our New York company, continuously connecting quality medical and life-science resources across U.S. cities", intro: "These regions indicate resource distribution only and do not mean HeraVita has partnerships with all local institutions.", regions: regions(["Local company · resource connection and member coordination", "Medical & innovation region", "Medical & innovation region", "Medical & innovation region", "Medical & innovation region"]), cta: "" },
   capabilities: { eyebrow: "Core Directions", title: "Advanced medicine and life-science connections", intro: "Advanced Medicine · Precision Health · Life Science · Health Innovation", items: caps(["Frontier medicine", "Precision health", "Life science", "Health technology", "Longevity science", "Global specialists"]) },
@@ -90,7 +89,7 @@ const en: UsaCopy = {
 
 const es: UsaCopy = {
   hero: { eyebrow: "Estados Unidos · Innovación", title: "United States", subtitle: "Conexión con la medicina avanzada y las ciencias de la vida", lead: "One Local Presence. A Broader Medical Network.", tags: TAGS, cta: "" },
-  premise: { eyebrow: "Por qué EE. UU.", title: "Conectar la vida con la medicina del futuro", quote: "El valor de EE. UU. no está en una sola ciudad, sino en múltiples centros médicos, facultades de medicina y regiones de ciencias de la vida e innovación.", body: ["Direcciones: medicina avanzada, medicina de precisión, ciencias de la vida, genómica, tecnología sanitaria, innovación médica y especialistas internacionales.", "HeraVita no es un hospital; los servicios médicos los prestan instituciones y equipos profesionales concretos."] },
+  premise: { eyebrow: "Por qué EE. UU.", title: "Conectar la vida con la medicina del futuro", quote: "El valor de EE. UU. no está en una sola ciudad, sino en múltiples centros médicos, facultades de medicina y regiones de ciencias de la vida e innovación.", body: ["Direcciones: medicina avanzada, medicina de precisión, ciencias de la vida, genómica, tecnología sanitaria, innovación médica y especialistas internacionales."] },
   anchor: { eyebrow: "Presencia local", title: "HeraVita ha establecido una empresa local en Nueva York", body: "Nueva York es el punto de apoyo para el desarrollo del mercado, la conexión de recursos locales, la coordinación de servicios a miembros y el acceso a especialistas y recursos médicos internacionales.", cta: "" },
   network: { eyebrow: "U.S. Medical & Innovation Network", title: "Desde Nueva York, conectando recursos médicos y de ciencias de la vida en distintas ciudades", intro: "Estas regiones solo indican la distribución de recursos y no implican alianzas con todas las instituciones locales.", regions: regions(["Empresa local · conexión de recursos y coordinación", "Región médica y de innovación", "Región médica y de innovación", "Región médica y de innovación", "Región médica y de innovación"]), cta: "" },
   capabilities: { eyebrow: "Direcciones clave", title: "Medicina avanzada y ciencias de la vida", intro: "Medicina avanzada · Salud de precisión · Ciencias de la vida · Innovación", items: caps(["Medicina avanzada", "Salud de precisión", "Ciencias de la vida", "Tecnología sanitaria", "Longevidad", "Especialistas globales"]) },
@@ -102,7 +101,7 @@ const es: UsaCopy = {
 
 const ar: UsaCopy = {
   hero: { eyebrow: "الولايات المتحدة · الابتكار", title: "United States", subtitle: "الربط بالطب المتقدم وعلوم الحياة", lead: "One Local Presence. A Broader Medical Network.", tags: TAGS, cta: "" },
-  premise: { eyebrow: "لماذا الولايات المتحدة", title: "ربط الحياة بطب المستقبل", quote: "قيمة الولايات المتحدة لا تكمن في مدينة واحدة، بل في مراكز طبية وكليات طب ومناطق علوم الحياة والابتكار المتعددة.", body: ["الاتجاهات: الطب المتقدم، الطب الدقيق، علوم الحياة، علم الجينوم، التقنيات الصحية، الابتكار الطبي وموارد الخبراء الدوليين.", "HeraVita ليست مستشفى؛ تقدم الخدمات الطبية مؤسسات وفرق مهنية محددة."] },
+  premise: { eyebrow: "لماذا الولايات المتحدة", title: "ربط الحياة بطب المستقبل", quote: "قيمة الولايات المتحدة لا تكمن في مدينة واحدة، بل في مراكز طبية وكليات طب ومناطق علوم الحياة والابتكار المتعددة.", body: ["الاتجاهات: الطب المتقدم، الطب الدقيق، علوم الحياة، علم الجينوم، التقنيات الصحية، الابتكار الطبي وموارد الخبراء الدوليين."] },
   anchor: { eyebrow: "حضور محلي", title: "أسست HeraVita شركة محلية في نيويورك", body: "تمثل نيويورك مرتكزًا لتطوير السوق وربط الموارد المحلية وتنسيق خدمات الأعضاء والوصول إلى الخبراء والموارد الطبية الدولية.", cta: "" },
   network: { eyebrow: "U.S. Medical & Innovation Network", title: "من نيويورك، نربط باستمرار موارد طبية وعلمية متميزة في مدن أمريكية مختلفة", intro: "تشير هذه المناطق إلى توزيع الموارد فقط، ولا تعني وجود شراكات مع جميع المؤسسات المحلية.", regions: regions(["شركة محلية · ربط الموارد وتنسيق الخدمات", "منطقة طبية وابتكارية", "منطقة طبية وابتكارية", "منطقة طبية وابتكارية", "منطقة طبية وابتكارية"]), cta: "" },
   capabilities: { eyebrow: "الاتجاهات الأساسية", title: "الطب المتقدم وعلوم الحياة", intro: "الطب المتقدم · الصحة الدقيقة · علوم الحياة · الابتكار الصحي", items: caps(["الطب المتقدم", "الصحة الدقيقة", "علوم الحياة", "التقنيات الصحية", "علم طول العمر", "الخبراء الدوليون"]) },

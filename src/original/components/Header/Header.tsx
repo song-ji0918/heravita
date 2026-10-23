@@ -98,8 +98,9 @@ const Header = ({ backgroundColor, overlay = false, alwaysVisible = false }: Hea
             setIsAtPageTop(!nextScrolledState);
           }
 
+          // 全站统一：下滑渐隐、上滑或回顶渐显（alwaysVisible 不再短路动效）。
           setHeaderVisibility(
-            alwaysVisible || !nextScrolledState || self.direction < 0 || menuOpenRef.current,
+            !nextScrolledState || self.direction < 0 || menuOpenRef.current,
           );
         },
       });

@@ -6,7 +6,7 @@ import english from './source.en.json';
 export function journeyText(text: string, language = i18n.language || 'zh'): string {
   const code = language.split('-')[0];
   if (code !== 'es' && code !== 'ar') return text;
-  const value: unknown = i18n.getResource(code, 'journey-copy', [text]);
+  const value: unknown = i18n.getResource(code, 'journey-copy', text);
   return typeof value === 'string' ? value : text;
 }
 

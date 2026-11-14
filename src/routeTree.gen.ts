@@ -29,6 +29,7 @@ import { Route as JourneyBookingRouteImport } from './routes/journey_.booking'
 import { Route as JourneyFlourishRouteImport } from './routes/journey_.flourish'
 import { Route as JourneyRebuildRouteImport } from './routes/journey_.rebuild'
 import { Route as JourneyResetRouteImport } from './routes/journey_.reset'
+import { Route as TrustAsiaRouteImport } from './routes/trust.asia'
 import { Route as GlobalPhuketBookingRouteImport } from './routes/global_.phuket_.booking'
 import { Route as GlobalUsaConsultationRouteImport } from './routes/global_.usa_.consultation'
 import { Route as GlobalUsaNetworkRouteImport } from './routes/global_.usa_.network'
@@ -133,6 +134,11 @@ const JourneyResetRoute = JourneyResetRouteImport.update({
   path: '/journey/reset',
   getParentRoute: () => rootRouteImport,
 } as any)
+const TrustAsiaRoute = TrustAsiaRouteImport.update({
+  id: '/trust/asia',
+  path: '/trust/asia',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const GlobalPhuketBookingRoute = GlobalPhuketBookingRouteImport.update({
   id: '/global_/phuket_/booking',
   path: '/global/phuket/booking',
@@ -170,6 +176,7 @@ export interface FileRoutesByFullPath {
   '/journey/flourish': typeof JourneyFlourishRoute
   '/journey/rebuild': typeof JourneyRebuildRoute
   '/journey/reset': typeof JourneyResetRoute
+  '/trust/asia': typeof TrustAsiaRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
   '/global/usa/consultation': typeof GlobalUsaConsultationRoute
   '/global/usa/network': typeof GlobalUsaNetworkRoute
@@ -195,6 +202,7 @@ export interface FileRoutesByTo {
   '/journey/flourish': typeof JourneyFlourishRoute
   '/journey/rebuild': typeof JourneyRebuildRoute
   '/journey/reset': typeof JourneyResetRoute
+  '/trust/asia': typeof TrustAsiaRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
   '/global/usa/consultation': typeof GlobalUsaConsultationRoute
   '/global/usa/network': typeof GlobalUsaNetworkRoute
@@ -221,6 +229,7 @@ export interface FileRoutesById {
   '/journey_/flourish': typeof JourneyFlourishRoute
   '/journey_/rebuild': typeof JourneyRebuildRoute
   '/journey_/reset': typeof JourneyResetRoute
+  '/trust/asia': typeof TrustAsiaRoute
   '/global_/phuket_/booking': typeof GlobalPhuketBookingRoute
   '/global_/usa_/consultation': typeof GlobalUsaConsultationRoute
   '/global_/usa_/network': typeof GlobalUsaNetworkRoute
@@ -248,6 +257,7 @@ export interface FileRouteTypes {
     | '/journey/flourish'
     | '/journey/rebuild'
     | '/journey/reset'
+    | '/trust/asia'
     | '/global/phuket/booking'
     | '/global/usa/consultation'
     | '/global/usa/network'
@@ -273,6 +283,7 @@ export interface FileRouteTypes {
     | '/journey/flourish'
     | '/journey/rebuild'
     | '/journey/reset'
+    | '/trust/asia'
     | '/global/phuket/booking'
     | '/global/usa/consultation'
     | '/global/usa/network'
@@ -298,6 +309,7 @@ export interface FileRouteTypes {
     | '/journey_/flourish'
     | '/journey_/rebuild'
     | '/journey_/reset'
+    | '/trust/asia'
     | '/global_/phuket_/booking'
     | '/global_/usa_/consultation'
     | '/global_/usa_/network'
@@ -324,6 +336,7 @@ export interface RootRouteChildren {
   JourneyFlourishRoute: typeof JourneyFlourishRoute
   JourneyRebuildRoute: typeof JourneyRebuildRoute
   JourneyResetRoute: typeof JourneyResetRoute
+  TrustAsiaRoute: typeof TrustAsiaRoute
   GlobalPhuketBookingRoute: typeof GlobalPhuketBookingRoute
   GlobalUsaConsultationRoute: typeof GlobalUsaConsultationRoute
   GlobalUsaNetworkRoute: typeof GlobalUsaNetworkRoute
@@ -471,6 +484,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JourneyResetRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/trust/asia': {
+      id: '/trust/asia'
+      path: '/trust/asia'
+      fullPath: '/trust/asia'
+      preLoaderRoute: typeof TrustAsiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/global_/phuket_/booking': {
       id: '/global_/phuket_/booking'
       path: '/global/phuket/booking'
@@ -516,6 +536,7 @@ const rootRouteChildren: RootRouteChildren = {
   JourneyFlourishRoute: JourneyFlourishRoute,
   JourneyRebuildRoute: JourneyRebuildRoute,
   JourneyResetRoute: JourneyResetRoute,
+  TrustAsiaRoute: TrustAsiaRoute,
   GlobalPhuketBookingRoute: GlobalPhuketBookingRoute,
   GlobalUsaConsultationRoute: GlobalUsaConsultationRoute,
   GlobalUsaNetworkRoute: GlobalUsaNetworkRoute,

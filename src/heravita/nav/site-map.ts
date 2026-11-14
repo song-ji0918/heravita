@@ -37,6 +37,7 @@ export const SITE_GROUPS: NavGroup[] = [
   },
   {
     id: "trust", to: "/medical", zh: "信任证明", en: "TRUST / PROOF", es: "CONFIANZA", ar: "الثقة", children: [
+      { to: "/trust/asia", zh: "亚洲医疗合作机构", en: "ASIA HEALTHCARE PARTNERS", es: "SOCIOS MÉDICOS EN ASIA", ar: "شركاء الرعاية الصحية في آسيا" },
       { to: "/medical", zh: "医学与生活方式", en: "MEDICINE & LIFESTYLE", es: "MEDICINA Y ESTILO DE VIDA", ar: "الطب ونمط الحياة" },
     ],
   },

@@ -144,8 +144,8 @@ const HomeNarrative = () => {
           {t("homeNarrative.proof.lead")}
         </p>
         <div className='hn-proof-list'>
-          {proofItems.map((item) => (
-            <button type='button' className='hn-clp-button hn-button-on-dark hn-proof-button' key={item.english}>
+          {proofItems.map((item, index) => (
+            <button type='button' onClick={index === 0 ? () => navigate("/trust/asia") : undefined} className='hn-clp-button hn-button-on-dark hn-proof-button' key={item.english}>
               <span className='hn-clp-button__label'>{item.label}</span>
               <span className='hn-clp-button__arrow' aria-hidden='true'>→</span>
             </button>

@@ -609,7 +609,12 @@
   width: 100%;
   min-width: 0;
   font-size: 14px;
-  text-transform: none;
+  text-transform: uppercase;
+}
+
+.hn-proof-button:disabled {
+  cursor: default;
+  opacity: 1;
 }
 
 .hn-proof-button .hn-clp-button__label {
@@ -655,27 +660,32 @@
   direction: ltr;
 }
 
-.hn-final-title {
-  font-size: clamp(39px, 4.4vw, 66px);
-}
-
 .hn-final-copy {
   margin: 0;
-  font-size: 18px;
-  line-height: 2;
+}
+
+.hn-final-title .hn-title-line--emphasis {
+  padding-left: 8%;
 }
 
 .hn-final-actions {
   align-self: end;
   display: grid;
   gap: 14px;
+  transform: translateX(clamp(40px, 4vw, 72px));
 }
 
 .hn-final-actions .hn-clp-button {
-  width: 100%;
+  width: min(100%, 320px);
+  min-width: 260px;
   height: var(--hn-button-height);
   min-height: var(--hn-button-height);
   font-size: 14px;
+}
+
+.hn-final-actions .hn-clp-button:disabled {
+  cursor: default;
+  opacity: 1;
 }
 
 .hn-final-actions .hn-clp-button__arrow {
@@ -711,6 +721,11 @@
 .home-narrative[dir="rtl"] .hn-method-title .hn-title-line--emphasis,
 .home-narrative[dir="rtl"] .hn-journey-title .hn-title-line--emphasis,
 .home-narrative[dir="rtl"] .hn-global-title .hn-title-line--emphasis {
+  padding-right: 8%;
+  padding-left: 0;
+}
+
+.home-narrative[dir="rtl"] .hn-final-title .hn-title-line--emphasis {
   padding-right: 8%;
   padding-left: 0;
 }
@@ -845,6 +860,11 @@
 
   .hn-final-actions {
     margin-top: 80px;
+    transform: translateX(24px);
+  }
+
+  .hn-final-actions .hn-clp-button {
+    width: min(100%, 300px);
   }
 
   .hn-final-meta {

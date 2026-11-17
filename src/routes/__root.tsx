@@ -14,6 +14,9 @@ import appCss from "../original/index.css?url";
 import journeyTokens from "../journey-tokens.css?url";
 import SiteJourneyBridge from "@/heravita/journey/SiteJourneyBridge";
 import SiteBreadcrumb from "@/heravita/nav/SiteBreadcrumb";
+import ChineseTypography from "@/heravita/typography/ChineseTypography";
+import LatinTypography from "@/heravita/typography/LatinTypography";
+import FooterTransition from "@/heravita/nav/FooterTransition";
 
 function NotFoundComponent() {
   return (
@@ -125,6 +128,9 @@ function RootComponent() {
     <QueryClientProvider client={queryClient}>
       <SiteJourneyBridge />
       <SiteBreadcrumb />
+      <LatinTypography />
+      <ChineseTypography />
+      <FooterTransition />
       {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
       <Outlet />
     </QueryClientProvider>

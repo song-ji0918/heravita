@@ -1,0 +1,97 @@
+/* Noto SC glyphs from Google Fonts, split by character range. OFL notices: public/fonts/zh/. */
+@font-face {
+  font-family: "HV Noto Sans SC";
+  src: url("/fonts/zh/noto-sans-sc-1.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  unicode-range: U+3000-53EB;
+}
+@font-face {
+  font-family: "HV Noto Sans SC";
+  src: url("/fonts/zh/noto-sans-sc-2.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  unicode-range: U+53EF-6001;
+}
+@font-face {
+  font-family: "HV Noto Sans SC";
+  src: url("/fonts/zh/noto-sans-sc-3.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  unicode-range: U+600E-6CF3;
+}
+@font-face {
+  font-family: "HV Noto Sans SC";
+  src: url("/fonts/zh/noto-sans-sc-4.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  unicode-range: U+6D01-7F3A;
+}
+@font-face {
+  font-family: "HV Noto Sans SC";
+  src: url("/fonts/zh/noto-sans-sc-5.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  unicode-range: U+7F51-952E;
+}
+@font-face {
+  font-family: "HV Noto Sans SC";
+  src: url("/fonts/zh/noto-sans-sc-6.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  unicode-range: U+9547-FF5C;
+}
+@font-face {
+  font-family: "HV Noto Serif SC";
+  src: url("/fonts/zh/noto-serif-sc-1.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+3000-53EB;
+}
+@font-face {
+  font-family: "HV Noto Serif SC";
+  src: url("/fonts/zh/noto-serif-sc-2.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+53EF-6001;
+}
+@font-face {
+  font-family: "HV Noto Serif SC";
+  src: url("/fonts/zh/noto-serif-sc-3.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+600E-6CF3;
+}
+@font-face {
+  font-family: "HV Noto Serif SC";
+  src: url("/fonts/zh/noto-serif-sc-4.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+6D01-7F3A;
+}
+@font-face {
+  font-family: "HV Noto Serif SC";
+  src: url("/fonts/zh/noto-serif-sc-5.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+7F51-952E;
+}
+@font-face {
+  font-family: "HV Noto Serif SC";
+  src: url("/fonts/zh/noto-serif-sc-6.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  unicode-range: U+9547-FF5C;
+}

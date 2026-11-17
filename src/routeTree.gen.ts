@@ -29,7 +29,10 @@ import { Route as JourneyBookingRouteImport } from './routes/journey_.booking'
 import { Route as JourneyFlourishRouteImport } from './routes/journey_.flourish'
 import { Route as JourneyRebuildRouteImport } from './routes/journey_.rebuild'
 import { Route as JourneyResetRouteImport } from './routes/journey_.reset'
-import { Route as TrustAsiaRouteImport } from './routes/trust.asia'
+import { Route as TrustAsiaRouteImport } from './routes/trust_.asia'
+import { Route as TrustEuropeUsRouteImport } from './routes/trust_.europe-us'
+import { Route as TrustLifestyleRouteImport } from './routes/trust_.lifestyle'
+import { Route as TrustStandardsRouteImport } from './routes/trust_.standards'
 import { Route as GlobalPhuketBookingRouteImport } from './routes/global_.phuket_.booking'
 import { Route as GlobalUsaConsultationRouteImport } from './routes/global_.usa_.consultation'
 import { Route as GlobalUsaNetworkRouteImport } from './routes/global_.usa_.network'
@@ -135,8 +138,23 @@ const JourneyResetRoute = JourneyResetRouteImport.update({
   getParentRoute: () => rootRouteImport,
 } as any)
 const TrustAsiaRoute = TrustAsiaRouteImport.update({
-  id: '/trust/asia',
+  id: '/trust_/asia',
   path: '/trust/asia',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrustEuropeUsRoute = TrustEuropeUsRouteImport.update({
+  id: '/trust_/europe-us',
+  path: '/trust/europe-us',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrustLifestyleRoute = TrustLifestyleRouteImport.update({
+  id: '/trust_/lifestyle',
+  path: '/trust/lifestyle',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrustStandardsRoute = TrustStandardsRouteImport.update({
+  id: '/trust_/standards',
+  path: '/trust/standards',
   getParentRoute: () => rootRouteImport,
 } as any)
 const GlobalPhuketBookingRoute = GlobalPhuketBookingRouteImport.update({
@@ -177,6 +195,9 @@ export interface FileRoutesByFullPath {
   '/journey/rebuild': typeof JourneyRebuildRoute
   '/journey/reset': typeof JourneyResetRoute
   '/trust/asia': typeof TrustAsiaRoute
+  '/trust/europe-us': typeof TrustEuropeUsRoute
+  '/trust/lifestyle': typeof TrustLifestyleRoute
+  '/trust/standards': typeof TrustStandardsRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
   '/global/usa/consultation': typeof GlobalUsaConsultationRoute
   '/global/usa/network': typeof GlobalUsaNetworkRoute
@@ -203,6 +224,9 @@ export interface FileRoutesByTo {
   '/journey/rebuild': typeof JourneyRebuildRoute
   '/journey/reset': typeof JourneyResetRoute
   '/trust/asia': typeof TrustAsiaRoute
+  '/trust/europe-us': typeof TrustEuropeUsRoute
+  '/trust/lifestyle': typeof TrustLifestyleRoute
+  '/trust/standards': typeof TrustStandardsRoute
   '/global/phuket/booking': typeof GlobalPhuketBookingRoute
   '/global/usa/consultation': typeof GlobalUsaConsultationRoute
   '/global/usa/network': typeof GlobalUsaNetworkRoute
@@ -229,7 +253,10 @@ export interface FileRoutesById {
   '/journey_/flourish': typeof JourneyFlourishRoute
   '/journey_/rebuild': typeof JourneyRebuildRoute
   '/journey_/reset': typeof JourneyResetRoute
-  '/trust/asia': typeof TrustAsiaRoute
+  '/trust_/asia': typeof TrustAsiaRoute
+  '/trust_/europe-us': typeof TrustEuropeUsRoute
+  '/trust_/lifestyle': typeof TrustLifestyleRoute
+  '/trust_/standards': typeof TrustStandardsRoute
   '/global_/phuket_/booking': typeof GlobalPhuketBookingRoute
   '/global_/usa_/consultation': typeof GlobalUsaConsultationRoute
   '/global_/usa_/network': typeof GlobalUsaNetworkRoute
@@ -258,6 +285,9 @@ export interface FileRouteTypes {
     | '/journey/rebuild'
     | '/journey/reset'
     | '/trust/asia'
+    | '/trust/europe-us'
+    | '/trust/lifestyle'
+    | '/trust/standards'
     | '/global/phuket/booking'
     | '/global/usa/consultation'
     | '/global/usa/network'
@@ -284,6 +314,9 @@ export interface FileRouteTypes {
     | '/journey/rebuild'
     | '/journey/reset'
     | '/trust/asia'
+    | '/trust/europe-us'
+    | '/trust/lifestyle'
+    | '/trust/standards'
     | '/global/phuket/booking'
     | '/global/usa/consultation'
     | '/global/usa/network'
@@ -309,7 +342,10 @@ export interface FileRouteTypes {
     | '/journey_/flourish'
     | '/journey_/rebuild'
     | '/journey_/reset'
-    | '/trust/asia'
+    | '/trust_/asia'
+    | '/trust_/europe-us'
+    | '/trust_/lifestyle'
+    | '/trust_/standards'
     | '/global_/phuket_/booking'
     | '/global_/usa_/consultation'
     | '/global_/usa_/network'
@@ -337,6 +373,9 @@ export interface RootRouteChildren {
   JourneyRebuildRoute: typeof JourneyRebuildRoute
   JourneyResetRoute: typeof JourneyResetRoute
   TrustAsiaRoute: typeof TrustAsiaRoute
+  TrustEuropeUsRoute: typeof TrustEuropeUsRoute
+  TrustLifestyleRoute: typeof TrustLifestyleRoute
+  TrustStandardsRoute: typeof TrustStandardsRoute
   GlobalPhuketBookingRoute: typeof GlobalPhuketBookingRoute
   GlobalUsaConsultationRoute: typeof GlobalUsaConsultationRoute
   GlobalUsaNetworkRoute: typeof GlobalUsaNetworkRoute
@@ -484,11 +523,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof JourneyResetRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/trust/asia': {
-      id: '/trust/asia'
+    '/trust_/asia': {
+      id: '/trust_/asia'
       path: '/trust/asia'
       fullPath: '/trust/asia'
       preLoaderRoute: typeof TrustAsiaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trust_/europe-us': {
+      id: '/trust_/europe-us'
+      path: '/trust/europe-us'
+      fullPath: '/trust/europe-us'
+      preLoaderRoute: typeof TrustEuropeUsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trust_/lifestyle': {
+      id: '/trust_/lifestyle'
+      path: '/trust/lifestyle'
+      fullPath: '/trust/lifestyle'
+      preLoaderRoute: typeof TrustLifestyleRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trust_/standards': {
+      id: '/trust_/standards'
+      path: '/trust/standards'
+      fullPath: '/trust/standards'
+      preLoaderRoute: typeof TrustStandardsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/global_/phuket_/booking': {
@@ -537,6 +597,9 @@ const rootRouteChildren: RootRouteChildren = {
   JourneyRebuildRoute: JourneyRebuildRoute,
   JourneyResetRoute: JourneyResetRoute,
   TrustAsiaRoute: TrustAsiaRoute,
+  TrustEuropeUsRoute: TrustEuropeUsRoute,
+  TrustLifestyleRoute: TrustLifestyleRoute,
+  TrustStandardsRoute: TrustStandardsRoute,
   GlobalPhuketBookingRoute: GlobalPhuketBookingRoute,
   GlobalUsaConsultationRoute: GlobalUsaConsultationRoute,
   GlobalUsaNetworkRoute: GlobalUsaNetworkRoute,

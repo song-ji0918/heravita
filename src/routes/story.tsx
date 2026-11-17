@@ -13,5 +13,5 @@ export const Route = createFileRoute("/story")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: originalPage(() => import("@/original/pages/Story/StoryPage")),
+  component: originalPage(() => import("@/heravita/story/StoryPage")),
 });

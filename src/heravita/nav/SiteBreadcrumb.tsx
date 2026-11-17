@@ -13,46 +13,78 @@ export default function SiteBreadcrumb() {
   const trail = trailFor(pathname);
   const [top, setTop] = useState<number | null>(null);
   const [light, setLight] = useState(true);
-  const [hidden, setHidden] = useState(false);
   const [menu, setMenu] = useState(false);
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     setMenu(false);
     setTop(null);
-    let ro: ResizeObserver | null = null;
-    let observed: Element | null = null;
+    const breadcrumb = ref.current;
+    if (!breadcrumb) return;
+    breadcrumb.style.visibility = "hidden";
+    breadcrumb.inert = true;
+    let resizeObserver: ResizeObserver | null = null;
+    let fadeObserver: MutationObserver | null = null;
+    let observed: HTMLElement | null = null;
+    const syncFade = () => {
+      if (!observed) return;
+      const { opacity, visibility, pointerEvents } = observed.style;
+      // Mirror the header's actual GSAP tween instead of running a second scroll animation.
+      breadcrumb.style.opacity = opacity || "1";
+      breadcrumb.style.visibility = visibility || "visible";
+      breadcrumb.style.pointerEvents = pointerEvents;
+      breadcrumb.inert = visibility === "hidden" || pointerEvents === "none";
+      if (visibility === "hidden") setMenu(false);
+    };
     const measure = () => {
-      const header = document.querySelector("header");
-      if (!header) return;
-      if (observed !== header && typeof ResizeObserver !== "undefined") {
-        ro?.disconnect();
-        ro = new ResizeObserver(measure);
-        ro.observe(header);
+      const header = document.querySelector<HTMLElement>("header");
+      if (!header || header.getBoundingClientRect().height === 0) return;
+      if (observed !== header) {
         observed = header;
+        resizeObserver?.disconnect();
+        if (typeof ResizeObserver !== "undefined") {
+          resizeObserver = new ResizeObserver(measure);
+          resizeObserver.observe(header);
+        }
+
+        fadeObserver?.disconnect();
+        fadeObserver = new MutationObserver(syncFade);
+        fadeObserver.observe(header, { attributes: true, attributeFilter: ["style"] });
+        syncFade();
       }
-      const rect = header.getBoundingClientRect();
-      if (rect.height === 0) return;
-      const overlay = getComputedStyle(header).position === "fixed";
-      setTop(overlay ? rect.bottom : Math.max(rect.bottom, 0));
+      const nextTop = Math.max(header.getBoundingClientRect().bottom, 0);
+      setTop(nextTop);
       const themed = document
-        .elementsFromPoint(window.innerWidth / 2, Math.min(rect.bottom + 14, window.innerHeight - 1))
+        .elementsFromPoint(window.innerWidth / 2, Math.min(nextTop + 14, window.innerHeight - 1))
         .map((el) => el.closest<HTMLElement>("[data-header-theme]"))
         .find((el) => el !== null);
-      setLight(overlay && themed?.dataset.headerTheme === "dark");
-      setHidden(window.scrollY > 40);
+      setLight(themed?.dataset.headerTheme === "dark");
     };
+    const routeObserver = new MutationObserver(() => {
+      if (!observed?.isConnected) measure();
+    });
+    routeObserver.observe(document.body, { childList: true, subtree: true });
     measure();
     const raf = requestAnimationFrame(measure);
     const id = window.setTimeout(measure, 400);
     window.addEventListener("scroll", measure, { passive: true });
     window.addEventListener("resize", measure);
-    return () => { cancelAnimationFrame(raf); window.clearTimeout(id); ro?.disconnect(); window.removeEventListener("scroll", measure); window.removeEventListener("resize", measure); };
+    return () => {
+      cancelAnimationFrame(raf);
+      window.clearTimeout(id);
+      resizeObserver?.disconnect();
+      fadeObserver?.disconnect();
+      routeObserver.disconnect();
+      window.removeEventListener("scroll", measure);
+      window.removeEventListener("resize", measure);
+    };
   }, [pathname]);
 
   useEffect(() => {
     if (!menu) return;
-    const out = (e: MouseEvent) => { if (!ref.current?.contains(e.target as Node)) setMenu(false); };
+    const out = (e: MouseEvent) => {
+      if (!ref.current?.contains(e.target as Node)) setMenu(false);
+    };
     document.addEventListener("mousedown", out);
     return () => document.removeEventListener("mousedown", out);
   }, [menu]);
@@ -61,26 +93,49 @@ export default function SiteBreadcrumb() {
   const label = (c: { zh: string; en: string; es: string; ar: string }) => navLabel(c, lang);
 
   return (
-    <nav ref={ref} aria-label={zh ? "页面路径" : "Breadcrumb"} className={`hv-crumb ${light ? "is-light" : "is-dark"} ${hidden ? "is-hidden" : ""}`} style={{ top: top ?? 0, visibility: top === null ? "hidden" : undefined }}>
+    <nav
+      ref={ref}
+      aria-label={zh ? "页面路径" : "Breadcrumb"}
+      className={`hv-crumb ${light ? "is-light" : "is-dark"}`}
+      style={{ top: top ?? 0 }}
+    >
       <ol>
         {trail.map((c, i) => {
           const last = i === trail.length - 1;
           return (
             <li key={c.to + i}>
-              {i > 0 && <span className="hv-crumb-sep" aria-hidden="true">›</span>}
+              {i > 0 && (
+                <span className="hv-crumb-sep" aria-hidden="true">
+                  ›
+                </span>
+              )}
               {last && c.siblings ? (
                 <span className="hv-crumb-select">
-                  <button type="button" aria-expanded={menu} aria-current="page" onClick={() => setMenu(!menu)}>{label(c)}<i aria-hidden="true">⌄</i></button>
+                  <button
+                    type="button"
+                    aria-expanded={menu}
+                    aria-current="page"
+                    onClick={() => setMenu(!menu)}
+                  >
+                    {label(c)}
+                    <i aria-hidden="true">⌄</i>
+                  </button>
                   {menu && (
                     <ul className="hv-crumb-menu">
                       {c.siblings.map((s) => (
-                        <li key={s.to}><Link to={s.to} aria-current={s.to === c.to ? "page" : undefined}>{label(s)}</Link></li>
+                        <li key={s.to}>
+                          <Link to={s.to} aria-current={s.to === c.to ? "page" : undefined}>
+                            {label(s)}
+                          </Link>
+                        </li>
                       ))}
                     </ul>
                   )}
                 </span>
               ) : last ? (
-                <span aria-current="page" className="hv-crumb-current">{label(c)}</span>
+                <span aria-current="page" className="hv-crumb-current">
+                  {label(c)}
+                </span>
               ) : c.siblings ? (
                 <Link to={c.to}>{label(c)}</Link>
               ) : (

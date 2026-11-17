@@ -13,5 +13,5 @@ export const Route = createFileRoute("/global")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
-  component: originalPage(() => import("@/original/pages/Global/GlobalPage")),
+  component: originalPage(() => import("@/heravita/global/GlobalAtlasPage")),
 });

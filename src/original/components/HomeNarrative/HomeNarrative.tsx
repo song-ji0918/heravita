@@ -33,6 +33,17 @@ const HomeNarrative = () => {
   const destinations = t("homeNarrative.global.items", { returnObjects: true }) as BilingualItem[];
   const proofItems = t("homeNarrative.proof.items", { returnObjects: true }) as BilingualItem[];
   const finalActions = t("homeNarrative.action.items", { returnObjects: true }) as string[];
+  const proofActionHandlers: Record<string, (() => void) | undefined> = {
+    "ASIA MEDICAL PARTNERS": () => navigate("/trust/asia"),
+    "EUROPE AND US LONGEVITY NETWORK": () => navigate("/trust/europe-us"),
+    "GLOBAL PREMIUM LIFESTYLE": () => navigate("/trust/lifestyle"),
+    "PROFESSIONAL SERVICE STANDARDS": () => navigate("/trust/standards"),
+  };
+  const finalActionHandlers = [
+    () => navigate("/journey"),
+    undefined,
+    () => navigate("/journey/booking"),
+  ];
 
   return (
   <div className='home-narrative' dir={i18n.dir()} data-language={languageCode}>
@@ -144,12 +155,23 @@ const HomeNarrative = () => {
           {t("homeNarrative.proof.lead")}
         </p>
         <div className='hn-proof-list'>
-          {proofItems.map((item, index) => (
-            <button type='button' onClick={index === 0 ? () => navigate("/trust/asia") : undefined} className='hn-clp-button hn-button-on-dark hn-proof-button' key={item.english}>
-              <span className='hn-clp-button__label'>{item.label}</span>
-              <span className='hn-clp-button__arrow' aria-hidden='true'>→</span>
-            </button>
-          ))}
+          {proofItems.map((item) => {
+            const onClick = proofActionHandlers[item.english];
+
+            return (
+              <button
+                type='button'
+                className='hn-clp-button hn-button-on-dark hn-proof-button'
+                key={item.english}
+                onClick={onClick}
+                disabled={!onClick}
+                aria-disabled={!onClick}
+              >
+                <span className='hn-clp-button__label'>{item.label}</span>
+                <span className='hn-clp-button__arrow' aria-hidden='true'>→</span>
+              </button>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -157,23 +179,34 @@ const HomeNarrative = () => {
     <section id='action' data-header-theme='dark' className='hn-screen hn-final'>
       <div className='hn-final-inner'>
         <div>
-          <p className='hn-eyebrow'>{t("homeNarrative.action.eyebrow")}</p>
           <h2 className='hn-headline hn-final-title'>
-            {t("homeNarrative.action.titleLine1")}
-            <br />
-            {t("homeNarrative.action.titleLine2")}
+            <span className='hn-title-line'>{t("homeNarrative.action.titleLine1")}</span>
+            <span className='hn-title-line hn-title-line--emphasis'>
+              {t("homeNarrative.action.titleLine2")}
+            </span>
           </h2>
-          <p className='hn-final-copy'>
+          <p className='hn-description hn-final-copy'>
             {t("homeNarrative.action.description")}
           </p>
         </div>
         <div className='hn-final-actions'>
-          {finalActions.map((item) => (
-            <button type='button' className='hn-clp-button hn-button-on-dark' key={item}>
-              <span className='hn-clp-button__label'>{item}</span>
-              <span className='hn-clp-button__arrow' aria-hidden='true'>→</span>
-            </button>
-          ))}
+          {finalActions.map((item, index) => {
+            const onClick = finalActionHandlers[index];
+
+            return (
+              <button
+                type='button'
+                className='hn-clp-button hn-button-on-dark'
+                key={item}
+                onClick={onClick}
+                disabled={!onClick}
+                aria-disabled={!onClick}
+              >
+                <span className='hn-clp-button__label'>{item}</span>
+                <span className='hn-clp-button__arrow' aria-hidden='true'>→</span>
+              </button>
+            );
+          })}
         </div>
       </div>
       <div className='hn-final-meta'>

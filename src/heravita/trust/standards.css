@@ -1,0 +1,605 @@
+.hv-standards {
+  --standards-ink: #f6f4ef;
+  --standards-paper: #f4f2ec;
+  --standards-dark: #151a1c;
+  --standards-body: rgb(246 244 239 / 88%);
+  --standards-margin: clamp(24px, 8vw, 120px);
+  --hn-button-height: 48px;
+  --hn-button-arrow-width: 40px;
+  color: var(--standards-ink);
+  background: var(--standards-dark);
+}
+
+.hv-standards main {
+  font-family: var(--hv-zh-family, "HV Noto Sans SC"), "Hera Asia Text", var(--font-brand-sans), sans-serif;
+  font-weight: 400;
+  line-height: 1.9;
+}
+
+.hv-standards main :is(h1, h2, h3, p) {
+  margin: 0;
+}
+
+.hv-standards main :is(h1, h2, h3) {
+  font-family: var(--hv-zh-family, "HV Noto Sans SC"), "Hera Asia Display", var(--font-brand-sans), sans-serif;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.hv-standards__wrap {
+  width: min(100% - 2 * var(--standards-margin), 1280px);
+  margin-inline: auto;
+}
+
+.hv-standards__skip {
+  position: fixed;
+  z-index: 100;
+  inset-block-start: 12px;
+  inset-inline-start: 16px;
+  padding: 10px 16px;
+  color: #171b1d;
+  background: #fff;
+}
+
+.hv-standards__skip:not(:focus) {
+  clip-path: inset(50%);
+}
+
+.hv-standards :is(a, button):focus-visible {
+  outline: 2px solid #b6c9c1;
+  outline-offset: 4px;
+}
+
+.hv-standards__hero,
+.hv-standards__chapter {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hv-standards__hero {
+  min-block-size: 100svh;
+  padding-block: clamp(170px, 20svh, 244px) clamp(80px, 11svh, 128px);
+}
+
+.hv-standards__chapter {
+  min-block-size: 115svh;
+  padding-block: clamp(132px, 16svh, 184px);
+}
+
+.hv-standards__visual {
+  position: absolute;
+  z-index: -2;
+  inset: 0;
+  background: #20282a;
+}
+
+.hv-standards__visual img,
+.hv-standards__role-visual img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.hv-standards__visual::after {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: rgb(10 14 15 / 66%);
+  content: "";
+}
+
+.hv-standards__visual[data-visual="hero"] {
+  background: #1b2225;
+}
+
+.hv-standards__visual[data-visual="care-system"] {
+  background: #252727;
+}
+
+.hv-standards__visual[data-visual="medical-team"] {
+  background: #172328;
+}
+
+.hv-standards__visual[data-visual="rebuilding-team"] {
+  background: #242420;
+}
+
+.hv-standards__visual[data-visual="concierge"] {
+  background: #25221f;
+}
+
+.hv-standards__visual[data-visual="professional-boundaries"] {
+  background: #171b1d;
+}
+
+.hv-standards__visual[data-visual="continuity"] {
+  background: #202724;
+}
+
+.hv-standards__visual[data-visual="hero"]::after {
+  background: linear-gradient(180deg, rgb(6 10 12 / 72%) 0%, rgb(6 10 12 / 58%) 46%, rgb(6 10 12 / 78%) 100%);
+}
+
+.hv-standards__visual[data-visual="care-system"]::after,
+.hv-standards__visual[data-visual="concierge"]::after {
+  background: linear-gradient(90deg, rgb(8 12 13 / 78%) 0%, rgb(8 12 13 / 66%) 42%, rgb(8 12 13 / 28%) 100%);
+}
+
+.hv-standards__visual[data-visual="medical-team"]::after,
+.hv-standards__visual[data-visual="rebuilding-team"]::after {
+  background: linear-gradient(90deg, rgb(7 10 11 / 76%) 0%, rgb(7 10 11 / 53%) 48%, rgb(7 10 11 / 22%) 100%);
+}
+
+.hv-standards__visual[data-visual="professional-boundaries"]::after,
+.hv-standards__visual[data-visual="continuity"]::after {
+  background: linear-gradient(90deg, rgb(10 14 15 / 82%) 0%, rgb(10 14 15 / 66%) 46%, rgb(10 14 15 / 30%) 100%);
+}
+
+.hv-standards__visual[data-visual="care-system"] img {
+  object-position: 72% center;
+}
+
+.hv-standards__visual[data-visual="medical-team"] img {
+  object-position: 74% center;
+}
+
+.hv-standards__visual[data-visual="rebuilding-team"] img {
+  object-position: 56% center;
+}
+
+.hv-standards__visual[data-visual="concierge"] img {
+  object-position: 66% center;
+}
+
+.hv-standards__visual[data-visual="professional-boundaries"] img {
+  object-position: 62% center;
+}
+
+.hv-standards__visual[data-visual="continuity"] img {
+  object-position: 68% center;
+}
+
+.hv-standards__hero-copy,
+.hv-standards__chapter-copy {
+  display: grid;
+  width: min(100%, 680px);
+  margin-inline: auto;
+  text-align: center;
+}
+
+.hv-standards__hero-copy {
+  gap: 0;
+}
+
+.hv-standards__chapter-copy {
+  gap: clamp(30px, 3.5svh, 48px);
+  width: min(680px, calc(100vw - 16rem));
+  margin-inline: 8rem auto;
+  text-align: start;
+}
+
+.hv-standards__hero-copy h1 {
+  font-size: var(--hv-zh-hero, clamp(30px, 3.34vw, 48px));
+  line-height: 1.25;
+  margin-block-end: clamp(66px, 8.6svh, 104px);
+}
+
+.hv-standards__hero-copy h1 em,
+.hv-standards__chapter-copy h2 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hv-standards__title-line--accent {
+  display: inline-block;
+}
+
+.hv-standards__chapter-copy h2,
+.hv-standards__roles h2 {
+  font-size: var(--hv-zh-title, clamp(30px, 3.62vw, 52px));
+  line-height: 1.32;
+}
+
+.hv-standards__hero-copy p,
+.hv-standards__chapter-copy > p {
+  color: var(--standards-body);
+  font-size: var(--hv-zh-body, 17px);
+  line-height: 1.95;
+  text-wrap: pretty;
+}
+
+.hv-standards__hero-copy .hv-standards__lead {
+  color: var(--standards-ink);
+  font-size: var(--hv-zh-lead, 20px);
+  line-height: 1.7;
+  max-inline-size: 650px;
+  margin-inline: auto;
+}
+
+.hv-standards__hero-copy > p:last-child {
+  max-inline-size: 750px;
+  margin-block-start: clamp(34px, 4.3svh, 52px);
+  margin-inline: auto;
+}
+
+.hv-standards__points {
+  display: grid;
+  gap: clamp(22px, 3.2svh, 38px);
+  padding: 0;
+  margin: clamp(8px, 2svh, 20px) 0 0;
+  list-style: none;
+  text-align: start;
+}
+
+.hv-standards main[lang="en"] {
+  font-family: "Hera Asia Text", "Red Hat Text", sans-serif;
+}
+
+.hv-standards main[lang="en"] :is(h1, h2, h3) {
+  font-family: "Hera Asia Display", "Red Hat Display", sans-serif;
+  font-weight: 400;
+}
+
+.hv-standards main[lang="en"] .hv-standards__hero-copy h1 {
+  /* Matches CLP's dark-image hero: Red Hat Display, 52 / 56 / 2.6. */
+  font-size: 52px;
+  line-height: 56px;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+}
+
+.hv-standards main[lang="en"] .hv-standards__chapter-copy h2 {
+  font-size: 52px;
+  line-height: 56px;
+  letter-spacing: 2.6px;
+  text-transform: uppercase;
+}
+
+.hv-standards main[lang="en"] .hv-standards__chapter-copy {
+  width: min(640px, calc(100vw - 16rem));
+}
+
+.hv-standards main[lang="en"] .hv-standards__hero-copy .hv-standards__lead {
+  font-size: 17px;
+  letter-spacing: normal;
+  line-height: 30px;
+}
+
+.hv-standards main[lang="en"] :is(.hv-standards__hero-copy p, .hv-standards__chapter-copy > p, .hv-standards__points p) {
+  font-size: 17px;
+  letter-spacing: normal;
+  line-height: 30px;
+}
+
+.hv-standards__points li {
+  display: grid;
+  grid-template-columns: minmax(158px, 0.72fr) minmax(0, 1.28fr);
+  gap: clamp(24px, 3vw, 46px);
+  align-items: start;
+}
+
+.hv-standards__points h3 {
+  font-size: var(--hv-zh-small-title, clamp(20px, 1.67vw, 24px));
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.hv-standards__points p {
+  color: var(--standards-body);
+  font-size: var(--hv-zh-body, 17px);
+  line-height: 1.95;
+}
+
+/* Professional boundaries are read as four considered statements, not a label/value table. */
+.hv-standards__chapter--5 .hv-standards__points {
+  gap: clamp(26px, 4svh, 48px);
+  max-inline-size: 640px;
+}
+
+.hv-standards__chapter--5 .hv-standards__points li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.hv-standards__chapter--5 .hv-standards__points h3 {
+  color: var(--standards-ink);
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.35;
+}
+
+.hv-standards__chapter--5 .hv-standards__points p {
+  max-inline-size: 570px;
+}
+
+/* The rebuilding-support chapter follows the same reading rhythm: statement, then explanation. */
+.hv-standards__chapter--3 .hv-standards__points {
+  gap: clamp(28px, 4.2svh, 52px);
+  max-inline-size: 680px;
+}
+
+.hv-standards__chapter--3 .hv-standards__points li {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.hv-standards__chapter--3 .hv-standards__points h3 {
+  color: var(--standards-ink);
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.35;
+}
+
+.hv-standards__chapter--3 .hv-standards__points p {
+  max-inline-size: 600px;
+}
+
+.hv-standards__roles {
+  position: relative;
+  min-block-size: 115svh;
+  overflow: hidden;
+  color: var(--standards-ink);
+  background: #172224;
+}
+
+.hv-standards__role-stage {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-block-size: 115svh;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hv-standards__role-visual,
+.hv-standards__role-shade {
+  position: absolute;
+  inset: 0;
+}
+
+.hv-standards__role-visual {
+  z-index: 0;
+  background: #1b2829;
+}
+
+.hv-standards__role-visual img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  animation: hv-standards-role-enter 620ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+.hv-standards__role-shade {
+  z-index: 1;
+  background:
+    linear-gradient(90deg, rgb(7 13 14 / 78%) 0%, rgb(7 13 14 / 56%) 34%, rgb(7 13 14 / 11%) 72%),
+    linear-gradient(0deg, rgb(5 10 11 / 74%) 0%, transparent 48%);
+}
+
+.hv-standards__role-copy {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  gap: clamp(18px, 2.5svh, 28px);
+  inline-size: min(640px, calc(100vw - 16rem));
+  margin: 0 8rem;
+}
+
+.hv-standards__role-copy h2 {
+  color: var(--standards-ink);
+  font-size: var(--hv-zh-title, clamp(30px, 3.62vw, 52px));
+  font-weight: 400;
+  line-height: 1.32;
+}
+
+.hv-standards__role-copy > p {
+  max-inline-size: 610px;
+  color: var(--standards-body);
+  font-size: var(--hv-zh-body, 17px);
+  line-height: 1.95;
+}
+
+.hv-standards__role-boundary {
+  display: grid;
+  gap: 7px;
+  max-inline-size: 560px;
+  padding-block-start: 6px;
+}
+
+.hv-standards__role-boundary span {
+  color: rgb(246 244 239 / 70%);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+}
+
+.hv-standards__role-copy .hn-clp-button {
+  margin-block-start: clamp(8px, 1.5svh, 16px);
+}
+
+.hv-standards__role-nav {
+  z-index: 2;
+  position: absolute;
+  inset-inline: clamp(26px, 4vw, 68px);
+  inset-block: 50% auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.hv-standards__role-nav button {
+  display: grid;
+  place-items: center;
+  inline-size: 54px;
+  block-size: 92px;
+  padding: 0;
+  border: 0;
+  color: #fff;
+  background: transparent;
+  font-size: 42px;
+  font-weight: 200;
+  cursor: pointer;
+  opacity: 0.82;
+  pointer-events: auto;
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.hv-standards__role-nav button:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.hv-standards__role-nav p {
+  position: absolute;
+  inset-inline-start: 50%;
+  transform: translateX(-50%);
+  inset-block-start: clamp(140px, 21svh, 228px);
+  margin: 0;
+  color: rgb(246 244 239 / 78%);
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes hv-standards-role-enter {
+  from { opacity: 0; transform: scale(1.035); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+@media (max-width: 900px) {
+  .hv-standards__hero-copy,
+  .hv-standards__chapter-copy {
+    margin-inline: 0;
+    text-align: start;
+  }
+
+  .hv-standards__roles-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hv-standards__roles-heading {
+    position: static;
+  }
+
+  .hv-standards__role-visual {
+    min-block-size: 46svh;
+  }
+}
+
+@media (max-width: 680px) {
+  .hv-standards {
+    --standards-margin: 24px;
+  }
+
+  .hv-standards__hero {
+    min-block-size: 100svh;
+    padding-block: 168px 64px;
+  }
+
+  .hv-standards__chapter {
+    min-block-size: 115svh;
+    padding-block: 112px 72px;
+  }
+
+  .hv-standards__hero-copy,
+  .hv-standards__chapter-copy {
+    gap: 20px;
+  }
+
+  .hv-standards__chapter-copy,
+  .hv-standards main[lang="en"] .hv-standards__chapter-copy {
+    width: 100%;
+    margin-inline: 0;
+  }
+
+  .hv-standards__hero-copy {
+    gap: 0;
+  }
+
+  .hv-standards__hero-copy h1 {
+    margin-block-end: 56px;
+  }
+
+  .hv-standards__hero-copy > p:last-child {
+    margin-block-start: 30px;
+  }
+
+  .hv-standards__hero-copy h1,
+  .hv-standards__chapter-copy h2,
+  .hv-standards__roles h2 {
+    font-size: 30px;
+  }
+
+  .hv-standards__hero-copy p,
+  .hv-standards__chapter-copy > p,
+  .hv-standards__points p,
+  .hv-standards__roles-heading > p,
+  .hv-standards__role-copy dd {
+    font-size: 16px;
+  }
+
+  .hv-standards__hero-copy .hv-standards__lead {
+    font-size: 18px;
+  }
+
+  .hv-standards main[lang="en"] .hv-standards__hero-copy h1 {
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 1.5px;
+  }
+
+  .hv-standards main[lang="en"] .hv-standards__chapter-copy h2 {
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 1.5px;
+  }
+
+  .hv-standards__points li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .hv-standards__points h3 {
+    font-size: 20px;
+  }
+
+  .hv-standards__roles {
+    min-block-size: 115svh;
+    padding-block: 104px 80px;
+  }
+
+  .hv-standards__roles-layout {
+    gap: 40px;
+  }
+
+  .hv-standards__role-visual {
+    min-block-size: 300px;
+  }
+
+  .hv-standards__role-copy dl {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hv-standards__roles-close {
+    display: grid;
+    gap: 28px;
+    padding-block-start: 24px;
+  }
+
+  .hv-standards__roles-close > p {
+    font-size: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hv-standards__role-controls button {
+    transition: none;
+  }
+}

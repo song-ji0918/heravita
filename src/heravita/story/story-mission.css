@@ -1,0 +1,151 @@
+.story-page-shell {
+  display: contents;
+}
+
+#mission.story-mission {
+  --mission-paper: #f5f2eb;
+  --mission-ink: #1c2925;
+  --mission-muted: #41534b;
+  --mission-gutter: max(7%, calc((100% - 1440px) / 2));
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0, 62fr) minmax(0, 38fr);
+  align-content: center;
+  align-items: start;
+  padding: clamp(96px, 11vh, 145px) var(--mission-gutter) clamp(134px, 14vh, 175px);
+  min-height: 100svh !important;
+  color: var(--mission-ink);
+  background: var(--mission-paper);
+}
+
+#mission.story-mission::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  inset-inline: 43% 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+  background: url("/story/mission-lakeshore.jpg") right center / cover no-repeat;
+  mask-image: linear-gradient(to right, transparent 19%, #000 61%);
+}
+
+#mission.story-mission:dir(rtl)::before {
+  transform: scaleX(-1);
+}
+
+#mission.story-mission > :is(.eyebrow, .mission-intro, .mission-grid) {
+  grid-column: 1;
+  position: relative;
+  inset: auto;
+  width: 100%;
+  max-width: none;
+}
+
+#mission.story-mission > .eyebrow {
+  margin: 0 0 20px;
+  color: var(--mission-muted);
+}
+
+#mission.story-mission .mission-intro {
+  margin: 0;
+}
+
+#mission.story-mission .mission-intro h2 {
+  margin: 0 0 22px;
+  max-inline-size: 17em;
+  color: var(--mission-ink);
+  font-size: clamp(30px, 3.62vw, 52px);
+  line-height: 1.35;
+  text-align: start;
+  text-wrap: balance;
+}
+
+#mission.story-mission .mission-intro > p {
+  max-inline-size: 42em;
+  margin: 0;
+  color: var(--mission-muted);
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+#mission.story-mission > .mission-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(26px, 3.5vw, 56px);
+  margin: clamp(38px, 5vh, 64px) 0 0;
+}
+
+#mission.story-mission .mission-card {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  color: var(--mission-ink);
+  background: transparent;
+  box-shadow: none;
+}
+
+#mission.story-mission .mission-card .mission-description {
+  margin: 0;
+  color: var(--mission-muted);
+}
+
+#mission.story-mission .mission-card .story-mission-label {
+  margin: 0 0 14px;
+  color: var(--mission-ink);
+  font-size: clamp(22px, 2.23vw, 32px);
+  line-height: 1.45;
+  letter-spacing: 0.04em;
+}
+
+#mission.story-mission .mission-card .story-mission-statement {
+  margin: 0 0 12px;
+  color: var(--mission-ink);
+  font-size: clamp(18px, 1.4vw, 20px);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+#mission.story-mission .mission-card .mission-description {
+  font-size: 17px;
+  line-height: 1.85;
+}
+
+@media (max-width: 900px) {
+  #mission.story-mission {
+    display: block;
+    padding: 0 var(--mission-gutter) 134px;
+  }
+
+  #mission.story-mission::before,
+  #mission.story-mission:dir(rtl)::before {
+    position: relative;
+    z-index: auto;
+    inset: auto;
+    width: 100vw;
+    height: clamp(230px, 39svh, 380px);
+    margin: 0 calc(50% - 50vw);
+    background-position: 76% 51%;
+    mask-image: linear-gradient(to bottom, #000 84%, transparent);
+    transform: none;
+  }
+
+  #mission.story-mission > .eyebrow {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  #mission.story-mission > .mission-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  #mission.story-mission .mission-intro > p,
+  #mission.story-mission .mission-card .mission-description {
+    font-size: 16px;
+  }
+}

@@ -832,8 +832,8 @@
     },
     "action": {
       "eyebrow": "07 / BEGIN THE NEXT CHAPTER",
-      "titleLine1": "生命的下一段，",
-      "titleLine2": "从此刻开始。",
+      "titleLine1": "生命的下一段",
+      "titleLine2": "从此刻开始",
       "description": "无论你希望重新看见自己，还是希望与 HeraVita 一起推动健康文明的发展，我们期待与你开启一次真正有意义的对话。",
       "items": ["开启生命发现", "探索全球合作", "提交咨询意向"],
       "ecosystem": "HERAVITA · GLOBAL LIFE REBUILDING ECOSYSTEM",

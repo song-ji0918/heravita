@@ -55,6 +55,8 @@ const spanish = {
   "Precision testing and assessment": "Pruebas de precisión y evaluación médica",
   "Partnership and family": "Relación de pareja y familia",
   "International medical coordination": "Coordinación médica internacional",
+  "Europe and US longevity resource consultation":
+    "Consulta sobre recursos de longevidad en Europa y Estados Unidos",
   "Anything you would like to share (optional)":
     "¿Qué te gustaría compartir con tu asesor? (opcional)",
   "Timing and Companions": "Fechas y acompañantes",
@@ -83,6 +85,8 @@ const spanish = {
 };
 
 const arabic: Record<keyof typeof spanish, string> = {
+  "Europe and US longevity resource consultation":
+    "استشارة حول موارد طول العمر في أوروبا والولايات المتحدة",
   "A quiet life journey sanctuary": "ملاذ هادئ لرحلتك الحياتية",
   "Your Private Life Journey": "رحلتك الحياتية الخاصة",
   "Begin with a Personal Conversation": "ابدأ بمحادثة شخصية",

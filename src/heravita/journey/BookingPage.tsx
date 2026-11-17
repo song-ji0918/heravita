@@ -19,7 +19,11 @@ import "./journey.css";
 import "./booking.css";
 
 type Dest = (typeof destinations)[number];
-type Props = { initialStage?: Stage | "undecided"; initialDestination?: Dest };
+type Props = {
+  initialStage?: Stage | "undecided";
+  initialDestination?: Dest;
+  consultationContext?: "europe-us-longevity";
+};
 
 const focusOptions: [string, string][] = [
   ["身体状态与疲惫恢复", "Energy and recovery"],
@@ -40,6 +44,7 @@ const destNames: Record<Dest, [string, string]> = {
 export default function BookingPage({
   initialStage = "undecided",
   initialDestination = "undecided",
+  consultationContext,
 }: Props) {
   const { i18n, language: lang, t } = useBookingCopy();
   const [stage, setStage] = useState<Stage | "undecided">(initialStage);
@@ -284,7 +289,16 @@ export default function BookingPage({
               </div>
               <label>
                 {t("想对顾问说的话（可选）", "Anything you would like to share (optional)")}
-                <textarea name="focus" rows={4} maxLength={700} />
+                <textarea
+                  name="focus"
+                  rows={4}
+                  maxLength={700}
+                  defaultValue={
+                    consultationContext === "europe-us-longevity"
+                      ? t("欧美长寿资源咨询", "Europe and US longevity resource consultation")
+                      : undefined
+                  }
+                />
               </label>
             </section>
 

@@ -1,0 +1,523 @@
+.hv-lifestyle {
+  --lifestyle-ink: #222821;
+  --lifestyle-muted: #455049;
+  --lifestyle-paper: #f5f4ef;
+  --lifestyle-margin: clamp(24px, 8vw, 120px);
+  --lifestyle-space: clamp(64px, 10svh, 116px);
+  --hn-button-height: 48px;
+  --hn-button-arrow-width: 40px;
+  background: #fff;
+  color: var(--lifestyle-ink);
+}
+
+.hv-lifestyle main {
+  font-family: "Hera Asia Text", var(--font-brand-sans), sans-serif;
+  line-height: 1.85;
+}
+
+.hv-lifestyle main :is(h1, h2, h3) {
+  margin: 0;
+  font-family: "Hera Asia Display", var(--font-brand-sans), sans-serif;
+  font-weight: 400;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.hv-lifestyle main[lang="ar"],
+.hv-lifestyle main[lang="ar"] :is(h1, h2, h3) {
+  font-family: inherit;
+}
+
+.hv-lifestyle main h1 {
+  font-size: var(--hv-zh-hero, clamp(30px, 3.34vw, 48px));
+}
+.hv-lifestyle main h2 {
+  font-size: var(--hv-zh-title, clamp(30px, 3.62vw, 52px));
+}
+.hv-lifestyle main h3 {
+  font-size: var(--hv-zh-module, clamp(22px, 2.23vw, 32px));
+}
+
+.hv-lifestyle :where(main p) {
+  margin: 0;
+  color: var(--lifestyle-muted);
+  font-size: var(--hv-zh-body, 17px);
+}
+
+.hv-lifestyle .hv-lifestyle__eyebrow,
+.hv-lifestyle main .hv-lifestyle__translation {
+  display: block;
+  color: var(--lifestyle-muted);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  line-height: 1.6;
+}
+
+.hv-lifestyle__eyebrow[lang="en"] {
+  text-transform: uppercase;
+}
+.hv-lifestyle[dir="rtl"] :is(.hv-lifestyle__eyebrow, .hv-lifestyle__translation) {
+  letter-spacing: normal;
+}
+
+.hv-lifestyle__wrap {
+  width: min(100% - 2 * var(--lifestyle-margin), 1280px);
+  margin-inline: auto;
+}
+
+.hv-lifestyle main,
+.hv-lifestyle main section[id] {
+  scroll-margin-top: 176px;
+}
+
+.hv-lifestyle :is(a, summary):focus-visible {
+  outline: 2px solid #344e3f;
+  outline-offset: 5px;
+}
+
+.hv-lifestyle__skip {
+  position: fixed;
+  z-index: 100;
+  inset-block-start: 12px;
+  inset-inline-start: 16px;
+  padding: 10px 16px;
+  color: #fff;
+  background: var(--lifestyle-ink);
+}
+
+.hv-lifestyle__skip:not(:focus) {
+  clip-path: inset(50%);
+}
+
+.hv-lifestyle__media {
+  position: relative;
+  overflow: hidden;
+  min-inline-size: 0;
+  background: #e1e3da;
+}
+
+.hv-lifestyle__media img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hv-lifestyle__media[data-scene="spain"] {
+  background: #ded6c8;
+}
+.hv-lifestyle__media[data-scene="italy"] {
+  background: #dddcd5;
+}
+.hv-lifestyle__media[data-scene="switzerland"] {
+  background: #d8dfd7;
+}
+.hv-lifestyle__media[data-scene="thailand"] {
+  background: #dce3d8;
+}
+.hv-lifestyle__media[data-scene="united-states"] {
+  background: #e2ddd3;
+}
+.hv-lifestyle__media[data-scene="field-research"] {
+  background: #dce0d6;
+}
+.hv-lifestyle__media[data-scene="field-research"] img {
+  object-position: 50% 56%;
+}
+
+.hv-lifestyle__hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-block-size: 100svh;
+  padding-block: clamp(160px, 25svh, 280px) clamp(24px, 5svh, 52px);
+  background: #e9ebe3;
+}
+
+.hv-lifestyle__hero .hv-lifestyle__media {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: #dfe4da;
+}
+
+.hv-lifestyle__hero .hv-lifestyle__media img {
+  object-position: 67% 50%;
+}
+.hv-lifestyle__hero .hv-lifestyle__media::after {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgb(246 245 238 / 86%),
+    rgb(246 245 238 / 62%) 50%,
+    rgb(246 245 238 / 20%)
+  );
+  content: "";
+}
+
+.hv-lifestyle[dir="rtl"] .hv-lifestyle__hero .hv-lifestyle__media::after {
+  transform: scaleX(-1);
+}
+
+.hv-lifestyle__hero-inner {
+  align-self: center;
+}
+.hv-lifestyle__hero-copy {
+  display: grid;
+  gap: clamp(14px, 2.5svh, 24px);
+  max-inline-size: 640px;
+}
+.hv-lifestyle__hero-copy > p:not(.hv-lifestyle__eyebrow) {
+  max-inline-size: 34em;
+}
+
+.hv-lifestyle__scroll {
+  display: grid;
+  justify-self: center;
+  justify-items: center;
+  align-content: center;
+  gap: 10px;
+  min-block-size: 56px;
+  padding: 4px 16px 12px;
+  margin-block-start: 36px;
+  color: var(--lifestyle-ink);
+  font-size: 14px;
+}
+.hv-lifestyle__scroll span {
+  inline-size: 12px;
+  block-size: 12px;
+  border: solid currentColor;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  transition: translate 180ms ease;
+}
+.hv-lifestyle__scroll:hover span {
+  translate: 0 4px;
+}
+
+.hv-lifestyle__network {
+  display: grid;
+  align-items: center;
+  min-block-size: 115svh;
+  padding-block: var(--lifestyle-space);
+  text-align: center;
+}
+.hv-lifestyle .hv-lifestyle__network h2 {
+  max-inline-size: 850px;
+  margin-inline: auto;
+}
+.hv-lifestyle__network p {
+  max-inline-size: 690px;
+  margin: 26px auto 0;
+}
+
+.hv-lifestyle__country-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px clamp(12px, 2.3vw, 34px);
+  padding: 0;
+  margin: 28px 0 0;
+  list-style: none;
+}
+
+.hv-lifestyle__country-nav a,
+.hv-lifestyle__text-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 44px;
+  min-inline-size: 44px;
+  color: var(--lifestyle-ink);
+  text-decoration: underline;
+  text-decoration-color: #889187;
+  text-underline-offset: 6px;
+  transition:
+    text-decoration-color 180ms ease,
+    color 180ms ease;
+}
+
+.hv-lifestyle__country-nav a:hover,
+.hv-lifestyle__text-link:hover {
+  color: #425b4d;
+  text-decoration-color: currentColor;
+}
+
+.hv-lifestyle__country {
+  background: var(--lifestyle-paper);
+}
+
+.hv-lifestyle__country-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 60fr) minmax(0, 40fr);
+  min-block-size: 115svh;
+}
+
+.hv-lifestyle__country-copy {
+  align-self: center;
+  padding-block: clamp(64px, 10svh, 116px);
+  padding-inline: var(--lifestyle-margin) clamp(42px, 5vw, 88px);
+}
+
+.hv-lifestyle__country-copy .hv-lifestyle__eyebrow {
+  margin-block-end: 15px;
+}
+.hv-lifestyle__country-copy > p {
+  max-inline-size: 44em;
+}
+.hv-lifestyle__country-copy .hv-lifestyle__statement {
+  margin-block: 24px 12px;
+  color: var(--lifestyle-ink);
+}
+
+.hv-lifestyle__country--italy,
+.hv-lifestyle__country--united-states {
+  background: #fff;
+}
+.hv-lifestyle__country--italy .hv-lifestyle__country-inner,
+.hv-lifestyle__country--united-states .hv-lifestyle__country-inner {
+  grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
+}
+.hv-lifestyle__country--italy .hv-lifestyle__media,
+.hv-lifestyle__country--united-states .hv-lifestyle__media {
+  grid-area: 1 / 1;
+}
+.hv-lifestyle__country--italy .hv-lifestyle__country-copy,
+.hv-lifestyle__country--united-states .hv-lifestyle__country-copy {
+  grid-area: 1 / 2;
+  padding-inline: clamp(42px, 5vw, 88px) var(--lifestyle-margin);
+}
+
+.hv-lifestyle__country--switzerland .hv-lifestyle__country-inner {
+  position: relative;
+  isolation: isolate;
+  min-block-size: max(115svh, 620px);
+  grid-template-columns: 1fr;
+  place-items: center;
+}
+.hv-lifestyle__country--switzerland .hv-lifestyle__media {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+.hv-lifestyle__country--switzerland .hv-lifestyle__media::after {
+  position: absolute;
+  inset: 0;
+  background: rgb(246 247 242 / 70%);
+  content: "";
+}
+.hv-lifestyle__country--switzerland .hv-lifestyle__country-copy {
+  width: min(100% - 2 * var(--lifestyle-margin), 740px);
+  padding: var(--lifestyle-space) 0;
+  text-align: center;
+}
+.hv-lifestyle__country--switzerland .hv-lifestyle__country-copy p {
+  margin-inline: auto;
+}
+
+.hv-lifestyle__research {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-block-size: 115svh;
+  padding-block-start: var(--lifestyle-space);
+  background: var(--lifestyle-paper);
+}
+.hv-lifestyle__research-copy {
+  max-inline-size: 750px;
+  margin-inline: auto;
+  text-align: center;
+}
+.hv-lifestyle__research-copy .hv-lifestyle__eyebrow {
+  margin-block-end: 16px;
+}
+.hv-lifestyle__research-copy > p:last-child {
+  margin-block-start: 24px;
+}
+.hv-lifestyle main .hv-lifestyle__translation {
+  margin-block-start: 12px;
+}
+.hv-lifestyle__research > .hv-lifestyle__media {
+  margin-block-start: clamp(38px, 7svh, 82px);
+  min-block-size: 0;
+}
+
+.hv-lifestyle__evidence {
+  display: grid;
+  align-items: center;
+  min-block-size: 115svh;
+  padding-block: var(--lifestyle-space);
+}
+.hv-lifestyle__evidence-inner,
+.hv-lifestyle__closing-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+  gap: clamp(30px, 7vw, 110px);
+  align-items: start;
+}
+
+.hv-lifestyle__closing-inner {
+  grid-template-areas: "title steps" "actions steps";
+  row-gap: 24px;
+}
+
+.hv-lifestyle__closing-inner h2 {
+  grid-area: title;
+}
+
+.hv-lifestyle__evidence-list details {
+  border-block-end: 1px solid #d9ded6;
+}
+.hv-lifestyle__evidence-list details:first-child {
+  border-block-start: 1px solid #d9ded6;
+}
+.hv-lifestyle__evidence-list summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  min-block-size: 60px;
+  padding-block: 14px;
+  cursor: pointer;
+  font-size: clamp(17px, 1.65vw, 23px);
+  line-height: 1.5;
+  list-style: none;
+}
+.hv-lifestyle__evidence-list summary::-webkit-details-marker {
+  display: none;
+}
+.hv-lifestyle__evidence-list summary::after {
+  flex: 0 0 10px;
+  block-size: 10px;
+  margin-inline-end: 4px;
+  border: solid currentColor;
+  border-width: 0 1px 1px 0;
+  transform: rotate(45deg);
+  content: "";
+}
+.hv-lifestyle__evidence-list details[open] summary::after {
+  transform: rotate(225deg);
+}
+.hv-lifestyle__evidence-list details p {
+  max-inline-size: 38em;
+  padding-block-end: 20px;
+}
+
+.hv-lifestyle__closing {
+  display: grid;
+  align-items: center;
+  min-block-size: 115svh;
+  padding-block: var(--lifestyle-space) calc(var(--lifestyle-space) + 90px);
+  background: var(--lifestyle-paper);
+}
+.hv-lifestyle__delivery {
+  grid-area: steps;
+  display: grid;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hv-lifestyle__delivery p {
+  margin-block-start: 8px;
+}
+.hv-lifestyle__actions {
+  grid-area: actions;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 28px;
+}
+.hv-lifestyle .hn-clp-button {
+  height: auto;
+  direction: inherit;
+  box-shadow: none;
+  transition:
+    transform 180ms ease,
+    background-color 250ms ease;
+}
+.hv-lifestyle .hn-clp-button:hover {
+  transform: translateY(-2px);
+}
+.hv-lifestyle .hn-clp-button:active {
+  transform: none;
+}
+.hv-lifestyle .hn-clp-button:focus-visible {
+  outline-color: #344e3f;
+}
+.hv-lifestyle .hn-clp-button__label {
+  padding: 10px 14px;
+  white-space: normal;
+}
+.hv-lifestyle .hn-clp-button__arrow {
+  border-left: 0;
+  border-inline-start: 1px solid rgb(255 255 255 / 70%);
+}
+
+@media (max-width: 820px) {
+  .hv-lifestyle main,
+  .hv-lifestyle main section[id] {
+    scroll-margin-top: 150px;
+  }
+  .hv-lifestyle__hero {
+    padding-block-start: 160px;
+  }
+  .hv-lifestyle__hero .hv-lifestyle__media::after {
+    background: linear-gradient(
+      0deg,
+      rgb(246 245 238 / 86%),
+      rgb(246 245 238 / 71%) 60%,
+      rgb(246 245 238 / 40%)
+    );
+  }
+  .hv-lifestyle__hero .hv-lifestyle__media img {
+    object-position: 100% 50%;
+  }
+  .hv-lifestyle .hv-lifestyle__country-inner {
+    grid-template-columns: 1fr;
+    min-block-size: 115svh;
+  }
+  .hv-lifestyle .hv-lifestyle__country-copy {
+    grid-area: 2 / 1;
+    padding: 42px var(--lifestyle-margin) 62px;
+  }
+  .hv-lifestyle .hv-lifestyle__country-inner > .hv-lifestyle__media {
+    grid-area: 1 / 1;
+    min-block-size: clamp(275px, 59vw, 500px);
+  }
+  .hv-lifestyle .hv-lifestyle__country--switzerland .hv-lifestyle__country-inner {
+    min-block-size: max(620px, 115svh);
+  }
+  .hv-lifestyle .hv-lifestyle__country--switzerland .hv-lifestyle__country-copy {
+    grid-area: 1 / 1;
+    padding: 62px 0;
+  }
+  .hv-lifestyle__evidence-inner,
+  .hv-lifestyle__closing-inner {
+    grid-template-columns: 1fr;
+  }
+  .hv-lifestyle__closing-inner {
+    grid-template-areas: "title" "steps" "actions";
+  }
+}
+
+@media (max-width: 640px) {
+  .hv-lifestyle main p {
+    font-size: var(--hv-zh-body, 16px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hv-lifestyle :is(a, .hv-lifestyle__scroll span) {
+    transition: none;
+  }
+  .hv-lifestyle .hn-clp-button:hover {
+    transform: none;
+  }
+  .hv-lifestyle__scroll:hover span {
+    translate: none;
+  }
+}

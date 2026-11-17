@@ -3,6 +3,8 @@ import { useNavigate } from "@tanstack/react-router";
 import { stagePaths } from "./Navigation";
 import { stages, type Stage, type destinations } from "./rules";
 
+const proofPaths = ["/trust/asia", "/trust/europe-us", "/trust/lifestyle"] as const;
+
 /** Additive wiring for the preserved original site's inert buttons and raw HTML CTAs. */
 export default function SiteJourneyBridge(){
  const navigate=useNavigate();
@@ -10,6 +12,17 @@ export default function SiteJourneyBridge(){
   function click(e:MouseEvent){
    if(e.button!==0||e.metaKey||e.ctrlKey||e.altKey||e.shiftKey)return;
    const target=e.target instanceof Element?e.target:null;if(!target)return;
+   const proof=target.closest(".home-narrative .hn-proof-button");
+   if (proof) {
+    const index = Array.from(document.querySelectorAll(".home-narrative .hn-proof-button")).indexOf(proof);
+    const to = proofPaths[index];
+    if (to) {
+     e.preventDefault();
+     e.stopPropagation();
+     void navigate({ to });
+     return;
+    }
+   }
    const journey=target.closest(".home-narrative .hn-journey-button");
    if(journey){const all=Array.from(document.querySelectorAll(".home-narrative .hn-journey-button"));const stage=stages[all.indexOf(journey)];if(stage){e.preventDefault();e.stopPropagation();void navigate({to:stagePaths[stage]});}return;}
    const anchor=target.closest<HTMLAnchorElement>("a");const href=anchor?.getAttribute("href")??"";

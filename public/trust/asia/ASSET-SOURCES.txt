@@ -1,0 +1,16 @@
+hero.jpg: Pexels, cottonbro studio, https://www.pexels.com/photo/persons-hand-on-white-textile-4659799/
+care.jpg: Pexels, Anna Shvets, https://www.pexels.com/photo/photo-of-people-holding-each-other-s-hands-4672720/
+garden.jpg: AI-generated conceptual image of natural stone and light; not a photograph of an institution.
+terrace.jpg: AI-generated conceptual image of linen and light; not a photograph of an institution.
+Pexels license: https://www.pexels.com/license/
+premium-hero.jpg: Original AI-generated abstract glass and light artwork, informed by the overall light-on-dark character of the user's Clinique La Prairie reference.
+premium-form.jpg: Original AI-generated abstract glass loop artwork, informed by the overall light-on-dark character of the user's Clinique La Prairie reference.
+profile-nutrition.jpg: Original ImageGen nutrition still life with pear, oats, and walnuts on limestone.
+profile-preparation.jpg: Original ImageGen depiction of hands organising papers before a consultation.
+profile-genetics.jpg: Original ImageGen glass double-helix sculpture for the genetics discussion.
+profile-bumrungrad.jpg: Bumrungrad International Hospital exterior, credited to L’Avion via PR Newswire Asia (cropped); https://photos.prnasia.com/prnh/20171225/2021873-1?lang=0
+profile-bangkok-hospital-hq.jpg: Bangkok Hospital headquarters exterior, from the hospital's official Advanced Diabetic Wound Care brochure, final page; https://static.bangkokhospital.com/uploads/2024/11/eCatalog_%E0%B8%A8%E0%B8%B9%E0%B8%99%E0%B8%A2%E0%B9%8C%E0%B9%80%E0%B8%9A%E0%B8%B2%E0%B8%AB%E0%B8%A7%E0%B8%B2%E0%B8%99-Eng-resize.pdf
+profile-icellare-bangkok.jpg: ICELLARÉ Lifespan Center Bangkok entrance, first photograph under Our Bangkok Facilities; https://www.icellare.com/facilities
+profile-vitallife-interior.webp: Portrait ImageGen reconstruction of the VitalLife Bangkok lounge, using VitalLife's official opening article photograph of the ivory seating and brass lantern partitions; https://www.vitallifeintegratedhealth.com/en/news/grand-opening-27-september-2024
+profile-bangkok-hospital-interior.webp: Portrait ImageGen reconstruction of Bangkok Hospital's timber-and-glass entrance atrium, based on Thai Soung's Bangkok Hospital project gallery; https://www.thaisoung.com/page/project/bangkok-hospital
+profile-icellare-interior.webp: Portrait ImageGen reconstruction of the ICELLARÉ Bangkok marble reception, using the second photograph under Our Bangkok Facilities; https://www.icellare.com/facilities

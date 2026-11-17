@@ -1,0 +1,161 @@
+/* Chinese is opt-in by text role. The font faces contain no Latin or ASCII digits. */
+html:lang(zh) {
+  --hv-zh-sans: "PingFang SC", "Microsoft YaHei";
+  --hv-zh-serif: "Songti SC", "SimSun";
+  --font-brand-sans:
+    "HV Noto Sans SC", "Helvetica Neue", "Helvetica", var(--hv-zh-sans), "Noto Sans CJK SC", Arial,
+    sans-serif;
+  --hv-zh-hero: clamp(30px, 3.34vw, 48px);
+  --hv-zh-brand-title: clamp(30px, 3.62vw, 52px);
+  --hv-zh-title: var(--hv-zh-brand-title);
+  --hv-zh-module: clamp(22px, 2.23vw, 32px);
+  --hv-zh-small-title: clamp(20px, 1.67vw, 24px);
+  --hv-zh-quote: clamp(22px, 1.95vw, 28px);
+  --hv-zh-lead: 20px;
+  --hv-zh-body: 17px;
+  --hv-zh-nav: 14px;
+  --hv-zh-caption: 13px;
+}
+
+html:lang(zh) [data-hv-zh-type] {
+  --hv-zh-family: "HV Noto Sans SC";
+  --hv-zh-latin: "Red Hat Text";
+  --hv-zh-fallback: var(--hv-zh-sans), sans-serif;
+  font-family: var(--hv-zh-family), var(--hv-zh-latin), var(--hv-zh-fallback) !important;
+}
+
+html:lang(zh) :is(h1, h2, h3, h4, h5, h6, [data-hv-zh-type="destination"])[data-hv-zh-type] {
+  --hv-zh-latin: "Red Hat Display";
+}
+html:lang(zh)
+  :is([data-hv-zh-type="brand-hero"], [data-hv-zh-type="brand-title"], [data-hv-zh-type="quote"]) {
+  --hv-zh-family: "HV Noto Sans SC";
+  --hv-zh-fallback: var(--hv-zh-sans), sans-serif;
+}
+
+html:lang(zh) [data-hv-zh-type="brand-hero"] {
+  --hv-zh-size: var(--hv-zh-hero);
+  --hv-zh-weight: 400;
+}
+html:lang(zh) [data-hv-zh-type="hero"] {
+  --hv-zh-size: var(--hv-zh-hero);
+  --hv-zh-weight: 400;
+}
+html:lang(zh) [data-hv-zh-type="brand-title"] {
+  --hv-zh-size: var(--hv-zh-brand-title);
+  --hv-zh-weight: 400;
+}
+html:lang(zh) [data-hv-zh-type="title"] {
+  --hv-zh-size: var(--hv-zh-brand-title);
+  --hv-zh-weight: 400;
+}
+html:lang(zh) [data-hv-zh-type="module"] {
+  --hv-zh-size: var(--hv-zh-module);
+  --hv-zh-weight: 400;
+  --hv-zh-leading: 1.45;
+}
+html:lang(zh) [data-hv-zh-type="small-title"] {
+  --hv-zh-size: var(--hv-zh-small-title);
+  --hv-zh-weight: 500;
+  --hv-zh-leading: 1.5;
+}
+html:lang(zh) [data-hv-zh-type="destination"] {
+  --hv-zh-size: var(--hv-zh-hero);
+  --hv-zh-weight: 400;
+}
+html:lang(zh) [data-hv-zh-type="compact-heading"] {
+  --hv-zh-size: var(--hv-zh-nav);
+  --hv-zh-weight: 500;
+  --hv-zh-leading: 1.5;
+}
+html:lang(zh) body main :is(h1, h2, h3, h4, h5, h6, em)[data-hv-zh-type],
+html:lang(zh) :is(h1, h2, h3, h4, h5, h6, em)[data-hv-zh-type] {
+  font-size: var(--hv-zh-size) !important;
+  font-weight: var(--hv-zh-weight) !important;
+  line-height: var(--hv-zh-leading, 1.4) !important;
+  letter-spacing: 0.02em !important;
+  font-style: normal;
+  text-wrap: balance;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+html:lang(zh)
+  [data-hv-zh-type]
+  :is(.hv-hero-line, .hn-title-line, [data-banner-item] > span):not(.hv-clp-english-fragment) {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  font-style: normal !important;
+  max-inline-size: 100%;
+  white-space: normal !important;
+  text-wrap: wrap !important;
+  overflow-wrap: break-word;
+}
+
+html:lang(zh) [data-hv-zh-type="quote"] {
+  font-size: var(--hv-zh-quote) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  font-style: normal;
+}
+html:lang(zh) :is([data-hv-zh-type="body"], [data-hv-zh-type="lead"]) {
+  font-size: var(--hv-zh-body) !important;
+  font-weight: 400 !important;
+  line-height: 1.85 !important;
+  letter-spacing: 0.01em;
+}
+html:lang(zh) [data-hv-zh-type="lead"] {
+  font-size: var(--hv-zh-lead) !important;
+  line-height: 1.8 !important;
+}
+html:lang(zh) [data-hv-zh-type="caption"] {
+  font-size: var(--hv-zh-caption) !important;
+  line-height: 1.6 !important;
+}
+html:lang(zh) [data-hv-zh-type="supporting"] {
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+}
+html:lang(zh) [data-hv-zh-type="menu"] {
+  font-size: 20px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+html:lang(zh) [data-hv-zh-type="heading-fragment"] {
+  font-family: inherit !important;
+  font-size: inherit !important;
+  font-weight: inherit !important;
+  line-height: inherit !important;
+  letter-spacing: inherit !important;
+  font-style: normal !important;
+}
+html:lang(zh) [data-hv-zh-type="nav"] {
+  font-size: var(--hv-zh-nav) !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+}
+html:lang(zh) :is(.hv-crumb-current, .hv-crumb-select > button)[data-hv-zh-type="nav"] {
+  font-weight: 500 !important;
+}
+html:lang(zh) [data-hv-zh-type="cta"] {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 1.5 !important;
+}
+
+@media (max-width: 767px) {
+  html:lang(zh) {
+    --hv-zh-lead: 18px;
+    --hv-zh-body: 16px;
+    --hv-zh-nav: 15px;
+    --hv-zh-caption: 12px;
+  }
+
+  html:lang(zh) .re-hero .hv-hero-line--second {
+    margin-inline-start: 0;
+  }
+}

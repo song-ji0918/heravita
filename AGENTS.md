@@ -1,4 +1,5 @@
 # Architecture rules
+- Before planning, designing, or modifying the HeraVita site, read `项目错题集.md` and `网站设计偏好.md` and apply the entries relevant to the current request, subject to the user's latest instructions. Update these files when the user corrects an issue or states a lasting preference.
 - The user's original site lives unmodified under src/original; iterate by adding, not rewriting, because the user requires their existing code to stay the base.
 - `react-router-dom` is aliased to src/router-compat.tsx (vite.config.ts) so original imports run on TanStack Router without editing them.
 - Each original page has a thin TanStack route (ssr: false via src/original-page.tsx) because the original i18n reads localStorage at load.

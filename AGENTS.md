@@ -14,3 +14,4 @@
 - Rebuild and Flourish render StageEditorialPage with isolated stage-vitality styling and StageDayPath; Reset retains DayPath, so later-stage presentation can evolve without changing the approved Reset composition.
 - Site menu hierarchy and breadcrumb trail share src/heravita/nav/site-map.ts; the original Header only swaps its menu import, so new pages are added there once.
 - Global overview uses an isolated MapMarkers overlay with separated numbered locations and a translated legend below the map, preventing dense regional names from overlapping without changing source location data.
+- Global partnership enquiries use an isolated page at the existing contact URL and one validated server-only insert/notification action; submission UUIDs prevent duplicate rows on retry, while notification outcomes remain auditable without exposing private applications to visitors.

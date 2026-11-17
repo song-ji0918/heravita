@@ -1,4 +1,6 @@
 # HeraVita
+- [ ] Build the vertically arranged global partnership enquiry page with a photographic cover and four-language form.
+- [ ] Store partnership submissions privately, send WeCom notifications and verify a real form submission.
 - [ ] Remove repetitive visitor-facing disclaimers while retaining concise application and assessment information.
 - [ ] Correct multilingual editorial errors and complete Spanish/Arabic journey and booking copy.
 - [ ] Verify language switching, journey navigation and booking form presentation.

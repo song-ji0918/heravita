@@ -59,6 +59,69 @@ export type Database = {
         }
         Relationships: []
       }
+      partnership_inquiries: {
+        Row: {
+          communication: string
+          consent: boolean
+          contact: string
+          contact_method: string
+          cooperation: string[]
+          country_city: string
+          created_at: string
+          full_name: string
+          id: string
+          institution_name: string
+          institution_type: string
+          language: string
+          notification_status: string
+          notified_at: string | null
+          position: string
+          proposal: string
+          title: string
+          website: string
+        }
+        Insert: {
+          communication: string
+          consent: boolean
+          contact: string
+          contact_method: string
+          cooperation: string[]
+          country_city: string
+          created_at?: string
+          full_name: string
+          id: string
+          institution_name: string
+          institution_type: string
+          language: string
+          notification_status?: string
+          notified_at?: string | null
+          position: string
+          proposal: string
+          title: string
+          website?: string
+        }
+        Update: {
+          communication?: string
+          consent?: boolean
+          contact?: string
+          contact_method?: string
+          cooperation?: string[]
+          country_city?: string
+          created_at?: string
+          full_name?: string
+          id?: string
+          institution_name?: string
+          institution_type?: string
+          language?: string
+          notification_status?: string
+          notified_at?: string | null
+          position?: string
+          proposal?: string
+          title?: string
+          website?: string
+        }
+        Relationships: []
+      }
       phuket_consultations: {
         Row: {
           arrival_date: string | null

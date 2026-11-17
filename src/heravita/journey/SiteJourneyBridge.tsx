@@ -26,6 +26,11 @@ export default function SiteJourneyBridge(){
    const journey=target.closest(".home-narrative .hn-journey-button");
    if(journey){const all=Array.from(document.querySelectorAll(".home-narrative .hn-journey-button"));const stage=stages[all.indexOf(journey)];if(stage){e.preventDefault();e.stopPropagation();void navigate({to:stagePaths[stage]});}return;}
    const anchor=target.closest<HTMLAnchorElement>("a");const href=anchor?.getAttribute("href")??"";
+   // Preserve the original homepage's final cooperation entry and all /contact menu links.
+   const finalAction = target.closest(".home-narrative .hn-final-actions .hn-clp-button");
+   if (href === "/contact" || (finalAction && Array.from(document.querySelectorAll(".home-narrative .hn-final-actions .hn-clp-button")).indexOf(finalAction) === 2)) {
+    e.preventDefault(); e.stopPropagation(); void navigate({to:"/contact"}); return;
+   }
    const isDiscover=Boolean(target.closest(".discover-page"));
    const isApply=(isDiscover&&href.startsWith("mailto:"))||Boolean(target.closest(".home-narrative .hn-final-actions .hn-clp-button"))||((href==="/contact"||href==="/global/phuket/booking"||href==="/global/usa/consultation")&&Boolean(target.closest("header, .pk-page, .usa-page, footer, #site-nav-menu")));
    if(!isApply)return;

@@ -43,6 +43,13 @@
       "when": 1791568404132,
       "tag": "0005_create_journey_applications",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1794893697325,
+      "tag": "0006_create_partnership_inquiries",
+      "breakpoints": true
     }
   ]
 }

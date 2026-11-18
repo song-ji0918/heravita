@@ -45,3 +45,4 @@
 fieldset[aria-invalid=true] .pt-choice,.pt-pills[aria-invalid=true] .pt-pill{border-color:var(--destructive)}
 .pt-nav{display:flex;justify-content:space-between;align-items:center;margin-top:40px}.pt-page .pt-back{color:var(--journey-muted);letter-spacing:.08em}
 @media(max-width:640px){.pt-steps{font-size:11px;gap:14px}.pt-steps li{flex-direction:column;gap:6px}}
+.pt-pills-sm{margin-bottom:20px}.pt-pills-sm .pt-pill{min-height:40px;padding:8px 18px;font-size:14px}

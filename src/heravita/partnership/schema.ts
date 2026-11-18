@@ -12,7 +12,7 @@ export const partnershipSchema = z.object({
   proposal: z.string().trim().min(10).max(2000),
   title: z.enum(["mr", "ms", "dr", "prof", "other"]),
   full_name: z.string().trim().min(1).max(80),
-  position: z.string().trim().min(1).max(100),
+  position: z.string().trim().max(100),
   contact_method: z.enum(["email", "phone", "wechat"]),
   contact: z.string().trim().min(3).max(120),
   communication: z.enum(["weekdays", "anytime", "email-first"]),
